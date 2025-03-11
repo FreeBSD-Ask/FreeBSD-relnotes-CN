@@ -5,6 +5,8 @@
 * [FreeBSD 14.2-RELEASE 发行说明（2024 年 12 月 3 日）](freebsd-14.2.md)
 * [FreeBSD 14.1-RELEASE 发行说明（2024 年 6 月 4 日）](freebsd-14.1-fa-hang-shuo-ming.md)
 * [FreeBSD 14.0-RELEASE 发行说明（2023 年 11 月 20 日）](freebsd-14.0-fa-hang-shuo-ming.md)
+* [FreeBSD 13.5-RELEASE 发行说明（2025 年 3 月 11 日）](13.5.md)
+* [FreeBSD 13.4-RELEASE 发行说明（2024 年 9 月 17 日）](13.4.md)
 * [FreeBSD 13.3-RELEASE 发行说明（2024 年 5 月 5 日）](freebsd-13.3.md)
 * [FreeBSD 13.2-RELEASE 发行说明（2023 年 4 月 11 日）](freebsd-13.2-fa-hang-shuo-ming.md)
 * [FreeBSD 13.1-RELEASE 发行说明（2022 年 5 月 16 日）](freebsd-13.1-fa-hang-shuo-ming.md)
