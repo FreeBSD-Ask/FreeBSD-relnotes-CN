@@ -18,7 +18,7 @@ FreeBSD 14.0-RELEASE 发行说明总结了在 14-STABLE 开发线上对 FreeBSD 
 
 这份发行说明适用于 14-STABLE 开发分支中的一个节点，位于 13.2-RELEASE 和后续的 14.1-RELEASE 之间。可以在 [ https://www.FreeBSD.org/releases/ ](https://www.freebsd.org/releases/) 找到有关此分支上的预构建二进制发行版的信息。
 
-FreeBSD 14.0-RELEASE 的这个发行版本是一个正式的 RELEASE 版本。可以在 [ https://www.FreeBSD.org/releases/ ](https://www.freebsd.org/releases/) 或其镜像站点找到它。有关获取这个（或其他） FreeBSD 发行版本的更多信息，请参阅[ FreeBSD 手册](https://docs.freebsd.org/en/books/handbook/) 中的[获取 FreeBSD 附录](https://docs.freebsd.org/en/books/handbook/mirrors)。
+FreeBSD 14.0-RELEASE 的这个发行版本是一个正式的 RELEASE 版本。可以在 [ https://www.FreeBSD.org/releases/ ](https://www.freebsd.org/releases/) 或其镜像站点找到它。有关获取这个（或其他）FreeBSD 发行版本的更多信息，请参阅[ FreeBSD 手册](https://docs.freebsd.org/en/books/handbook/) 中的[获取 FreeBSD 附录](https://docs.freebsd.org/en/books/handbook/mirrors)。
 
 在安装 FreeBSD 之前，建议所有用户查阅发行勘误。发行勘误文档会在发行周期结束后或发行后发现的“迟到”的信息进行更新。通常，它包含已知错误、安全公告和对文档的更正。可以在 FreeBSD 网站上找到 FreeBSD 14.0-RELEASE 的最新发行勘误副本。
 
@@ -118,7 +118,7 @@ arm64 的[ linux(4)  ](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4
 
 现在可以在运行时使用有日志的软更新的 UFS 文件系统上进行快照。因此，现在可以在使用有日志的软更新运行的活动文件系统上执行后台转储。通过使用 `dump(8)` 的 `-L` 参数请求后台转储。（在先前的版本中，UFS 快照与有日志的软更新不兼容。）[ 78f412987605 ](https://cgit.freebsd.org/src/commit/?id=78f412987605)（由 FreeBSD 基金会赞助）
 
-已经重新集成内核的[ wg(4)  ](https://man.freebsd.org/cgi/man.cgi?query=wg&sektion=4&format=html) WireGuard 驱动程序；它提供了使用 WireGuard 协议的虚拟专用网络（VPN）接口。[ 744bfb213144 ](https://cgit.freebsd.org/src/commit/?id=744bfb213144)（由 Rubicon Communications, LLC ("Netgate")和 FreeBSD 基金会赞助）
+已经重新集成内核的[ wg(4)  ](https://man.freebsd.org/cgi/man.cgi?query=wg&sektion=4&format=html) WireGuard 驱动程序；它提供了使用 WireGuard 协议的虚拟专用网络（VPN）接口。[ 744bfb213144 ](https://cgit.freebsd.org/src/commit/?id=744bfb213144)（由 Rubicon Communications, LLC ("Netgate") 和 FreeBSD 基金会赞助）
 
 KTLS（内核 TLS 实现）已为 TLS 1.3 添加了接收卸载支持。现在支持 TLS 1.1 到 1.3 的接收卸载；对于 TLS 1.0 到 1.3，支持发送卸载。[ 05a1d0f5d7ac ](https://cgit.freebsd.org/src/commit/?id=05a1d0f5d7ac)（由奈飞赞助）
 
@@ -134,7 +134,7 @@ Radix 表和查找现在在[ ipfw(4)  ](https://man.freebsd.org/cgi/man.cgi?quer
 
 root 用户的默认 shell 现在是 [ sh(1)  ](https://man.freebsd.org/cgi/man.cgi?query=sh&sektion=1&format=html)，具有许多用于交互式使用的新功能。 [ d410b585b6f0 ](https://cgit.freebsd.org/src/commit/?id=d410b585b6f0)
 
-默认的邮件传输代理（MTA）现在是 Dragonfly Mail Agent ([ dma(8)  ](https://man.freebsd.org/cgi/man.cgi?query=dma&sektion=8&format=html))，而不再是[ sendmail(8)  ](https://man.freebsd.org/cgi/man.cgi?query=sendmail&sektion=8&format=html)。 MTA 的配置通过 [ mailer.conf(5)  ](https://man.freebsd.org/cgi/man.cgi?query=mailer.conf&sektion=5&format=html) 进行。 [ sendmail(8)  ](https://man.freebsd.org/cgi/man.cgi?query=sendmail&sektion=8&format=html)及其配置仍然可用。 [ a67b925ff3e5 ](https://cgit.freebsd.org/src/commit/?id=a67b925ff3e5)
+默认的邮件传输代理（MTA）现在是 Dragonfly Mail Agent ([ dma(8)  ](https://man.freebsd.org/cgi/man.cgi?query=dma&sektion=8&format=html))，而不再是[ sendmail(8)  ](https://man.freebsd.org/cgi/man.cgi?query=sendmail&sektion=8&format=html)。MTA 的配置通过 [ mailer.conf(5)  ](https://man.freebsd.org/cgi/man.cgi?query=mailer.conf&sektion=5&format=html) 进行。 [ sendmail(8)  ](https://man.freebsd.org/cgi/man.cgi?query=sendmail&sektion=8&format=html)及其配置仍然可用。 [ a67b925ff3e5 ](https://cgit.freebsd.org/src/commit/?id=a67b925ff3e5)
 
 [ rc.conf(5)  ](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5&format=html)中已经删除了配置变量 `mta_start_script`，以及启动脚本 `othermta`。 [ 616f32ea6da7 ](https://cgit.freebsd.org/src/commit/?id=616f32ea6da7)
 
@@ -208,7 +208,7 @@ Telnet 守护程序，[ telnetd(8)  ](https://man.freebsd.org/cgi/man.cgi?query=
 
 **One True Awk**（[ awk(1)  ](https://man.freebsd.org/cgi/man.cgi?query=awk&sektion=1&format=html)）已更新到 20210727，这是第 1 版。 （第 2 版将包含在 14.1-RELEASE 中。）现在除一个 FreeBSD 补丁外，所有的 FreeBSD 补丁都已被上游采纳或丢弃。值得注意的变化包括：不再使用地区（locale）进行范围选择；与 `gawk` 和 `mawk` 有更好的兼容性。请注意，十六进制字符串的解释与早期的 FreeBSD 版本一样被解释为数字。这将在 FreeBSD 15 中变更以符合上游和当前的 POSIX 标准。 [ f39dd6a97844 ](https://cgit.freebsd.org/src/commit/?id=f39dd6a97844)​[ 23f24377b1a9 ](https://cgit.freebsd.org/src/commit/?id=23f24377b1a9)​[ 628bd30ab5a4 ](https://cgit.freebsd.org/src/commit/?id=628bd30ab5a4)
 
-[ bc(1)  ](https://man.freebsd.org/cgi/man.cgi?query=bc&sektion=1&format=html) 和 [ dc(1)  ](https://man.freebsd.org/cgi/man.cgi?query=dc&sektion=1&format=html) 命令已更新到版本 6.6.0，修复了与行编辑和包含多个 read()命令的复杂脚本的问题，并在 `bc` 的（非标准）扩展数学库中添加了一些功能。
+[ bc(1)  ](https://man.freebsd.org/cgi/man.cgi?query=bc&sektion=1&format=html) 和 [ dc(1)  ](https://man.freebsd.org/cgi/man.cgi?query=dc&sektion=1&format=html) 命令已更新到版本 6.6.0，修复了与行编辑和包含多个 read() 命令的复杂脚本的问题，并在 `bc` 的（非标准）扩展数学库中添加了一些功能。
 
 **libbsdxml**（`expat`，[ libbsdxml(3)  ](https://man.freebsd.org/cgi/man.cgi?query=libbsdxml&sektion=3&format=html)）已升级到版本 2.4.7。 [ 7ed8e142a00d ](https://cgit.freebsd.org/src/commit/?id=7ed8e142a00d)
 
@@ -224,7 +224,7 @@ Telnet 守护程序，[ telnetd(8)  ](https://man.freebsd.org/cgi/man.cgi?query=
 
 对于[ ssh(1)  ](https://man.freebsd.org/cgi/man.cgi?query=ssh&sektion=1&format=html)，`VerifyHostKeyDNS` 参数现在默认为 `no`，与 OpenSSH 默认发行一致。`X11Forwarding` 参数也默认为 `no`。 [ 41ff5ea22cb9 ](https://cgit.freebsd.org/src/commit/?id=41ff5ea22cb9)​[ 77934b7a1301 ](https://cgit.freebsd.org/src/commit/?id=77934b7a1301)（由 FreeBSD 基金会赞助）
 
-从 OpenSSH 中删除了 HPN 参数处理。 HPN 支持很久以前就已经弃用，但配置参数仍然被接受（并被忽略）以保持向后兼容性。 [ 348bea10b6f2 ](https://cgit.freebsd.org/src/commit/?id=348bea10b6f2)（由 FreeBSD 基金会赞助）
+从 OpenSSH 中删除了 HPN 参数处理。HPN 支持很久以前就已经弃用，但配置参数仍然被接受（并被忽略）以保持向后兼容性。 [ 348bea10b6f2 ](https://cgit.freebsd.org/src/commit/?id=348bea10b6f2)（由 FreeBSD 基金会赞助）
 
 从[ ssh(1)  ](https://man.freebsd.org/cgi/man.cgi?query=ssh&sektion=1&format=html)客户端中删除了 `VersionAddendum` 参数。 [ bffe60ead024 ](https://cgit.freebsd.org/src/commit/?id=bffe60ead024)（由 FreeBSD 基金会赞助）
 
@@ -296,7 +296,7 @@ FreeBSD 现在重新启动更快。添加了 sysctl  `kern.reboot_wait_time` 以
 
 `kinst` 已移植到 arm64 和 riscv。 [ 07864a8a2466 ](https://cgit.freebsd.org/src/commit/?id=07864a8a2466)​[ 2d7bb03adb43 ](https://cgit.freebsd.org/src/commit/?id=2d7bb03adb43)（由 FreeBSD 基金会赞助）
 
-现在可以在 amd64 内核中使用 LLVM 的 MemorySanitizer 。有关更多信息，请参见手册页 [ kmsan(9)  ](https://man.freebsd.org/cgi/man.cgi?query=kmsan&sektion=9&format=html) 。 [ a422084abbda ](https://cgit.freebsd.org/src/commit/?id=a422084abbda)（由 FreeBSD 基金会赞助）
+现在可以在 amd64 内核中使用 LLVM 的 MemorySanitizer。有关更多信息，请参见手册页 [ kmsan(9)  ](https://man.freebsd.org/cgi/man.cgi?query=kmsan&sektion=9&format=html) 。 [ a422084abbda ](https://cgit.freebsd.org/src/commit/?id=a422084abbda)（由 FreeBSD 基金会赞助）
 
 现在可以在 arm64 内核以及 amd64 上使用 LLVM 的 AddressSanitizer。有关更多信息，请参见 [ kasan(9)  ](https://man.freebsd.org/cgi/man.cgi?query=kasan&sektion=9&format=html) 手册页。 [ 89c52f9d59fa ](https://cgit.freebsd.org/src/commit/?id=89c52f9d59fa)（由 Juniper Networks, Inc.赞助）（由 Klara, Inc.赞助）
 
@@ -322,7 +322,7 @@ FreeBSD 现在重新启动更快。添加了 sysctl  `kern.reboot_wait_time` 以
 
 在使用默认的 [ vt(4)  ](https://man.freebsd.org/cgi/man.cgi?query=vt&sektion=4&format=html) 控制台时，默认情况下不再启用可听的响铃。可以使用以下命令启用它：`sysctl kern.vt.enable_bell=1` 和 `kbdcontrol -b normal`。 [ 225639e7db68 ](https://cgit.freebsd.org/src/commit/?id=225639e7db68)
 
-在 DPAA2（第二代数据路径加速架构，出现在一些 NXP SoC 中的硬件级网络架构）中进行了改进。它运行由 NXP 提供的固件，该固件提供 DPAA2 对象作为抽象层，并提供 `dpni` 网络接口。 DPAA2 通道之间的分离已经显着改进，以隔离对 DMA 资源和清理操作的访问，并在网络负载较重（1 Gbit/s 链接）时避免内核崩溃。其他改进包括 FDT / ACPI MDIO 支持，通过 DPAA2 进行网络启动以及单独的命令门户（DPMCP）支持。
+在 DPAA2（第二代数据路径加速架构，出现在一些 NXP SoC 中的硬件级网络架构）中进行了改进。它运行由 NXP 提供的固件，该固件提供 DPAA2 对象作为抽象层，并提供 `dpni` 网络接口。DPAA2 通道之间的分离已经显着改进，以隔离对 DMA 资源和清理操作的访问，并在网络负载较重（1 Gbit/s 链接）时避免内核崩溃。其他改进包括 FDT / ACPI MDIO 支持，通过 DPAA2 进行网络启动以及单独的命令门户（DPMCP）支持。
 
 已添加对 Arm Corelink DMC-620 内存控制器和 CMN-600 一致性网格网络控制器的支持，已添加到 [ hwpmc(4)  ](https://man.freebsd.org/cgi/man.cgi?query=hwpmc&sektion=4&format=html) 和 `libpmc`。请参阅 [ pmc.dmc-620(3)  ](https://man.freebsd.org/cgi/man.cgi?query=pmc.dmc-620&sektion=3&format=html) 和 [ pmc.cmn-600(3)  ](https://man.freebsd.org/cgi/man.cgi?query=pmc.cmn-600&sektion=3&format=html)。 [ 1459a22787ea ](https://cgit.freebsd.org/src/commit/?id=1459a22787ea)​[ 59191f3573f6 ](https://cgit.freebsd.org/src/commit/?id=59191f3573f6)（由 ARM 赞助）（由 Ampere Computing 赞助）
 
@@ -342,9 +342,9 @@ Realtek 无线 PCI 接口的 [ rtw88(4)  ](https://man.freebsd.org/cgi/man.cgi?q
 
 ### 弃用和删除的驱动程序
 
-x86 `GENERIC` 内核配置中已删除 [ pms(4)  ](https://man.freebsd.org/cgi/man.cgi?query=pms&sektion=4&format=html) 驱动程序 `pmspcv`，因为它很大且使用不常见。可以通过在 [ loader.conf(5)  ](https://man.freebsd.org/cgi/man.cgi?query=loader.conf&sektion=5&format=html) 中放置 `pmspcv_load="YES"` 来将其加载为模块。 [ 95e4f5ef7cce ](https://cgit.freebsd.org/src/commit/?id=95e4f5ef7cce)（由 Rubicon Communications, LLC ("Netgate")赞助）
+x86 `GENERIC` 内核配置中已删除 [ pms(4)  ](https://man.freebsd.org/cgi/man.cgi?query=pms&sektion=4&format=html) 驱动程序 `pmspcv`，因为它很大且使用不常见。可以通过在 [ loader.conf(5)  ](https://man.freebsd.org/cgi/man.cgi?query=loader.conf&sektion=5&format=html) 中放置 `pmspcv_load="YES"` 来将其加载为模块。 [ 95e4f5ef7cce ](https://cgit.freebsd.org/src/commit/?id=95e4f5ef7cce)（由 Rubicon Communications, LLC ("Netgate") 赞助）
 
-x86 `GENERIC` 和 `MINIMAL` 内核配置中已删除了 VESA 参数。它仍然可用作内核模块。 VESA 不被默认控制台 [ vt(4)  ](https://man.freebsd.org/cgi/man.cgi?query=vt&sektion=4&format=html) 使用。 [ 777526ed8382 ](https://cgit.freebsd.org/src/commit/?id=777526ed8382)​[ b8cf1c5c30a5 ](https://cgit.freebsd.org/src/commit/?id=b8cf1c5c30a5)（由 FreeBSD 基金会赞助）
+x86 `GENERIC` 和 `MINIMAL` 内核配置中已删除了 VESA 参数。它仍然可用作内核模块。VESA 不被默认控制台 [ vt(4)  ](https://man.freebsd.org/cgi/man.cgi?query=vt&sektion=4&format=html) 使用。 [ 777526ed8382 ](https://cgit.freebsd.org/src/commit/?id=777526ed8382)​[ b8cf1c5c30a5 ](https://cgit.freebsd.org/src/commit/?id=b8cf1c5c30a5)（由 FreeBSD 基金会赞助）
 
 已删除 ISA 声卡的驱动程序。 [ 92e6b4712b53 ](https://cgit.freebsd.org/src/commit/?id=92e6b4712b53)​[ df51e63eb5d7 ](https://cgit.freebsd.org/src/commit/?id=df51e63eb5d7)​[ aa83e9b189d6 ](https://cgit.freebsd.org/src/commit/?id=aa83e9b189d6)​[ 754decef384a ](https://cgit.freebsd.org/src/commit/?id=754decef384a)​[ 5126e5eeeb5e ](https://cgit.freebsd.org/src/commit/?id=5126e5eeeb5e)​[ 716924cb4832 ](https://cgit.freebsd.org/src/commit/?id=716924cb4832)​[ 9054e296819f ](https://cgit.freebsd.org/src/commit/?id=9054e296819f)（由 FreeBSD 基金会赞助）
 
@@ -380,7 +380,7 @@ x86 `GENERIC` 和 `MINIMAL` 内核配置中已删除了 VESA 参数。它仍然�
 
 NFS 现在支持在 VNET jail 中运行 NFS 服务器，包括[ nfsd(8)  ](https://man.freebsd.org/cgi/man.cgi?query=nfsd&sektion=8&format=html)，[ nfsuserd(8)  ](https://man.freebsd.org/cgi/man.cgi?query=nfsuserd&sektion=8&format=html)，[ mountd(8)  ](https://man.freebsd.org/cgi/man.cgi?query=mountd&sektion=8&format=html)，[ gssd(8)  ](https://man.freebsd.org/cgi/man.cgi?query=gssd&sektion=8&format=html)和[ rpc.tlsservd(8)  ](https://man.freebsd.org/cgi/man.cgi?query=rpc.tlsservd&sektion=8&format=html)。VNET jail 必须位于自己的文件系统上，必须设置 jail 参数 `allow.nfsd`，而 `enforce_statfs` 不能设置为 `0`。不允许使用 UDP 和 pNFS 服务器配置。[ 7344856e3a6d ](https://cgit.freebsd.org/src/commit/?id=7344856e3a6d)和其他许多
 
-对于 NFSv4 挂载，NFS 客户端现在默认使用 NFS 服务器支持的 NFSv4 的最高小版本，而不是小版本 0。 挂载参数 `minorversion` 可用于覆盖此默认值。[ a145cf3f73c7 ](https://cgit.freebsd.org/src/commit/?id=a145cf3f73c7)
+对于 NFSv4 挂载，NFS 客户端现在默认使用 NFS 服务器支持的 NFSv4 的最高小版本，而不是小版本 0。挂载参数 `minorversion` 可用于覆盖此默认值。[ a145cf3f73c7 ](https://cgit.freebsd.org/src/commit/?id=a145cf3f73c7)
 
 FreeBSD NFS 客户端现在可以设置为使用 1M 字节的 I/O 大小，通过`tunablevfs.maxbcachebuf`；Linux NFS 客户端也可以进行 1M 字节的 I/O。需要增加`kern.ipc.maxsockbuf`的值。控制台消息将建议其设置。请注意，在[ nfsd(8)  ](https://man.freebsd.org/cgi/man.cgi?query=nfsd&sektion=8&format=html)未运行时，可以通过 sysctl `vfs.nfsd.srvmaxio`将 FreeBSD NFS 服务器的最大 I/O 大小增加到任何 2 的幂次方，最多为 1M 字节。[ ee29e6f31111 ](https://cgit.freebsd.org/src/commit/?id=ee29e6f31111)
 
@@ -388,7 +388,7 @@ FreeBSD NFS 客户端现在可以设置为使用 1M 字节的 I/O 大小，通�
 
 NFSv4.1/4.2 挂载使用挂载参数 `intr` 现在基本可用，尽管不是 100％正确，但也使用了挂载参数 `nolockd`。有关详细信息，请参见手册页 [ mount_nfs(8)  ](https://man.freebsd.org/cgi/man.cgi?query=mount_nfs&sektion=8&format=html)。[ 981ef32230b2 ](https://cgit.freebsd.org/src/commit/?id=981ef32230b2)​[ 33721eb991d8 ](https://cgit.freebsd.org/src/commit/?id=33721eb991d8)
 
-对于 Kerberized NFSv4.1/4.2 挂载，现在可以使用新的挂载参数 `syskrb5`。 NFSv4.1/4.2 的一个特性用于提供 `AUTH_SYS` 身份验证，因此在挂载时不需要 Kerberos 凭证。请参见[ mount_nfs(8)  ](https://man.freebsd.org/cgi/man.cgi?query=mount_nfs&sektion=8&format=html)。[ 896516e54a8c ](https://cgit.freebsd.org/src/commit/?id=896516e54a8c)
+对于 Kerberized NFSv4.1/4.2 挂载，现在可以使用新的挂载参数 `syskrb5`。NFSv4.1/4.2 的一个特性用于提供 `AUTH_SYS` 身份验证，因此在挂载时不需要 Kerberos 凭证。请参见[ mount_nfs(8)  ](https://man.freebsd.org/cgi/man.cgi?query=mount_nfs&sektion=8&format=html)。[ 896516e54a8c ](https://cgit.freebsd.org/src/commit/?id=896516e54a8c)
 
 在 NFS 服务器中，NFS 挂载协议中已添加对 `SP4_MACH_CRED` 的支持。该功能由 Linux NFSv4.1/4.2 客户端用于 Kerberized 挂载。以前通过回退处理，但现在直接支持。[ 330aa8acdec7 ](https://cgit.freebsd.org/src/commit/?id=330aa8acdec7)​[ ff2f1f691cdb ](https://cgit.freebsd.org/src/commit/?id=ff2f1f691cdb)
 
@@ -485,7 +485,7 @@ IPv4 已变更为不广播子网上的最小地址（主机 0），除非它配�
 
 本项目不再提供带有 14.0-RELEASE 的 armv6 架构支持。
 
-已删除对 MIPS 架构及相关硬件的支持。 MIPS 将在其生命周期内继续在 13-STABLE 分支上得到支持。
+已删除对 MIPS 架构及相关硬件的支持。MIPS 将在其生命周期内继续在 13-STABLE 分支上得到支持。
 
 已淘汰对 RISC-V 架构的软件浮点变体 riscv64sf 的支持。所有可用的硬件都受到常规 riscv64 架构的支持。
 

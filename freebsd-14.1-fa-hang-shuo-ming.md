@@ -82,7 +82,7 @@ Clang/LLVM 已升级至版本 18.1.5。[90a5e985e5f4](https://cgit.freebsd.org/s
 
 套件 sendmail(8) 已升级至版本 8.18.1，修复了漏洞 CVE-2023-51765。[58ae50f31e95](https://cgit.freebsd.org/src/commit/?id=58ae50f31e95)
 
-解析器 [unbound(8)](https://man.freebsd.org/cgi/man.cgi?query=unbound&sektion=8&format=html) 已升级至版本 1.20.0，并修复了 “DNSBomb” 漏洞（CVE-2024-33655）。[dcde37c4170b](https://cgit.freebsd.org/src/commit/?id=dcde37c4170b)
+解析器 [unbound(8)](https://man.freebsd.org/cgi/man.cgi?query=unbound&sektion=8&format=html) 已升级至版本 1.20.0，并修复了“DNSBomb”漏洞（CVE-2024-33655）。[dcde37c4170b](https://cgit.freebsd.org/src/commit/?id=dcde37c4170b)
 
 ### 运行时库和 API
 
@@ -90,7 +90,7 @@ Clang/LLVM 已升级至版本 18.1.5。[90a5e985e5f4](https://cgit.freebsd.org/s
 
 在 amd64 设备支持时，C 库中的许多字符串和内存操作，都能用 SIMD（单指令多数据）进行扩展以提高性能；请参阅 [simd(7)](https://man.freebsd.org/cgi/man.cgi?query=simd&sektion=7&format=html)。（由 FreeBSD 基金会赞助）
 
-对于受支持的平台, [math(3)](https://man.freebsd.org/cgi/man.cgi?query=math&sektion=3&format=html) 库中的 128 位 `tgammal` 函数实现已有更优实现。[8df6c930c151](https://cgit.freebsd.org/src/commit/?id=8df6c930c151)
+对于受支持的平台，[math(3)](https://man.freebsd.org/cgi/man.cgi?query=math&sektion=3&format=html) 库中的 128 位 `tgammal` 函数实现已有更优实现。[8df6c930c151](https://cgit.freebsd.org/src/commit/?id=8df6c930c151)
 
 ## 云端
 
@@ -148,7 +148,7 @@ OpenZFS 已升级至版本 2.2.4. [78c9d8f1ce65](https://cgit.freebsd.org/src/co
 
 ### 引导加载程序变更
 
-现在 [loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html) 会在读取其他配置文件后，读取变量 `local_loader_conf_files` 中列出的本地配置文件， 默认为 `/boot/loader.conf.local`。[a25531db0fc2](https://cgit.freebsd.org/src/commit/?id=a25531db0fc2)
+现在 [loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html) 会在读取其他配置文件后，读取变量 `local_loader_conf_files` 中列出的本地配置文件，默认为 `/boot/loader.conf.local`。[a25531db0fc2](https://cgit.freebsd.org/src/commit/?id=a25531db0fc2)
 
 现在可以配置 [loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html)，以便根据 SMBIOS 中的变量 planar maker、planar product、system product 和 uboot m_product 读取特定的配置文件。目前，最好的文档是 git 提交信息，[3eb3a802a31b](https://cgit.freebsd.org/src/commit/?id=3eb3a802a31b)。
 
@@ -188,7 +188,7 @@ netgraph 模块 ng_ipfw(4) 不再将 cookie 截断为 16 位，可使用完整�
 
 ## 后续 FreeBSD 版本发行的一般注意事项
 
-预计 FreeBSD 15.0 不会支持除 armv7 以外的 32 位平台。 armv6、i386 和 powerpc 平台已弃用并将被移除。 64 位系统仍可运行旧款 32 位二进制文件。
+预计 FreeBSD 15.0 不会支持除 armv7 以外的 32 位平台。armv6、i386 和 powerpc 平台已弃用并将被移除。64 位系统仍可运行旧款 32 位二进制文件。
 
 预计我们将在 FreeBSD 15.0 及 stable/15 中，把 armv7 作为第二级架构。然而，我们也预计可能会在 FreeBSD 16.0 中移除 armv7。我们将在发行 15.0 时提供 armv7 在 15.x 和 16.x 中状态的相关更新。
 
