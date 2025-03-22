@@ -14,7 +14,7 @@ FreeBSD 13.3-RELEASE 的发布说明包含了对 13-STABLE 开发主线中的 Fr
 
 本文档所适用的 RELEASE 版本代表了 13-STABLE 开发分支中的一个节点，位于 13.2-RELEASE 和后续的 13.4-RELEASE 之间。有关该分支上预构建二进制发行版的信息，请参见 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/)。
 
-此 FreeBSD 13.3-RELEASE 版本是 RELEASE 分行版。它可以在 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 和任何镜像站点找到。有关获取此版本或其他版本的更多信息，请参见 [FreeBSD 手册](https://docs.freebsd.org/en/books/handbook//) 中的附录[获取 FreeBSD](https://docs.freebsd.org/en/books/handbook//mirrors)。
+此 FreeBSD 13.3-RELEASE 版本是 RELEASE 分行版。它可以在 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 和任何镜像站点找到。有关获取此版本或其他版本的更多信息，请参见 [FreeBSD 手册](https://docs.freebsd.org/en/books/handbook//) 中的附录 [获取 FreeBSD](https://docs.freebsd.org/en/books/handbook//mirrors)。
 
 在安装 FreeBSD 之前，建议所有用户都先查阅下发行勘误文档。勘误文档会根据发布周期结束和发布后发现的“最后时刻”信息进行更新，通常包含已知的 bug、安全通告以及文档的更正。可以在 FreeBSD 网站上找到最新的 FreeBSD 13.3-RELEASE 勘误文档。
 
