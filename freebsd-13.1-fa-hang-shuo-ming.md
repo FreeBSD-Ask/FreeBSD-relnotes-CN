@@ -32,7 +32,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 
 > 在尝试升级 FreeBSD 之前，务必备份 **所有** 数据和配置文件。
 
->升级后，sshd（来自 OpenSSH 8.8p1）在重新启动之前不会接受新的连接。在安装新用户空间后，要么按照源代码升级程序的要求重启系统，要么执行 `service sshd restart` 来重启 `sshd` 服务。 
+>升级后，sshd（来自 OpenSSH 8.8p1）在重新启动之前不会接受新的连接。在安装新用户空间后，要么按照源代码升级程序的要求重启系统，要么执行 `service sshd restart` 来重启 `sshd` 服务。
 
 ## 用户空间
 
@@ -190,7 +190,7 @@ ZFS 已升级至 OpenZFS 2.1.4 版本。OpenZFS 的发行说明可参阅 [https:
 ### 引导加载程序的变更
 
 - **UEFI 引导改进（amd64）**：  
-  针对 amd64 架构改进了 UEFI 引导。加载器会检测所加载的内核是否支持原位暂存区（非复制模式）。默认设置为 `copy_staging auto`。用户可以通过手动覆盖自动检测，例如：设置 `copy_staging enable` 时，加载器会无条件将暂存区复制到 2M 地址，无论内核是否支持。此外，扩展暂存区的代码更为稳健，用户无需手动调整和重新编译加载器即可完成扩展。（由 [ FreeBSD 基金会](https://www.freebsdfoundation.org/) 赞助）
+  针对 amd64 架构改进了 UEFI 引导。加载器会检测所加载的内核是否支持原位暂存区（非复制模式）。默认设置为 `copy_staging auto`。用户可以通过手动覆盖自动检测，例如：设置 `copy_staging enable` 时，加载器会无条件将暂存区复制到 2M 地址，无论内核是否支持。此外，扩展暂存区的代码更为稳健，用户无需手动调整和重新编译加载器即可完成扩展。（由 [FreeBSD 基金会](https://www.freebsdfoundation.org/) 赞助）
 
 - **修复 `boot1` 和 `loader` 在 powerpc64le 架构上的问题**：[8a62b07bce7](https://cgit.freebsd.org/src/commit/?id=8a62b07bce7)
 
@@ -231,4 +231,4 @@ ZFS 已升级至 OpenZFS 2.1.4 版本。OpenZFS 的发行说明可参阅 [https:
 
 这预计将是 i386 架构中默认 `CPUTYPE` 的最后一次升级。
 
->此变更不影响 FreeBSD 12.x 系列版本。 
+>此变更不影响 FreeBSD 12.x 系列版本。

@@ -132,7 +132,7 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 - 驱动 [ig4(4)](https://man.freebsd.org/cgi/man.cgi?query=ig4&sektion=4&format=html) 新增了对 Meteor Lake 的支持。[56f0fc0011c2](https://cgit.freebsd.org/src/commit/?id=56f0fc0011c2)
 - 一款支持部分 Realtek 芯片组的新无线驱动已可用：[rtw89(4)](https://man.freebsd.org/cgi/man.cgi?query=rtw89&sektion=4&format=html)。[a2d1e07f6451](https://cgit.freebsd.org/src/commit/?id=a2d1e07f6451)（由 FreeBSD 基金会赞助）
 - 对 Realtek 8156/8156B 的支持已从 [cdce(4)](https://man.freebsd.org/cgi/man.cgi?query=cdce&sektion=4&format=html) 迁移至 [ure(4)](https://man.freebsd.org/cgi/man.cgi?query=ure&sektion=4&format=html)，以提升性能和可靠性。[630077a84186](https://cgit.freebsd.org/src/commit/?id=630077a84186)（由 FreeBSD 基金会赞助）
-- 增加了对 ACPI GPIO _AEI 对象的支持。[1db6ffb2a482](https://cgit.freebsd.org/src/commit/?id=1db6ffb2a482)（由亚马逊赞助） 
+- 增加了对 ACPI GPIO _AEI 对象的支持。[1db6ffb2a482](https://cgit.freebsd.org/src/commit/?id=1db6ffb2a482)（由亚马逊赞助）
 - 已在所有架构上启用 [nvme(4)](https://man.freebsd.org/cgi/man.cgi?query=nvme&sektion=4&format=html) 和 [nvmecontrol(8)](https://man.freebsd.org/cgi/man.cgi?query=nvmecontrol&sektion=8&format=html)。[24687a65dd7f](https://cgit.freebsd.org/src/commit/?id=24687a65dd7f)，[aba2d7f89dcf](https://cgit.freebsd.org/src/commit/?id=aba2d7f89dcf)（由 Chelsio Communications 和奈飞赞助）  
 
 
@@ -180,7 +180,7 @@ BIOS 引导加载程序重新添加了对 gzip 和 bzip2 的支持，但默认�
 ### 一般网络
 
 - 为驱动 [igc(4)](https://man.freebsd.org/cgi/man.cgi?query=igc&sektion=4&format=html) 新增了 AIM（Adaptive Interrupt Moderation，自适应中断调节/中断裁决）支持。[472a0ccf847a](https://cgit.freebsd.org/src/commit/?id=472a0ccf847a)（由 Rubicon Communications, LLC ("Netgate") 和 BBOX.io 赞助）  
-- 此功能也已添加到了驱动程序 [lem(4)](https://man.freebsd.org/cgi/man.cgi?query=lem&sektion=4&format=html)、[em(4)](https://man.freebsd.org/cgi/man.cgi?query=em&sektion=4&format=html) 和 [igb(4)](https://man.freebsd.org/cgi/man.cgi?query=igb&sektion=4&format=html) 中。FreeBSD 12.0 中引入的 UDP 性能严重下降问题（包括基于 UDP 的 NFS）预计已通过此变更得到修复。。[49f12d5b38f6](https://cgit.freebsd.org/src/commit/?id=49f12d5b38f6)（由 Rubicon Communications, LLC ("Netgate") 和 BBOX.io 赞助） 
+- 此功能也已添加到了驱动程序 [lem(4)](https://man.freebsd.org/cgi/man.cgi?query=lem&sektion=4&format=html)、[em(4)](https://man.freebsd.org/cgi/man.cgi?query=em&sektion=4&format=html) 和 [igb(4)](https://man.freebsd.org/cgi/man.cgi?query=igb&sektion=4&format=html) 中。FreeBSD 12.0 中引入的 UDP 性能严重下降问题（包括基于 UDP 的 NFS）预计已通过此变更得到修复。。[49f12d5b38f6](https://cgit.freebsd.org/src/commit/?id=49f12d5b38f6)（由 Rubicon Communications, LLC ("Netgate") 和 BBOX.io 赞助）
 
 ### 无线网络
 

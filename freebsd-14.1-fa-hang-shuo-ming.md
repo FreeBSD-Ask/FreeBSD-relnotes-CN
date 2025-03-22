@@ -112,7 +112,7 @@ powerpc 已实现例程 `fpu_kern_enter` 和 `fpu_kern_leave`，能在使用浮�
 
 ### 设备驱动程序
 
-Intel E800 系列（[ice(4)](https://man.freebsd.org/cgi/man.cgi?query=ice&sektion=4&format=html) 以太网网络控制器）已有驱动程序，可支持 100 Gb/s 速率。该驱动程序已升级至版本 1.39.13-k.[ 71d104536b51](https://cgit.freebsd.org/src/commit/?id=71d104536b51) [f6de0a7c94e9](https://cgit.freebsd.org/src/commit/?id=f6de0a7c94e9)（由英特尔公司赞助）。
+Intel E800 系列（[ice(4)](https://man.freebsd.org/cgi/man.cgi?query=ice&sektion=4&format=html) 以太网网络控制器）已有驱动程序，可支持 100 Gb/s 速率。该驱动程序已升级至版本 1.39.13-k.[71d104536b51](https://cgit.freebsd.org/src/commit/?id=71d104536b51) [f6de0a7c94e9](https://cgit.freebsd.org/src/commit/?id=f6de0a7c94e9)（由英特尔公司赞助）。
 
 英特尔 WiFi 设备的 [iwlwifi(4)](https://man.freebsd.org/cgi/man.cgi?query=iwlwifi&sektion=4&format=html) 驱动程序已进行了许多稳定性改进。(由 FreeBSD 基金会赞助)
 
@@ -176,7 +176,7 @@ netgraph 模块 ng_ipfw(4) 不再将 cookie 截断为 16 位，可使用完整�
 
 本节涉及了物理机、虚拟化环境的一般硬件支持，以及不兼容于本文档其他部分的硬件变更和更新。
 
-请查看 14.1-RELEASE[ 硬件支持列表](https://www.freebsd.org/releases/14.1R/hardware)，以及受支持的 CPU [架构完整列表页](https://www.freebsd.org/platforms/)。
+请查看 14.1-RELEASE[硬件支持列表](https://www.freebsd.org/releases/14.1R/hardware)，以及受支持的 CPU [架构完整列表页](https://www.freebsd.org/platforms/)。
 
 ## 文档
 
