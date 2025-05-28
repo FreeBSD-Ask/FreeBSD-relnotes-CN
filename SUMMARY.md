@@ -2,6 +2,7 @@
 
 * [FreeBSD 中文版发行说明](README.md)
 * [编辑日志](CHANGELOG.md)
+* [FreeBSD 14.3-RELEASE 发行说明（2025 年 6 月 10 日）](14.3.md)
 * [FreeBSD 14.2-RELEASE 发行说明（2024 年 12 月 3 日）](freebsd-14.2.md)
 * [FreeBSD 14.1-RELEASE 发行说明（2024 年 6 月 4 日）](freebsd-14.1-fa-hang-shuo-ming.md)
 * [FreeBSD 14.0-RELEASE 发行说明（2023 年 11 月 20 日）](freebsd-14.0-fa-hang-shuo-ming.md)
