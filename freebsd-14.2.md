@@ -190,7 +190,7 @@ LinuxKPI（尤其是针对 802.11）的功能已增强（如 [iwlwifi(4)](https:
 
 本节介绍了对物理设备、虚拟化环境和硬件的一般支持，以及不属于其他章节的硬件更新。
 
-请查看 [14.2-RELEASE 硬件支持列表](https://www.freebsd.org/releases/14.2R/hardware)以及[平台页面](https://www.freebsd.org/platforms/)以了解完整的支持 CPU 架构列表。
+请查看 [14.2-RELEASE 硬件支持列表](https://www.freebsd.org/releases/14.2R/hardware) 以及 [平台页面](https://www.freebsd.org/platforms/) 以了解完整的支持 CPU 架构列表。
 
 
 ### 处理器支持
