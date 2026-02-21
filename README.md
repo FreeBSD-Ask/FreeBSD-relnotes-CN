@@ -1,5 +1,11 @@
 # FreeBSD 中文版发行说明
 
+>**技巧**
+>
+>那些关注实时开发状态或使用 CURRENT 的用户应该关注 [freebsd-src/UPDATING](https://github.com/freebsd/freebsd-src/blob/main/UPDATING) 及 [freebsd-src/RELNOTES](https://github.com/freebsd/freebsd-src/blob/main/RELNOTES)。
+>
+>否则仅建议你使用在生命周期内最新的 RELEASE 版本。
+
 >**警告**
 >
 >除已校对部分外，本项目目前翻译错漏百出，不适合用于生产。但译者已经尽力修正。
