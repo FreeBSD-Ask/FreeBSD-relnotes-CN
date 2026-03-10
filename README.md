@@ -26,8 +26,6 @@
 
 | 日期           | 事件        | 信息 |
 | :---------------- | :--------------: | :-------------: |
-| 2025 年 12 月  | FreeBSD 15.0 |     [参见此处](https://www.freebsd.org/releases/15.0R/schedule/)         |
-| 2026 年 3 月     | FreeBSD 14.4 |    [参见此处](https://www.freebsd.org/releases/14.4R/schedule/)        |
 | 2026 年 6 月      | FreeBSD 15.1 |             |
 | 2026 年 9 月 | FreeBSD 14.5 |             |
 | 2026 年 12 月  | FreeBSD 15.2 |             |
