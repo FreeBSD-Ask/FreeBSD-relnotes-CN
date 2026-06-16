@@ -99,7 +99,7 @@ FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 Fr
 
 [head(1)](https://man.freebsd.org/cgi/man.cgi?query=head&sektion=1&format=html) 和 [tail(1)](https://man.freebsd.org/cgi/man.cgi?query=tail&sektion=1&format=html) 程序现在一致地支持参数 `-q`（安静）和 `-v`（详细）。数字参数现在可以使用 [expand_number(3)](https://man.freebsd.org/cgi/man.cgi?query=expand_number&sektion=3&format=html) 支持的 SI 后缀。[585762c3733f](https://cgit.freebsd.org/src/commit/?id=585762c3733f)
 
-现在可以使用 LLVM 提供的工具 [objdump(1)](https://man.freebsd.org/cgi/man.cgi?query=objdump&sektion=1&format=html)。某些 LLVM objdump 参数的输出格式与 GNU objdump 不同；可以使用 [readelf(1)](https://man.freebsd.org/cgi/man.cgi?query=readelf&sektion=1&format=html) 检查 ELF 文件，并且可以通过 Port devel/binutils 和二进制包安装 GNU objdump。
+LLVM 提供的 [objdump(1)](https://man.freebsd.org/cgi/man.cgi?query=objdump&sektion=1&format=html) 工具现已可用。某些 LLVM objdump 参数的输出格式与 GNU objdump 不同；可以使用 [readelf(1)](https://man.freebsd.org/cgi/man.cgi?query=readelf&sektion=1&format=html) 检查 ELF 文件，并且可以通过 Port devel/binutils 和二进制包安装 GNU objdump。
 
 [tftpd(8)](https://man.freebsd.org/cgi/man.cgi?query=tftpd&sektion=8&format=html) 服务器现在可以配置为允许在 chroot 环境中写入非世界可写的文件，使用新的 `-S` 参数。[b71dde1aeba2](https://cgit.freebsd.org/src/commit/?id=b71dde1aeba2)
 
