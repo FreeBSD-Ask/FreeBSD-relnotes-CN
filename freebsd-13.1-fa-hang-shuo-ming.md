@@ -123,13 +123,13 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 
 修改了 CAM 库以在解析设备名称之前使用 [realpath(3)](https://man.freebsd.org/cgi/man.cgi?query=realpath&sektion=3&format=html)，从而允许诸如 [camcontrol(8)](https://man.freebsd.org/cgi/man.cgi?query=camcontrol&sektion=8&format=html) 和 [smartctl(8)](https://man.freebsd.org/cgi/man.cgi?query=smartctl&sektion=8&format=html) 之类的工具在使用符号链接时更加友好。[e32acf95ea25](https://cgit.freebsd.org/src/commit/?id=e32acf95ea25)
 
-通过在程序名称以 `sum` 结尾时让相应的 BSD 程序运行 `-r` 选项，添加了兼容 Linux 的 [md5sum(1)](https://man.freebsd.org/cgi/man.cgi?query=md5sum&sektion=1&format=html) 和类似的消息摘要程序。[c0d5665be0dc](https://cgit.freebsd.org/src/commit/?id=c0d5665be0dc)（由Netflix赞助）
+通过在程序名称以 `sum` 结尾时让相应的 BSD 程序运行 `-r` 选项，添加了兼容 Linux 的 [md5sum(1)](https://man.freebsd.org/cgi/man.cgi?query=md5sum&sektion=1&format=html) 和类似的消息摘要程序。[c0d5665be0dc](https://cgit.freebsd.org/src/commit/?id=c0d5665be0dc)（由 Netflix 赞助）
 
 [svnlite(1)](https://man.freebsd.org/cgi/man.cgi?query=svnlite&sektion=1&format=html) 默认在构建中禁用。[a4f99b3c2384](https://cgit.freebsd.org/src/commit/?id=a4f99b3c2384)
 
 [mpsutil(8)](https://man.freebsd.org/cgi/man.cgi?query=mpsutil&sektion=8&format=html) 扩展以显示适配器信息并控制 NCQ。[395bc3598b47](https://cgit.freebsd.org/src/commit/?id=395bc3598b47)
 
-修复了使用 [camcontrol(8)](https://man.freebsd.org/cgi/man.cgi?query=camcontrol&sektion=8&format=html) 下载固件后设备出现的问题，方法是在下载固件后强制重新扫描 LUN。[327da43602cc](https://cgit.freebsd.org/src/commit/?id=327da43602cc)（由Netflix赞助）
+修复了使用 [camcontrol(8)](https://man.freebsd.org/cgi/man.cgi?query=camcontrol&sektion=8&format=html) 下载固件后设备出现的问题，方法是在下载固件后强制重新扫描 LUN。[327da43602cc](https://cgit.freebsd.org/src/commit/?id=327da43602cc)（由 Netflix 赞助）
 
 ### 第三方软件
 
@@ -274,7 +274,7 @@ ZFS 已升级至 OpenZFS 2.1.4 版本。OpenZFS 的发行说明可参阅 [https:
 - **IPv4 子网最低地址的处理变更**：
   IPv4（子）网的最低地址（主机 0）的处理方式发生了变化，只有在该地址被设置为广播地址时，才会将数据包作为广播发送。这一变更使最低地址可用于主机。如果需要恢复旧行为，可以通过 sysctl 选项 `net.inet.ip.broadcast_lowest` 完成。背景信息参见 [https://datatracker.ietf.org/doc/draft-schoen-intarea-unicast-lowest-address/](https://datatracker.ietf.org/doc/draft-schoen-intarea-unicast-lowest-address/)。[3ee882bf21af](https://cgit.freebsd.org/src/commit/?id=3ee882bf21af)
 
-## 关于后续  FreeBSD 版本的说明
+## 关于后续 FreeBSD 版本的一般说明
 
 暂无具体变更内容。
 
@@ -284,11 +284,11 @@ ZFS 已升级至 OpenZFS 2.1.4 版本。OpenZFS 的发行说明可参阅 [https:
 
 这意味着默认生成的二进制文件将需要支持 686 级别的 CPU，包括但不限于由 FreeBSD 发布工程团队提供的二进制文件。尽管 FreeBSD 13.0 仍将支持较旧的 CPU，但需要此功能的用户需自行构建其专属版本以获得官方支持。
 
-由于 i486 和 i586 CPU 的主要应用通常在嵌入式市场，普通终端用户受此变更的影响预计会非常有限。新硬件中这些类型的 CPU 早已不常见，而大部分现有系统的硬件也接近使用寿命的尾声。
+由于 i486 和 i586 CPU 的主要应用通常在嵌入式市场，普通终端用户受此变更的影响预计会非常有限。新硬件中这些类型的 CPU 早已不常见，而从统计数据来看，大部分现有系统的硬件已接近退役年限。
 
-作出这一变更考虑了多个因素。例如，i486 不支持 64 位原子操作（atomics），虽然内核可以模拟这些操作，但在用户态（userland）中无法实现。此外，32 位 amd64 库自开始以来便已采用 i686。
+作出这一变更考虑了多个因素。例如，i486 不支持 64 位原子操作，虽然内核可以模拟这些操作，但在用户态中无法实现。此外，32 位 amd64 库自开始以来便已采用 i686。
 
-大多数 32 位测试由开发者通过在 64 位硬件上使用内核中的选项 `COMPAT_FREEBSD32` 和 lib32 库完成。此变更可提供更好的覆盖范围和用户体验，同时符合大多数 Linux® 发行版的长期做法。
+大多数 32 位测试由开发者在 64 位硬件上使用 lib32 库并配合内核中的 `COMPAT_FREEBSD32` 选项完成。此变更可提供更好的覆盖范围和用户体验，同时符合大多数 Linux® 发行版的长期做法。
 
 这预计将是 i386 架构中默认 `CPUTYPE` 的最后一次升级。
 

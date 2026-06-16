@@ -1,31 +1,31 @@
 import urllib.request
+import json
+import base64
 
-# Try fetching the page again - it might have been updated
-url = 'https://www.freebsd.org/releases/15.1R/relnotes/'
+# Get the latest version of the 15.1 relnotes.adoc file from GitHub
+url = 'https://api.github.com/repos/freebsd/freebsd-doc/contents/website/content/en/releases/15.1R/relnotes.adoc'
 req = urllib.request.Request(url, headers={
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-    'Cache-Control': 'no-cache',
-    'Pragma': 'no-cache'
+    'User-Agent': 'Mozilla/5.0',
+    'Accept': 'application/vnd.github.v3+json'
 })
 with urllib.request.urlopen(req, timeout=30) as resp:
-    content = resp.read().decode('utf-8')
+    data = json.loads(resp.read().decode('utf-8'))
 
-# Search for the sections
-import re
+content = base64.b64decode(data['content']).decode('utf-8')
+lines = content.splitlines()
 
-# Find all h2 headings
-h2_pattern = re.compile(r'<h2[^>]*>(.*?)</h2>', re.DOTALL)
-for m in h2_pattern.finditer(content):
-    clean = re.sub(r'<[^>]+>', '', m.group(1)).strip()
-    print(f'h2: {clean}')
+print(f'Total lines: {len(lines)}')
+print(f'SHA: {data["sha"]}')
 
+# Search for Ports and Future sections
+for i, line in enumerate(lines):
+    if '[[ports]]' in line or 'Ports Collection' in line:
+        print(f'Line {i+1}: {line}')
+    if '[[future-releases]]' in line or 'Future FreeBSD' in line:
+        print(f'Line {i+1}: {line}')
+
+# Print the last 20 lines
 print()
-
-# Search specifically for "Ports" and "Future"
-for keyword in ['Ports Collection', 'ports', 'future-releases', 'Future FreeBSD', 'Packaging Changes']:
-    idx = content.find(keyword)
-    if idx != -1:
-        print(f'Found "{keyword}" at index {idx}')
-        print(f'  Context: ...{content[max(0,idx-100):idx+200]}...')
-    else:
-        print(f'NOT FOUND: "{keyword}"')
+print('--- Last 20 lines ---')
+for line in lines[-20:]:
+    print(line)
