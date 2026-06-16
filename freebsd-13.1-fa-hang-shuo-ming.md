@@ -26,7 +26,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 
 通过 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具，可以在不同 RELEASE 版本之间（包括各安全分支的快照版本）进行二进制升级。该工具将更新未修改的用户空间工具，以及官方 FreeBSD 发行版中包含的未修改的 GENERIC 内核。使用 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具要求待升级的主机具备互联网连接。
 
-基于源代码的升级（通过重新编译 FreeBSD 基本系统的源代码进行升级）也受到支持，具体请按照 `/usr/src/UPDATING` 中的说明操作。
+基于源代码的升级（通过重新编译 FreeBSD 基本系统的源代码进行升级）也受到支持，具体请按照 **/usr/src/UPDATING** 中的说明操作。
 
 对于所有 powerpc 架构的用户，在成功安装内核和世界后，需要手动运行 `kldxref /boot/kernel`。
 
@@ -103,7 +103,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 
 ### 用户空间配置变更
 
-参数 `-i` 现在默认添加了到 `/etc/defaults/rc.conf` 中的 [rtsol(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsol&sektion=8&format=html) 和 [rtsold(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsold&sektion=8&format=html)。变更详情见 [a0fc5094bf4c](https://cgit.freebsd.org/src/commit/?id=a0fc5094bf4c)（由 [https://www.patreon.com/cperciva](https://www.patreon.com/cperciva) 赞助）。
+参数 `-i` 现在默认添加了到 **/etc/defaults/rc.conf** 中的 [rtsol(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsol&sektion=8&format=html) 和 [rtsold(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsold&sektion=8&format=html)。变更详情见 [a0fc5094bf4c](https://cgit.freebsd.org/src/commit/?id=a0fc5094bf4c)（由 [https://www.patreon.com/cperciva](https://www.patreon.com/cperciva) 赞助）。
 
 ### 用户空间应用程序变更
 
@@ -263,7 +263,7 @@ ZFS 已升级至 OpenZFS 2.1.4 版本。OpenZFS 的发行说明可参阅 [https:
   EC2 镜像现在默认使用 UEFI 引导而非传统的 BIOS 引导。不过，基于 Xen 的 EC2 实例或 `bare metal` EC2 实例仍不支持 UEFI。[65f22ccf8247](https://cgit.freebsd.org/src/commit/?id=65f22ccf8247)（由 [https://www.patreon.com/cperciva](https://www.patreon.com/cperciva) 赞助）
 
 - **支持在 AWS Systems Manager 参数存储中记录 EC2 AMI ID**：
-  FreeBSD 在 AWS Systems Manager 参数存储中使用公共前缀 `/aws/service/freebsd`，生成类似 `/aws/service/freebsd/amd64/base/ufs/13.1/RELEASE` 的参数名称。[242d1c32e42c](https://cgit.freebsd.org/src/commit/?id=242d1c32e42c)（由 [https://www.patreon.com/cperciva](https://www.patreon.com/cperciva) 赞助）
+  FreeBSD 在 AWS Systems Manager 参数存储中使用公共前缀 **/aws/service/freebsd**，生成类似 **/aws/service/freebsd/amd64/base/ufs/13.1/RELEASE** 的参数名称。[242d1c32e42c](https://cgit.freebsd.org/src/commit/?id=242d1c32e42c)（由 [https://www.patreon.com/cperciva](https://www.patreon.com/cperciva) 赞助）
 
 ## 网络
 

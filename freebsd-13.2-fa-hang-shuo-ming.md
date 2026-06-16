@@ -26,13 +26,13 @@ FreeBSD 13.2-RELEASE 的发布说明包含了在 13-STABLE 开发线上对 FreeB
 
 使用 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具支持在 RELEASE 版本之间（以及各种安全分支的快照）进行二进制升级。 [二进制升级程序](https://docs.freebsd.org/en/books/handbook/cutting-edge/#freebsdupdate-upgrade) 会更新未修改的用户态工具以及作为官方 FreeBSD 发行版一部分分发的未修改的 GENERIC 内核。 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具要求被升级的主机必须具备互联网连接。
 
-支持基于源代码的升级（即从源代码重新编译 FreeBSD 基本系统）到先前版本，具体按 `/usr/src/UPDATING` 中的说明进行操作。
+支持基于源代码的升级（即从源代码重新编译 FreeBSD 基本系统）到先前版本，具体按 **/usr/src/UPDATING** 中的说明进行操作。
 
 所有 PowerPC 架构的用户，在成功安装内核和世界之后，必须手动运行 `kldxref /boot/kernel`。
 
 >升级 FreeBSD 之前应备份 **所有** 数据和配置文件。
 
->安装新用户态软件后，正在运行的守护进程仍来自先前版本。在通过第二次调用 `freebsd-update` 安装用户级组件，或通过使用 `installworld` 从源代码进行升级后，系统应重新启动以启动新软件。例如，旧版本的 `sshd` 在安装新版本的 `/usr/sbin/sshd` 后无法正确处理传入连接；重启后，新的 `sshd` 和其他守护进程将启动。
+>安装新用户态软件后，正在运行的守护进程仍来自先前版本。在通过第二次调用 `freebsd-update` 安装用户级组件，或通过使用 `installworld` 从源代码进行升级后，系统应重新启动以启动新软件。例如，旧版本的 `sshd` 在安装新版本的 **/usr/sbin/sshd** 后无法正确处理传入连接；重启后，新的 `sshd` 和其他守护进程将启动。
 
 ## 安全与勘误
 
@@ -92,7 +92,7 @@ FreeBSD 13.2-RELEASE 的发布说明包含了在 13-STABLE 开发线上对 FreeB
 
 新增了 RC 脚本 `zpoolreguid`，用于为一个或多个 zpool 分配新的 GUID，在虚拟化环境中共享数据集时非常有用。
 
-`hostid` 启动脚本现在将在没有 `/etc/hostid` 文件且硬件没有有效 UUID 时生成一个随机（版本 4）UUID。此外，如果没有 `/etc/machine-id` 文件，`hostid_save` 脚本将把一个压缩版的 hostid（没有连字符的版本）存储在 `/etc/machine-id` 中。此文件由 GLib 等库使用。[17333d92643d](https://cgit.freebsd.org/src/commit/?id=17333d92643d) [a379d5c5efb2](https://cgit.freebsd.org/src/commit/?id=a379d5c5efb2) [71d88613d129](https://cgit.freebsd.org/src/commit/?id=71d88613d129)
+`hostid` 启动脚本现在将在没有 **/etc/hostid** 文件且硬件没有有效 UUID 时生成一个随机（版本 4）UUID。此外，如果没有 **/etc/machine-id** 文件，`hostid_save` 脚本将把一个压缩版的 hostid（没有连字符的版本）存储在 **/etc/machine-id** 中。此文件由 GLib 等库使用。[17333d92643d](https://cgit.freebsd.org/src/commit/?id=17333d92643d) [a379d5c5efb2](https://cgit.freebsd.org/src/commit/?id=a379d5c5efb2) [71d88613d129](https://cgit.freebsd.org/src/commit/?id=71d88613d129)
 
 现在可以通过使用变量 `defaultrouter_fibN` 和 `ipv6_defaultrouter_fibN` [rc.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5&format=html) ，为除主路由表外的其他 FIB 添加默认路由。[c6ec1b441ad3](https://cgit.freebsd.org/src/commit/?id=c6ec1b441ad3)（由 ScaleEngine Inc. 赞助）
 
@@ -106,13 +106,13 @@ FreeBSD 13.2-RELEASE 的发布说明包含了在 13-STABLE 开发线上对 FreeB
 
 新增工具 [nproc(1)](https://man.freebsd.org/cgi/man.cgi?query=nproc&sektion=1&format=html) ，与同名的 Linux 程序兼容。
 
-工具 [timeout(1)](https://man.freebsd.org/cgi/man.cgi?query=timeout&sektion=1&format=html) 已从 `/usr/bin` 移动到 `/bin`。
+工具 [timeout(1)](https://man.freebsd.org/cgi/man.cgi?query=timeout&sektion=1&format=html) 已从 **/usr/bin** 移动到 **/bin**。
 
 工具 [pciconf(8)](https://man.freebsd.org/cgi/man.cgi?query=pciconf&sektion=8&format=html) 新增了对解码 ACS 扩展能力的支持。[dde4103a465b](https://cgit.freebsd.org/src/commit/?id=dde4103a465b)（由 Chelsio Communications 赞助）
 
 工具 [procstat(1)](https://man.freebsd.org/cgi/man.cgi?query=procstat&sektion=1&format=html) 现在可以通过新增的 `advlock` 命令打印关于文件的建议锁的信息。[f9daaf452a8a](https://cgit.freebsd.org/src/commit/?id=f9daaf452a8a)
 
-[pwd_mkdb(8)](https://man.freebsd.org/cgi/man.cgi?query=pwd_mkdb&sektion=8&format=html) 工具不再将 `/etc/master.passwd` 中的注释复制到 `/etc/passwd` 中。[3e955733117d](https://cgit.freebsd.org/src/commit/?id=3e955733117d)
+[pwd_mkdb(8)](https://man.freebsd.org/cgi/man.cgi?query=pwd_mkdb&sektion=8&format=html) 工具不再将 **/etc/master.passwd** 中的注释复制到 **/etc/passwd** 中。[3e955733117d](https://cgit.freebsd.org/src/commit/?id=3e955733117d)
 
 MSS clamping 在 [ppp(8)](https://man.freebsd.org/cgi/man.cgi?query=ppp&sektion=8&format=html) 中得到了改进。[301bff9bdd62](https://cgit.freebsd.org/src/commit/?id=301bff9bdd62)
 
@@ -182,7 +182,7 @@ Gavin Howard 的 `bc` 已升级到版本 6.2.4。
 
 已实现针对 Intel Alder Lake（第十二代）和 Raptor Lake（第十三代）混合 CPU 的硬件页面失效问题的解决方法。该漏洞可能导致 UFS 和 MSDOSFS 文件系统损坏，并可能导致其他内存损坏。通过此解决方法，小核（E 核心）会自动使用较慢的页面失效方法。[567cc4e6bfd9](https://cgit.freebsd.org/src/commit/?id=567cc4e6bfd9)（由 FreeBSD 基金会赞助）
 
-新增内核配置选项 `SPLIT_KERNEL_DEBUG`，用于控制将内核和模块的调试数据分割成独立的文件。该选项与选项 `WITHOUT_KERNEL_SYMBOLS` 相互作用，后者的操作方式与 13.0-RELEASE 和 13.1-RELEASE 中不同，但与早期版本相似；它现在仅控制调试数据的安装。默认情况下为 `WITH_KERNEL_SYMBOLS` 和 `WITH_SPLIT_KERNEL_DEBUG`，允许将不含调试数据的内核和模块安装在 /boot 中，将独立的调试文件安装在 `/usr/lib/debug` 中，这与 13.0-RELEASE 之前的版本相同。使用 `WITHOUT_KERNEL_SYMBOLS` 和 `WITH_SPLIT_KERNEL_DEBUG` 时，生成独立的调试文件，但不安装，类似于早期版本中使用 `WITHOUT_KERNEL_SYMBOLS` 的情况。最后，使用 `WITHOUT_KERNEL_SYMBOLS` 和 `WITHOUT_SPLIT_KERNEL_DEBUG` 时，将内核和模块与内置调试信息一起安装到 `/boot` 中，这与 13.1-RELEASE 中使用 `WITHOUT_KERNEL_SYMBOLS` 的情况相同。[0c4d13c521aa](https://cgit.freebsd.org/src/commit/?id=0c4d13c521aa)（由 FreeBSD 基金会赞助）
+新增内核配置选项 `SPLIT_KERNEL_DEBUG`，用于控制将内核和模块的调试数据分割成独立的文件。该选项与选项 `WITHOUT_KERNEL_SYMBOLS` 相互作用，后者的操作方式与 13.0-RELEASE 和 13.1-RELEASE 中不同，但与早期版本相似；它现在仅控制调试数据的安装。默认情况下为 `WITH_KERNEL_SYMBOLS` 和 `WITH_SPLIT_KERNEL_DEBUG`，允许将不含调试数据的内核和模块安装在 /boot 中，将独立的调试文件安装在 **/usr/lib/debug** 中，这与 13.0-RELEASE 之前的版本相同。使用 `WITHOUT_KERNEL_SYMBOLS` 和 `WITH_SPLIT_KERNEL_DEBUG` 时，生成独立的调试文件，但不安装，类似于早期版本中使用 `WITHOUT_KERNEL_SYMBOLS` 的情况。最后，使用 `WITHOUT_KERNEL_SYMBOLS` 和 `WITHOUT_SPLIT_KERNEL_DEBUG` 时，将内核和模块与内置调试信息一起安装到 **/boot** 中，这与 13.1-RELEASE 中使用 `WITHOUT_KERNEL_SYMBOLS` 的情况相同。[0c4d13c521aa](https://cgit.freebsd.org/src/commit/?id=0c4d13c521aa)（由 FreeBSD 基金会赞助）
 
 在 PowerPC 上，支持 pseries 的 ISA 3.0 中的 radix pmap。这应使得 pseries 在 POWER9 实例上显著加速，因为现在管理 pmap 所需的超调用更少。[c74c77531248](https://cgit.freebsd.org/src/commit/?id=c74c77531248)
 
@@ -190,7 +190,7 @@ Gavin Howard 的 `bc` 已升级到版本 6.2.4。
 
 为了提高 `stable` 分支的 ABI 兼容性，CPU 亲和性系统调用现在可以更宽容地处理比内核使用的 CPU 集合小的 CPU 集合。这将促进 `MAXCPU`（内核 CPU 集合的大小）增加。[72bc1e6806cc](https://cgit.freebsd.org/src/commit/?id=72bc1e6806cc)
 
-为保存 CPU 浮动点状态跨信号传递，64 位 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&format=html) ABI 增加了支持。[0b82c544de58](https://cgit.freebsd.org/src/commit/?id=0b82c544de58)，[20d601714206](https://cgit.freebsd.org/src/commit/?id=20d601714206)
+为保存 CPU 浮点状态跨信号传递，64 位 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&format=html) ABI 增加了支持。[0b82c544de58](https://cgit.freebsd.org/src/commit/?id=0b82c544de58)，[20d601714206](https://cgit.freebsd.org/src/commit/?id=20d601714206)
 
 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&format=html) ABI 中的 vDSO（虚拟动态共享对象）支持已基本完成。[a340b5b4bd48](https://cgit.freebsd.org/src/commit/?id=a340b5b4bd48)
 

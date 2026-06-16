@@ -107,7 +107,7 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 - `nuageinit` 启动脚本现在支持 OpenStack 网络配置。[ea310d18b222](https://cgit.freebsd.org/src/commit/?id=ea310d18b222)（由 OVHCloud 赞助）
 - FreeBSD 项目现在可发布符合 OCI 标准的容器镜像。[8a688fcc242e](https://cgit.freebsd.org/src/commit/?id=8a688fcc242e)
 - FreeBSD 项目现已发布 Oracle Cloud Infrastructure 镜像。更多信息请参见 [Oracle Cloud Infrastructure FreeBSD 列表](https://cloudmarketplace.oracle.com/marketplace/app/freebsd-release)。[77b296a2582b](https://cgit.freebsd.org/src/commit/?id=77b296a2582b)
-- Amazon EC2 云环境中的 `shutdown` 和 `reboot` API 现在可支持 arm64 实例。更新至 FreeBSD 14.2-RELEASE 的旧实例需要在 `/boot/loader.conf` 中设置 `debug.acpi.quirks="8"`。[28b881840df7](https://cgit.freebsd.org/src/commit/?id=28b881840df7)（由亚马逊赞助）
+- Amazon EC2 云环境中的 `shutdown` 和 `reboot` API 现在可支持 arm64 实例。更新至 FreeBSD 14.2-RELEASE 的旧实例需要在 **/boot/loader.conf** 中设置 `debug.acpi.quirks="8"`。[28b881840df7](https://cgit.freebsd.org/src/commit/?id=28b881840df7)（由亚马逊赞助）
 - FreeBSD 项目现在发布了“精简版（small）”的 EC2 镜像。精简版镜像在“基础版（base）”中移除了调试符号、测试、32 位库、LLDB 调试器、Amazon SSM Agent 和 AWS CLI。[953142d6baf3](https://cgit.freebsd.org/src/commit/?id=953142d6baf3)（由亚马逊赞助）
 
 ## 设备与驱动
@@ -211,7 +211,7 @@ FreeBSD 安装程序 [bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?query=b
 
 FreeBSD 项目计划在 FreeBSD 15.0 和 stable/15 中将 armv7 作为二级（Tier 2）架构继续支持。然而，项目方预计 armv7 可能会在 FreeBSD 16.0 中被删除。FreeBSD 项目将会在 15.0 发布时更新在 15.x 和 16.x RELEASE 中 armv7 的支持状态。
 
-通过选项 `COMPAT_FREEBSD32` 在 64 位平台上运行 32 位二进制文件的支持将至少延续到分支 stable/15 和 stable/16。此外，通过 `cc -m32` 编译单个 32 位应用程序的支持也将至少延续到分支 stable/15，该分支中将包含适当的头文件（`/usr/include`）和库（`/usr/lib32`）。
+通过选项 `COMPAT_FREEBSD32` 在 64 位平台上运行 32 位二进制文件的支持将至少延续到分支 stable/15 和 stable/16。此外，通过 `cc -m32` 编译单个 32 位应用程序的支持也将至少延续到分支 stable/15，该分支中将包含适当的头文件（**/usr/include**）和库（**/usr/lib32**）。
 
 自 FreeBSD 15.0 起，Ports 将不再支持被弃用的 32 位平台。Ports 后续版本将不再提供用于弃用的 32 位平台的二进制软件包，也不支持使用 Ports 构建这些平台的软件包。
 
