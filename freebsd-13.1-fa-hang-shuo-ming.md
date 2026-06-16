@@ -238,7 +238,7 @@ ZFS 已升级至 OpenZFS 2.1.4 版本。OpenZFS 的发行说明可参阅 [https:
 
 - NFSv4.1/4.2 的挂载选项 `nconnect` 已新增，用于指定挂载所使用的 TCP 连接数量（最多 16 个）。默认的第一个 TCP 连接将用于所有小型 RPC 消息，而可能包含大型 RPC 消息的操作（如 Read、Readdir、ReaddirPlus、Write）将在额外的 TCP 连接上以轮询方式发送。如果 NFS 客户端或服务器具有多个聚合的网络接口或支持多队列的网络接口，则此功能可以提高 NFS 的性能。[9ec7dbf46b0a](https://cgit.freebsd.org/src/commit/?id=9ec7dbf46b0a)
 
-- sysctl 配置项 `vfs.nfsd.srvmaxio` 已添加，用于将 NFS 服务器的最大 I/O 大小从 128KB 增加到任意 2 的幂值（最高 1MB）。该选项只能在 nfsd 线程未运行时设置，且通常需要将 `kern.ipc.maxsockbuf` 增加至控制台日志中建议的值。[9fb6e613373c](https://cgit.freebsd.org/src/commit/?id=9fb6e613373c)
+- 已添加 sysctl 配置项 `vfs.nfsd.srvmaxio`，用于将 NFS 服务器的最大 I/O 大小从 128KB 增加到任意 2 的幂值（最高 1MB）。该选项只能在 nfsd 线程未运行时设置，且通常需要将 `kern.ipc.maxsockbuf` 增加至控制台日志中建议的值。[9fb6e613373c](https://cgit.freebsd.org/src/commit/?id=9fb6e613373c)
 
 ### UFS 变更
 
