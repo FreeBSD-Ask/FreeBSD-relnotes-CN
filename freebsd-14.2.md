@@ -21,15 +21,15 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 
 一般的发行说明内容包括自 14.1-RELEASE 之后发布的安全公告、新增的驱动程序/硬件支持、新命令/参数、主要的错误修复/外部软件更新。还可能列出主要 Ports/软件包和发行工程实践的变更。显然，发行说明无法详尽列出两个 FreeBSD 版本之间所做的每项变更；本文档主要聚焦于安全公告、用户可见的变更和重大架构改进。
 
-### 从旧版 FreeBSD 更新
+## 从旧版 FreeBSD 更新
 
-使用工具 **freebsd-update(8)** 能在 RELEASE 版本（及各安全分支快照）间进行二进制更新。请参阅特定版本的更新程序，例如 FreeBSD 14.2-RELEASE 的更新信息，并在 FreeBSD 手册中查阅关于二进制更新的详细说明。此工具会更新未经修改的用户空间工具，以及在官方 FreeBSD RELEASE 分发的未经修改的 GENERIC 内核。工具 **freebsd-update(8)** 要求更新的主机能够连接互联网。
+使用工具 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 能在 RELEASE 版本（及各安全分支快照）间进行二进制更新。请参阅特定版本的更新程序，例如 [FreeBSD 14.2-RELEASE 更新信息](https://www.freebsd.org/releases/14.2R/installation/#upgrade-binary)，并在 FreeBSD 手册中查阅关于[二进制更新](https://docs.freebsd.org/en/books/handbook/cutting-edge/#freebsdupdate-upgrade)的详细说明。此工具会更新未经修改的用户空间工具，以及在官方 FreeBSD RELEASE 分发的未经修改的 GENERIC 内核。工具 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 要求更新的主机能够连接互联网。
 
 可以按照 **/usr/src/UPDATING** 中的说明从以前的版本进行基于源代码的更新（通过重新编译 FreeBSD 基本系统进行更新）。
 
-在更新 FreeBSD 之前，应先备份所有数据和配置文件。
+在更新 FreeBSD 之前，应先备份**所有**数据和配置文件。
 
-### 安全与勘误
+## 安全与勘误
 
 本节列出了自 14.1-RELEASE 以来发布的安全公告和勘误通知。
 
