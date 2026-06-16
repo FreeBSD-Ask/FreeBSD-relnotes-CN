@@ -6,7 +6,7 @@
 
 FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 FreeBSD 基本系统所做变更的总结。本文列出了自上次发布以来发布的相关安全通告，并介绍了 FreeBSD 内核和用户空间的重大变更。还简要说明了从先前版本升级的相关事项。
 
-## 简介
+## 引言
 
 本文档包含了 FreeBSD 13.3-RELEASE 的发行说明。它简述了 FreeBSD 最近添加、改变和删除的功能，还提供了一些从旧版本升级的注意事项。
 
@@ -22,7 +22,7 @@ FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 Fr
 
 典型的发行说明项目记录了自 13.2-RELEASE 以来发布的安全通告、新的驱动程序和硬件支持、新的命令和参数、主要的 bug 修复，及第三方的软件升级。它们还可能列出主要 Port/包的变更和发布工程实践。显然，发行说明无法列出 FreeBSD 在两个版本之间做出的每一个变更；本文档主要关注安全通告、用户可见的变更以及主要的架构改进。
 
-## 从以前的 FreeBSD 版本升级
+## 从旧版 FreeBSD 升级
 
 使用工具 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 能在 RELEASE 版本之间（以及各种安全分支的快照）进行二进制升级。有关升级的详细信息，请参阅发布特定的升级程序：[FreeBSD 13.3-RELEASE 升级信息](https://www.freebsd.org/releases/13.3R/installation/#upgrade-binary)，以及 FreeBSD 手册中的 [二进制升级程序](https://docs.freebsd.org/en/books/handbook/cutting-edge/#freebsdupdate-upgrade)。这将更新未修改的用户空间工具以及作为官方 FreeBSD 发行版一部分的未修改的 GENERIC 内核。 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具要求升级的主机必须具备互联网连接。
 
@@ -135,9 +135,9 @@ FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 Fr
 
 [intro(9)](https://man.freebsd.org/cgi/man.cgi?query=intro&sektion=9&format=html) 核心编程接口介绍已完全重写。[5a0c410787b8](https://cgit.freebsd.org/src/commit/?id=5a0c410787b8)（由 FreeBSD 基金会赞助）
 
-## 设备和驱动
+## 设备与驱动
 
-本节涉及自 13.2-RELEASE 以降设备和设备驱动的变更与新增。
+本节涉及自 13.2-RELEASE 以降设备与驱动的变更与新增。
 
 ### 设备驱动
 

@@ -1,16 +1,31 @@
+import urllib.request
+
+# Try fetching the page again - it might have been updated
+url = 'https://www.freebsd.org/releases/15.1R/relnotes/'
+req = urllib.request.Request(url, headers={
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+    'Cache-Control': 'no-cache',
+    'Pragma': 'no-cache'
+})
+with urllib.request.urlopen(req, timeout=30) as resp:
+    content = resp.read().decode('utf-8')
+
+# Search for the sections
 import re
 
-with open(r'C:\Users\ykla\AppData\Local\Temp\relnotes_15_1.html', 'r', encoding='utf-8') as f:
-    content = f.read()
-
-# Search for any mention of "Ports" near heading tags
-for m in re.finditer(r'<h[1-6][^>]*>.*?(?:[Pp]ort).*?</h[1-6]>', content, re.DOTALL):
-    print(f'Found at {m.start()}: {m.group()[:200]}')
+# Find all h2 headings
+h2_pattern = re.compile(r'<h2[^>]*>(.*?)</h2>', re.DOTALL)
+for m in h2_pattern.finditer(content):
+    clean = re.sub(r'<[^>]+>', '', m.group(1)).strip()
+    print(f'h2: {clean}')
 
 print()
-# Search for the section after "Man Pages"
-man_pages_idx = content.find('Man Pages')
-if man_pages_idx != -1:
-    print(f'"Man Pages" found at index {man_pages_idx}')
-    # Print the next 5000 chars after "Man Pages"
-    print(content[man_pages_idx:man_pages_idx+5000])
+
+# Search specifically for "Ports" and "Future"
+for keyword in ['Ports Collection', 'ports', 'future-releases', 'Future FreeBSD', 'Packaging Changes']:
+    idx = content.find(keyword)
+    if idx != -1:
+        print(f'Found "{keyword}" at index {idx}')
+        print(f'  Context: ...{content[max(0,idx-100):idx+200]}...')
+    else:
+        print(f'NOT FOUND: "{keyword}"')

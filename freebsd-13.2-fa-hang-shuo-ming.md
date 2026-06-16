@@ -4,9 +4,9 @@
 
 ## 摘要
 
-FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeBSD 基本系统所做变更的摘要。本文件列出了自上次发布以来发布的相关安全通告，以及对 FreeBSD 内核和用户态的重大变更。此外，还提供了有关升级的一些简要说明。
+FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeBSD 基本系统所做变更的摘要。本文件列出了自上次发布以来发布的相关安全通告，以及对 FreeBSD 内核和用户空间的重大变更。此外，还提供了有关升级的一些简要说明。
 
-## 介绍
+## 引言
 
 本文档包含 FreeBSD 13.2-RELEASE 的发行说明。它介绍了最近添加、变更或删除的 FreeBSD 特性，并提供了一些关于从之前版本升级的说明。
 
@@ -22,9 +22,9 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 典型的发行说明项包括 13.1-RELEASE 之后发布的安全通告、新的驱动程序或硬件支持、新命令或选项、重大错误修复或第三方软件升级。它们也可能列出对主要 Port/软件包或发布工程实践的变更。显然，发行说明无法列出两个版本之间对 FreeBSD 所做的每个变更；本文件主要关注安全通告、用户可见的变更以及重大架构改进。
 
-## 从先前版本升级 FreeBSD
+## 从旧版 FreeBSD 升级
 
-使用 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具支持在 RELEASE 版本之间（以及各种安全分支的快照）进行二进制升级。 [二进制升级程序](https://docs.freebsd.org/en/books/handbook/cutting-edge/#freebsdupdate-upgrade) 会更新未修改的用户态工具以及作为官方 FreeBSD 发行版一部分分发的未修改的 GENERIC 内核。 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具要求被升级的主机必须具备互联网连接。
+使用 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具支持在 RELEASE 版本之间（以及各种安全分支的快照）进行二进制升级。 [二进制升级程序](https://docs.freebsd.org/en/books/handbook/cutting-edge/#freebsdupdate-upgrade) 会更新未修改的用户空间工具以及作为官方 FreeBSD 发行版一部分分发的未修改的 GENERIC 内核。 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具要求被升级的主机必须具备互联网连接。
 
 支持基于源代码的升级（即从源代码重新编译 FreeBSD 基本系统）到先前版本，具体按 **/usr/src/UPDATING** 中的说明进行操作。
 
@@ -32,7 +32,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 >升级 FreeBSD 之前应备份 **所有** 数据和配置文件。
 
->安装新用户态软件后，正在运行的守护进程仍来自先前版本。在通过第二次调用 `freebsd-update` 安装用户级组件，或通过使用 `installworld` 从源代码升级后，系统应重新启动以启动新软件。例如，旧版本的 `sshd` 在安装新版本的 **/usr/sbin/sshd** 后无法正确处理传入连接；重启后，新的 `sshd` 和其他守护进程将启动。
+>安装新用户空间软件后，正在运行的守护进程仍来自先前版本。在通过第二次调用 `freebsd-update` 安装用户级组件，或通过使用 `installworld` 从源代码升级后，系统应重新启动以启动新软件。例如，旧版本的 `sshd` 在安装新版本的 **/usr/sbin/sshd** 后无法正确处理传入连接；重启后，新的 `sshd` 和其他守护进程将启动。
 
 ## 安全与勘误
 
@@ -80,11 +80,11 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 | [FreeBSD-EN-23:03.ena](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:03.ena.asc) | 2023 年 2 月 8 日 | ena 驱动在第 7 代 AWS 实例类型上重置后崩溃 |
 | [FreeBSD-EN-23:04.ixgbe](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:04.ixgbe.asc) | 2023 年 2 月 8 日 | ixgbe 对 82599ES 错误地报告输入错误 |
 
-## 用户态
+## 用户空间
 
-本节涉及对用户态应用程序、第三方软件和系统工具的变更和新增内容。
+本节涉及对用户空间应用程序、第三方软件和系统工具的变更和新增内容。
 
-### 用户态配置变更
+### 用户空间配置变更
 
 [growfs(7)](https://man.freebsd.org/cgi/man.cgi?query=growfs&sektion=7&format=html) 启动脚本现在将在扩展根文件系统时添加交换分区（如果可能），且如果之前未存在交换分区。这在使用原始映像安装到 SD 卡时尤其有用。新增了 [rc.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5&format=html) 变量 `growfs_swap_size`，可以根据需要控制交换分区的添加。详细信息请参见 [growfs(7)](https://man.freebsd.org/cgi/man.cgi?query=growfs&sektion=7&format=html)。
 
@@ -96,7 +96,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 现在可以通过使用变量 `defaultrouter_fibN` 和 `ipv6_defaultrouter_fibN` [rc.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5&format=html) ，为除主路由表外的其他 FIB 添加默认路由。[c6ec1b441ad3](https://cgit.freebsd.org/src/commit/?id=c6ec1b441ad3)（由 ScaleEngine Inc. 赞助）
 
-### 用户态应用程序变更
+### 用户空间应用程序变更
 
 工具 [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 新增了 virtio-input 设备仿真支持。这将用于将键盘/鼠标输入事件注入到客户机中。命令行语法为：`-s <slot>,virtio-input,/dev/input/eventX`。[6192776124c5](https://cgit.freebsd.org/src/commit/?id=6192776124c5)
 
@@ -196,11 +196,11 @@ Gavin Howard 的 `bc` 已升级到版本 6.2.4。
 
 arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&format=html) ABI 已与 amd64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&format=html) ABI 达到一致。[0b82c544de58](https://cgit.freebsd.org/src/commit/?id=0b82c544de58)，[a340b5b4bd48](https://cgit.freebsd.org/src/commit/?id=a340b5b4bd48)
 
-## 设备和驱动程序
+## 设备与驱动
 
-本节介绍了自 13.1-RELEASE 以来，设备和设备驱动程序的变更和新增内容。
+本节介绍了自 13.1-RELEASE 以来，设备与驱动的变更和新增内容。
 
-### 设备驱动程序
+### 设备驱动
 
 [em(4)](https://man.freebsd.org/cgi/man.cgi?query=em&sektion=4&format=html) 驱动程序现在可以正确支持新款芯片 82580 和 i350 上的完整接收缓冲区大小范围。[3f8306cf8e2d](https://cgit.freebsd.org/src/commit/?id=3f8306cf8e2d)
 
