@@ -268,11 +268,11 @@ TCP 和 SCTP 中有多个 bug 修复。
 
 ISA 声卡的驱动程序已弃用，并将在 FreeBSD 14.0 中移除。[d7620b6ec941](https://cgit.freebsd.org/src/commit/?id=d7620b6ec941)（由 FreeBSD 基金会赞助）
 
-已弃用工具 [mergemaster(8)](https://man.freebsd.org/cgi/man.cgi?query=mergemaster&sektion=8&format=html)，并将在 FreeBSD 14.0 中移除。它的替代工具是 [etcupdate(8)](https://man.freebsd.org/cgi/man.cgi?query=etcupdate&sektion=8&format=html)。[5fa16e3c50c5](https://cgit.freebsd.org/src/commit/?id=5fa16e3c50c5)（由 FreeBSD 基金会赞助）
+工具 [mergemaster(8)](https://man.freebsd.org/cgi/man.cgi?query=mergemaster&sektion=8&format=html) 已弃用，并将在 FreeBSD 14.0 中移除。它的替代工具是 [etcupdate(8)](https://man.freebsd.org/cgi/man.cgi?query=etcupdate&sektion=8&format=html)。[5fa16e3c50c5](https://cgit.freebsd.org/src/commit/?id=5fa16e3c50c5)（由 FreeBSD 基金会赞助）
 
-已弃用工具 [minigzip(1)](https://man.freebsd.org/cgi/man.cgi?query=minigzip&sektion=1&format=html)，并将在 FreeBSD 14.0 中移除。[84d3fc26e3a2](https://cgit.freebsd.org/src/commit/?id=84d3fc26e3a2)
+工具 [minigzip(1)](https://man.freebsd.org/cgi/man.cgi?query=minigzip&sektion=1&format=html) 已弃用，并将在 FreeBSD 14.0 中移除。[84d3fc26e3a2](https://cgit.freebsd.org/src/commit/?id=84d3fc26e3a2)
 
-在 netgraph 中，ATM 的剩余组件（NgATM）已弃用，并将在 FreeBSD 14.0 中移除。已移除对 ATM NIC 的支持。
+在 netgraph 中，ATM 的剩余组件（NgATM）已弃用，并将在 FreeBSD 14.0 中移除。对 ATM NIC 的支持已移除。
 
 已弃用 Telnet 守护进程 [telnetd(8)](https://man.freebsd.org/cgi/man.cgi?query=telnetd&sektion=8&format=html)，并将在 FreeBSD 14.0 中移除。Telnet 客户端不受影响。
 
