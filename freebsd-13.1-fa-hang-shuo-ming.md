@@ -14,7 +14,7 @@ FreeBSD 13.1-RELEASE 的发行说明总结了在 13-STABLE 开发分支中对 Fr
 
 本发行说明所涉的发行版，位于 13-STABLE 开发分支中 13.0-RELEASE 和未来 13.2-RELEASE 之间的某一节点。有关此分支上预构建的二进制发行版的信息，请访问 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/)。
 
-FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 或其任一镜像站下载。关于获取此版本（或其他版本）发行版的更多信息，请参阅 [FreeBSD 手册](https://docs.freebsd.org/en/books/handbook//mirrors) 中的 [获取 FreeBSD 附录](https://docs.freebsd.org/en/books/handbook//mirrors)。
+FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 或其任一镜像站下载。关于获取此版本（或其他版本）发行版的更多信息，请参阅 [FreeBSD 手册](https://docs.freebsd.org/en/books/handbook/mirrors) 中的 [获取 FreeBSD 附录](https://docs.freebsd.org/en/books/handbook/mirrors)。
 
 建议所有用户在安装 FreeBSD 之前，查阅发行版的勘误表。勘误表包含在发行周期后期或发行后发现的“最新信息”，通常包括已知错误、安全公告以及文档修订的相关内容。可在 FreeBSD 网站上找到 FreeBSD 13.1-RELEASE 的最新勘误表副本。
 
