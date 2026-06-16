@@ -20,7 +20,7 @@ FreeBSD 13.2-RELEASE 的发布说明包含了在 13-STABLE 开发线上对 FreeB
 
 本文档介绍了自 13.1-RELEASE 以来 FreeBSD 中最具用户可见性的新增或变更功能。一般来说，本文所述的变更是 13-STABLE 分支的特有变更，除非特别标记为已合并特性。
 
-典型的发布说明项包括发布后的安全通告、新的驱动程序或硬件支持、新命令或选项、重大错误修复或第三方软件升级。它们也可能列出对主要 Port/软件包或发布工程实践的变更。显然，发布说明无法列出两个版本之间对 FreeBSD 所做的每个变更；本文件主要关注安全通告、用户可见的变更以及重大架构改进。
+典型的发布说明项包括 13.1-RELEASE 之后发布的安全通告、新的驱动程序或硬件支持、新命令或选项、重大错误修复或第三方软件升级。它们也可能列出对主要 Port/软件包或发布工程实践的变更。显然，发布说明无法列出两个版本之间对 FreeBSD 所做的每个变更；本文件主要关注安全通告、用户可见的变更以及重大架构改进。
 
 ## 从先前版本升级 FreeBSD
 
@@ -43,7 +43,7 @@ FreeBSD 13.2-RELEASE 的发布说明包含了在 13-STABLE 开发线上对 FreeB
 | 通告 | 日期 | 主题 |
 | :--- | :--- | :--- |
 | [FreeBSD-SA-22:03.openssl](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:03.openssl.asc) | 2022 年 3 月 15 日 | OpenSSL 证书解析无限循环 |
-| [FreeBSD-SA-22:04.netmap](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:04.netmap.asc) | 2022 年 4 月 6 日 | netmap 中潜在的 jail 逃逸漏洞 |
+| [FreeBSD-SA-22:04.netmap](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:04.netmap.asc) | 2022 年 4 月 6 日 | netmap 中潜在的 Jail 逃逸漏洞 |
 | [FreeBSD-SA-22:05.bhyve](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:05.bhyve.asc) | 2022 年 4 月 6 日 | Bhyve e82545 设备仿真越界写入 |
 | [FreeBSD-SA-22:06.ioctl](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:06.ioctl.asc) | 2022 年 4 月 6 日 | mpr/mps/mpt 驱动 ioctl 堆越界写入 |
 | [FreeBSD-SA-22:07.wifi_meshid](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:07.wifi_meshid.asc) | 2022 年 4 月 6 日 | 802.11 堆缓冲区溢出 |
