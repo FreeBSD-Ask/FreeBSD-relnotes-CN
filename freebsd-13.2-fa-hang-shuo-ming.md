@@ -38,7 +38,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 本节列出了自 13.1-RELEASE 以来的各项安全通告和勘误通知。
 
-### 安全通告
+### 安全公告
 
 | 通告 | 日期 | 主题 |
 | :--- | :--- | :--- |
@@ -174,7 +174,7 @@ Gavin Howard 的 `bc` 已升级到版本 6.2.4。
 
 本节涉及内核配置、系统调优以及未分类的系统控制参数的变更。
 
-### 一般内核变更
+### 内核通用变更
 
 [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 虚拟机管理程序和内核模块 [vmm(4)](https://man.freebsd.org/cgi/man.cgi?query=vmm&sektion=4&format=html) 现在支持在虚拟机中使用超过 16 个 vCPU。默认情况下，Bhyve 允许每个虚拟机创建与主机物理 CPU 数量相同的 vCPU。此限制可以通过加载器调节选项 `hw.vmm.maxcpu` 来调整。[3e02f8809aec](https://cgit.freebsd.org/src/commit/?id=3e02f8809aec)
 
@@ -200,7 +200,7 @@ arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=
 
 本节介绍了自 13.1-RELEASE 以来，设备与驱动的变更和新增内容。
 
-### 设备驱动
+### 设备驱动程序
 
 [em(4)](https://man.freebsd.org/cgi/man.cgi?query=em&sektion=4&format=html) 驱动程序现在可以正确支持新款芯片 82580 和 i350 上的完整接收缓冲区大小范围。[3f8306cf8e2d](https://cgit.freebsd.org/src/commit/?id=3f8306cf8e2d)
 
@@ -246,7 +246,7 @@ arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=
 
 本节介绍了影响 FreeBSD 网络功能的变更。
 
-### 一般网络
+### 通用网络
 
 内核的 [wg(4)](https://man.freebsd.org/cgi/man.cgi?query=wg&sektion=4&format=html) WireGuard 驱动程序已重新集成；它通过 WireGuard 协议提供虚拟私人网络（VPN）接口。[5ae69e2f10da](https://cgit.freebsd.org/src/commit/?id=5ae69e2f10da)（由 Rubicon Communications, LLC（"Netgate"）和 FreeBSD 基金会赞助）
 

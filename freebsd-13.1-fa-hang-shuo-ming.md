@@ -244,7 +244,7 @@ ZFS 已升级至 OpenZFS 2.1.4 版本。OpenZFS 的发行说明可参阅 [https:
 
 修复了 [fsck_ffs(8)](https://man.freebsd.org/cgi/man.cgi?query=fsck_ffs&sektion=8&format=html) 工具在预检模式下处理启用软更新（但未启用软更新日志）的 UFS 时无法正常运行的问题。[fb2feceac34c](https://cgit.freebsd.org/src/commit/?id=fb2feceac34c)
 
-## 引导加载程序的变更
+## 引导加载程序变更
 
 本部分涉及引导加载程序、引导菜单和其他引导相关的变更内容。
 
