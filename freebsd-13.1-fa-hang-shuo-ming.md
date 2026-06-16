@@ -58,7 +58,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 | [FreeBSD-SA-22:01.vt](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:01.vt.asc) | 2022 年 1 月 11 日 | vt 控制台缓冲区溢出 |
 | [FreeBSD-SA-22:02.wifi](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:02.wifi.asc) | 2022 年 3 月 15 日 | 多个 WiFi 问题 |
 | [FreeBSD-SA-22:03.openssl](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:03.openssl.asc) | 2022 年 3 月 15 日 | OpenSSL 证书解析无限循环 |
-| [FreeBSD-SA-22:04.netmap](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:04.netmap.asc) | 2022 年 4 月 6 日 | netmap 中潜在的 jail 逃逸漏洞 |
+| [FreeBSD-SA-22:04.netmap](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:04.netmap.asc) | 2022 年 4 月 6 日 | netmap 中潜在的 Jail 逃逸漏洞 |
 | [FreeBSD-SA-22:05.bhyve](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:05.bhyve.asc) | 2022 年 4 月 6 日 | Bhyve e82545 设备仿真越界写入 |
 | [FreeBSD-SA-22:06.ioctl](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:06.ioctl.asc) | 2022 年 4 月 6 日 | mpr/mps/mpt 驱动 ioctl 堆越界写入 |
 | [FreeBSD-SA-22:07.wifi_meshid](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:07.wifi_meshid.asc) | 2022 年 4 月 6 日 | 802.11 堆缓冲区溢出 |
