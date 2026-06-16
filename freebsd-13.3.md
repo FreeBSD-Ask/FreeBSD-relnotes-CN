@@ -83,7 +83,7 @@ FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 Fr
 
 ### 用户空间配置变更
 
-[libtacplus(3)](https://man.freebsd.org/cgi/man.cgi?query=libtacplus&sektion=3&format=html) 库已改进，现 [tacplus.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=tacplus.conf&sektion=5&format=html) 遵循 POSIX shell 语法规则。如果共享密钥包含单引号、双引号或反斜杠字符，且未正确引用和转义，这可能会导致 `TACACS+` 认证失败。该库现在允许配置最多 255 个附加 AV 配对。[5761f8a7de9f](https://cgit.freebsd.org/src/commit/?id=5761f8a7de9f)（由 Klara, Inc. 赞助）
+改进了 [libtacplus(3)](https://man.freebsd.org/cgi/man.cgi?query=libtacplus&sektion=3&format=html) 库，现 [tacplus.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=tacplus.conf&sektion=5&format=html) 遵循 POSIX shell 语法规则。如果共享密钥包含单引号、双引号或反斜杠字符，且未正确引用和转义，这可能会导致 `TACACS+` 认证失败。该库现在允许配置最多 255 个附加 AV 配对。[5761f8a7de9f](https://cgit.freebsd.org/src/commit/?id=5761f8a7de9f)（由 Klara, Inc. 赞助）
 
 像 [login(1)](https://man.freebsd.org/cgi/man.cgi?query=login&sektion=1&format=html) 这样的程序，使用 [setusercontext(3)](https://man.freebsd.org/cgi/man.cgi?query=setusercontext&sektion=3&format=html)，现在能根据凭据从 `~/.login_conf` 文件中设置进程优先级。此外，可以在 [login.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5&format=html) 中，将优先级指定为 `inherit`，表示进程优先级将继承自父进程。同样，现在也可以将 `umask` 值指定为 `inherit`。[8b359002747a](https://cgit.freebsd.org/src/commit/?id=8b359002747a) [e074746fec21](https://cgit.freebsd.org/src/commit/?id=e074746fec21) [16e02df98ad6](https://cgit.freebsd.org/src/commit/?id=16e02df98ad6)（由 Kumacom SAS 赞助）
 
