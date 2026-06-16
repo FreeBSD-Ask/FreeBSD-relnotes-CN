@@ -158,9 +158,9 @@ Gavin Howard 的 `bc` 升级到版本 6.2.4。
 
 `xz` 升级到版本 5.4.1。
 
-`xz-embedded` 已升级到版本 3f438e15109229bb14ab45f285f4bff5412a9542。
+`xz-embedded` 升级到版本 3f438e15109229bb14ab45f285f4bff5412a9542。
 
-`zlib` 已升级到版本 1.2.13。
+`zlib` 升级到版本 1.2.13。
 
 ### 运行时库和 API
 
