@@ -114,7 +114,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 [pwd_mkdb(8)](https://man.freebsd.org/cgi/man.cgi?query=pwd_mkdb&sektion=8&format=html) 工具不再将 **/etc/master.passwd** 中的注释复制到 **/etc/passwd** 中。[3e955733117d](https://cgit.freebsd.org/src/commit/?id=3e955733117d)
 
-MSS clamping 在 [ppp(8)](https://man.freebsd.org/cgi/man.cgi?query=ppp&sektion=8&format=html) 中改进。[301bff9bdd62](https://cgit.freebsd.org/src/commit/?id=301bff9bdd62)
+MSS clamping 在 [ppp(8)](https://man.freebsd.org/cgi/man.cgi?query=ppp&sektion=8&format=html) 中已改进。[301bff9bdd62](https://cgit.freebsd.org/src/commit/?id=301bff9bdd62)
 
 指标别名在 [prometheus_sysctl_exporter(8)](https://man.freebsd.org/cgi/man.cgi?query=prometheus_sysctl_exporter&sektion=8&format=html) 中已变更，以避免由于冲突的指标名称而混淆 Prometheus 服务器。UMA 区域 `tcp_log_bucket` 已重命名为 `tcp_log_id_bucket`，`tcp_log_node` 被重命名为 `tcp_log_id_node` 以保持一致性。描述中带有 `(LEGACY)` 的 sysctl 变量不再导出，这些变量由已被其他变量替换的 ZFS sysctl 使用，其中许多已别名为相同的 Prometheus 指标名称（如 `vfs.zfs.arc_max` 和 `vfs.zfs.arc.max`）。[e4f508d5a211](https://cgit.freebsd.org/src/commit/?id=e4f508d5a211)（由 Axcient 赞助）
 
@@ -130,17 +130,17 @@ Gavin Howard 的 `bc` 升级到版本 6.2.4。
 
 `file` 升级到版本 5.43。
 
-`less` 已升级到版本 608。
+`less` 升级到版本 608。
 
-`libarchive` 已升级到版本 3.6.2，此版本修复了许多可靠性问题。发行说明可查看 [https://github.com/libarchive/libarchive/releases](https://github.com/libarchive/libarchive/releases)。
+`libarchive` 升级到版本 3.6.2，此版本修复了许多可靠性问题。发行说明可查看 [https://github.com/libarchive/libarchive/releases](https://github.com/libarchive/libarchive/releases)。
 
-`libedit` 已升级到版本 2022-04-11。
+`libedit` 升级到版本 2022-04-11。
 
-`LLVM` 和 `clang` 编译器已升级到版本 14.0.5。
+`LLVM` 和 `clang` 编译器升级到版本 14.0.5。
 
 支持的 `LLVM` sanitizers 现已在 `powerpc64` 及其变体上启用。
 
-`mandoc` 已升级到版本 1.14.6。
+`mandoc` 升级到版本 1.14.6。
 
 `OpenSSH` 已升级到版本 9.3p1。
 
