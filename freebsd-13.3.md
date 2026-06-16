@@ -169,7 +169,7 @@ NFS 服务器（[nfsd(8)](https://man.freebsd.org/cgi/man.cgi?query=nfsd&sektion
 
 ### ZFS 变更
 
-`OpenZFS` 已升级到 2.1.14 版本。[7005cd440405](https://cgit.freebsd.org/src/commit/?id=7005cd440405) [e6c1e181ba7f](https://cgit.freebsd.org/src/commit/?id=e6c1e181ba7f) [d9a61490b098](https://cgit.freebsd.org/src/commit/?id=d9a61490b098) [f5eac6541278](https://cgit.freebsd.org/src/commit/?id=f5eac6541278)
+`OpenZFS` 升级到 2.1.14 版本。[7005cd440405](https://cgit.freebsd.org/src/commit/?id=7005cd440405) [e6c1e181ba7f](https://cgit.freebsd.org/src/commit/?id=e6c1e181ba7f) [d9a61490b098](https://cgit.freebsd.org/src/commit/?id=d9a61490b098) [f5eac6541278](https://cgit.freebsd.org/src/commit/?id=f5eac6541278)
 
 守护进程 [zfsd(8)](https://man.freebsd.org/cgi/man.cgi?query=zfsd&sektion=8&format=html) 现在将故障掉生成过多 I/O 延迟事件的磁盘。[e2ce586899ff](https://cgit.freebsd.org/src/commit/?id=e2ce586899ff)（由 Axcient 赞助）
 
