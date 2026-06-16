@@ -105,8 +105,6 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 
 在 riscv64 和 riscv64sf 平台上构建了 OPENMP 库。[aaf56e35569](https://cgit.freebsd.org/src/commit/?id=aaf56e35569)
 
-
-
 ## 内核
 
 本部分涉及内核配置、系统调优以及未分类的系统控制参数的变更。
