@@ -86,7 +86,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 ### 用户空间配置变更
 
-[growfs(7)](https://man.freebsd.org/cgi/man.cgi?query=growfs&sektion=7&format=html) 启动脚本现在将在扩展根文件系统时添加交换分区（如果可能），且如果之前未存在交换分区。这在使用原始映像安装到 SD 卡时尤其有用。新增了 [rc.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5&format=html) 变量 `growfs_swap_size`，可以根据需要控制交换分区的添加。详细信息请参见 [growfs(7)](https://man.freebsd.org/cgi/man.cgi?query=growfs&sektion=7&format=html)。
+[growfs(7)](https://man.freebsd.org/cgi/man.cgi?query=growfs&sektion=7&format=html) 启动脚本现在将在扩展根文件系统时添加交换分区（如果可能），且如果之前未存在交换分区。这在使用原始映像安装到 SD 卡时尤其有用。新增了 [rc.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5&format=html) 变量 `growfs_swap_size`，可以根据需要控制交换分区的添加。详见 [growfs(7)](https://man.freebsd.org/cgi/man.cgi?query=growfs&sektion=7&format=html)。
 
 `zfskeys` 启动脚本支持自动加载存储在 ZFS 上的密钥。[2411090f6940](https://cgit.freebsd.org/src/commit/?id=2411090f6940)（由 Klara Inc. 赞助）
 

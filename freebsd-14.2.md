@@ -11,9 +11,9 @@ FreeBSD 14.2-RELEASE 发行说明总结了在 14-STABLE 开发分支上 FreeBSD 
 
 本文档为 FreeBSD 14.2-RELEASE 的发行说明，概述了 FreeBSD 最近新增、修改和删除的功能，并附带了有关从旧版本更新的说明。
 
-本发行说明适用于自 14-STABLE 开发分支创建以来的最新版本信息。有关该分支中预编译的二进制“RELEASE”发行版的信息，请参见 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/)。
+本发行说明适用于自 14-STABLE 开发分支创建以来的最新版本信息。该分支中预编译的二进制“RELEASE”发行版的信息，请参见 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/)。
 
-FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 和其有关镜像下载。有关获取此版本（及其他版本）FreeBSD 的更多信息，请参阅 [FreeBSD Handbook](https://docs.freebsd.org/en/books/handbook/) 的 [FreeBSD 附录](https://docs.freebsd.org/en/books/handbook/mirrors)。
+FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 和其有关镜像下载。获取此版本（及其他版本）FreeBSD 的更多信息，请参阅 [FreeBSD Handbook](https://docs.freebsd.org/en/books/handbook/) 的 [FreeBSD 附录](https://docs.freebsd.org/en/books/handbook/mirrors)。
 
 建议在安装 FreeBSD 之前，用户先查阅下发行勘误文档。该文档包含在发行周期后期及发行后发现的“最新”信息，通常涉及已知错误、安全公告以及文档修正。可在 FreeBSD 网站上找到最新的 FreeBSD 14.2-RELEASE 勘误文档。
 
