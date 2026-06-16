@@ -193,7 +193,7 @@ root 用户的默认 shell 现在是 [sh(1)](https://man.freebsd.org/cgi/man.cgi
 
 [sockstat(1)](https://man.freebsd.org/cgi/man.cgi?query=sockstat&sektion=1&format=html) 工具现在在 capsicum 中运行。[94dc57159532](https://cgit.freebsd.org/src/commit/?id=94dc57159532)[c5a2d8c5f517](https://cgit.freebsd.org/src/commit/?id=c5a2d8c5f517)
 
-[systat(1)](https://man.freebsd.org/cgi/man.cgi?query=systat&sektion=1&format=html) 工具有新命令 `iolat`，可报告由 CAM I/O 调度程序计算的 I/O 延迟。[22054f88914b](https://cgit.freebsd.org/src/commit/?id=22054f88914b)（由 Netflix 赞助）
+[systat(1)](https://man.freebsd.org/cgi/man.cgi?query=systat&sektion=1&format=html) 工具有新命令 `iolat`，可报告由 CAM I/O 调度器计算的 I/O 延迟。[22054f88914b](https://cgit.freebsd.org/src/commit/?id=22054f88914b)（由 Netflix 赞助）
 
 新的工具，[tcpsso(8)](https://man.freebsd.org/cgi/man.cgi?query=tcpsso&sektion=8&format=html)，能够将套接字参数应用于现有的 TCP 端点，例如变更拥塞控制模块或 TCP 栈。[881631a2a371](https://cgit.freebsd.org/src/commit/?id=881631a2a371)（由 Netflix 赞助）
 
