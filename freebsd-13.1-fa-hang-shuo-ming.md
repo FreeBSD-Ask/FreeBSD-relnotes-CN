@@ -32,7 +32,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 
 > 在尝试升级 FreeBSD 之前，务必备份 **所有** 数据和配置文件。
 
->升级后，sshd（来自 OpenSSH 8.8p1）在重新启动之前不会接受新的连接。在安装新用户空间后，要么按照源代码升级程序的要求重启系统，要么执行 `service sshd restart` 来重启 `sshd` 服务。
+> 升级后，sshd（来自 OpenSSH 8.8p1）在重新启动之前不会接受新的连接。在安装新用户空间后，要么按照源代码升级程序的要求重启系统，要么执行 `service sshd restart` 来重启 `sshd` 服务。
 
 ## 安全与勘误
 
@@ -292,4 +292,4 @@ ZFS 已升级至 OpenZFS 2.1.4 版本。OpenZFS 的发行说明可参阅 [https:
 
 这预计将是 i386 架构中默认 `CPUTYPE` 的最后一次升级。
 
->此变更不影响 FreeBSD 12.x 系列版本。
+> 此变更不影响 FreeBSD 12.x 系列版本。
