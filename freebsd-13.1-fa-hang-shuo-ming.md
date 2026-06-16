@@ -169,7 +169,7 @@ ZFS 已升级至 OpenZFS 2.1.4 版本。OpenZFS 的发行说明可参阅 [https:
 
 ### NFS 变更
 
-- 默认在 **amd64** 和 **arm64** 架构上构建了两个新的守护程序 [rpc.tlsclntd(8)](https://man.freebsd.org/cgi/man.cgi?query=rpc.tlsclntd&sektion=8&format=html) 和 [rpc.tlsservd(8)](https://man.freebsd.org/cgi/man.cgi?query=rpc.tlsservd&sektion=8&format=html)。它们提供了对基于 TLS 的 NFS 加密支持，该功能描述于《Towards Remote Procedure Call Encryption By Default》草案中。这些守护程序在指定 `WITH_OPENSSL_KTLS` 时构建，使用 KTLS 加密/解密所有 NFS RPC 消息流量，并可选择通过 X.509 证书验证设备身份。[2c76eebca71b](https://cgit.freebsd.org/src/commit/?id=2c76eebca71b) [59f6f5e23c1a](https://cgit.freebsd.org/src/commit/?id=59f6f5e23c1a)
+- 默认在 **amd64** 和 **arm64** 架构上构建了两个新的守护进程 [rpc.tlsclntd(8)](https://man.freebsd.org/cgi/man.cgi?query=rpc.tlsclntd&sektion=8&format=html) 和 [rpc.tlsservd(8)](https://man.freebsd.org/cgi/man.cgi?query=rpc.tlsservd&sektion=8&format=html)。它们提供了对基于 TLS 的 NFS 加密支持，该功能描述于《Towards Remote Procedure Call Encryption By Default》草案中。这些守护进程在指定 `WITH_OPENSSL_KTLS` 时构建，使用 KTLS 加密/解密所有 NFS RPC 消息流量，并可选择通过 X.509 证书验证设备身份。[2c76eebca71b](https://cgit.freebsd.org/src/commit/?id=2c76eebca71b) [59f6f5e23c1a](https://cgit.freebsd.org/src/commit/?id=59f6f5e23c1a)
 
 - 默认的 NFSv4 挂载次版本号已变更为 NFSv4 服务器所支持的最高次版本号。用户可通过挂载选项 `minorversion` 手动覆盖此默认值。[8a04edfdcbd2](https://cgit.freebsd.org/src/commit/?id=8a04edfdcbd2)
 
