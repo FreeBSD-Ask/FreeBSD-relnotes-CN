@@ -75,8 +75,6 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 
 [env(1)](https://man.freebsd.org/cgi/man.cgi?query=env&sektion=1&format=html) 增加了一个用于变更目录的参数。此功能类似于 GNU 版 `env` 的功能，但不支持长选项（**译者注：即 `--` 此类参数**）。[08e8554c4a39](https://cgit.freebsd.org/src/commit/?id=08e8554c4a39)（由 Klara, Inc. 赞助）
 
-
-
 ### 第三方应用程序
 
 - `bc` 已更新至 7.0.2。[90ea553a0d30](https://cgit.freebsd.org/src/commit/?id=90ea553a0d30)  
