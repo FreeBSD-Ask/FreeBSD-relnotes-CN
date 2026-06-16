@@ -26,11 +26,11 @@
 | 日期 | 事件 | 信息 |
 | :--- | :--: | :--: |
 | 2026 年 6 月 | FreeBSD 15.1 | [参见此处](https://www.freebsd.org/releases/15.1R/schedule/) |
-| 2026 年 9 月 | FreeBSD 14.5 |  |
-| 2026 年 12 月 | FreeBSD 15.2 |  |
-| 2027 年 3 月 | FreeBSD 14.6 |  |
-| 2027 年 6 月 | FreeBSD 15.3 |  |
-| 2027 年 12 月 | FreeBSD 16.0 |  |
+| 2026 年 9 月 | FreeBSD 14.5 | |
+| 2026 年 12 月 | FreeBSD 15.2 | |
+| 2027 年 3 月 | FreeBSD 14.6 | |
+| 2027 年 6 月 | FreeBSD 15.3 | |
+| 2027 年 12 月 | FreeBSD 16.0 | |
 
 ——[发布工程信息](https://www.freebsd.org/releng/)
 
