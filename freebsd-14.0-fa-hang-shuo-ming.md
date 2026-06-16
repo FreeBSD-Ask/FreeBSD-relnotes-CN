@@ -1,10 +1,8 @@
 # FreeBSD 14.0-RELEASE 发行说明（2023 年 11 月 20 日）
 
-
 - 原文链接：<https://www.freebsd.org/releases/14.0R/relnotes/>
 - 作者：FreeBSD 项目
 - 译者：ChatGPT & Natsufumij
-
 
 ## 摘要
 
