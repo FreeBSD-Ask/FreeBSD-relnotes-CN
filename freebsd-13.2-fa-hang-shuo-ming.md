@@ -274,7 +274,7 @@ ISA 声卡的驱动程序已弃用，并将在 FreeBSD 14.0 中移除。[d7620b6
 
 在 netgraph 中，ATM 的剩余组件（NgATM）已弃用，并将在 FreeBSD 14.0 中移除。对 ATM NIC 的支持已移除。
 
-已弃用 Telnet 守护进程 [telnetd(8)](https://man.freebsd.org/cgi/man.cgi?query=telnetd&sektion=8&format=html)，并将在 FreeBSD 14.0 中移除。Telnet 客户端不受影响。
+Telnet 守护进程 [telnetd(8)](https://man.freebsd.org/cgi/man.cgi?query=telnetd&sektion=8&format=html) 已弃用，并将在 FreeBSD 14.0 中移除。Telnet 客户端不受影响。
 
 [geom(8)](https://man.freebsd.org/cgi/man.cgi?query=geom&sektion=8&format=html) 中的 VINUM 类已弃用，并将在后续版本中移除。
 
@@ -286,7 +286,7 @@ ISA 声卡的驱动程序已弃用，并将在 FreeBSD 14.0 中移除。[d7620b6
 
 由于 i486 和 i586 CPU 主要用于嵌入式市场，因此预计对普通用户的影响将是最小的，因为这些 CPU 类型的新硬件早已不再使用，而从统计数据来看，部署的这类系统大部分已接近退役年限。
 
-做出这一变更时考虑了多个因素。例如，i486 没有 64 位原子操作，虽然可以在内核中模拟，但无法在用户空间中模拟。此外，32 位 amd64 库从一开始就是 i686。
+做出这一变更时考虑了多个因素。例如，i486 没有 64 位原子操作，虽然它们可以在内核中模拟，但无法在用户空间中模拟。此外，32 位 amd64 库从一开始就是 i686。
 
 由于大多数 32 位测试是由开发人员在 64 位硬件上使用 lib32 库并配合内核中的 `COMPAT_FREEBSD32` 选项进行的，这一变更确保了更好的覆盖率和用户体验。这也符合大多数 Linux® 发行版长期以来的做法。
 
