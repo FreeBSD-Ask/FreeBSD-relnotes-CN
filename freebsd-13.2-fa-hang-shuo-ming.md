@@ -272,11 +272,11 @@ TCP 和 SCTP 中有多个 bug 修复。
 
 弃用工具 [minigzip(1)](https://man.freebsd.org/cgi/man.cgi?query=minigzip&sektion=1&format=html)，并将在 FreeBSD 14.0 中移除。[84d3fc26e3a2](https://cgit.freebsd.org/src/commit/?id=84d3fc26e3a2)
 
-在 netgraph 中，ATM 的剩余组件（NgATM）已弃用，并将在 FreeBSD 14.0 中移除。对 ATM NIC 的支持此前已移除。
+在 netgraph 中，弃用 ATM 的剩余组件（NgATM），并将在 FreeBSD 14.0 中移除。对 ATM NIC 的支持此前移除。
 
-Telnet 守护进程 [telnetd(8)](https://man.freebsd.org/cgi/man.cgi?query=telnetd&sektion=8&format=html) 已弃用，并将在 FreeBSD 14.0 中移除。Telnet 客户端不受影响。
+弃用 Telnet 守护进程 [telnetd(8)](https://man.freebsd.org/cgi/man.cgi?query=telnetd&sektion=8&format=html)，并将在 FreeBSD 14.0 中移除。Telnet 客户端不受影响。
 
-[geom(8)](https://man.freebsd.org/cgi/man.cgi?query=geom&sektion=8&format=html) 中的 VINUM 类已弃用，并将在后续版本中移除。
+弃用 [geom(8)](https://man.freebsd.org/cgi/man.cgi?query=geom&sektion=8&format=html) 中的 VINUM 类，并将在后续版本中移除。
 
 ### 默认 `CPUTYPE` 变更
 
