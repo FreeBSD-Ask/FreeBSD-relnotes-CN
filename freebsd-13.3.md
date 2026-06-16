@@ -99,33 +99,33 @@ FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 Fr
 
 [head(1)](https://man.freebsd.org/cgi/man.cgi?query=head&sektion=1&format=html) 和 [tail(1)](https://man.freebsd.org/cgi/man.cgi?query=tail&sektion=1&format=html) 程序现在一致地支持参数 `-q`（安静）和 `-v`（详细）。数字参数现在可以使用 [expand_number(3)](https://man.freebsd.org/cgi/man.cgi?query=expand_number&sektion=3&format=html) 支持的 SI 后缀。[585762c3733f](https://cgit.freebsd.org/src/commit/?id=585762c3733f)
 
-LLVM 提供的 [objdump(1)](https://man.freebsd.org/cgi/man.cgi?query=objdump&sektion=1&format=html) 工具现已可用。某些 LLVM objdump 参数的输出格式与 GNU objdump 不同；可以使用 [readelf(1)](https://man.freebsd.org/cgi/man.cgi?query=readelf&sektion=1&format=html) 检查 ELF 文件，并且可以通过 Port devel/binutils 和二进制包安装 GNU objdump。
+LLVM 提供的 [objdump(1)](https://man.freebsd.org/cgi/man.cgi?query=objdump&sektion=1&format=html) 工具现在可用。某些 LLVM objdump 参数的输出格式与 GNU objdump 不同；可以使用 [readelf(1)](https://man.freebsd.org/cgi/man.cgi?query=readelf&sektion=1&format=html) 检查 ELF 文件，并且可以通过 Port devel/binutils 和二进制包安装 GNU objdump。
 
 [tftpd(8)](https://man.freebsd.org/cgi/man.cgi?query=tftpd&sektion=8&format=html) 服务器现在可以配置为允许在 chroot 环境中写入非世界可写的文件，使用新的 `-S` 参数。[b71dde1aeba2](https://cgit.freebsd.org/src/commit/?id=b71dde1aeba2)
 
 ### 第三方软件
 
-`expat` 已升级至 2.6.0 版本。
+`expat` 升级至 2.6.0 版本。
 
-若干 Heimdal 安全修复已应用，以缓解 Kerberos 密钥分发中心中的漏洞。
+应用了若干 Heimdal 安全修复，以缓解 Kerberos 密钥分发中心中的漏洞。
 
-`libfido2` 认证令牌库已更新至 1.13.0 版本。[b27bad1e0373](https://cgit.freebsd.org/src/commit/?id=b27bad1e0373) [079a1c2059e7](https://cgit.freebsd.org/src/commit/?id=079a1c2059e7) [d79e0d1735e3](https://cgit.freebsd.org/src/commit/?id=d79e0d1735e3)（由 FreeBSD 基金会赞助）
+`libfido2` 认证令牌库更新至 1.13.0 版本。[b27bad1e0373](https://cgit.freebsd.org/src/commit/?id=b27bad1e0373) [079a1c2059e7](https://cgit.freebsd.org/src/commit/?id=079a1c2059e7) [d79e0d1735e3](https://cgit.freebsd.org/src/commit/?id=d79e0d1735e3)（由 FreeBSD 基金会赞助）
 
-`LLVM` 和 `clang` 编译器已升级至 17.0.6 版本。
+`LLVM` 和 `clang` 编译器升级至 17.0.6 版本。
 
-`nvi`（[vi(1)](https://man.freebsd.org/cgi/man.cgi?query=vi&sektion=1&format=html)）已升级至 2.2.1 版本。
+`nvi`（[vi(1)](https://man.freebsd.org/cgi/man.cgi?query=vi&sektion=1&format=html)）升级至 2.2.1 版本。
 
-`sendmail` 已升级至 8.18.1 版本。此版本默认执行更严格的 RFC 合规性，特别是在行尾方面。这可能会导致接收来自不合规邮件传输代理（MTA）的消息时出现问题；有关缓解措施，请参阅 [https://ftp.sendmail.org/RELEASE_NOTES](https://ftp.sendmail.org/RELEASE_NOTES) 中的 8.18.1 发行说明。[b36ddb27b3b9](https://cgit.freebsd.org/src/commit/?id=b36ddb27b3b9)
+`sendmail` 升级至 8.18.1 版本。此版本默认执行更严格的 RFC 合规性，特别是在行尾方面。这可能会导致接收来自不合规邮件传输代理（MTA）的消息时出现问题；有关缓解措施，请参阅 [https://ftp.sendmail.org/RELEASE_NOTES](https://ftp.sendmail.org/RELEASE_NOTES) 中的 8.18.1 发行说明。[b36ddb27b3b9](https://cgit.freebsd.org/src/commit/?id=b36ddb27b3b9)
 
-`OpenSSH` 已更新至 9.6p1 版本，包括若干安全修复。最重要的修复是针对 SSH 传输协议中新发现的漏洞。现在 [ssh-keygen(1)](https://man.freebsd.org/cgi/man.cgi?query=ssh-keygen&sektion=1&format=html) 默认生成 Ed25519 密钥。[sshd(8)](https://man.freebsd.org/cgi/man.cgi?query=sshd&sektion=8&format=html) 现在能够准确保留子系统命令和参数的引号。[f26eafdfafb0](https://cgit.freebsd.org/src/commit/?id=f26eafdfafb0) [221a6bc397ad](https://cgit.freebsd.org/src/commit/?id=221a6bc397ad) [2cd20d9bc807](https://cgit.freebsd.org/src/commit/?id=2cd20d9bc807)（由 FreeBSD 基金会赞助）
+`OpenSSH` 更新至 9.6p1 版本，包括若干安全修复。最重要的修复是针对 SSH 传输协议中新发现的漏洞。现在 [ssh-keygen(1)](https://man.freebsd.org/cgi/man.cgi?query=ssh-keygen&sektion=1&format=html) 默认生成 Ed25519 密钥。[sshd(8)](https://man.freebsd.org/cgi/man.cgi?query=sshd&sektion=8&format=html) 现在能够准确保留子系统命令和参数的引号。[f26eafdfafb0](https://cgit.freebsd.org/src/commit/?id=f26eafdfafb0) [221a6bc397ad](https://cgit.freebsd.org/src/commit/?id=221a6bc397ad) [2cd20d9bc807](https://cgit.freebsd.org/src/commit/?id=2cd20d9bc807)（由 FreeBSD 基金会赞助）
 
-`tzdata` 已升级至 2024a 版本。
+`tzdata` 升级至 2024a 版本。
 
-`unbound` 已升级至 1.19.1 版本，包括安全修复。[c6edb21e3763](https://cgit.freebsd.org/src/commit/?id=c6edb21e3763)
+`unbound` 升级至 1.19.1 版本，包括安全修复。[c6edb21e3763](https://cgit.freebsd.org/src/commit/?id=c6edb21e3763)
 
-`xz` 已升级至 5.4.5 版本。
+`xz` 升级至 5.4.5 版本。
 
-[zlib(3)](https://man.freebsd.org/cgi/man.cgi?query=zlib&sektion=3&format=html) 库已更新至 1.3.1 版本。[f2de7ba78a49](https://cgit.freebsd.org/src/commit/?id=f2de7ba78a49) [05e3998add1c](https://cgit.freebsd.org/src/commit/?id=05e3998add1c)
+[zlib(3)](https://man.freebsd.org/cgi/man.cgi?query=zlib&sektion=3&format=html) 库更新至 1.3.1 版本。[f2de7ba78a49](https://cgit.freebsd.org/src/commit/?id=f2de7ba78a49) [05e3998add1c](https://cgit.freebsd.org/src/commit/?id=05e3998add1c)
 
 ## 内核
 
@@ -133,7 +133,7 @@ LLVM 提供的 [objdump(1)](https://man.freebsd.org/cgi/man.cgi?query=objdump&se
 
 ### 内核通用变更
 
-[intro(9)](https://man.freebsd.org/cgi/man.cgi?query=intro&sektion=9&format=html) 核心编程接口介绍已完全重写。[5a0c410787b8](https://cgit.freebsd.org/src/commit/?id=5a0c410787b8)（由 FreeBSD 基金会赞助）
+[intro(9)](https://man.freebsd.org/cgi/man.cgi?query=intro&sektion=9&format=html) 核心编程接口介绍完全重写。[5a0c410787b8](https://cgit.freebsd.org/src/commit/?id=5a0c410787b8)（由 FreeBSD 基金会赞助）
 
 ## 设备与驱动
 
@@ -143,13 +143,13 @@ LLVM 提供的 [objdump(1)](https://man.freebsd.org/cgi/man.cgi?query=objdump&se
 
 现在，x86 系统可支持多个 PCI MCFG 区域，使得支持访问非 0 域（段）的 PCI 配置成为可能。[0fb0306a89ad](https://cgit.freebsd.org/src/commit/?id=0fb0306a89ad)
 
-`graid` 实现中的一个问题已修复，该问题在使用 4 个及更多磁盘创建 Promise RAID1 时出现。该阵列仅在重启前正常工作。[394ceefc2f2f](https://cgit.freebsd.org/src/commit/?id=394ceefc2f2f)
+修复了 `graid` 实现中的一个问题，该问题在使用 4 个及更多磁盘创建 Promise RAID1 时出现。该阵列仅在重启前正常工作。[394ceefc2f2f](https://cgit.freebsd.org/src/commit/?id=394ceefc2f2f)
 
-[Intel 无线接口的 iwlwifi(4) 驱动](https://man.freebsd.org/cgi/man.cgi?query=iwlwifi&sektion=4&format=html) 已更新，支持 BE200 及更高版本的芯片组。（由 FreeBSD 基金会赞助）（由 minipci.biz 赞助）
+更新了 [Intel 无线接口的 iwlwifi(4) 驱动](https://man.freebsd.org/cgi/man.cgi?query=iwlwifi&sektion=4&format=html)，支持 BE200 及更高版本的芯片组。（由 FreeBSD 基金会赞助）（由 minipci.biz 赞助）
 
-[Realtek 无线 PCI 接口的 rtw88(4) 驱动](https://man.freebsd.org/cgi/man.cgi?query=rtw88&sektion=4&format=html) 已更新。
+更新了 [Realtek 无线 PCI 接口的 rtw88(4) 驱动](https://man.freebsd.org/cgi/man.cgi?query=rtw88&sektion=4&format=html)。
 
-原生和基于 LinuxKPI 的无线驱动程序已修复诸多稳定性问题。（由 FreeBSD 基金会赞助）
+修复了原生和基于 LinuxKPI 的无线驱动程序的诸多稳定性问题。（由 FreeBSD 基金会赞助）
 
 USB 以太网适配器驱动 [smsc(4)](https://man.freebsd.org/cgi/man.cgi?query=smsc&sektion=4&format=html) 现在将在树莓派设备中从 `bootargs` 获取 MAC 地址，如果没有提供，则回退到使用 [ether_gen_addr(9)](https://man.freebsd.org/cgi/man.cgi?query=ether_gen_addr&sektion=9&format=html) 生成固定的 MAC 地址。[3d96ee7c7dcc](https://cgit.freebsd.org/src/commit/?id=3d96ee7c7dcc)
 
