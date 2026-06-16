@@ -303,7 +303,7 @@ FreeBSD 现在重新启动更快。添加了 sysctl  `kern.reboot_wait_time` 以
 
 已从内核开放加密框架（OCF）中删除了对非对称加密操作的支持，因为它们不被现代 OpenSSL 版本使用。[76681661be28](https://cgit.freebsd.org/src/commit/?id=76681661be28)
 
-添加了一个本机 [timerfd(2)](https://man.freebsd.org/cgi/man.cgi?query=timerfd&sektion=2&format=html) 设施，以便轻松移植使用 timerfd 的 Linux 程序。以前，timerfd 仅在 Linux 仿真下可用。对于仅为 FreeBSD 编写的程序，首选使用 [kqueue(2)](https://man.freebsd.org/cgi/man.cgi?query=kqueue&sektion=2&format=html) EVFILT_TIMER 过滤器来建立任意计时器。[af93fea71038](https://cgit.freebsd.org/src/commit/?id=af93fea71038)
+添加了本机 [timerfd(2)](https://man.freebsd.org/cgi/man.cgi?query=timerfd&sektion=2&format=html) 设施，以便轻松移植使用 timerfd 的 Linux 程序。以前，timerfd 仅在 Linux 仿真下可用。对于仅为 FreeBSD 编写的程序，首选使用 [kqueue(2)](https://man.freebsd.org/cgi/man.cgi?query=kqueue&sektion=2&format=html) EVFILT_TIMER 过滤器来建立任意计时器。[af93fea71038](https://cgit.freebsd.org/src/commit/?id=af93fea71038)
 
 由 `security.bsd.see_jail_proc`[sysctl(8)](https://man.freebsd.org/cgi/man.cgi?query=sysctl&sektion=8&format=html) 开关控制的进程可见性策略已经过加固，防止未经授权的用户尝试随机杀死、变更优先级或调试同一子 Jail 中具有相同（实际）UID 的进程，即使这些进程对其不可见也会成功。它也可以被 MAC 策略覆盖，就像其他进程可见性策略一样。[7e21c691f295](https://cgit.freebsd.org/src/commit/?id=7e21c691f295)[63c01c18a8d3](https://cgit.freebsd.org/src/commit/?id=63c01c18a8d3)（由 Kumacom, SAS 赞助）（由 FreeBSD 基金会赞助）
 
