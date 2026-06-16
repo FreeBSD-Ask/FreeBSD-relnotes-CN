@@ -218,7 +218,7 @@ arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=
 
 [rtw88(4)](https://man.freebsd.org/cgi/man.cgi?query=rtw88&sektion=4&format=html) 驱动程序已添加，用于支持多个 Realtek 无线 PCI 接口。目前仅限于 802.11 a/b/g 操作。更多信息请参见 [https://wiki.freebsd.org/WiFi/Rtw88](https://wiki.freebsd.org/WiFi/Rtw88)。
 
-已为支持 Linux 设备驱动程序的 KPI 添加了许多新功能和改进。（由 FreeBSD 基金会赞助）
+支持 Linux 设备驱动程序的 KPI 有许多新增和改进。（由 FreeBSD 基金会赞助）
 
 ## 存储
 
