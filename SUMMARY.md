@@ -50,7 +50,7 @@
 * [FreeBSD 6.4 RELEASE amd64 发行说明（2008 年 11 月 28 日）](6.4-amd64.md)
 * [FreeBSD 6.3 RELEASE amd64 发行说明（2008 年 1 月 18 日）](6.3-amd64.md)
 * [FreeBSD 6.2 RELEASE amd64 发行说明（2007 年 1 月 15 日）](6.2-amd64.md)
-* [FreeBSD 6.1 RELEASE amd64 发行说明（2006 年 5 月 8 日）](6.1-amd64.md)
+* [FreeBSD 6.1-RELEASE amd64 发行说明（2006 年 5 月 8 日）](6.1-amd64.md)
 * [FreeBSD 6.0 RELEASE amd64 发行说明（2005 年 11 月 4 日）](6.0-amd64.md)
 * [FreeBSD 5.5 RELEASE amd64 发行说明（2006 年 5 月 25 日）](5.5-amd64.md)
 * [FreeBSD 5.4 RELEASE amd64 发行说明（2005 年 5 月 9 日）](5.4-amd64.md)
