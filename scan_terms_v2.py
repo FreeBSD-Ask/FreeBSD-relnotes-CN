@@ -69,4 +69,93 @@ TERM_RULES = [
     (r'(?<![a-zA-Z])核心(?!团队|成员|部分|架构|数|的|是|上|中|之|内|外|地|性|设|想|概|观|价|技|任|业|功|能|服|产|品|商|标|竞|争|优|先|级|网|安|全|概|念|定|义|组|件|模|块|驱|动|程|序|代|码|文|件|库|目|录|系|统|层|次|架|构|服|务|器|协|议|算|法|数|据|结|构|策|略|模|式|框|架|工|具|实|用|程|序|命|令|配|置|选|项|参|数|设|置|值|内|存|磁|盘|网|络|硬|件|软|件|缓|存|总|线|寄|存|器|栈|队|列|管|道|信|号|量|锁|互|斥|体|条|件|变|量|线|程|进|程|守|护|进|程|套|接|字|接|口|界|面|端|口|连|接|链|路|协|议|栈|安|全|加|密|解|密|签|名|验|证|授|权|认|证|审|计|日|志|监|控|调|试|测|试|部|署|发|布|版|本|更|新|升|级|迁|移|备|份|恢|复|故|障|冗|余|负|载|均|衡|性|能|优|化|扩|展|伸|缩|虚|拟|化|容|器|隔|离|沙|箱|编|译|构|建|链|接|加|载|执|行|运|行|启|动|停|止|重|启|关|闭|开|机|引|导|初|始|化|配|置|安|装|卸|载|格|式|化|分|区|挂|载|卸|载|文|件|系|统|目|录|路|径|权|限|用|户|组|角|色|策|略|模|式|框|架|工|具|实|用|程|序|命|令|配|置|选|项|参|数|设|置|值)', '核心', '确认指kernel还是core，kernel应译为"内核"', 'kernel'),
 
     # ===== 发行/发布 一致性 =====
-    (r'发行注记', 'release notes', '确认是否统一为"发行说明"',
+    (r'发行注记', 'release notes', '确认是否统一为"发行说明"', 'release notes'),
+    (r'发布说明', 'release notes', '确认是否统一为"发行说明"', 'release notes'),
+
+    # ===== 命令/指令 一致性 =====
+    (r'指令集', 'instruction set', '确认"指令集"是否应该保留（CPU指令集）', '指令'),
+    (r'命令行', 'command line', '确认是否统一为"命令行"', '命令'),
+]
+
+
+def scan_file(filepath):
+    """扫描单个文件"""
+    issues = []
+    try:
+        with open(filepath, "r", encoding="utf-8") as f:
+            content = f.read()
+            lines = content.split("\n")
+    except Exception as e:
+        return issues
+
+    # 标记代码块范围，避免扫描代码块内部
+    in_code_block = False
+    for line_idx, line in enumerate(lines, 1):
+        stripped = line.strip()
+        if stripped.startswith("```"):
+            in_code_block = not in_code_block
+            continue
+        if in_code_block:
+            continue
+
+        for pattern, term_name, suggestion, category in TERM_RULES:
+            for m in re.finditer(pattern, line):
+                matched = m.group(0)
+                issues.append({
+                    "file": str(filepath.relative_to(BASE_DIR)),
+                    "line": line_idx,
+                    "matched": matched,
+                    "term": term_name,
+                    "suggestion": suggestion,
+                    "category": category,
+                    "context": stripped[:150],
+                })
+    return issues
+
+
+def main():
+    all_issues = []
+    stats = defaultdict(lambda: defaultdict(int))
+
+    for filepath in sorted(BASE_DIR.glob("*.md")):
+        if filepath.name in EXCLUDE:
+            continue
+        issues = scan_file(filepath)
+        all_issues.extend(issues)
+        for issue in issues:
+            stats[issue["category"]][issue["term"]] += 1
+
+    # 按类别统计
+    print("=" * 60)
+    print("术语不一致统计（按类别）")
+    print("=" * 60)
+    for category in sorted(stats.keys()):
+        print(f"\n--- {category} ---")
+        for term, count in sorted(stats[category].items(), key=lambda x: -x[1]):
+            print(f"  {term}: {count} 处")
+
+    print(f"\n{'=' * 60}")
+    print(f"总计: {len(all_issues)} 个术语问题")
+    print("=" * 60)
+
+    # 按文件分组输出
+    print("\n\n按文件分组详情：")
+    print("=" * 60)
+    current_file = None
+    for issue in sorted(all_issues, key=lambda x: (x["file"], x["line"])):
+        if issue["file"] != current_file:
+            current_file = issue["file"]
+            print(f"\n--- {current_file} ---")
+        print(f"  L{issue['line']:>4d} [{issue['category']}] {issue['term']}: '{issue['matched']}'")
+        print(f"         → {issue['suggestion']}")
+        print(f"         上下文: {issue['context']}")
+
+    # 保存 JSON
+    output_path = BASE_DIR / "term_issues_v2.json"
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(all_issues, f, ensure_ascii=False, indent=2)
+    print(f"\n详细结果已保存到 {output_path}")
+
+
+if __name__ == "__main__":
+    main()
