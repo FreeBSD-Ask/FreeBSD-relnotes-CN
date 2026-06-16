@@ -136,7 +136,7 @@ Clang/LLVM 已升级至版本 18.1.5。[90a5e985e5f4](https://cgit.freebsd.org/s
 
 ### 设备驱动程序
 
-Intel E800 系列（[ice(4)](https://man.freebsd.org/cgi/man.cgi?query=ice&sektion=4&format=html) 以太网网络控制器）已有驱动程序，该系列控制器可支持 100 Gb/s 速率。该驱动程序已升级至版本 1.39.13-k.[71d104536b51](https://cgit.freebsd.org/src/commit/?id=71d104536b51) [f6de0a7c94e9](https://cgit.freebsd.org/src/commit/?id=f6de0a7c94e9)（由英特尔公司赞助）。
+Intel E800 系列（[ice(4)](https://man.freebsd.org/cgi/man.cgi?query=ice&sektion=4&format=html) 以太网网络控制器）已有驱动程序，该系列控制器可支持 100 Gb/s 速率。该驱动程序已升级至版本 1.39.13-k.[71d104536b51](https://cgit.freebsd.org/src/commit/?id=71d104536b51) [f6de0a7c94e9](https://cgit.freebsd.org/src/commit/?id=f6de0a7c94e9)（由 Intel Corporation 赞助）。
 
 英特尔 WiFi 设备的 [iwlwifi(4)](https://man.freebsd.org/cgi/man.cgi?query=iwlwifi&sektion=4&format=html) 驱动程序经过许多稳定性改进。(由 FreeBSD 基金会赞助)
 
