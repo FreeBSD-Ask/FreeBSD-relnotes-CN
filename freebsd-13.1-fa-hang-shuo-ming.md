@@ -182,7 +182,7 @@ CAS 已变更为支持 Radix MMU。[cc8e726c85b](https://cgit.freebsd.org/src/co
 
 在 powerpc64(le) 平台上的 `pmap_mincore` 添加了对超页的支持。[32b50b8520d](https://cgit.freebsd.org/src/commit/?id=32b50b8520d)
 
-在 arm64 平台上为 32 位 ARM 二进制文件添加了 HWCAP/HWCAP2 辅助参数支持。这修复了在 `COMPAT32` 仿真下构建/运行 Golang 的问题。[28e22482279f](https://cgit.freebsd.org/src/commit/?id=28e22482279f)（由 Rubicon Communications, LLC ("Netgate") 赞助）
+在 arm64 平台上为 32 位 ARM 二进制文件添加了 HWCAP/HWCAP2 辅助参数支持。这修复了在 `COMPAT32` 仿真下构建/运行 Golang 的问题。[28e22482279f](https://cgit.freebsd.org/src/commit/?id=28e22482279f)（由 Rubicon Communications, LLC (“Netgate”) 赞助）
 
 ## 设备与驱动
 
@@ -190,7 +190,7 @@ CAS 已变更为支持 Radix MMU。[cc8e726c85b](https://cgit.freebsd.org/src/co
 
 ### 设备驱动程序
 
-引入了 [igc(4)](https://man.freebsd.org/cgi/man.cgi?query=igc&sektion=4&format=html) 驱动程序，用于支持 Intel I225 以太网控制器。该控制器支持 2.5G/1G/100Mb/10Mb 速度，并支持 tx/rx 校验和卸载、TSO、LRO 和多队列操作。[d7388d33b4dd](https://cgit.freebsd.org/src/commit/?id=d7388d33b4dd)（由 Rubicon Communications, LLC ("Netgate") 赞助）
+引入了 [igc(4)](https://man.freebsd.org/cgi/man.cgi?query=igc&sektion=4&format=html) 驱动程序，用于支持 Intel I225 以太网控制器。该控制器支持 2.5G/1G/100Mb/10Mb 速度，并支持 tx/rx 校验和卸载、TSO、LRO 和多队列操作。[d7388d33b4dd](https://cgit.freebsd.org/src/commit/?id=d7388d33b4dd)（由 Rubicon Communications, LLC (“Netgate”) 赞助）
 
 修复了 powerpc64(le) 平台在启动过程中使用 AST2500 时，VGA/HDMI 控制台的问题。[c41d129485e](https://cgit.freebsd.org/src/commit/?id=c41d129485e)
 
