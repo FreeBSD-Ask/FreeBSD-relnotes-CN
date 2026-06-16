@@ -60,13 +60,13 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 
 修改了 CAM 库以在解析设备名称之前使用 [realpath(3)](https://man.freebsd.org/cgi/man.cgi?query=realpath&sektion=3&format=html)，从而允许诸如 [camcontrol(8)](https://man.freebsd.org/cgi/man.cgi?query=camcontrol&sektion=8&format=html) 和 [smartctl(8)](https://man.freebsd.org/cgi/man.cgi?query=smartctl&sektion=8&format=html) 之类的工具在使用符号链接时更加友好。[e32acf95ea25](https://cgit.freebsd.org/src/commit/?id=e32acf95ea25)
 
-通过在程序名称以 `sum` 结尾时让相应的 BSD 程序运行 `-r` 选项，添加了兼容 Linux 的 [md5sum(1)](https://man.freebsd.org/cgi/man.cgi?query=md5sum&sektion=1&format=html) 和类似的消息摘要程序。[c0d5665be0dc](https://cgit.freebsd.org/src/commit/?id=c0d5665be0dc)（由奈飞赞助）
+通过在程序名称以 `sum` 结尾时让相应的 BSD 程序运行 `-r` 选项，添加了兼容 Linux 的 [md5sum(1)](https://man.freebsd.org/cgi/man.cgi?query=md5sum&sektion=1&format=html) 和类似的消息摘要程序。[c0d5665be0dc](https://cgit.freebsd.org/src/commit/?id=c0d5665be0dc)（由Netflix赞助）
 
 [svnlite(1)](https://man.freebsd.org/cgi/man.cgi?query=svnlite&sektion=1&format=html) 默认在构建中禁用。[a4f99b3c2384](https://cgit.freebsd.org/src/commit/?id=a4f99b3c2384)
 
 [mpsutil(8)](https://man.freebsd.org/cgi/man.cgi?query=mpsutil&sektion=8&format=html) 扩展以显示适配器信息并控制 NCQ。[395bc3598b47](https://cgit.freebsd.org/src/commit/?id=395bc3598b47)
 
-修复了使用 [camcontrol(8)](https://man.freebsd.org/cgi/man.cgi?query=camcontrol&sektion=8&format=html) 下载固件后设备出现的问题，方法是在下载固件后强制重新扫描 LUN。[327da43602cc](https://cgit.freebsd.org/src/commit/?id=327da43602cc)（由奈飞赞助）
+修复了使用 [camcontrol(8)](https://man.freebsd.org/cgi/man.cgi?query=camcontrol&sektion=8&format=html) 下载固件后设备出现的问题，方法是在下载固件后强制重新扫描 LUN。[327da43602cc](https://cgit.freebsd.org/src/commit/?id=327da43602cc)（由Netflix赞助）
 
 ### 第三方软件
 

@@ -35,37 +35,37 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 
 #### 安全公告
 
-| 公告编号                       | 日期                | 主题                                                                                                                     |
-| :----------------------------- | :------------------ | :----------------------------------------------------------------------------------------------------------------------- |
-| **FreeBSD-SA-24:04.openssh**   | 2024 年 7 月 1 日   | OpenSSH 预认证远程代码执行                                                                                               |
-| **FreeBSD-SA-24:05.pf**        | 2024 年 8 月 7 日   | pf 在状态表中错误匹配不同的 ICMPv6 状态                                                                                  |
-| **FreeBSD-SA-24:06.ktrace**    | 2024 年 8 月 7 日   | [ktrace(2)](https://man.freebsd.org/cgi/man.cgi?query=ktrace&sektion=2&format=html) 在执行 setuid 二进制文件时未正确分离 |
-| **FreeBSD-SA-24:07.nfsclient** | 2024 年 8 月 7 日   | NFS 客户端接受包含路径分隔符的文件名                                                                                     |
-| **FreeBSD-SA-24:08.openssh**   | 2024 年 8 月 7 日   | OpenSSH 预认证异步信号安全问题                                                                                           |
-| **FreeBSD-SA-24:09.libnv**     | 2024 年 9 月 4 日   | libnv 中的多个漏洞                                                                                                       |
-| **FreeBSD-SA-24:10.bhyve**     | 2024 年 9 月 4 日   | [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 通过 TPM 设备直通导致的特权用户逃逸    |
-| **FreeBSD-SA-24:11.ctl**       | 2024 年 9 月 4 日   | [ctl(4)](https://man.freebsd.org/cgi/man.cgi?query=ctl&sektion=4&format=html) CAM 目标层的多个问题                       |
-| **FreeBSD-SA-24:12.bhyve**     | 2024 年 9 月 4 日   | [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 通过 USB 控制器直通导致的特权用户逃逸  |
-| **FreeBSD-SA-24:13.openssl**   | 2024 年 9 月 4 日   | OpenSSL 中 X.509 名称检查可能导致的 DoS                                                                                  |
-| **FreeBSD-SA-24:14.umtx**      | 2024 年 9 月 4 日   | umtx 内核崩溃或使用后释放                                                                                                |
-| **FreeBSD-SA-24:15.bhyve**     | 2024 年 9 月 19 日  | [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) XHCI 仿真中越界读取访问                |
-| **FreeBSD-SA-24:16.libnv**     | 2024 年 9 月 19 日  | libnv 中的整数溢出                                                                                                       |
-| **FreeBSD-SA-24:17.bhyve**     | 2024 年 10 月 29 日 | bhyve 管理程序中的多个问题                                                                                               |
-| **FreeBSD-SA-24:18.ctl**       | 2024 年 10 月 29 日 | [ctl(4)](https://man.freebsd.org/cgi/man.cgi?query=ctl&sektion=4&format=html) CAM 目标层中的不受限制分配                 |
-| **FreeBSD-SA-24:19.fetch**     | 2024 年 10 月 29 日 | [fetch(1)](https://man.freebsd.org/cgi/man.cgi?query=fetch&sektion=1&format=html) 参数的证书吊销列表功能失效             |
+| 公告编号 | 日期 | 主题 |
+| :------- | :--- | :--- |
+| **FreeBSD-SA-24:04.openssh** | 2024 年 7 月 1 日 | OpenSSH 预认证远程代码执行 |
+| **FreeBSD-SA-24:05.pf** | 2024 年 8 月 7 日 | pf 在状态表中错误匹配不同的 ICMPv6 状态 |
+| **FreeBSD-SA-24:06.ktrace** | 2024 年 8 月 7 日 | [ktrace(2)](https://man.freebsd.org/cgi/man.cgi?query=ktrace&sektion=2&format=html) 在执行 setuid 二进制文件时未正确分离 |
+| **FreeBSD-SA-24:07.nfsclient** | 2024 年 8 月 7 日 | NFS 客户端接受包含路径分隔符的文件名 |
+| **FreeBSD-SA-24:08.openssh** | 2024 年 8 月 7 日 | OpenSSH 预认证异步信号安全问题 |
+| **FreeBSD-SA-24:09.libnv** | 2024 年 9 月 4 日 | libnv 中的多个漏洞 |
+| **FreeBSD-SA-24:10.bhyve** | 2024 年 9 月 4 日 | [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 通过 TPM 设备直通导致的特权用户逃逸 |
+| **FreeBSD-SA-24:11.ctl** | 2024 年 9 月 4 日 | [ctl(4)](https://man.freebsd.org/cgi/man.cgi?query=ctl&sektion=4&format=html) CAM 目标层的多个问题 |
+| **FreeBSD-SA-24:12.bhyve** | 2024 年 9 月 4 日 | [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 通过 USB 控制器直通导致的特权用户逃逸 |
+| **FreeBSD-SA-24:13.openssl** | 2024 年 9 月 4 日 | OpenSSL 中 X.509 名称检查可能导致的 DoS |
+| **FreeBSD-SA-24:14.umtx** | 2024 年 9 月 4 日 | umtx 内核崩溃或使用后释放 |
+| **FreeBSD-SA-24:15.bhyve** | 2024 年 9 月 19 日 | [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) XHCI 仿真中越界读取访问 |
+| **FreeBSD-SA-24:16.libnv** | 2024 年 9 月 19 日 | libnv 中的整数溢出 |
+| **FreeBSD-SA-24:17.bhyve** | 2024 年 10 月 29 日 | Bhyve 管理程序中的多个问题 |
+| **FreeBSD-SA-24:18.ctl** | 2024 年 10 月 29 日 | [ctl(4)](https://man.freebsd.org/cgi/man.cgi?query=ctl&sektion=4&format=html) CAM 目标层中的不受限制分配 |
+| **FreeBSD-SA-24:19.fetch** | 2024 年 10 月 29 日 | [fetch(1)](https://man.freebsd.org/cgi/man.cgi?query=fetch&sektion=1&format=html) 参数的证书吊销列表功能失效 |
 
 #### 勘误通知
 
-| 勘误编号                      | 日期                | 主题                                                                                                                                                                             |
-| :---------------------------- | :------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **FreeBSD-EN-24:10.zfs**      | 2024 年 6 月 19 日  | ZFS 内核内存泄漏                                                                                                                                                                 |
-| **FreeBSD-EN-24:11.ldns**     | 2024 年 6 月 19 日  | LDNS 使用了 **resolv.conf** 中注释掉的 nameserver                                                                                                                                |
-| **FreeBSD-EN-24:12.killpg**   | 2024 年 6 月 19 日  | killpg 中的锁顺序反转（Lock order reversal，LOR）导致的活锁                                                                                                                      |
-| **FreeBSD-EN-24:13.libc++**   | 2024 年 6 月 19 日  | 传递给堆分配的 `std::string` 删除操作的大小不正确                                                                                                                                |
-| **FreeBSD-EN-24:14.ifconfig** | 2024 年 8 月 7 日   | ifconfig 掩码分配错误                                                                                                                                                            |
-| **FreeBSD-EN-24:15.calendar** | 2024 年 9 月 4 日   | [cron(8)](https://man.freebsd.org/cgi/man.cgi?query=cron&sektion=8&format=html)/[periodic(8)](https://man.freebsd.org/cgi/man.cgi?query=periodic&sektion=8&format=html) 会话登录 |
-| **FreeBSD-EN-24:16.pf**       | 2024 年 9 月 19 日  | pf 中的 ICMPv6 状态处理错误                                                                                                                                                      |
-| **FreeBSD-EN-24:17.pam_xdg**  | 2024 年 10 月 29 日 | 登录时 XDG 运行目录的文件描述符泄漏                                                                                                                                              |
+| 勘误编号 | 日期 | 主题 |
+| :------- | :--- | :--- |
+| **FreeBSD-EN-24:10.zfs** | 2024 年 6 月 19 日 | ZFS 内核内存泄漏 |
+| **FreeBSD-EN-24:11.ldns** | 2024 年 6 月 19 日 | LDNS 使用了 **resolv.conf** 中注释掉的 nameserver |
+| **FreeBSD-EN-24:12.killpg** | 2024 年 6 月 19 日 | killpg 中的锁顺序反转（Lock order reversal，LOR）导致的活锁 |
+| **FreeBSD-EN-24:13.libc++** | 2024 年 6 月 19 日 | 传递给堆分配的 `std::string` 删除操作的大小不正确 |
+| **FreeBSD-EN-24:14.ifconfig** | 2024 年 8 月 7 日 | ifconfig 掩码分配错误 |
+| **FreeBSD-EN-24:15.calendar** | 2024 年 9 月 4 日 | [cron(8)](https://man.freebsd.org/cgi/man.cgi?query=cron&sektion=8&format=html)/[periodic(8)](https://man.freebsd.org/cgi/man.cgi?query=periodic&sektion=8&format=html) 会话登录 |
+| **FreeBSD-EN-24:16.pf** | 2024 年 9 月 19 日 | pf 中的 ICMPv6 状态处理错误 |
+| **FreeBSD-EN-24:17.pam_xdg** | 2024 年 10 月 29 日 | 登录时 XDG 运行目录的文件描述符泄漏 |
 
 ## 用户空间
 
@@ -125,7 +125,7 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 - 一款支持部分 Realtek 芯片组的新无线驱动已可用：[rtw89(4)](https://man.freebsd.org/cgi/man.cgi?query=rtw89&sektion=4&format=html)。[a2d1e07f6451](https://cgit.freebsd.org/src/commit/?id=a2d1e07f6451)（由 FreeBSD 基金会赞助）
 - 对 Realtek 8156/8156B 的支持已从 [cdce(4)](https://man.freebsd.org/cgi/man.cgi?query=cdce&sektion=4&format=html) 迁移至 [ure(4)](https://man.freebsd.org/cgi/man.cgi?query=ure&sektion=4&format=html)，以提升性能和可靠性。[630077a84186](https://cgit.freebsd.org/src/commit/?id=630077a84186)（由 FreeBSD 基金会赞助）
 - 增加了对 ACPI GPIO _AEI 对象的支持。[1db6ffb2a482](https://cgit.freebsd.org/src/commit/?id=1db6ffb2a482)（由亚马逊赞助）
-- 已在所有架构上启用 [nvme(4)](https://man.freebsd.org/cgi/man.cgi?query=nvme&sektion=4&format=html) 和 [nvmecontrol(8)](https://man.freebsd.org/cgi/man.cgi?query=nvmecontrol&sektion=8&format=html)。[24687a65dd7f](https://cgit.freebsd.org/src/commit/?id=24687a65dd7f)，[aba2d7f89dcf](https://cgit.freebsd.org/src/commit/?id=aba2d7f89dcf)（由 Chelsio Communications 和奈飞赞助）
+- 已在所有架构上启用 [nvme(4)](https://man.freebsd.org/cgi/man.cgi?query=nvme&sektion=4&format=html) 和 [nvmecontrol(8)](https://man.freebsd.org/cgi/man.cgi?query=nvmecontrol&sektion=8&format=html)。[24687a65dd7f](https://cgit.freebsd.org/src/commit/?id=24687a65dd7f)，[aba2d7f89dcf](https://cgit.freebsd.org/src/commit/?id=aba2d7f89dcf)（由 Chelsio Communications 和Netflix赞助）
 
 ### 弃用和删除的驱动程序
 
@@ -146,7 +146,7 @@ OpenZFS 已更新至版本 2.2.6。[755e773877e9](https://cgit.freebsd.org/src/c
 
 ### 启动加载程序的变更
 
-BIOS 引导加载程序重新添加了对 gzip 和 bzip2 的支持，但默认情况下移除了图形模式的支持，以解决大小问题。（EFI 引导加载程序未受影响，仍支持上述所有功能。）[4d3b05a8530e](https://cgit.freebsd.org/src/commit/?id=4d3b05a8530e)（由奈飞赞助）
+BIOS 引导加载程序重新添加了对 gzip 和 bzip2 的支持，但默认情况下移除了图形模式的支持，以解决大小问题。（EFI 引导加载程序未受影响，仍支持上述所有功能。）[4d3b05a8530e](https://cgit.freebsd.org/src/commit/?id=4d3b05a8530e)（由Netflix赞助）
 
 ## 网络
 
