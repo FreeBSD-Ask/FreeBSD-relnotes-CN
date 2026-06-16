@@ -43,12 +43,12 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 | 公告 | 日期 | 主题 |
 | :--- | :--- | :--- |
 | [FreeBSD-SA-21:03.pam_login_access](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:03.pam_login_access.asc) | 2021 年 2 月 24 日 | login.access 未能应用规则 |
-| [FreeBSD-SA-21:04.jail_remove](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:04.jail_remove.asc) | 2021 年 2 月 24 日 | [jail_remove(2)](https://man.freebsd.org/cgi/man.cgi?query=jail_remove&sektion=2&format=html) 未能终止所有 jail 进程 |
+| [FreeBSD-SA-21:04.jail_remove](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:04.jail_remove.asc) | 2021 年 2 月 24 日 | [jail_remove(2)](https://man.freebsd.org/cgi/man.cgi?query=jail_remove&sektion=2&format=html) 未能终止所有 Jail 进程 |
 | [FreeBSD-SA-21:05.jail_chdir](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:05.jail_chdir.asc) | 2021 年 2 月 24 日 | [jail_attach(2)](https://man.freebsd.org/cgi/man.cgi?query=jail_attach&sektion=2&format=html) 依赖调用者更改当前工作目录 |
 | [FreeBSD-SA-21:06.xen](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:06.xen.asc) | 2021 年 2 月 24 日 | Xen 授权映射错误处理问题 |
 | [FreeBSD-SA-21:08.vm](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:08.vm.asc) | 2021 年 4 月 6 日 | 过时虚拟内存映射导致内存泄露 |
 | [FreeBSD-SA-21:09.accept_filter](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:09.accept_filter.asc) | 2021 年 4 月 6 日 | [accept_filter(9)](https://man.freebsd.org/cgi/man.cgi?query=accept_filter&sektion=9&format=html) 套接字配置接口中的双重释放 |
-| [FreeBSD-SA-21:10.jail_mount](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:10.jail_mount.asc) | 2021 年 4 月 6 日 | 通过挂载到 jail 根目录可能实现 jail 逃逸 |
+| [FreeBSD-SA-21:10.jail_mount](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:10.jail_mount.asc) | 2021 年 4 月 6 日 | 通过挂载到 Jail 根目录可能实现 Jail 逃逸 |
 | [FreeBSD-SA-21:11.smap](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:11.smap.asc) | 2021 年 5 月 26 日 | SMAP 绕过 |
 | [FreeBSD-SA-21:12.libradius](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:12.libradius.asc) | 2021 年 5 月 26 日 | [libradius(3)](https://man.freebsd.org/cgi/man.cgi?query=libradius&sektion=3&format=html) 缺少消息验证 |
 | [FreeBSD-SA-21:13.bhyve](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:13.bhyve.asc) | 2021 年 8 月 24 日 | [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 设备模型中缺少错误处理 |
