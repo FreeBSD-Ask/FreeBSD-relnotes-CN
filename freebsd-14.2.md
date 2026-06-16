@@ -3,7 +3,7 @@
 - 原文地址：[FreeBSD 14.2-RELEASE Release Notes](https://www.freebsd.org/releases/14.2R/relnotes/)
 - 最后修改：[Dave Cottlehuber](https://cgit.freebsd.org/doc/commit/?id=f232709d21) 于 2024 年 12 月 4 日
 
-## 概述
+## 摘要
 
 FreeBSD 14.2-RELEASE 发行说明总结了在 14-STABLE 开发分支上 FreeBSD 基本系统发生的变更。本文档列出了自上次发布以来 RELEASE 适用的安全公告，以及对 FreeBSD 内核和用户空间的重大变更。同时还附带了有关更新的简要说明。
 
@@ -189,7 +189,7 @@ IOAPIC ID 最大值已增加至 255，修复了某些高核心数 AMD CPU 启动
 
 现在，Linux 二进制兼容层所有的 `stat()` 及其衍生都将忽略参数 `AT_NO_AUTOMOUNT`——因为该参数指定的行为已经与 FreeBSD 的行为一致，这提高了 Linux 应用程序的兼容性。[99d3ce80ba07](https://cgit.freebsd.org/src/commit/?id=99d3ce80ba07)（由 FreeBSD 基金会赞助）
 
-### 多媒体
+## 多媒体
 
 对音频堆栈进行了许多改进，包括支持 [mixer(8)](https://man.freebsd.org/cgi/man.cgi?query=mixer&sektion=8&format=html) 中的热插拔功能，以及新增了工具 [mididump(1)](https://man.freebsd.org/cgi/man.cgi?query=mididump&sektion=1&format=html)。[cf9d2fb18433](https://cgit.freebsd.org/src/commit/?id=cf9d2fb18433)（由 FreeBSD 基金会赞助） [7224e9f2d4af](https://cgit.freebsd.org/src/commit/?id=7224e9f2d4af)（由 FreeBSD 基金会赞助）
 
@@ -217,6 +217,4 @@ FreeBSD 项目计划在 FreeBSD 15.0 和 stable/15 中将 armv7 作为二级（T
 
 FreeBSD stable/14 及更早分支将保留现有的 32 位内核和系统支持。在这些分支的支持期间，Ports 仍将支持为 32 位系统构建 Ports 和软件包。然而，所有 32 位平台均为二级、三级（Tier-2、Tier-3），因此随着上游停止对 32 位平台的支持，个别 Port 的支持可能会逐步下降。
 
-按照当前的支持计划，stable/14 的生命周期将在 FreeBSD 14.0-RELEASE 发布后约 5 年结束。stable/14 的生命周期结束（EOL）将参数着被弃用的 32 位平台支持的终结，包括源代码发布、预构建软件包和通过 Ports 构建应用程序的支持。随着 14.0-RELEASE 于 2023 年 11 月发布，对被弃用的 32 位平台的支持将于 2028 年 11 月结束。
-
-当 FreeBSD 15.0 发布时，FreeBSD 项目可能选择通过延续某些弃用平台的支持，调整这一计划。所有变更将根据社区反馈以及持续支持平台的努力来决定。
+按照当前的支持计划，stable/14 的生命周期将在 FreeBSD 14.0-RELEASE 发布后约 5 年结束。stable/14 的生命周期结束（EOL）将标志着被弃用的 32 位平台支持的终结，包括源代码发布、预构建软件包和通过 Ports 构建应用程序的支持。随着 14.0-RELEASE 于 2023 年 11 月发布，对被弃用的 32 位平台的支持将于 2028 年 11 月结束。
