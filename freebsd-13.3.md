@@ -89,7 +89,7 @@ FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 Fr
 
 通过 [periodic(8)](https://man.freebsd.org/cgi/man.cgi?query=periodic&sektion=8&format=html) 生成的配置文件和安全输出报告（发送给系统管理员）现在使用了简化的上下文，以减少无关内容。生成每日输出时，传给 [diff(1)](https://man.freebsd.org/cgi/man.cgi?query=diff&sektion=1&format=html) 的参数，可以通过 [rc.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5&format=html) 中的变量 `daily_diff_flags` 进行控制；安全脚本所用的 [diff(1)](https://man.freebsd.org/cgi/man.cgi?query=diff&sektion=1&format=html) 参数由 `security_status_diff_flags` 控制。[4c14a3a6aebe](https://cgit.freebsd.org/src/commit/?id=4c14a3a6aebe) [6d9195b5f763](https://cgit.freebsd.org/src/commit/?id=6d9195b5f763)
 
-用于下载闰秒信息的默认链接已更新为使用标准源，因为旧链接已经失效。[d19b59cfe594](https://cgit.freebsd.org/src/commit/?id=d19b59cfe594)
+用于下载闰秒信息的默认链接更新为使用标准源，因为旧链接失效。[d19b59cfe594](https://cgit.freebsd.org/src/commit/?id=d19b59cfe594)
 
 在使用 arm64 `RPI` 系统的树莓派设备上，守护进程 [powerd(8)](https://man.freebsd.org/cgi/man.cgi?query=powerd&sektion=8&format=html) 默认启用，这样系统可以在需要时全速运行。非默认睿频设置的用户也许需要禁用之。[e889b5a892b6](https://cgit.freebsd.org/src/commit/?id=e889b5a892b6)
 
