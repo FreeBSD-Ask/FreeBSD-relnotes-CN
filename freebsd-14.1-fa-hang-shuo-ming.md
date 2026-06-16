@@ -16,7 +16,7 @@ FreeBSD 14.1-RELEASE 发行说明概述了由 14-STABLE 开发线衍生的 FreeB
 
 该 FreeBSD 14.1-RELEASE 版本是个“RELEASE”版本。可以在 <https://www.FreeBSD.org/releases/> 和镜像站中找到它。下载该（及其他）FreeBSD“RELEASE”版本的信息，请参阅 [FreeBSD 手册](https://docs.freebsd.org/en/books/handbook/)的[附录《获取 FreeBSD》](https://docs.freebsd.org/en/books/handbook/mirrors)。
 
-在安装 FreeBSD 前，建议所有用户都看一下发行勘误。勘误文档会在发行周期后期，随发行后发现的“最新”信息更新。它通常涉及已知错误、安全公告和文档更正的相关信息。FreeBSD 14.1-RELEASE 的最新勘误信息可在 FreeBSD 网站上找到。
+在安装 FreeBSD 前，建议所有用户都看一下发行勘误。勘误文档会在发行周期后期，随发行后发现的“最新”信息更新。它通常涉及已知错误、安全公告和文档更正的相关信息。可以在 FreeBSD 网站上找到 FreeBSD 14.1-RELEASE 的最新勘误信息。
 
 本文档说明了自 14.0-RELEASE 以降，在 FreeBSD 中最具用户可见性的新特性和变更。一般来说，除非明确标记为 MERGED 特性，否则此处所述的变更独立于 14-STABLE 分支。
 

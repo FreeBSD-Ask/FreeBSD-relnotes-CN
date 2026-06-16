@@ -16,7 +16,7 @@ FreeBSD 13.1-RELEASE 的发行说明总结了在 13-STABLE 开发分支中对 Fr
 
 FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 或其任一镜像站下载。获取此版本（或其他版本）发行版的更多信息，请参阅 [FreeBSD 手册](https://docs.freebsd.org/en/books/handbook/mirrors) 中的 [获取 FreeBSD 附录](https://docs.freebsd.org/en/books/handbook/mirrors)。
 
-建议所有用户在安装 FreeBSD 之前，查阅发行版的勘误表。勘误表包含在发行周期后期或发行后发现的“最新信息”，通常包括已知错误、安全公告以及文档修订的相关内容。FreeBSD 13.1-RELEASE 的最新勘误表副本可在 FreeBSD 网站上找到。
+建议所有用户在安装 FreeBSD 之前，查阅发行版的勘误。勘误文档包含在发行周期后期或发行后发现的“最新信息”，通常包括已知错误、安全公告以及文档修订的相关内容。FreeBSD 13.1-RELEASE 的最新勘误副本可在 FreeBSD 网站上找到。
 
 本文件介绍了自 13.0-RELEASE 以来，FreeBSD 中对用户最显著的新功能或变更。一般而言，本文中提到的变更是 13-STABLE 分支所独有的，除非明确标记为已合并功能。
 
@@ -152,7 +152,7 @@ LLDB 的构建支持已在所有 PowerPC 架构上启用。[cb1bee9bd34](https:/
   - [scp(1)](https://man.freebsd.org/cgi/man.cgi?query=scp&sektion=1&format=html)：远程到远程复制（如 `scp host-a:/path host-b:`）的行为已变更，默认通过本地主机传输。
   - [scp(1)](https://man.freebsd.org/cgi/man.cgi?query=scp&sektion=1&format=html)：实验性支持使用 SFTP 协议进行传输，以替代传统的 SCP/RCP 协议。
 
-在 `ssh` 中启用了对 FIDO/U2F 硬件认证器的支持，新增了 `ecdsa-sk` 和 `ed25519-sk` 公钥类型以及相应的证书类型。有关 FIDO/U2F 支持的描述请参考 [https://www.openssh.com/txt/release-8.2](https://www.openssh.com/txt/release-8.2)。[a613d68fff9a](https://cgit.freebsd.org/src/commit/?id=a613d68fff9a)（由 FreeBSD 基金会赞助）
+对 FIDO/U2F 硬件认证器的支持已在 `ssh` 中启用，新增了 `ecdsa-sk` 和 `ed25519-sk` 公钥类型以及相应的证书类型。有关 FIDO/U2F 支持的描述请参考 [https://www.openssh.com/txt/release-8.2](https://www.openssh.com/txt/release-8.2)。[a613d68fff9a](https://cgit.freebsd.org/src/commit/?id=a613d68fff9a)（由 FreeBSD 基金会赞助）
 
 [bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?query=bsdinstall&sektion=8&format=html) 的脚本分区编辑器新增了一种新模式，用于支持变体磁盘名称。如果 `DEFAULT` 被设置为磁盘参数，或者在 `PARTITIONS` 参数中未指定设备名称，安装程序将遵循自动分区模式的逻辑。如果存在多个磁盘，将提供选择对话框；如果只有一个磁盘，则会自动选择。这简化了为硬件或虚拟机创建全自动安装介质的过程。[5ec4eb443e81](https://cgit.freebsd.org/src/commit/?id=5ec4eb443e81)
 
@@ -182,7 +182,7 @@ powerpc64(le) 平台上在 QEMU 的 TCG 模式下运行启用了 HPT 超页的 F
 
 powerpc64(le) 平台上的 `pmap_mincore` 已添加对超页的支持。[32b50b8520d](https://cgit.freebsd.org/src/commit/?id=32b50b8520d)
 
-在 arm64 平台上为 32 位 ARM 二进制文件添加了 HWCAP/HWCAP2 辅助参数支持。这修复了在 `COMPAT32` 仿真下构建/运行 Golang 的问题。[28e22482279f](https://cgit.freebsd.org/src/commit/?id=28e22482279f)（由 Rubicon Communications, LLC (“Netgate”) 赞助）
+HWCAP/HWCAP2 辅助参数支持已添加到 arm64 平台的 32 位 ARM 二进制文件中。这修复了在 `COMPAT32` 仿真下构建/运行 Golang 的问题。[28e22482279f](https://cgit.freebsd.org/src/commit/?id=28e22482279f)（由 Rubicon Communications, LLC (“Netgate”) 赞助）
 
 ## 设备与驱动
 
@@ -202,7 +202,7 @@ powerpc64(le) 平台在启动过程中使用 AST2500 时，VGA/HDMI 控制台的
 
 [virtio_random(8)](https://man.freebsd.org/cgi/man.cgi?query=virtio_random&sektion=8&format=html) 驱动阻止虚拟机客户机关机或重启的问题已修复。[fa67c45842bb](https://cgit.freebsd.org/src/commit/?id=fa67c45842bb)
 
-[ice(4)](https://man.freebsd.org/cgi/man.cgi?query=ice&sektion=4&format=html) 驱动已更新至 1.34.2-k，增加了固件日志记录功能和初步的 DCB 支持。[a0cdf45ea1d1](https://cgit.freebsd.org/src/commit/?id=a0cdf45ea1d1)（由英特尔公司赞助）
+[ice(4)](https://man.freebsd.org/cgi/man.cgi?query=ice&sektion=4&format=html) 驱动已更新至 1.34.2-k，增加了固件日志记录功能和初步的 DCB 支持。[a0cdf45ea1d1](https://cgit.freebsd.org/src/commit/?id=a0cdf45ea1d1)（由 Intel Corporation 赞助）
 
 网络接口驱动程序 [mgb(4)](https://man.freebsd.org/cgi/man.cgi?query=mgb&sektion=4&format=html) 已添加，支持 Microchip 的 LAN7430 PCIe 千兆以太网控制器（带 PHY）和 LAN7431 PCIe 千兆以太网控制器（带 RGMII 接口）。尽管该驱动仍存在一些限制，但功能已可用。[e0262ffbc6ae](https://cgit.freebsd.org/src/commit/?id=e0262ffbc6ae)（由 FreeBSD 基金会赞助）
 
@@ -238,7 +238,7 @@ ZFS 已升级至 OpenZFS 2.1.4 版本。OpenZFS 的发行说明可参阅 [https:
 
 - 新增了 NFSv4.1/4.2 的挂载选项 `nconnect`，用于指定挂载所使用的 TCP 连接数量（最多 16 个）。默认的第一个 TCP 连接将用于所有小型 RPC 消息，而可能包含大型 RPC 消息的操作（如 Read、Readdir、ReaddirPlus、Write）将在额外的 TCP 连接上以轮询方式发送。如果 NFS 客户端或服务器具有多个聚合的网络接口或支持多队列的网络接口，则此功能可以提高 NFS 的性能。[9ec7dbf46b0a](https://cgit.freebsd.org/src/commit/?id=9ec7dbf46b0a)
 
-- 添加了 sysctl 配置项 `vfs.nfsd.srvmaxio`，用于将 NFS 服务器的最大 I/O 大小从 128KB 增加到任意 2 的幂值（最高 1MB）。该选项只能在 nfsd 线程未运行时设置，且通常需要将 `kern.ipc.maxsockbuf` 增加至控制台日志中建议的值。[9fb6e613373c](https://cgit.freebsd.org/src/commit/?id=9fb6e613373c)
+- sysctl 配置项 `vfs.nfsd.srvmaxio` 已添加，用于将 NFS 服务器的最大 I/O 大小从 128KB 增加到任意 2 的幂值（最高 1MB）。该选项只能在 nfsd 线程未运行时设置，且通常需要将 `kern.ipc.maxsockbuf` 增加至控制台日志中建议的值。[9fb6e613373c](https://cgit.freebsd.org/src/commit/?id=9fb6e613373c)
 
 ### UFS 变更
 
@@ -251,13 +251,13 @@ ZFS 已升级至 OpenZFS 2.1.4 版本。OpenZFS 的发行说明可参阅 [https:
 ### 引导加载程序变更
 
 - **UEFI 引导改进（amd64）**：
-  针对 amd64 架构改进了 UEFI 引导。加载器会检测所加载的内核是否支持原位暂存区（非复制模式）。默认设置为 `copy_staging auto`。用户可以通过手动覆盖自动检测，例如：设置 `copy_staging enable` 时，加载器会无条件将暂存区复制到 2M 地址，无论内核是否支持。此外，扩展暂存区的代码更为稳健，用户无需手动调整和重新编译加载器即可完成扩展。（由 [FreeBSD 基金会](https://www.freebsdfoundation.org/) 赞助）
+  amd64 架构的 UEFI 引导已改进。加载器会检测所加载的内核是否支持原位暂存区（非复制模式）。默认设置为 `copy_staging auto`。用户可以通过手动覆盖自动检测，例如：设置 `copy_staging enable` 时，加载器会无条件将暂存区复制到 2M 地址，无论内核是否支持。此外，扩展暂存区的代码更为稳健，用户无需手动调整和重新编译加载器即可完成扩展。（由 [FreeBSD 基金会](https://www.freebsdfoundation.org/) 赞助）
 
 - **修复 `boot1` 和 `loader` 在 powerpc64le 架构上的问题**：[8a62b07bce7](https://cgit.freebsd.org/src/commit/?id=8a62b07bce7)
 
 ### 其他引导变更
 
-- **性能改进**：优化了 [loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html)、[nvme(4)](https://man.freebsd.org/cgi/man.cgi?query=nvme&sektion=4&format=html)、[random(4)](https://man.freebsd.org/cgi/man.cgi?query=random&sektion=4&format=html)、[rtsold(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsold&sektion=8&format=html) 和 x86 时钟校准的性能，这显著缩短了系统引导时间。此外，EC2 平台的配置变更进一步提高了性能，使得 13.1-RELEASE 的引导速度比 13.0-RELEASE 快了两倍以上。（由 [https://www.patreon.com/cperciva](https://www.patreon.com/cperciva) 赞助）
+- **性能改进**：[loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html)、[nvme(4)](https://man.freebsd.org/cgi/man.cgi?query=nvme&sektion=4&format=html)、[random(4)](https://man.freebsd.org/cgi/man.cgi?query=random&sektion=4&format=html)、[rtsold(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsold&sektion=8&format=html) 和 x86 时钟校准的性能已优化，这显著缩短了系统引导时间。此外，EC2 平台的配置变更进一步提高了性能，使得 13.1-RELEASE 的引导速度比 13.0-RELEASE 快了两倍以上。（由 [https://www.patreon.com/cperciva](https://www.patreon.com/cperciva) 赞助）
 
 - **EC2 镜像默认使用 UEFI 引导**：
   EC2 镜像现在默认使用 UEFI 引导而非传统的 BIOS 引导。不过，基于 Xen 的 EC2 实例或 `bare metal` EC2 实例仍不支持 UEFI。[65f22ccf8247](https://cgit.freebsd.org/src/commit/?id=65f22ccf8247)（由 [https://www.patreon.com/cperciva](https://www.patreon.com/cperciva) 赞助）

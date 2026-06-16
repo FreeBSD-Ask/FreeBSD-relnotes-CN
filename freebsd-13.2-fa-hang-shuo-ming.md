@@ -4,7 +4,7 @@
 
 ## 摘要
 
-FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeBSD 基本系统所做变更的摘要。本文件列出了自上次发布以来发布的相关安全通告，以及对 FreeBSD 内核和用户空间的重大变更。此外，本文档还提供了有关升级的一些简要说明。
+FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeBSD 基本系统所做变更的摘要。本文件列出了自上次发布以来发布的相关安全公告，以及对 FreeBSD 内核和用户空间的重大变更。此外，本文档还提供了有关升级的一些简要说明。
 
 ## 引言
 
@@ -16,11 +16,11 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 该 FreeBSD 13.2-RELEASE 的分发版是一个 RELEASE 发行版。该分发版可以在 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 和镜像站点找到。获取此版本（及其他）FreeBSD 发行版的更多信息，请参见 [FreeBSD 手册](https://docs.freebsd.org/en/books/handbook/)中的[获取 FreeBSD 附录](https://docs.freebsd.org/en/books/handbook/mirrors)。
 
-所有用户在安装 FreeBSD 之前都应查阅发布错误文档。错误文档会更新一些在发布周期末期或发布后发现的“突发”信息。通常，它包含已知的漏洞、安全通告以及文档的修正。FreeBSD 13.2-RELEASE 的最新错误文档可以在 FreeBSD 网站上找到。
+所有用户在安装 FreeBSD 之前都应查阅发布勘误。勘误文档会更新一些在发布周期末期或发布后发现的“最新”信息。通常，它包含已知的漏洞、安全公告以及文档的修正。FreeBSD 13.2-RELEASE 的最新勘误可以在 FreeBSD 网站上找到。
 
 本文档介绍了自 13.1-RELEASE 以来 FreeBSD 中最具用户可见性的新增或变更功能。一般来说，本文所述的变更是 13-STABLE 分支的特有变更，除非特别标记为合并特性。
 
-典型的发行说明项包括 13.1-RELEASE 之后发布的安全通告、新的驱动程序或硬件支持、新命令或选项、重大错误修复或第三方软件升级。它们也可能列出对主要 Ports/软件包或发布工程实践的变更。显然，发行说明无法列出两个版本之间对 FreeBSD 所做的每个变更；本文件主要关注安全通告、用户可见的变更以及重大架构改进。
+典型的发行说明条目包括 13.1-RELEASE 之后发布的安全公告、新的驱动程序或硬件支持、新命令或选项、重大错误修复或第三方软件升级。它们也可能列出对主要 Ports/软件包或发布工程实践的变更。显然，发行说明无法列出两个版本之间对 FreeBSD 所做的每个变更；本文件主要关注安全公告、用户可见的变更以及重大架构改进。
 
 ## 从旧版 FreeBSD 升级
 
@@ -36,7 +36,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 ## 安全与勘误
 
-本节列出了自 13.1-RELEASE 以来的各项安全通告和勘误通知。
+本节列出了自 13.1-RELEASE 以来的各项安全公告和勘误通知。
 
 ### 安全公告
 
@@ -102,7 +102,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 工具 [kdump(1)](https://man.freebsd.org/cgi/man.cgi?query=kdump&sektion=1&format=html) 新增了对 Linux 系统调用的解码支持。
 
-工具 [killall(1)](https://man.freebsd.org/cgi/man.cgi?query=killall&sektion=1&format=html) 现在允许通过语法 `-t pts/N` 向控制终端位于 [pts(4)](https://man.freebsd.org/cgi/man.cgi?query=pts&sektion=4&format=html) 上的进程发送信号。[a76fa7bb6cb7](https://cgit.freebsd.org/src/commit/?id=a76fa7bb6cb7)
+工具 [killall(1)](https://man.freebsd.org/cgi/man.cgi?query=killall&sektion=1&format=html) 现在允许通过语法 `-t pts/N` 向控制终端在 [pts(4)](https://man.freebsd.org/cgi/man.cgi?query=pts&sektion=4&format=html) 上的进程发送信号。[a76fa7bb6cb7](https://cgit.freebsd.org/src/commit/?id=a76fa7bb6cb7)
 
 新增工具 [nproc(1)](https://man.freebsd.org/cgi/man.cgi?query=nproc&sektion=1&format=html)，与同名的 Linux 程序兼容。
 
@@ -210,7 +210,7 @@ arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=
 
 [ice(4)](https://man.freebsd.org/cgi/man.cgi?query=ice&sektion=4&format=html) 驱动程序更新至 1.37.7-k 版本。
 
-[irdma(4)](https://man.freebsd.org/cgi/man.cgi?query=irdma&sektion=4&format=html) RDMA 驱动程序为 Intel E810 以太网控制器引入，支持 RoCEv2 和 iWARP 协议，以每个 PF 方式运行，默认使用 RoCEv2，并升级至 1.1.5-k 版本。[42bad04a2156](https://cgit.freebsd.org/src/commit/?id=42bad04a2156)（由英特尔公司赞助）
+[irdma(4)](https://man.freebsd.org/cgi/man.cgi?query=irdma&sektion=4&format=html) RDMA 驱动程序为 Intel E810 以太网控制器引入，支持 RoCEv2 和 iWARP 协议，以每个 PF 方式运行，默认使用 RoCEv2，并升级至 1.1.5-k 版本。[42bad04a2156](https://cgit.freebsd.org/src/commit/?id=42bad04a2156)（由 Intel Corporation 赞助）
 
 对 DPAA2（第二代数据路径加速架构，一种存在于某些 NXP SoC 中的硬件级网络架构）的初步支持现在提供。它运行 NXP 提供的固件，作为抽象层提供 DPAA2 对象，并提供一个 `dpni` 网络接口。[d5a64a935bc9](https://cgit.freebsd.org/src/commit/?id=d5a64a935bc9)（由 Bare Enthusiasm :-) 和 Traverse Technologies 赞助）
 
