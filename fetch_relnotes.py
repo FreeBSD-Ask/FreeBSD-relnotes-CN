@@ -1,41 +1,41 @@
-import urllib.request
-import json
+import os
 
-# Check the most recent commit to the relnotes.adoc file
-url = 'https://api.github.com/repos/freebsd/freebsd-doc/commits?path=website/content/en/releases/15.1R/relnotes.adoc&per_page=5'
-req = urllib.request.Request(url, headers={
-    'User-Agent': 'Mozilla/5.0',
-    'Accept': 'application/vnd.github.v3+json'
-})
-with urllib.request.urlopen(req, timeout=30) as resp:
-    commits = json.loads(resp.read().decode('utf-8'))
+fpath = r'c:\Users\ykla\Documents\FreeBSD-relnotes-CN\15.1.md'
 
-# Get the diff of the most recent commit
-sha = commits[0]['sha']
-print(f'Most recent commit: {sha}')
-print(f'Message: {commits[0]["commit"]["message"][:200]}')
-print()
+with open(fpath, 'rb') as f:
+    raw = f.read()
 
-# Get the commit diff
-diff_url = f'https://api.github.com/repos/freebsd/freebsd-doc/commits/{sha}'
-req2 = urllib.request.Request(diff_url, headers={
-    'User-Agent': 'Mozilla/5.0',
-    'Accept': 'application/vnd.github.v3+json'
-})
-with urllib.request.urlopen(req2, timeout=30) as resp:
-    commit_data = json.loads(resp.read().decode('utf-8'))
+# Check BOM
+if raw[:3] == b'\xef\xbb\xbf':
+    print('WARNING: File has UTF-8 BOM')
+else:
+    print('OK: No UTF-8 BOM')
 
-# Check the files changed
-for f in commit_data.get('files', []):
-    if 'relnotes' in f['filename']:
-        print(f'File: {f["filename"]}')
-        print(f'Status: {f["status"]}')
-        print(f'Changes: +{f["additions"]} -{f["deletions"]}')
-        # Print the patch if it's not too large
-        patch = f.get('patch', '')
-        if len(patch) < 5000:
-            print('Patch:')
-            print(patch)
-        else:
-            print(f'Patch too large ({len(patch)} chars), showing first 3000:')
-            print(patch[:3000])
+# Check line endings
+crlf_count = raw.count(b'\r\n')
+lf_count = raw.count(b'\n') - crlf_count
+cr_only = raw.count(b'\r') - crlf_count
+
+print(f'CRLF count: {crlf_count}')
+print(f'LF count: {lf_count}')
+print(f'CR only count: {cr_only}')
+
+if crlf_count > 0:
+    print('WARNING: File has CRLF line endings')
+    # Convert to LF
+    with open(fpath, 'wb') as f:
+        f.write(raw.replace(b'\r\n', b'\n'))
+    print('Converted to LF line endings')
+elif lf_count > 0:
+    print('OK: File has LF line endings')
+else:
+    print('WARNING: No line endings found')
+
+# Check last few lines
+with open(fpath, 'r', encoding='utf-8') as f:
+    lines = f.readlines()
+
+print(f'\nTotal lines: {len(lines)}')
+print('\nLast 5 lines:')
+for line in lines[-5:]:
+    print(repr(line))
