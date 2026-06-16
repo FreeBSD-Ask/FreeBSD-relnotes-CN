@@ -100,7 +100,7 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 
 新增函数 `cap_rights_is_empty`，用于判断 `cap_rights_t` 是否未设置任何权限。[e77813f7e4a3](https://cgit.freebsd.org/src/commit/?id=e77813f7e4a3)（由 FreeBSD 基金会赞助）
 
-## 云端支持
+## 云支持
 
 本节介绍云环境支持方面的变化。
 
@@ -110,7 +110,7 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 - Amazon EC2 云环境中的 `shutdown` 和 `reboot` API 现在可支持 arm64 实例。更新至 FreeBSD 14.2-RELEASE 的旧实例需要在 `/boot/loader.conf` 中设置 `debug.acpi.quirks="8"`。[28b881840df7](https://cgit.freebsd.org/src/commit/?id=28b881840df7)（由亚马逊赞助）
 - FreeBSD 项目现在发布了“精简版（small）”的 EC2 镜像。精简版镜像在“基础版（base）”中移除了调试符号、测试、32 位库、LLDB 调试器、Amazon SSM Agent 和 AWS CLI。[953142d6baf3](https://cgit.freebsd.org/src/commit/?id=953142d6baf3)（由亚马逊赞助）
 
-## 设备与驱动程序
+## 设备与驱动
 
 本节介绍自 FreeBSD 14.1-RELEASE 以来设备和驱动程序的变更与新增内容。
 
@@ -127,7 +127,7 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 - 增加了对 ACPI GPIO _AEI 对象的支持。[1db6ffb2a482](https://cgit.freebsd.org/src/commit/?id=1db6ffb2a482)（由亚马逊赞助）
 - 已在所有架构上启用 [nvme(4)](https://man.freebsd.org/cgi/man.cgi?query=nvme&sektion=4&format=html) 和 [nvmecontrol(8)](https://man.freebsd.org/cgi/man.cgi?query=nvmecontrol&sektion=8&format=html)。[24687a65dd7f](https://cgit.freebsd.org/src/commit/?id=24687a65dd7f)，[aba2d7f89dcf](https://cgit.freebsd.org/src/commit/?id=aba2d7f89dcf)（由 Chelsio Communications 和Netflix赞助）
 
-### 弃用和删除的驱动程序
+### 已弃用和已移除的驱动程序
 
 - 计划在 FreeBSD 15.0 中删除 [agp(4)](https://man.freebsd.org/cgi/man.cgi?query=agp&sektion=4&format=html) ，手册页已标注为弃用。[92af7c97e197](https://cgit.freebsd.org/src/commit/?id=92af7c97e197)
 - 计划在后续版本中删除 [syscons(4)](https://man.freebsd.org/cgi/man.cgi?query=syscons&sektion=4&format=html) ，手册页已标注为弃用，建议用户迁移至 [vt(4)](https://man.freebsd.org/cgi/man.cgi?query=vt&sektion=4&format=html)。[2bc5b1d60512](https://cgit.freebsd.org/src/commit/?id=2bc5b1d60512)（由 FreeBSD 基金会赞助）

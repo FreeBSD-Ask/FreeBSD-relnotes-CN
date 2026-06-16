@@ -230,7 +230,7 @@ arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=
 
 ### UFS 变更
 
-现在可以在运行启用了日志软更新的 UFS 文件系统上进行快照。因此，现在可以在运行日志软更新的在线文件系统上执行后台转储。通过使用 `-L` 参数来请求后台转储：[dump(8)](https://man.freebsd.org/cgi/man.cgi?query=dump&sektion=8&format=html)。在以前的版本中，UFS 快照与日志软更新不兼容。[3f908eed27b4](https://cgit.freebsd.org/src/commit/?id=3f908eed27b4)（由 FreeBSD 基金会赞助）
+现在可以在启用了日志软更新的 UFS 文件系统上进行快照。因此，现在可以在运行日志软更新的在线文件系统上执行后台转储。通过使用 `-L` 参数来请求后台转储：[dump(8)](https://man.freebsd.org/cgi/man.cgi?query=dump&sektion=8&format=html)。在以前的版本中，UFS 快照与日志软更新不兼容。[3f908eed27b4](https://cgit.freebsd.org/src/commit/?id=3f908eed27b4)（由 FreeBSD 基金会赞助）
 
 ## 启动加载器变更
 
@@ -240,7 +240,7 @@ arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=
 
 变量 `teken.fg_color` 和 `teken.bg_color` [loader.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=loader.conf&sektion=5&format=html) 现在接受 `bright` 或 `light` 前缀（以及颜色号 8 到 15）来选择亮色。[1dcb6002c500](https://cgit.freebsd.org/src/commit/?id=1dcb6002c500)（由 FreeBSD 基金会赞助）。另见 [233ab015c0d7](https://cgit.freebsd.org/src/commit/?id=233ab015c0d7)
 
-修复了多个导致视频控制台输出消失的 bug。问题通常是在启动加载器启动内核后出现挂起。（由Netflix赞助）
+修复了 [loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html) 中多个导致视频控制台输出消失的 bug。这些问题表现为启动加载器启动内核后出现挂起。（由 Netflix 赞助）
 
 ## 网络
 
@@ -250,7 +250,7 @@ arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=
 
 内核的 [wg(4)](https://man.freebsd.org/cgi/man.cgi?query=wg&sektion=4&format=html) WireGuard 驱动程序已重新集成；它通过 WireGuard 协议提供虚拟私人网络（VPN）接口。[5ae69e2f10da](https://cgit.freebsd.org/src/commit/?id=5ae69e2f10da)（由 Rubicon Communications, LLC（"Netgate"）和 FreeBSD 基金会赞助）
 
-KTLS（内核 TLS 实现）已为 TLS 1.3 添加接收卸载支持。现在支持 TLS 1.1 至 1.3 的接收卸载；TLS 1.0 至 1.3 的发送卸载也得到了支持。[1462dc95f796](https://cgit.freebsd.org/src/commit/?id=1462dc95f796)（由Netflix赞助）
+KTLS（内核 TLS 实现）已为 TLS 1.3 添加接收卸载支持。现在支持 TLS 1.1 至 1.3 的接收卸载；TLS 1.0 至 1.3 的发送卸载也得到了支持。[1462dc95f796](https://cgit.freebsd.org/src/commit/?id=1462dc95f796)（由 Netflix 赞助）
 
 现在提供 [netlink(4)](https://man.freebsd.org/cgi/man.cgi?query=netlink&sektion=4&format=html) 网络配置协议。它是 RFC 3549 中定义的通信协议，使用原始套接字在用户空间和内核之间交换配置数据。第三方路由程序和 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&format=html) ABI 使用该协议。[6058f6cc48f5](https://cgit.freebsd.org/src/commit/?id=6058f6cc48f5)（不包括在 13.2-RELEASE 的 GENERIC 配置中，但作为内核模块提供）
 
