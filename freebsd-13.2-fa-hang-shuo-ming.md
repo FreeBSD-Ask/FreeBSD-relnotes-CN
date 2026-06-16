@@ -44,7 +44,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 | :--- | :--- | :--- |
 | [FreeBSD-SA-22:03.openssl](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:03.openssl.asc) | 2022 年 3 月 15 日 | OpenSSL 证书解析无限循环 |
 | [FreeBSD-SA-22:04.netmap](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:04.netmap.asc) | 2022 年 4 月 6 日 | netmap 中潜在的 Jail 逃逸漏洞 |
-| [FreeBSD-SA-22:05.bhyve](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:05.bhyve.asc) | 2022 年 4 月 6 日 | Bhyve e82545 设备仿真越界写入 |
+| [FreeBSD-SA-22:05.bhyve](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:05.bhyve.asc) | 2022 年 4 月 6 日 | bhyve e82545 设备仿真越界写入 |
 | [FreeBSD-SA-22:06.ioctl](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:06.ioctl.asc) | 2022 年 4 月 6 日 | mpr/mps/mpt 驱动 ioctl 堆越界写入 |
 | [FreeBSD-SA-22:07.wifi_meshid](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:07.wifi_meshid.asc) | 2022 年 4 月 6 日 | 802.11 堆缓冲区溢出 |
 | [FreeBSD-SA-22:08.zlib](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:08.zlib.asc) | 2022 年 4 月 6 日 | zlib 压缩越界写入 |
@@ -176,7 +176,7 @@ Gavin Howard 的 `bc` 已升级到版本 6.2.4。
 
 ### 内核通用变更
 
-[bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 虚拟机管理程序和内核模块 [vmm(4)](https://man.freebsd.org/cgi/man.cgi?query=vmm&sektion=4&format=html) 现在支持在虚拟机中使用超过 16 个 vCPU。默认情况下，Bhyve 允许每个虚拟机创建与主机物理 CPU 数量相同的 vCPU。此限制可以通过加载器调节选项 `hw.vmm.maxcpu` 来调整。[3e02f8809aec](https://cgit.freebsd.org/src/commit/?id=3e02f8809aec)
+[bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 虚拟机管理程序和内核模块 [vmm(4)](https://man.freebsd.org/cgi/man.cgi?query=vmm&sektion=4&format=html) 现在支持在虚拟机中使用超过 16 个 vCPU。默认情况下，bhyve 允许每个虚拟机创建与主机物理 CPU 数量相同的 vCPU。此限制可以通过加载器调节选项 `hw.vmm.maxcpu` 来调整。[3e02f8809aec](https://cgit.freebsd.org/src/commit/?id=3e02f8809aec)
 
 默认启用了 64 位可执行文件的地址空间布局随机化（ASLR）。如果应用程序出现意外故障（例如，段错误），可以根据需要禁用 ASLR。要禁用单次调用，可以使用 [proccontrol(1)](https://man.freebsd.org/cgi/man.cgi?query=proccontrol&sektion=1&format=html) 命令：`proccontrol -m aslr -s disable command`。要禁用所有二进制文件的 ASLR 调用，可以使用 [elfctl(1)](https://man.freebsd.org/cgi/man.cgi?query=elfctl&sektion=1&format=html) 命令：`elfctl -e +noaslr file`。问题应通过问题报告系统 [https://bugs.freebsd.org](https://bugs.freebsd.org/) 提交，或通过 `freebsd-stable@FreeBSD.org` 邮件列表报告。[10192e77cfac](https://cgit.freebsd.org/src/commit/?id=10192e77cfac)（由 Stormshield 赞助）
 
