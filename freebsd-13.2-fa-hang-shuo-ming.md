@@ -90,7 +90,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 `zfskeys` 启动脚本支持自动加载存储在 ZFS 上的密钥。[2411090f6940](https://cgit.freebsd.org/src/commit/?id=2411090f6940)（由 Klara Inc. 赞助）
 
-新增了 RC 脚本 `zpoolreguid`，用于为一个或多个 zpool 分配新的 GUID，在虚拟化环境中共享数据集时非常有用。
+新增的 RC 脚本 `zpoolreguid` 用于为一个或多个 zpool 分配新的 GUID，在虚拟化环境中共享数据集时非常有用。
 
 `hostid` 启动脚本现在将在没有 **/etc/hostid** 文件且硬件没有有效 UUID 时生成一个随机（版本 4）UUID。此外，如果没有 **/etc/machine-id** 文件，`hostid_save` 脚本将把一个压缩版的 hostid（没有连字符的版本）存储在 **/etc/machine-id** 中。此文件由 GLib 等库使用。[17333d92643d](https://cgit.freebsd.org/src/commit/?id=17333d92643d) [a379d5c5efb2](https://cgit.freebsd.org/src/commit/?id=a379d5c5efb2) [71d88613d129](https://cgit.freebsd.org/src/commit/?id=71d88613d129)
 
