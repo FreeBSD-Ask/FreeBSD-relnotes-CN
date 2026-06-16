@@ -4,17 +4,17 @@
 
 ## 摘要
 
-FreeBSD 13.2-RELEASE 的发布说明包含了自 13-STABLE 开发线以来对 FreeBSD 基本系统所做变更的摘要。本文件列出了自上次发布以来发布的相关安全通告，以及对 FreeBSD 内核和用户态的重大变更。此外，还提供了有关升级的一些简要说明。
+FreeBSD 13.2-RELEASE 的发布说明包含了在 13-STABLE 开发线上对 FreeBSD 基本系统所做变更的摘要。本文件列出了自上次发布以来发布的相关安全通告，以及对 FreeBSD 内核和用户态的重大变更。此外，还提供了有关升级的一些简要说明。
 
 ## 介绍
 
 本文档包含 FreeBSD 13.2-RELEASE 的发布说明。它介绍了最近添加、变更或删除的 FreeBSD 特性，并提供了一些关于从之前版本升级的说明。
 
-这些发布说明适用于自 13-STABLE 创建以来，13-STABLE 开发分支上的最新版本。有关该分支上的预构建二进制发行版的信息，请访问 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/)。
+这些发布说明所适用的发行版，代表了自 13-STABLE 创建以来，该开发分支上的最新节点。有关该分支上的预构建二进制发行版的信息，请访问 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/)。
 
-这些发布说明适用于位于 13-STABLE 开发分支上的一个版本点，该版本位于 13.1-RELEASE 和未来的 13.3-RELEASE 之间。有关该分支上的预构建二进制发行版的信息，请访问 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/)。
+这些发布说明所适用的发行版，代表了 13-STABLE 开发分支上 13.1-RELEASE 与未来的 13.3-RELEASE 之间的一个节点。有关该分支上的预构建二进制发行版的信息，请访问 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/)。
 
-该 FreeBSD 13.2-RELEASE 的分发版是一个正式的 RELEASE 版本。可以在 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 和镜像站点找到。有关获取此版本（及其他）FreeBSD 发行版的更多信息，请参见 [FreeBSD 手册](https://docs.freebsd.org/en/books/handbook/)中的[获取 FreeBSD 附录](https://docs.freebsd.org/en/books/handbook/mirrors)。
+该 FreeBSD 13.2-RELEASE 的分发版是一个 RELEASE 发行版。可以在 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 和镜像站点找到。有关获取此版本（及其他）FreeBSD 发行版的更多信息，请参见 [FreeBSD 手册](https://docs.freebsd.org/en/books/handbook/)中的[获取 FreeBSD 附录](https://docs.freebsd.org/en/books/handbook/mirrors)。
 
 所有用户在安装 FreeBSD 之前都应查阅发布错误文档。错误文档会更新一些在发布周期末期或发布后发现的“突发”信息。通常，它包含已知的漏洞、安全通告以及文档的修正。FreeBSD 13.2-RELEASE 的最新错误文档可以在 FreeBSD 网站上找到。
 
