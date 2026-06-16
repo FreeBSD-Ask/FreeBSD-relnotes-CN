@@ -226,3 +226,4 @@ $RECYCLE.BIN/
 *.adoc
 *.ps1
 *.pyc
+*.json
