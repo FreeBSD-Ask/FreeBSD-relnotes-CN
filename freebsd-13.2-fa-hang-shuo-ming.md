@@ -186,7 +186,7 @@ Gavin Howard 的 `bc` 升级到版本 6.2.4。
 
 在 PowerPC 上，pseries 的 ISA 3.0 中的 radix pmap 现在受支持。这应使得 pseries 在 POWER9 实例上显著加速，因为现在管理 pmap 所需的超调用更少。[c74c77531248](https://cgit.freebsd.org/src/commit/?id=c74c77531248)
 
-[ptrace(2)](https://man.freebsd.org/cgi/man.cgi?query=ptrace&sektion=2&format=html) 支持现在可用于 arm64 上的 Linux 进程。[99950e8beb72](https://cgit.freebsd.org/src/commit/?id=99950e8beb72)
+arm64 上的 Linux 进程现在支持 [ptrace(2)](https://man.freebsd.org/cgi/man.cgi?query=ptrace&sektion=2&format=html)。[99950e8beb72](https://cgit.freebsd.org/src/commit/?id=99950e8beb72)
 
 为了提高 `stable` 分支的 ABI 兼容性，CPU 亲和性系统调用现在可以更宽容地处理比内核使用的 CPU 集合小的 CPU 集合。这将促进 `MAXCPU`（内核 CPU 集合的大小）增加。[72bc1e6806cc](https://cgit.freebsd.org/src/commit/?id=72bc1e6806cc)
 

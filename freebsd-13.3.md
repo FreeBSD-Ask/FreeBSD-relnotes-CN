@@ -4,7 +4,7 @@
 
 ## 摘要
 
-FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 FreeBSD 基本系统所做变更的总结。本文列出了自上次发布以来发布的相关安全通告，并介绍了 FreeBSD 内核和用户空间的重大变更。还简要说明了从先前版本升级的相关事项。
+FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 FreeBSD 基本系统所做变更的总结。本文列出了自上次发布以来发布的相关安全公告，并介绍了 FreeBSD 内核和用户空间的重大变更。还简要说明了从先前版本升级的相关事项。
 
 ## 引言
 
@@ -16,11 +16,11 @@ FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 Fr
 
 此 FreeBSD 13.3-RELEASE 版本是 RELEASE 发行版。它可以在 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 和任何镜像站点找到。获取此版本或其他版本的更多信息，请参见 [FreeBSD 手册](https://docs.freebsd.org/en/books/handbook/) 中的附录[获取 FreeBSD](https://docs.freebsd.org/en/books/handbook/mirrors)。
 
-在安装 FreeBSD 之前，建议所有用户都先查阅下发行勘误文档。勘误文档会根据发布周期结束和发布后发现的“最后时刻”信息更新，通常包含已知的 bug、安全通告以及文档的更正。最新的 FreeBSD 13.3-RELEASE 勘误文档可以在 FreeBSD 网站上找到。
+在安装 FreeBSD 之前，建议所有用户都先查阅下发行勘误文档。勘误文档会根据发布周期结束和发布后发现的“最新”信息更新，通常包含已知的 bug、安全公告以及文档的更正。最新的 FreeBSD 13.3-RELEASE 勘误文档可以在 FreeBSD 网站上找到。
 
 本文档介绍了 FreeBSD 13-STABLE 中自 13.2-RELEASE 以来最为用户可见的新特性或变更。请注意，本文中描述的某些变更也可以在 FreeBSD 14.0-RELEASE 中找到。
 
-典型的发行说明项目记录了自 13.2-RELEASE 以来发布的安全通告、新的驱动程序和硬件支持、新的命令和参数、主要的 bug 修复，及第三方的软件升级。它们还可能列出主要 Port/包的变更和发布工程实践。显然，发行说明无法列出 FreeBSD 在两个版本之间的每一项变更；本文档主要关注安全通告、用户可见的变更以及主要的架构改进。
+典型的发行说明条目记录了自 13.2-RELEASE 以来发布的安全公告、新的驱动程序和硬件支持、新的命令和参数、主要的 bug 修复，及第三方的软件升级。它们还可能列出主要 Port/包的变更和发布工程实践。显然，发行说明无法列出 FreeBSD 在两个版本之间的每一项变更；本文档主要关注安全公告、用户可见的变更以及主要的架构改进。
 
 ## 从旧版 FreeBSD 升级
 
@@ -34,7 +34,7 @@ FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 Fr
 
 ## 安全与勘误
 
-本节列出了自 13.2-RELEASE 以来的各项安全通告和勘误通知。
+本节列出了自 13.2-RELEASE 以来的各项安全公告和勘误通知。
 
 ### 安全通告
 
@@ -159,7 +159,7 @@ USB 以太网适配器驱动 [smsc(4)](https://man.freebsd.org/cgi/man.cgi?query
 
 ### 通用存储
 
-在调试和解决通用文件系统代码中与 vnode 回收相关的问题过程中，vnode 相关统计信息的 `sysctl` 已被分组到 `vfs.vnode` 下，以提高可见性。[77a8bd148796](https://cgit.freebsd.org/src/commit/?id=77a8bd148796)
+在调试和解决通用文件系统代码中与 vnode 回收相关的问题过程中，将 vnode 相关统计信息的 `sysctl` 分组到 `vfs.vnode` 下，以提高可见性。[77a8bd148796](https://cgit.freebsd.org/src/commit/?id=77a8bd148796)
 
 ### NFS 变更
 
