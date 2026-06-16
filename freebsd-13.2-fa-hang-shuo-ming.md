@@ -166,7 +166,7 @@ arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=
 
 [irdma(4)](https://man.freebsd.org/cgi/man.cgi?query=irdma&sektion=4&format=html) RDMA 驱动程序已为 Intel E810 以太网控制器引入，支持 RoCEv2 和 iWARP 协议，以每个 PF 方式运行，默认使用 RoCEv2，并已升级至 1.1.5-k 版本。[42bad04a2156](https://cgit.freebsd.org/src/commit/?id=42bad04a2156)（由英特尔公司赞助）
 
-现在已提供对 DPAA2（第二代数据路径加速架构，一种在某些 NXP SoC 中找到的硬件级网络架构）的初步支持。它运行 NXP 提供的固件，作为抽象层提供 DPAA2 对象，并提供一个 `dpni` 网络接口。[d5a64a935bc9](https://cgit.freebsd.org/src/commit/?id=d5a64a935bc9)（由 Bare Enthusiasm :) 和 Traverse Technologies 赞助）
+现在已提供对 DPAA2（第二代数据路径加速架构，一种在某些 NXP SoC 中找到的硬件级网络架构）的初步支持。它运行 NXP 提供的固件，作为抽象层提供 DPAA2 对象，并提供一个 `dpni` 网络接口。[d5a64a935bc9](https://cgit.freebsd.org/src/commit/?id=d5a64a935bc9)（由 Bare Enthusiasm :-) 和 Traverse Technologies 赞助）
 
 [iwlwifi(4)](https://man.freebsd.org/cgi/man.cgi?query=iwlwifi&sektion=4&format=html) 驱动程序已更新，用于支持 Intel 无线接口。（由 FreeBSD 基金会赞助）
 
