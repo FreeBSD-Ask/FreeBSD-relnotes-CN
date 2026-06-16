@@ -204,7 +204,7 @@ CAS 已变更为支持 Radix MMU。[cc8e726c85b](https://cgit.freebsd.org/src/co
 
 更新了驱动 [ice(4)](https://man.freebsd.org/cgi/man.cgi?query=ice&sektion=4&format=html) 至 1.34.2-k，增加了固件日志记录功能和初步的 DCB 支持。[a0cdf45ea1d1](https://cgit.freebsd.org/src/commit/?id=a0cdf45ea1d1)（由英特尔公司赞助）
 
-添加了网络接口驱动程序 [mgb(4)](https://man.freebsd.org/cgi/man.cgi?query=mgb&sektion=4&format=html) ，支持 Microchip 的 LAN7430 PCIe 千兆以太网控制器（带 PHY）和 LAN7431 PCIe 千兆以太网控制器（带 RGMII 接口）。尽管该驱动仍存在一些限制，但功能已可用。[e0262ffbc6ae](https://cgit.freebsd.org/src/commit/?id=e0262ffbc6ae)（由 FreeBSD 基金会赞助）
+添加了网络接口驱动程序 [mgb(4)](https://man.freebsd.org/cgi/man.cgi?query=mgb&sektion=4&format=html)，支持 Microchip 的 LAN7430 PCIe 千兆以太网控制器（带 PHY）和 LAN7431 PCIe 千兆以太网控制器（带 RGMII 接口）。尽管该驱动仍存在一些限制，但功能已可用。[e0262ffbc6ae](https://cgit.freebsd.org/src/commit/?id=e0262ffbc6ae)（由 FreeBSD 基金会赞助）
 
 为 [cdce(4)](https://man.freebsd.org/cgi/man.cgi?query=cdce&sektion=4&format=html) 设备添加了链路状态、媒体类型和 VLAN MTU 的支持。[973fb85188ea](https://cgit.freebsd.org/src/commit/?id=973fb85188ea)
 

@@ -153,7 +153,7 @@ root 用户的默认 shell 现在是 [sh(1)](https://man.freebsd.org/cgi/man.cgi
 
 ## 用户空间应用程序变更
 
-添加了工具 [base64(1)](https://man.freebsd.org/cgi/man.cgi?query=base64&sektion=1&format=html) 。[540a99289bb1](https://cgit.freebsd.org/src/commit/?id=540a99289bb1)
+添加了工具 [base64(1)](https://man.freebsd.org/cgi/man.cgi?query=base64&sektion=1&format=html)。[540a99289bb1](https://cgit.freebsd.org/src/commit/?id=540a99289bb1)
 
 [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 虚拟化程序现在具有可选的 TPM（可信平台模块）直通支持。这并非直接访问，而是将来自虚拟机的命令转发到物理 TPM。[67c26eb2a57c](https://cgit.freebsd.org/src/commit/?id=67c26eb2a57c)
 
@@ -297,7 +297,7 @@ FreeBSD 现在重新启动更快。添加了 sysctl  `kern.reboot_wait_time` 以
 
 `kinst` 已移植到 arm64 和 riscv。[07864a8a2466](https://cgit.freebsd.org/src/commit/?id=07864a8a2466)[2d7bb03adb43](https://cgit.freebsd.org/src/commit/?id=2d7bb03adb43)（由 FreeBSD 基金会赞助）
 
-现在可以在 amd64 内核中使用 LLVM 的 MemorySanitizer。更多信息请参见手册页 [kmsan(9)](https://man.freebsd.org/cgi/man.cgi?query=kmsan&sektion=9&format=html) 。[a422084abbda](https://cgit.freebsd.org/src/commit/?id=a422084abbda)（由 FreeBSD 基金会赞助）
+现在可以在 amd64 内核中使用 LLVM 的 MemorySanitizer。更多信息请参见手册页 [kmsan(9)](https://man.freebsd.org/cgi/man.cgi?query=kmsan&sektion=9&format=html)。[a422084abbda](https://cgit.freebsd.org/src/commit/?id=a422084abbda)（由 FreeBSD 基金会赞助）
 
 现在可以在 arm64 内核以及 amd64 上使用 LLVM 的 AddressSanitizer。更多信息请参见 [kasan(9)](https://man.freebsd.org/cgi/man.cgi?query=kasan&sektion=9&format=html) 手册页。[89c52f9d59fa](https://cgit.freebsd.org/src/commit/?id=89c52f9d59fa)（由 Juniper Networks, Inc.赞助）（由 Klara, Inc.赞助）
 

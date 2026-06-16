@@ -94,7 +94,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 `hostid` 启动脚本现在将在没有 **/etc/hostid** 文件且硬件没有有效 UUID 时生成一个随机（版本 4）UUID。此外，如果没有 **/etc/machine-id** 文件，`hostid_save` 脚本将把一个压缩版的 hostid（没有连字符的版本）存储在 **/etc/machine-id** 中。此文件由 GLib 等库使用。[17333d92643d](https://cgit.freebsd.org/src/commit/?id=17333d92643d) [a379d5c5efb2](https://cgit.freebsd.org/src/commit/?id=a379d5c5efb2) [71d88613d129](https://cgit.freebsd.org/src/commit/?id=71d88613d129)
 
-现在可以通过使用变量 `defaultrouter_fibN` 和 `ipv6_defaultrouter_fibN` [rc.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5&format=html) ，为除主路由表外的其他 FIB 添加默认路由。[c6ec1b441ad3](https://cgit.freebsd.org/src/commit/?id=c6ec1b441ad3)（由 ScaleEngine Inc. 赞助）
+现在可以通过使用变量 `defaultrouter_fibN` 和 `ipv6_defaultrouter_fibN` [rc.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5&format=html)，为除主路由表外的其他 FIB 添加默认路由。[c6ec1b441ad3](https://cgit.freebsd.org/src/commit/?id=c6ec1b441ad3)（由 ScaleEngine Inc. 赞助）
 
 ### 用户空间应用程序变更
 
@@ -104,7 +104,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 工具 [killall(1)](https://man.freebsd.org/cgi/man.cgi?query=killall&sektion=1&format=html) 现在允许通过语法 `-t pts/N` 向具有其控制终端的进程发送信号，[pts(4)](https://man.freebsd.org/cgi/man.cgi?query=pts&sektion=4&format=html) 中使用。[a76fa7bb6cb7](https://cgit.freebsd.org/src/commit/?id=a76fa7bb6cb7)
 
-新增工具 [nproc(1)](https://man.freebsd.org/cgi/man.cgi?query=nproc&sektion=1&format=html) ，与同名的 Linux 程序兼容。
+新增工具 [nproc(1)](https://man.freebsd.org/cgi/man.cgi?query=nproc&sektion=1&format=html)，与同名的 Linux 程序兼容。
 
 工具 [timeout(1)](https://man.freebsd.org/cgi/man.cgi?query=timeout&sektion=1&format=html) 已从 **/usr/bin** 移动到 **/bin**。
 
@@ -250,31 +250,31 @@ arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=
 
 内核的 [wg(4)](https://man.freebsd.org/cgi/man.cgi?query=wg&sektion=4&format=html) WireGuard 驱动程序已重新集成；它通过 WireGuard 协议提供虚拟私人网络（VPN）接口。[5ae69e2f10da](https://cgit.freebsd.org/src/commit/?id=5ae69e2f10da)（由 Rubicon Communications, LLC（“Netgate”）和 FreeBSD 基金会赞助）
 
-KTLS（内核 TLS 实现）已为 TLS 1.3 添加接收卸载支持。现在支持 TLS 1.1 至 1.3 的接收卸载；TLS 1.0 至 1.3 的发送卸载也得到了支持。[1462dc95f796](https://cgit.freebsd.org/src/commit/?id=1462dc95f796)（由 Netflix 赞助）
+KTLS（内核 TLS 实现）已为 TLS 1.3 添加接收卸载支持。TLS 1.1 至 1.3 的接收卸载现已支持；TLS 1.0 至 1.3 的发送卸载也得到了支持。[1462dc95f796](https://cgit.freebsd.org/src/commit/?id=1462dc95f796)（由 Netflix 赞助）
 
-现在提供 [netlink(4)](https://man.freebsd.org/cgi/man.cgi?query=netlink&sektion=4&format=html) 网络配置协议。它是 RFC 3549 中定义的通信协议，使用原始套接字在用户空间和内核之间交换配置数据。第三方路由程序和 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&format=html) ABI 使用该协议。[6058f6cc48f5](https://cgit.freebsd.org/src/commit/?id=6058f6cc48f5)（不包括在 13.2-RELEASE 的 GENERIC 配置中，但作为内核模块提供）
+[netlink(4)](https://man.freebsd.org/cgi/man.cgi?query=netlink&sektion=4&format=html) 网络配置协议现已提供。它是 RFC 3549 中定义的通信协议，使用原始套接字在用户空间和内核之间交换配置数据。第三方路由程序和 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&format=html) ABI 使用该协议。[6058f6cc48f5](https://cgit.freebsd.org/src/commit/?id=6058f6cc48f5)（该协议不包括在 13.2-RELEASE 的 **GENERIC** 配置中，但作为内核模块提供）
 
 现在支持在 [ipfw(4)](https://man.freebsd.org/cgi/man.cgi?query=ipfw&sektion=4&format=html) 中使用 Radix 表和查找来处理 MAC 地址。这使得可以构建和使用 MAC 地址表来进行过滤。[c31f8b7bd895](https://cgit.freebsd.org/src/commit/?id=c31f8b7bd895)
 
-内核模块 dpdk_lpm4 和 dpdk_lpm6 现在可用，可以通过 [loader.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=loader.conf&sektion=5&format=html) 加载。它们为具有大量路由表的主机提供优化的路由功能。可以通过 [route(8)](https://man.freebsd.org/cgi/man.cgi?query=route&sektion=8&format=html) 配置，并且是模块化 FIB 查找机制的一部分。[0ca122044369](https://cgit.freebsd.org/src/commit/?id=0ca122044369)
+内核模块 dpdk_lpm4 和 dpdk_lpm6 现在可用，可以通过 [loader.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=loader.conf&sektion=5&format=html) 加载。它们为具有大量路由表的主机提供优化的路由功能。它们可以通过 [route(8)](https://man.freebsd.org/cgi/man.cgi?query=route&sektion=8&format=html) 配置，并且是模块化 FIB 查找机制的一部分。[0ca122044369](https://cgit.freebsd.org/src/commit/?id=0ca122044369)
 
 TCP 和 SCTP 中有多个 bug 修复。
 
 ## 关于后续 FreeBSD 版本的一般说明
 
-已弃用 `OPIE`，并将在 FreeBSD 14.0 中移除。
+`OPIE` 已弃用，并将在 FreeBSD 14.0 中移除。
 
-已弃用同步串行驱动程序 [ce(4)](https://man.freebsd.org/cgi/man.cgi?query=ce&sektion=4&format=html) 和 [cp(4)](https://man.freebsd.org/cgi/man.cgi?query=cp&sektion=4&format=html) ，并将在 FreeBSD 14.0 中移除。
+同步串行驱动程序 [ce(4)](https://man.freebsd.org/cgi/man.cgi?query=ce&sektion=4&format=html) 和 [cp(4)](https://man.freebsd.org/cgi/man.cgi?query=cp&sektion=4&format=html) 已弃用，并将在 FreeBSD 14.0 中移除。
 
 ISA 声卡的驱动程序已弃用，并将在 FreeBSD 14.0 中移除。[d7620b6ec941](https://cgit.freebsd.org/src/commit/?id=d7620b6ec941)（由 FreeBSD 基金会赞助）
 
 已弃用工具 [mergemaster(8)](https://man.freebsd.org/cgi/man.cgi?query=mergemaster&sektion=8&format=html)，并将在 FreeBSD 14.0 中移除。它的替代工具是 [etcupdate(8)](https://man.freebsd.org/cgi/man.cgi?query=etcupdate&sektion=8&format=html)。[5fa16e3c50c5](https://cgit.freebsd.org/src/commit/?id=5fa16e3c50c5)（由 FreeBSD 基金会赞助）
 
-已弃用工具 [minigzip(1)](https://man.freebsd.org/cgi/man.cgi?query=minigzip&sektion=1&format=html) ，并将在 FreeBSD 14.0 中移除。[84d3fc26e3a2](https://cgit.freebsd.org/src/commit/?id=84d3fc26e3a2)
+已弃用工具 [minigzip(1)](https://man.freebsd.org/cgi/man.cgi?query=minigzip&sektion=1&format=html)，并将在 FreeBSD 14.0 中移除。[84d3fc26e3a2](https://cgit.freebsd.org/src/commit/?id=84d3fc26e3a2)
 
 在 netgraph 中，ATM 的剩余组件（NgATM）已弃用，并将在 FreeBSD 14.0 中移除。已移除对 ATM NIC 的支持。
 
-已弃用 Telnet 守护进程 [telnetd(8)](https://man.freebsd.org/cgi/man.cgi?query=telnetd&sektion=8&format=html) ，并将在 FreeBSD 14.0 中移除。Telnet 客户端不受影响。
+已弃用 Telnet 守护进程 [telnetd(8)](https://man.freebsd.org/cgi/man.cgi?query=telnetd&sektion=8&format=html)，并将在 FreeBSD 14.0 中移除。Telnet 客户端不受影响。
 
 已弃用 [geom(8)](https://man.freebsd.org/cgi/man.cgi?query=geom&sektion=8&format=html) 中的 VINUM 类，并将在后续版本中移除。
 
