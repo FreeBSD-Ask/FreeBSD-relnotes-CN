@@ -33,7 +33,7 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 
 本节列出了自 14.1-RELEASE 以来发布的安全公告和勘误通知。
 
-#### 安全公告
+### 安全公告
 
 | 公告编号 | 日期 | 主题 |
 | :------- | :--- | :--- |
@@ -54,7 +54,7 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 | **FreeBSD-SA-24:18.ctl** | 2024 年 10 月 29 日 | [ctl(4)](https://man.freebsd.org/cgi/man.cgi?query=ctl&sektion=4&format=html) CAM 目标层中的不受限制分配 |
 | **FreeBSD-SA-24:19.fetch** | 2024 年 10 月 29 日 | [fetch(1)](https://man.freebsd.org/cgi/man.cgi?query=fetch&sektion=1&format=html) 参数的证书吊销列表功能失效 |
 
-#### 勘误通知
+### 勘误通知
 
 | 勘误编号 | 日期 | 主题 |
 | :------- | :--- | :--- |
