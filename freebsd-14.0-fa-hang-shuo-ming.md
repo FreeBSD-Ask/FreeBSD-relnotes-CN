@@ -319,7 +319,7 @@ FreeBSD 现在重新启动更快。添加了 sysctl  `kern.reboot_wait_time` 以
 
 串行通信在引导加载程序、内核和用户空间中的默认速度现在为 115200 bps。请注意，早期的 x86 BIOS 引导加载程序（即 `boot0sio`）不支持 9600 bps 以上的速率，且未作变更。`boot0sio` 用户可以设置 `BOOT_COMCONSOLE_SPEED=9600`，以便在所有引导组件中使用 9600，或者使用标准的 `boot0`，并且 `boot2` 阶段的串行端口速率为 115200。[4722ceb7d53e](https://cgit.freebsd.org/src/commit/?id=4722ceb7d53e)（由 FreeBSD 基金会赞助）
 
-默认的响铃音频现在为 800Hz。可以使用 [kbdcontrol(1)](https://man.freebsd.org/cgi/man.cgi?query=kbdcontrol&sektion=1&format=html) 设置。对于希望使用声卡进行蜂鸣的用户，与 [devd(8)](https://man.freebsd.org/cgi/man.cgi?query=devd&sektion=8&format=html) 集成。[ba48d52ca6c8](https://cgit.freebsd.org/src/commit/?id=ba48d52ca6c8)[4ac3d08a9693](https://cgit.freebsd.org/src/commit/?id=4ac3d08a9693)[2533eca1c2b9](https://cgit.freebsd.org/src/commit/?id=2533eca1c2b9)（由 Netflix 赞助）
+默认的响铃音频现在为 800Hz。可以使用 [kbdcontrol(1)](https://man.freebsd.org/cgi/man.cgi?query=kbdcontrol&sektion=1&format=html) 设置。对于希望使用声卡进行蜂鸣的用户，现已与 [devd(8)](https://man.freebsd.org/cgi/man.cgi?query=devd&sektion=8&format=html) 集成。[ba48d52ca6c8](https://cgit.freebsd.org/src/commit/?id=ba48d52ca6c8)[4ac3d08a9693](https://cgit.freebsd.org/src/commit/?id=4ac3d08a9693)[2533eca1c2b9](https://cgit.freebsd.org/src/commit/?id=2533eca1c2b9)（由 Netflix 赞助）
 
 在使用默认的 [vt(4)](https://man.freebsd.org/cgi/man.cgi?query=vt&sektion=4&format=html) 控制台时，默认情况下不再启用可听的响铃。可以使用以下命令启用它：`sysctl kern.vt.enable_bell=1` 和 `kbdcontrol -b normal`。[225639e7db68](https://cgit.freebsd.org/src/commit/?id=225639e7db68)
 
