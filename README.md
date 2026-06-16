@@ -23,7 +23,6 @@
 
 ---
 
-
 | 日期           | 事件        | 信息 |
 | :---------------- | :--------------: | :-------------: |
 | 2026 年 6 月      | FreeBSD 15.1 |  [参见此处](https://www.freebsd.org/releases/15.1R/schedule/)           |
@@ -47,11 +46,9 @@
 | stable/13   | 不适用          |不适用            | 2026 年 4 月 30 日  |
 | releng/13.5 | 13.5-RELEASE | 2025 年 3 月 11 日 | 2026 年 4 月 30 日  |
 
-
 ——[FreeBSD 安全信息](https://www.freebsd.org/security/#sup)
 
 ## 平台支持
-
 
 | 平台名称                 | 目标架构                                                  | 13.x [支持等级](https://docs.freebsd.org/en/articles/committers-guide/#archs) | 14.x [支持等级](https://docs.freebsd.org/en/articles/committers-guide/#archs) | 15.x [支持等级](https://docs.freebsd.org/en/articles/committers-guide/#archs) | 预计 16.x [支持等级](https://docs.freebsd.org/en/articles/committers-guide/#archs) |
 | :--------------------: | :--------------------------------------------------------------: | :-------------------------------------------------------------------------: | :-------------------------------------------------------------------------: | :-------------------------------------------------------------------------: | :----------------------------------------------------------------------------: |
@@ -72,8 +69,6 @@
 | 64 位 RISC-V          | [riscv64](https://wiki.freebsd.org/riscv)                      | 二级                                                                        | 二级                                                                        | 二级                                                                        | 二级                                                                           |
 | 64 位 RISC-V 软浮点      | [riscv64sf](https://wiki.freebsd.org/riscv)                    | 二级                                                                        | 不支持                                                                       | 不支持                                                                       | 不支持                                                                          |
 
-
-
 | 平台名称             | 目标架构 | 最后支持的 RELEASE 版本                                         |
 | :----------------: | :------------: | :-------------------------------------------------: |
 | Alpha            | alpha        | [6.4](https://www.freebsd.org/releases/#rel6-4)   |
@@ -82,7 +77,6 @@
 | Intel IA-64      | ia64         | [10.4](https://www.freebsd.org/releases/#rel10-4) |
 | PC98             | pc98         | [11.4](https://www.freebsd.org/releases/#rel11-4) |
 | 64 位 SPARCv9     | sparc64      | [12.4](https://www.freebsd.org/releases/#rel12-4) |
-
 
 ——[Supported Platforms](https://www.freebsd.org/platforms/)
 
