@@ -21,7 +21,7 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 
 一般的发行说明内容包括自 14.1-RELEASE 之后发布的安全公告、新增的驱动程序/硬件支持、新命令/参数、主要的错误修复/外部软件更新。还可能列出主要 Ports/软件包和发行工程实践的变更。显然，发行说明无法详尽列出两个 FreeBSD 版本之间所做的每项变更；本文档主要聚焦于安全公告、用户可见的变更和重大架构改进。
 
-## 从旧版 FreeBSD 更新
+## 从旧版 FreeBSD 升级
 
 使用工具 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 能在 RELEASE 版本（及各安全分支快照）间进行二进制更新。请参阅特定版本的更新程序，例如 [FreeBSD 14.2-RELEASE 更新信息](https://www.freebsd.org/releases/14.2R/installation/#upgrade-binary)，并在 FreeBSD 手册中查阅关于[二进制更新](https://docs.freebsd.org/en/books/handbook/cutting-edge/#freebsdupdate-upgrade)的详细说明。此工具会更新未经修改的用户空间工具，以及在官方 FreeBSD RELEASE 分发的未经修改的 GENERIC 内核。工具 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 要求更新的主机能够连接互联网。
 
@@ -71,11 +71,11 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 
 本节介绍用户空间应用程序、第三方软件和系统工具的变更与新增内容。
 
-### 用户空间应用程序的变更
+### 用户空间应用程序变更
 
 [env(1)](https://man.freebsd.org/cgi/man.cgi?query=env&sektion=1&format=html) 增加了一个用于变更目录的参数。此功能类似于 GNU 版 `env` 的功能，但不支持长选项（**译者注：即 `--` 此类参数**）。[08e8554c4a39](https://cgit.freebsd.org/src/commit/?id=08e8554c4a39)（由 Klara, Inc. 赞助）
 
-### 第三方应用程序
+### 第三方软件
 
 - `bc` 已更新至 7.0.2。[90ea553a0d30](https://cgit.freebsd.org/src/commit/?id=90ea553a0d30)
 - `libarchive` 已更新至 3.7.7。[2ae238160f20](https://cgit.freebsd.org/src/commit/?id=2ae238160f20)
