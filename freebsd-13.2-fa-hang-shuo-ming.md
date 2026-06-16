@@ -128,7 +128,7 @@ Gavin Howard 的 `bc` 升级到版本 6.2.4。
 
 `expat`（`libbsdxml`）升级到版本 2.5.0。
 
-`file` 已升级到版本 5.43。
+`file` 升级到版本 5.43。
 
 `less` 已升级到版本 608。
 
