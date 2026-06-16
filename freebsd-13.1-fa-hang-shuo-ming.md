@@ -34,6 +34,69 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 
 >升级后，sshd（来自 OpenSSH 8.8p1）在重新启动之前不会接受新的连接。在安装新用户空间后，要么按照源代码升级程序的要求重启系统，要么执行 `service sshd restart` 来重启 `sshd` 服务。
 
+## 安全与勘误
+
+本节列出了自 13.0-RELEASE 以来的各项安全公告和勘误通知。
+
+### 安全公告
+
+| 公告 | 日期 | 主题 |
+|---|---|---|
+| [FreeBSD-SA-21:03.pam_login_access](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:03.pam_login_access.asc) | 2021 年 2 月 24 日 | login.access 未能应用规则 |
+| [FreeBSD-SA-21:04.jail_remove](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:04.jail_remove.asc) | 2021 年 2 月 24 日 | [jail_remove(2)](https://man.freebsd.org/cgi/man.cgi?query=jail_remove&sektion=2&format=html) 未能终止所有 jail 进程 |
+| [FreeBSD-SA-21:05.jail_chdir](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:05.jail_chdir.asc) | 2021 年 2 月 24 日 | [jail_attach(2)](https://man.freebsd.org/cgi/man.cgi?query=jail_attach&sektion=2&format=html) 依赖调用者更改当前工作目录 |
+| [FreeBSD-SA-21:06.xen](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:06.xen.asc) | 2021 年 2 月 24 日 | Xen 授权映射错误处理问题 |
+| [FreeBSD-SA-21:08.vm](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:08.vm.asc) | 2021 年 4 月 6 日 | 过时虚拟内存映射导致内存泄露 |
+| [FreeBSD-SA-21:09.accept_filter](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:09.accept_filter.asc) | 2021 年 4 月 6 日 | [accept_filter(9)](https://man.freebsd.org/cgi/man.cgi?query=accept_filter&sektion=9&format=html) 套接字配置接口中的双重释放 |
+| [FreeBSD-SA-21:10.jail_mount](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:10.jail_mount.asc) | 2021 年 4 月 6 日 | 通过挂载到 jail 根目录可能实现 jail 逃逸 |
+| [FreeBSD-SA-21:11.smap](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:11.smap.asc) | 2021 年 5 月 26 日 | SMAP 绕过 |
+| [FreeBSD-SA-21:12.libradius](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:12.libradius.asc) | 2021 年 5 月 26 日 | [libradius(3)](https://man.freebsd.org/cgi/man.cgi?query=libradius&sektion=3&format=html) 缺少消息验证 |
+| [FreeBSD-SA-21:13.bhyve](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:13.bhyve.asc) | 2021 年 8 月 24 日 | [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 设备模型中缺少错误处理 |
+| [FreeBSD-SA-21:14.ggatec](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:14.ggatec.asc) | 2021 年 8 月 24 日 | [ggatec(8)](https://man.freebsd.org/cgi/man.cgi?query=ggatec&sektion=8&format=html) 中的远程代码执行 |
+| [FreeBSD-SA-21:15.libfetch](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:15.libfetch.asc) | 2021 年 8 月 24 日 | libfetch 越界读取 |
+| [FreeBSD-SA-21:16.openssl](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:16.openssl.asc) | 2021 年 8 月 24 日 | 多个 OpenSSL 漏洞 |
+| [FreeBSD-SA-22:01.vt](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:01.vt.asc) | 2022 年 1 月 11 日 | vt 控制台缓冲区溢出 |
+| [FreeBSD-SA-22:02.wifi](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:02.wifi.asc) | 2022 年 3 月 15 日 | 多个 WiFi 问题 |
+| [FreeBSD-SA-22:03.openssl](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:03.openssl.asc) | 2022 年 3 月 15 日 | OpenSSL 证书解析无限循环 |
+| [FreeBSD-SA-22:04.netmap](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:04.netmap.asc) | 2022 年 4 月 6 日 | netmap 中潜在的 jail 逃逸漏洞 |
+| [FreeBSD-SA-22:05.bhyve](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:05.bhyve.asc) | 2022 年 4 月 6 日 | Bhyve e82545 设备仿真越界写入 |
+| [FreeBSD-SA-22:06.ioctl](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:06.ioctl.asc) | 2022 年 4 月 6 日 | mpr/mps/mpt 驱动 ioctl 堆越界写入 |
+| [FreeBSD-SA-22:07.wifi_meshid](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:07.wifi_meshid.asc) | 2022 年 4 月 6 日 | 802.11 堆缓冲区溢出 |
+| [FreeBSD-SA-22:08.zlib](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:08.zlib.asc) | 2022 年 4 月 6 日 | zlib 压缩越界写入 |
+
+### 勘误通知
+
+| 勘误 | 日期 | 主题 |
+|---|---|---|
+| [FreeBSD-EN-21:12.divert](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:12.divert.asc) | 2021 年 5 月 26 日 | 在 divert 套接字上传输时内核双重释放 |
+| [FreeBSD-EN-21:13.mpt](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:13.mpt.asc) | 2021 年 5 月 26 日 | [mpt(4)](https://man.freebsd.org/cgi/man.cgi?query=mpt&sektion=4&format=html) 在较大 maxphys 值下出现 I/O 错误 |
+| [FreeBSD-EN-21:14.pms](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:14.pms.asc) | 2021 年 5 月 26 日 | [pms(4)](https://man.freebsd.org/cgi/man.cgi?query=pms&sektion=4&format=html) 数据损坏 |
+| [FreeBSD-EN-21:15.virtio](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:15.virtio.asc) | 2021 年 5 月 26 日 | [virtio(4)](https://man.freebsd.org/cgi/man.cgi?query=virtio&sektion=4&format=html) 设备探测失败 |
+| [FreeBSD-EN-21:16.bc](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:16.bc.asc) | 2021 年 5 月 26 日 | dc 更新 |
+| [FreeBSD-EN-21:17.libradius](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:17.libradius.asc) | 2021 年 6 月 1 日 | [rad_get_attr(3)](https://man.freebsd.org/cgi/man.cgi?query=rad_get_attr&sektion=3&format=html) 中的错误验证 |
+| [FreeBSD-EN-21:18.libc++](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:18.libc%2B%2B.asc) | 2021 年 6 月 29 日 | libC++ 中缺少 C++20 头文件 |
+| [FreeBSD-EN-21:19.libcasper](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:19.libcasper.asc) | 2021 年 6 月 29 日 | libcasper 断言失败 |
+| [FreeBSD-EN-21:20.vlan](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:20.vlan.asc) | 2021 年 6 月 29 日 | [vlan(4)](https://man.freebsd.org/cgi/man.cgi?query=vlan&sektion=4&format=html) 缺少向后兼容性 |
+| [FreeBSD-EN-21:21.ipfw](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:21.ipfw.asc) | 2021 年 6 月 29 日 | 启用 ipfw 链路层过滤时内核崩溃 |
+| [FreeBSD-EN-21:22.linux_futex](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:22.linux_futex.asc) | 2021 年 6 月 29 日 | Linux 兼容层 [futex(2)](https://man.freebsd.org/cgi/man.cgi?query=futex&sektion=2&format=html) 系统调用漏洞 |
+| [FreeBSD-EN-21:23.virtio_blk](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:23.virtio_blk.asc) | 2021 年 8 月 24 日 | [virtio_blk(4)](https://man.freebsd.org/cgi/man.cgi?query=virtio_blk&sektion=4&format=html) 在某些虚拟机监控程序上无法挂载 |
+| [FreeBSD-EN-21:24.libcrypto](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:24.libcrypto.asc) | 2021 年 8 月 24 日 | OpenSSL 1.1.1e API 函数未导出 |
+| [FreeBSD-EN-21:25.bhyve](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:25.bhyve.asc) | 2021 年 8 月 24 日 | 修复大型 IO 的 NVMe iovec 构建问题 |
+| [FreeBSD-EN-21:26.libevent](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:26.libevent.asc) | 2021 年 11 月 3 日 | libevent1 ABI 不兼容 |
+| [FreeBSD-EN-21:27.caroot](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:27.caroot.asc) | 2021 年 11 月 3 日 | 根证书捆绑包更新 |
+| [FreeBSD-EN-21:28.vmci](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:28.vmci.asc) | 2021 年 11 月 3 日 | 修复 vmci 驱动初始化时的内核崩溃 |
+| [FreeBSD-EN-21:29.tzdata](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:29.tzdata.asc) | 2021 年 11 月 3 日 | 时区数据库信息更新 |
+| [FreeBSD-EN-22:01.fsck_ffs](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:01.fsck_ffs.asc) | 2022 年 1 月 11 日 | fsck_ffs 未能纠正某些错误 |
+| [FreeBSD-EN-22:02.xsave](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:02.xsave.asc) | 2022 年 1 月 11 日 | XSAVE 状态大小不正确 |
+| [FreeBSD-EN-22:03.hyperv](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:03.hyperv.asc) | 2022 年 1 月 11 日 | 某些 Hyper-V 版本的 vPCI 兼容性改进 |
+| [FreeBSD-EN-22:05.tail](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:05.tail.asc) | 2022 年 1 月 11 日 | tail -F 未能跟随某些类型的日志轮转 |
+| [FreeBSD-EN-22:06.libalias](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:06.libalias.asc) | 2022 年 1 月 11 日 | libalias 中对分片 IPv4 数据包的处理不正确 |
+| [FreeBSD-EN-22:07.la57](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:07.la57.asc) | 2022 年 2 月 1 日 | Intel CPU LA57 引导失败 |
+| [FreeBSD-EN-22:10.zfs](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:10.zfs.asc) | 2022 年 3 月 15 日 | ZFS 写入未能更新文件大小 |
+| [FreeBSD-EN-22:11.zfs](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:11.zfs.asc) | 2022 年 3 月 15 日 | ZFS [lseek(2)](https://man.freebsd.org/cgi/man.cgi?query=lseek&sektion=2&format=html) 不一致 |
+| [FreeBSD-EN-22:12.zfs](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:12.zfs.asc) | 2022 年 3 月 15 日 | 并发 'zfs list' 调用时 ZFS 崩溃 |
+| [FreeBSD-EN-22:14.tzdata](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:14.tzdata.asc) | 2022 年 3 月 22 日 | 时区数据库信息更新 |
+
 ## 用户空间
 
 本节涉及对用户空间应用程序、第三方软件以及系统实用工具的变更和新增内容。
