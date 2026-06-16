@@ -142,15 +142,15 @@ Gavin Howard 的 `bc` 升级到版本 6.2.4。
 
 `mandoc` 升级到版本 1.14.6。
 
-`OpenSSH` 已升级到版本 9.3p1。
+`OpenSSH` 升级到版本 9.3p1。
 
-`OpenSSL` 已升级到版本 1.1.1t。
+`OpenSSL` 升级到版本 1.1.1t。
 
-`sendmail` 已升级到版本 8.17.1。[68e86d5265bc](https://cgit.freebsd.org/src/commit/?id=68e86d5265bc)
+`sendmail` 升级到版本 8.17.1。[68e86d5265bc](https://cgit.freebsd.org/src/commit/?id=68e86d5265bc)
 
-`sqlite3` 已升级到版本 3.40.1。
+`sqlite3` 升级到版本 3.40.1。
 
-`tzcode` 已升级到版本 2022g，改进了时区变化检测并修复了可靠性问题。
+`tzcode` 升级到版本 2022g，改进了时区变化检测并修复了可靠性问题。
 
 `tzdata` 已升级到版本 2023c。
 
