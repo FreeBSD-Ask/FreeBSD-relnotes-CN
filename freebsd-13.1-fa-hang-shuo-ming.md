@@ -24,7 +24,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 
 ## 从旧版 FreeBSD 升级
 
-通过 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具，可以在不同 RELEASE 版本之间（包括各安全分支的快照版本）进行二进制升级。该工具将更新未修改的用户空间工具，以及官方 FreeBSD 发行版中包含的未修改的 GENERIC 内核。使用 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具要求待升级的主机具备互联网连接。
+通过 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具，可以在不同 RELEASE 版本之间（包括各安全分支的快照版本）进行二进制升级。该工具将更新未修改的用户空间工具，以及官方 FreeBSD 发行版中包含的未修改的 **GENERIC** 内核。使用 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具要求待升级的主机具备互联网连接。
 
 基于源代码的升级（通过重新编译 FreeBSD 基本系统的源代码升级）也受到支持，具体请按照 **/usr/src/UPDATING** 中的说明操作。
 
@@ -117,7 +117,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 
 [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 中构建大 IO 的 NVMe iovec 的问题已修复，该问题由 Rocky Linux 8.4 附带的 UEFI 驱动暴露出来。[a7761d19dacd](https://cgit.freebsd.org/src/commit/?id=a7761d19dacd)
 
-为巴西葡萄牙语 ABNT2 键盘添加了额外的 Alt Gr 映射。[310623908c20](https://cgit.freebsd.org/src/commit/?id=310623908c20)
+巴西葡萄牙语 ABNT2 键盘已添加额外的 Alt Gr 映射。[310623908c20](https://cgit.freebsd.org/src/commit/?id=310623908c20)
 
 `chroot` 现在支持非特权操作，[chroot(8)](https://man.freebsd.org/cgi/man.cgi?query=chroot&sektion=8&format=html) 程序增加了 `-n` 选项以启用该功能。[460b4b550dc9](https://cgit.freebsd.org/src/commit/?id=460b4b550dc9)（由 EPSRC 赞助）
 
@@ -127,9 +127,9 @@ CAM 库已修改，以在解析设备名称之前使用 [realpath(3)](https://ma
 
 [svnlite(1)](https://man.freebsd.org/cgi/man.cgi?query=svnlite&sektion=1&format=html) 默认在构建中禁用。[a4f99b3c2384](https://cgit.freebsd.org/src/commit/?id=a4f99b3c2384)
 
-[mpsutil(8)](https://man.freebsd.org/cgi/man.cgi?query=mpsutil&sektion=8&format=html) 扩展以显示适配器信息并控制 NCQ。[395bc3598b47](https://cgit.freebsd.org/src/commit/?id=395bc3598b47)
+[mpsutil(8)](https://man.freebsd.org/cgi/man.cgi?query=mpsutil&sektion=8&format=html) 已扩展，以显示适配器信息并控制 NCQ。[395bc3598b47](https://cgit.freebsd.org/src/commit/?id=395bc3598b47)
 
-修复了使用 [camcontrol(8)](https://man.freebsd.org/cgi/man.cgi?query=camcontrol&sektion=8&format=html) 下载固件后设备出现的问题，方法是在下载固件后强制重新扫描 LUN。[327da43602cc](https://cgit.freebsd.org/src/commit/?id=327da43602cc)（由 Netflix 赞助）
+使用 [camcontrol(8)](https://man.freebsd.org/cgi/man.cgi?query=camcontrol&sektion=8&format=html) 下载固件后设备出现的问题已修复，方法是在下载固件后强制重新扫描 LUN。[327da43602cc](https://cgit.freebsd.org/src/commit/?id=327da43602cc)（由 Netflix 赞助）
 
 ### 第三方软件
 
@@ -158,15 +158,15 @@ CAM 库已修改，以在解析设备名称之前使用 [realpath(3)](https://ma
 
 ### 运行时库和 API
 
-为 powerpc、powerpc64 和 powerpc64le 添加了 OpenSSL 的汇编优化代码。[ce35a3bc852](https://cgit.freebsd.org/src/commit/?id=ce35a3bc852)
+OpenSSL 的汇编优化代码已添加到 powerpc、powerpc64 和 powerpc64le 平台。[ce35a3bc852](https://cgit.freebsd.org/src/commit/?id=ce35a3bc852)
 
-修复了对 ARMv7 和 ARM64 加速加密操作的 CPU 特性检测，大幅提升了 `aes-256-gcm` 和 `sha256` 的性能。[32a2fed6e71f](https://cgit.freebsd.org/src/commit/?id=32a2fed6e71f)（由 Ampere Computing LLC 和 Klara Inc. 赞助）
+对 ARMv7 和 ARM64 加速加密操作的 CPU 特性检测已修复，大幅提升了 `aes-256-gcm` 和 `sha256` 的性能。[32a2fed6e71f](https://cgit.freebsd.org/src/commit/?id=32a2fed6e71f)（由 Ampere Computing LLC 和 Klara Inc. 赞助）
 
-启用了 riscv64 和 riscv64sf 平台上的 ASAN 和 UBSAN 库的构建支持。[8c56b338da7](https://cgit.freebsd.org/src/commit/?id=8c56b338da7)
+riscv64 和 riscv64sf 平台上的 ASAN 和 UBSAN 库的构建支持已启用。[8c56b338da7](https://cgit.freebsd.org/src/commit/?id=8c56b338da7)
 
-在 riscv64 和 riscv64sf 平台上构建了 OFED 库。[2b978245733](https://cgit.freebsd.org/src/commit/?id=2b978245733)
+OFED 库现在在 riscv64 和 riscv64sf 平台上构建。[2b978245733](https://cgit.freebsd.org/src/commit/?id=2b978245733)
 
-在 riscv64 和 riscv64sf 平台上构建了 OPENMP 库。[aaf56e35569](https://cgit.freebsd.org/src/commit/?id=aaf56e35569)
+OPENMP 库现在在 riscv64 和 riscv64sf 平台上构建。[aaf56e35569](https://cgit.freebsd.org/src/commit/?id=aaf56e35569)
 
 ## 内核
 
@@ -174,13 +174,13 @@ CAM 库已修改，以在解析设备名称之前使用 [realpath(3)](https://ma
 
 ### 内核通用变更
 
-修复了 powerpc64 平台上串行控制台的输出损坏问题。[dca829138ca](https://cgit.freebsd.org/src/commit/?id=dca829138ca)
+powerpc64 平台上串行控制台的输出损坏问题已修复。[dca829138ca](https://cgit.freebsd.org/src/commit/?id=dca829138ca)
 
 CAS 已变更为支持 Radix MMU。[cc8e726c85b](https://cgit.freebsd.org/src/commit/?id=cc8e726c85b)
 
-修复了在 QEMU 的 TCG 模式下运行启用了 HPT 超页的 FreeBSD 于 powerpc64(le) 平台的问题。[f05174ed354](https://cgit.freebsd.org/src/commit/?id=f05174ed354)
+powerpc64(le) 平台上在 QEMU 的 TCG 模式下运行启用了 HPT 超页的 FreeBSD 的问题已修复。[f05174ed354](https://cgit.freebsd.org/src/commit/?id=f05174ed354)
 
-在 powerpc64(le) 平台上的 `pmap_mincore` 添加了对超页的支持。[32b50b8520d](https://cgit.freebsd.org/src/commit/?id=32b50b8520d)
+powerpc64(le) 平台上的 `pmap_mincore` 已添加对超页的支持。[32b50b8520d](https://cgit.freebsd.org/src/commit/?id=32b50b8520d)
 
 在 arm64 平台上为 32 位 ARM 二进制文件添加了 HWCAP/HWCAP2 辅助参数支持。这修复了在 `COMPAT32` 仿真下构建/运行 Golang 的问题。[28e22482279f](https://cgit.freebsd.org/src/commit/?id=28e22482279f)（由 Rubicon Communications, LLC (“Netgate”) 赞助）
 
@@ -190,25 +190,25 @@ CAS 已变更为支持 Radix MMU。[cc8e726c85b](https://cgit.freebsd.org/src/co
 
 ### 设备驱动程序
 
-引入了 [igc(4)](https://man.freebsd.org/cgi/man.cgi?query=igc&sektion=4&format=html) 驱动程序，用于支持 Intel I225 以太网控制器。该控制器支持 2.5G/1G/100Mb/10Mb 速度，并支持 tx/rx 校验和卸载、TSO、LRO 和多队列操作。[d7388d33b4dd](https://cgit.freebsd.org/src/commit/?id=d7388d33b4dd)（由 Rubicon Communications, LLC (“Netgate”) 赞助）
+[igc(4)](https://man.freebsd.org/cgi/man.cgi?query=igc&sektion=4&format=html) 驱动程序已引入，用于支持 Intel I225 以太网控制器。该控制器支持 2.5G/1G/100Mb/10Mb 速度，并支持 tx/rx 校验和卸载、TSO、LRO 和多队列操作。[d7388d33b4dd](https://cgit.freebsd.org/src/commit/?id=d7388d33b4dd)（由 Rubicon Communications, LLC (“Netgate”) 赞助）
 
-修复了 powerpc64(le) 平台在启动过程中使用 AST2500 时，VGA/HDMI 控制台的问题。[c41d129485e](https://cgit.freebsd.org/src/commit/?id=c41d129485e)
+powerpc64(le) 平台在启动过程中使用 AST2500 时，VGA/HDMI 控制台的问题已修复。[c41d129485e](https://cgit.freebsd.org/src/commit/?id=c41d129485e)
 
-修复了 [virtio(4)](https://man.freebsd.org/cgi/man.cgi?query=virtio&sektion=4&format=html) 驱动中大端目标设备的 PCI 通用读写功能。[7e583075a41](https://cgit.freebsd.org/src/commit/?id=7e583075a41), [8d589845881](https://cgit.freebsd.org/src/commit/?id=8d589845881)
+[virtio(4)](https://man.freebsd.org/cgi/man.cgi?query=virtio&sektion=4&format=html) 驱动中大端目标设备的 PCI 通用读写功能已修复。[7e583075a41](https://cgit.freebsd.org/src/commit/?id=7e583075a41), [8d589845881](https://cgit.freebsd.org/src/commit/?id=8d589845881)
 
-为驱动 [mpr(4)](https://man.freebsd.org/cgi/man.cgi?query=mpr&sektion=4&format=html) 添加了大端支持。[7d45bf699dc](https://cgit.freebsd.org/src/commit/?id=7d45bf699dc), [2954aedb8e5](https://cgit.freebsd.org/src/commit/?id=2954aedb8e5), [c80a1c1072d](https://cgit.freebsd.org/src/commit/?id=c80a1c1072d)
+[mpr(4)](https://man.freebsd.org/cgi/man.cgi?query=mpr&sektion=4&format=html) 驱动已添加大端支持。[7d45bf699dc](https://cgit.freebsd.org/src/commit/?id=7d45bf699dc), [2954aedb8e5](https://cgit.freebsd.org/src/commit/?id=2954aedb8e5), [c80a1c1072d](https://cgit.freebsd.org/src/commit/?id=c80a1c1072d)
 
-降低了驱动 [aacraid(4)](https://man.freebsd.org/cgi/man.cgi?query=aacraid&sektion=4&format=html) 的最大 I/O 大小以避免 DMA 问题。[572e3575dba](https://cgit.freebsd.org/src/commit/?id=572e3575dba)
+[aacraid(4)](https://man.freebsd.org/cgi/man.cgi?query=aacraid&sektion=4&format=html) 驱动的最大 I/O 大小已降低，以避免 DMA 问题。[572e3575dba](https://cgit.freebsd.org/src/commit/?id=572e3575dba)
 
-修复了驱动 [virtio_random(8)](https://man.freebsd.org/cgi/man.cgi?query=virtio_random&sektion=8&format=html) 阻止虚拟机客户机关机或重启的问题。[fa67c45842bb](https://cgit.freebsd.org/src/commit/?id=fa67c45842bb)
+[virtio_random(8)](https://man.freebsd.org/cgi/man.cgi?query=virtio_random&sektion=8&format=html) 驱动阻止虚拟机客户机关机或重启的问题已修复。[fa67c45842bb](https://cgit.freebsd.org/src/commit/?id=fa67c45842bb)
 
-更新了驱动 [ice(4)](https://man.freebsd.org/cgi/man.cgi?query=ice&sektion=4&format=html) 至 1.34.2-k，增加了固件日志记录功能和初步的 DCB 支持。[a0cdf45ea1d1](https://cgit.freebsd.org/src/commit/?id=a0cdf45ea1d1)（由英特尔公司赞助）
+[ice(4)](https://man.freebsd.org/cgi/man.cgi?query=ice&sektion=4&format=html) 驱动已更新至 1.34.2-k，增加了固件日志记录功能和初步的 DCB 支持。[a0cdf45ea1d1](https://cgit.freebsd.org/src/commit/?id=a0cdf45ea1d1)（由英特尔公司赞助）
 
-添加了网络接口驱动程序 [mgb(4)](https://man.freebsd.org/cgi/man.cgi?query=mgb&sektion=4&format=html)，支持 Microchip 的 LAN7430 PCIe 千兆以太网控制器（带 PHY）和 LAN7431 PCIe 千兆以太网控制器（带 RGMII 接口）。尽管该驱动仍存在一些限制，但功能已可用。[e0262ffbc6ae](https://cgit.freebsd.org/src/commit/?id=e0262ffbc6ae)（由 FreeBSD 基金会赞助）
+网络接口驱动程序 [mgb(4)](https://man.freebsd.org/cgi/man.cgi?query=mgb&sektion=4&format=html) 已添加，支持 Microchip 的 LAN7430 PCIe 千兆以太网控制器（带 PHY）和 LAN7431 PCIe 千兆以太网控制器（带 RGMII 接口）。尽管该驱动仍存在一些限制，但功能已可用。[e0262ffbc6ae](https://cgit.freebsd.org/src/commit/?id=e0262ffbc6ae)（由 FreeBSD 基金会赞助）
 
-为 [cdce(4)](https://man.freebsd.org/cgi/man.cgi?query=cdce&sektion=4&format=html) 设备添加了链路状态、媒体类型和 VLAN MTU 的支持。[973fb85188ea](https://cgit.freebsd.org/src/commit/?id=973fb85188ea)
+[cdce(4)](https://man.freebsd.org/cgi/man.cgi?query=cdce&sektion=4&format=html) 设备已添加链路状态、媒体类型和 VLAN MTU 的支持。[973fb85188ea](https://cgit.freebsd.org/src/commit/?id=973fb85188ea)
 
-添加了 [iwlwifi(4)](https://man.freebsd.org/cgi/man.cgi?query=iwlwifi&sektion=4&format=html) 驱动和一个 LinuxKPI 802.11 兼容层，用于支持较新的 Intel 无线芯片组，以补充 [iwm(4)](https://man.freebsd.org/cgi/man.cgi?query=iwm&sektion=4&format=html) 驱动。（由 FreeBSD 基金会赞助）
+[iwlwifi(4)](https://man.freebsd.org/cgi/man.cgi?query=iwlwifi&sektion=4&format=html) 驱动和一个 LinuxKPI 802.11 兼容层已添加，用于支持较新的 Intel 无线芯片组，以补充 [iwm(4)](https://man.freebsd.org/cgi/man.cgi?query=iwm&sektion=4&format=html) 驱动。（由 FreeBSD 基金会赞助）
 
 当内核使用选项 `MMCCAM` 配置时，现在可以使用 `dwmmc` 控制器将内核崩溃转储保存到 SD 卡和 eMMC 模块。[79c3478e76c3](https://cgit.freebsd.org/src/commit/?id=79c3478e76c3)
 
@@ -232,7 +232,7 @@ ZFS 已升级至 OpenZFS 2.1.4 版本。OpenZFS 的发行说明可参阅 [https:
 
 ### NFS 变更
 
-- 默认在 **amd64** 和 **arm64** 架构上构建了两个新的守护进程 [rpc.tlsclntd(8)](https://man.freebsd.org/cgi/man.cgi?query=rpc.tlsclntd&sektion=8&format=html) 和 [rpc.tlsservd(8)](https://man.freebsd.org/cgi/man.cgi?query=rpc.tlsservd&sektion=8&format=html)。它们提供了对基于 TLS 的 NFS 加密支持，该功能描述于《Towards Remote Procedure Call Encryption By Default》草案中。这些守护进程在指定 `WITH_OPENSSL_KTLS` 时构建，使用 KTLS 加密/解密所有 NFS RPC 消息流量，并可选择通过 X.509 证书验证设备身份。[2c76eebca71b](https://cgit.freebsd.org/src/commit/?id=2c76eebca71b) [59f6f5e23c1a](https://cgit.freebsd.org/src/commit/?id=59f6f5e23c1a)
+- 两个新的守护进程 [rpc.tlsclntd(8)](https://man.freebsd.org/cgi/man.cgi?query=rpc.tlsclntd&sektion=8&format=html) 和 [rpc.tlsservd(8)](https://man.freebsd.org/cgi/man.cgi?query=rpc.tlsservd&sektion=8&format=html) 现在默认在 **amd64** 和 **arm64** 架构上构建。它们提供了对基于 TLS 的 NFS 加密支持，该功能描述于《Towards Remote Procedure Call Encryption By Default》草案中。这些守护进程在指定 `WITH_OPENSSL_KTLS` 时构建，使用 KTLS 加密/解密所有 NFS RPC 消息流量，并可选择通过 X.509 证书验证设备身份。[2c76eebca71b](https://cgit.freebsd.org/src/commit/?id=2c76eebca71b) [59f6f5e23c1a](https://cgit.freebsd.org/src/commit/?id=59f6f5e23c1a)
 
 - 默认的 NFSv4 挂载次版本号已变更为 NFSv4 服务器所支持的最高次版本号。用户可通过挂载选项 `minorversion` 手动覆盖此默认值。[8a04edfdcbd2](https://cgit.freebsd.org/src/commit/?id=8a04edfdcbd2)
 

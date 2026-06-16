@@ -52,7 +52,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 | [FreeBSD-SA-22:11.vm](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:11.vm.asc) | 2022 年 8 月 9 日 | 过期虚拟内存映射导致内存泄露 |
 | [FreeBSD-SA-22:12.lib9p](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:12.lib9p.asc) | 2022 年 8 月 9 日 | 9p 消息处理中缺少边界检查 |
 | [FreeBSD-SA-22:13.zlib](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:13.zlib.asc) | 2022 年 8 月 30 日 | zlib 堆缓冲区溢出 |
-| [FreeBSD-SA-22:14.heimdal](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:14.heimdal.asc) | 2022 年 11 月 15 日 | Heimdal 中的多个漏洞 [已修订] |
+| [FreeBSD-SA-22:14.heimdal](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:14.heimdal.asc) | 2022 年 11 月 15 日 | Heimdal 中的多个漏洞 [修订] |
 | [FreeBSD-SA-22:15.ping](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:15.ping.asc) | 2022 年 11 月 29 日 | [ping(8)](https://man.freebsd.org/cgi/man.cgi?query=ping&sektion=8&format=html) 栈溢出 |
 | [FreeBSD-SA-23:01.geli](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:01.geli.asc) | 2023 年 2 月 8 日 | GELI 在从标准输入读取时静默忽略密钥文件 |
 | [FreeBSD-SA-23:02.openssh](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:02.openssh.asc) | 2023 年 2 月 16 日 | OpenSSH 认证前双重释放 |
@@ -138,7 +138,7 @@ Gavin Howard 的 `bc` 升级到版本 6.2.4。
 
 `LLVM` 和 `clang` 编译器升级到版本 14.0.5。
 
-支持的 `LLVM` sanitizers 现已在 `powerpc64` 及其变体上启用。
+支持的 `LLVM` sanitizers 现在在 `powerpc64` 及其变体上启用。
 
 `mandoc` 升级到版本 1.14.6。
 
@@ -166,7 +166,7 @@ Gavin Howard 的 `bc` 升级到版本 6.2.4。
 
 `libmd` 增加了对 SHA-512/224 的支持。[e04ee7d95ef6](https://cgit.freebsd.org/src/commit/?id=e04ee7d95ef6)（由 Klara, Inc. 赞助）
 
-[sysdecode(3)](https://man.freebsd.org/cgi/man.cgi?query=sysdecode&sektion=3&format=html) 和 [kdump(1)](https://man.freebsd.org/cgi/man.cgi?query=kdump&sektion=1&format=html) 现已支持 Linux 风格的系统调用跟踪。
+[sysdecode(3)](https://man.freebsd.org/cgi/man.cgi?query=sysdecode&sektion=3&format=html) 和 [kdump(1)](https://man.freebsd.org/cgi/man.cgi?query=kdump&sektion=1&format=html) 现在支持 Linux 风格的系统调用跟踪。
 
 本地 pthread 库函数现在可以支持 Linux 语义。
 
@@ -184,9 +184,9 @@ Gavin Howard 的 `bc` 升级到版本 6.2.4。
 
 新增内核配置选项 `SPLIT_KERNEL_DEBUG`，用于控制将内核和模块的调试数据分割成独立的文件。该选项与选项 `WITHOUT_KERNEL_SYMBOLS` 相互作用，后者的操作方式与 13.0-RELEASE 和 13.1-RELEASE 中不同，但与早期版本相似；它现在仅控制调试数据的安装。默认情况下为 `WITH_KERNEL_SYMBOLS` 和 `WITH_SPLIT_KERNEL_DEBUG`，允许将不含调试数据的内核和模块安装在 **/boot** 中，将独立的调试文件安装在 **/usr/lib/debug** 中，这与 13.0-RELEASE 之前的版本相同。使用 `WITHOUT_KERNEL_SYMBOLS` 和 `WITH_SPLIT_KERNEL_DEBUG` 时，独立的调试文件会生成，但不会安装，类似于早期版本中使用 `WITHOUT_KERNEL_SYMBOLS` 的情况。最后，使用 `WITHOUT_KERNEL_SYMBOLS` 和 `WITHOUT_SPLIT_KERNEL_DEBUG` 时，将内核和模块与内置调试信息一起安装到 **/boot** 中，这与 13.1-RELEASE 中使用 `WITHOUT_KERNEL_SYMBOLS` 的情况相同。[0c4d13c521aa](https://cgit.freebsd.org/src/commit/?id=0c4d13c521aa)（由 FreeBSD 基金会赞助）
 
-在 PowerPC 上，pseries 的 ISA 3.0 中的 radix pmap 现已受支持。这应使得 pseries 在 POWER9 实例上显著加速，因为现在管理 pmap 所需的超调用更少。[c74c77531248](https://cgit.freebsd.org/src/commit/?id=c74c77531248)
+在 PowerPC 上，pseries 的 ISA 3.0 中的 radix pmap 现在受支持。这应使得 pseries 在 POWER9 实例上显著加速，因为现在管理 pmap 所需的超调用更少。[c74c77531248](https://cgit.freebsd.org/src/commit/?id=c74c77531248)
 
-[ptrace(2)](https://man.freebsd.org/cgi/man.cgi?query=ptrace&sektion=2&format=html) 支持现已可用于 arm64 上的 Linux 进程。[99950e8beb72](https://cgit.freebsd.org/src/commit/?id=99950e8beb72)
+[ptrace(2)](https://man.freebsd.org/cgi/man.cgi?query=ptrace&sektion=2&format=html) 支持现在可用于 arm64 上的 Linux 进程。[99950e8beb72](https://cgit.freebsd.org/src/commit/?id=99950e8beb72)
 
 为了提高 `stable` 分支的 ABI 兼容性，CPU 亲和性系统调用现在可以更宽容地处理比内核使用的 CPU 集合小的 CPU 集合。这将促进 `MAXCPU`（内核 CPU 集合的大小）增加。[72bc1e6806cc](https://cgit.freebsd.org/src/commit/?id=72bc1e6806cc)
 
@@ -194,7 +194,7 @@ Gavin Howard 的 `bc` 升级到版本 6.2.4。
 
 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&format=html) ABI 中的 vDSO（虚拟动态共享对象）支持基本完成。[a340b5b4bd48](https://cgit.freebsd.org/src/commit/?id=a340b5b4bd48)
 
-arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&format=html) ABI 已与 amd64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&format=html) ABI 达到一致。[0b82c544de58](https://cgit.freebsd.org/src/commit/?id=0b82c544de58)，[a340b5b4bd48](https://cgit.freebsd.org/src/commit/?id=a340b5b4bd48)
+arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&format=html) ABI 与 amd64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&format=html) ABI 达到一致。[0b82c544de58](https://cgit.freebsd.org/src/commit/?id=0b82c544de58)，[a340b5b4bd48](https://cgit.freebsd.org/src/commit/?id=a340b5b4bd48)
 
 ## 设备与驱动
 
@@ -206,13 +206,13 @@ arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=
 
 [ena(4)](https://man.freebsd.org/cgi/man.cgi?query=ena&sektion=4&format=html) 驱动程序升级到 2.6.2 版本。（由亚马逊公司赞助）
 
-[hwpmc(4)](https://man.freebsd.org/cgi/man.cgi?query=hwpmc&sektion=4&format=html) 已实现对 Intel Alder Lake CPU 的基本支持。[b8ef2ca9eae9](https://cgit.freebsd.org/src/commit/?id=b8ef2ca9eae9)
+[hwpmc(4)](https://man.freebsd.org/cgi/man.cgi?query=hwpmc&sektion=4&format=html) 实现了对 Intel Alder Lake CPU 的基本支持。[b8ef2ca9eae9](https://cgit.freebsd.org/src/commit/?id=b8ef2ca9eae9)
 
 [ice(4)](https://man.freebsd.org/cgi/man.cgi?query=ice&sektion=4&format=html) 驱动程序更新至 1.37.7-k 版本。
 
 [irdma(4)](https://man.freebsd.org/cgi/man.cgi?query=irdma&sektion=4&format=html) RDMA 驱动程序为 Intel E810 以太网控制器引入，支持 RoCEv2 和 iWARP 协议，以每个 PF 方式运行，默认使用 RoCEv2，并升级至 1.1.5-k 版本。[42bad04a2156](https://cgit.freebsd.org/src/commit/?id=42bad04a2156)（由英特尔公司赞助）
 
-对 DPAA2（第二代数据路径加速架构，一种存在于某些 NXP SoC 中的硬件级网络架构）的初步支持现已提供。它运行 NXP 提供的固件，作为抽象层提供 DPAA2 对象，并提供一个 `dpni` 网络接口。[d5a64a935bc9](https://cgit.freebsd.org/src/commit/?id=d5a64a935bc9)（由 Bare Enthusiasm :-) 和 Traverse Technologies 赞助）
+对 DPAA2（第二代数据路径加速架构，一种存在于某些 NXP SoC 中的硬件级网络架构）的初步支持现在提供。它运行 NXP 提供的固件，作为抽象层提供 DPAA2 对象，并提供一个 `dpni` 网络接口。[d5a64a935bc9](https://cgit.freebsd.org/src/commit/?id=d5a64a935bc9)（由 Bare Enthusiasm :-) 和 Traverse Technologies 赞助）
 
 用于 Intel 无线接口的 [iwlwifi(4)](https://man.freebsd.org/cgi/man.cgi?query=iwlwifi&sektion=4&format=html) 驱动程序更新。（由 FreeBSD 基金会赞助）
 
@@ -248,13 +248,13 @@ arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=
 
 ### 通用网络
 
-内核的 [wg(4)](https://man.freebsd.org/cgi/man.cgi?query=wg&sektion=4&format=html) WireGuard 驱动程序已重新集成；它通过 WireGuard 协议提供虚拟私人网络（VPN）接口。[5ae69e2f10da](https://cgit.freebsd.org/src/commit/?id=5ae69e2f10da)（由 Rubicon Communications, LLC（“Netgate”）和 FreeBSD 基金会赞助）
+内核的 [wg(4)](https://man.freebsd.org/cgi/man.cgi?query=wg&sektion=4&format=html) WireGuard 驱动程序重新集成；它通过 WireGuard 协议提供虚拟私人网络（VPN）接口。[5ae69e2f10da](https://cgit.freebsd.org/src/commit/?id=5ae69e2f10da)（由 Rubicon Communications, LLC（“Netgate”）和 FreeBSD 基金会赞助）
 
-KTLS（内核 TLS 实现）为 TLS 1.3 添加接收卸载支持。TLS 1.1 至 1.3 的接收卸载现已受支持；TLS 1.0 至 1.3 的发送卸载也已受支持。[1462dc95f796](https://cgit.freebsd.org/src/commit/?id=1462dc95f796)（由 Netflix 赞助）
+KTLS（内核 TLS 实现）为 TLS 1.3 添加接收卸载支持。TLS 1.1 至 1.3 的接收卸载现在受支持；TLS 1.0 至 1.3 的发送卸载也受支持。[1462dc95f796](https://cgit.freebsd.org/src/commit/?id=1462dc95f796)（由 Netflix 赞助）
 
-[netlink(4)](https://man.freebsd.org/cgi/man.cgi?query=netlink&sektion=4&format=html) 网络配置协议现已提供。它是 RFC 3549 中定义的通信协议，使用原始套接字在用户空间和内核之间交换配置数据。第三方路由程序和 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&format=html) ABI 使用该协议。[6058f6cc48f5](https://cgit.freebsd.org/src/commit/?id=6058f6cc48f5)（该协议不包括在 13.2-RELEASE 的 **GENERIC** 配置中，但作为内核模块提供）
+[netlink(4)](https://man.freebsd.org/cgi/man.cgi?query=netlink&sektion=4&format=html) 网络配置协议现在提供。它是 RFC 3549 中定义的通信协议，使用原始套接字在用户空间和内核之间交换配置数据。第三方路由程序和 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&format=html) ABI 使用该协议。[6058f6cc48f5](https://cgit.freebsd.org/src/commit/?id=6058f6cc48f5)（该协议不包括在 13.2-RELEASE 的 **GENERIC** 配置中，但作为内核模块提供）
 
-[ipfw(4)](https://man.freebsd.org/cgi/man.cgi?query=ipfw&sektion=4&format=html) 现已支持使用 Radix 表和查找来处理 MAC 地址。这使得可以构建和使用 MAC 地址表来进行过滤。[c31f8b7bd895](https://cgit.freebsd.org/src/commit/?id=c31f8b7bd895)
+[ipfw(4)](https://man.freebsd.org/cgi/man.cgi?query=ipfw&sektion=4&format=html) 现在支持使用 Radix 表和查找来处理 MAC 地址。这使得可以构建和使用 MAC 地址表来进行过滤。[c31f8b7bd895](https://cgit.freebsd.org/src/commit/?id=c31f8b7bd895)
 
 内核模块 dpdk_lpm4 和 dpdk_lpm6 现在可用，可以通过 [loader.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=loader.conf&sektion=5&format=html) 加载。它们为具有大量路由表的主机提供优化的路由功能。它们可以通过 [route(8)](https://man.freebsd.org/cgi/man.cgi?query=route&sektion=8&format=html) 配置，并且是模块化 FIB 查找机制的一部分。[0ca122044369](https://cgit.freebsd.org/src/commit/?id=0ca122044369)
 
@@ -284,7 +284,7 @@ TCP 和 SCTP 中有多个 bug 修复。
 
 这意味着，默认情况下，生成的二进制文件将要求 686 类 CPU，包括但不限于 FreeBSD 发布工程团队提供的二进制文件。FreeBSD 13.x 仍将继续支持旧的 CPU，但需要此功能的用户将需要为官方支持自行构建发行版。
 
-由于 i486 和 i586 CPU 主要用于嵌入式市场，因此预计对普通用户的影响将是最小的，因为这些 CPU 类型的新硬件早已不再使用，而从统计数据来看，部署的这类系统大部分已接近退役年限。
+由于 i486 和 i586 CPU 主要用于嵌入式市场，因此预计对普通用户的影响将是最小的，因为这些 CPU 类型的新硬件早就不再使用，而从统计数据来看，部署的这类系统大部分接近退役年限。
 
 这一变更考虑了多个因素。例如，i486 没有 64 位原子操作，虽然它们可以在内核中模拟，但无法在用户空间中模拟。此外，32 位 amd64 库从一开始就是 i686。
 
