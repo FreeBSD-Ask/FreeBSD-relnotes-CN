@@ -21,7 +21,6 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 
 一般的发行说明内容包括自 14.1-RELEASE 之后发布的安全公告、新增的驱动程序/硬件支持、新命令/参数、主要的错误修复/外部软件更新。还可能列出主要 Ports/软件包和发行工程实践的变更。显然，发行说明无法详尽列出两个 FreeBSD 版本之间所做的每项变更；本文档主要聚焦于安全公告、用户可见的变更和重大架构改进。
 
-
 ### 从旧版 FreeBSD 更新
 
 使用工具 **freebsd-update(8)** 能在 RELEASE 版本（及各安全分支快照）间进行二进制更新。请参阅特定版本的更新程序，例如 FreeBSD 14.2-RELEASE 的更新信息，并在 FreeBSD 手册中查阅关于二进制更新的详细说明。此工具会更新未经修改的用户空间工具，以及在官方 FreeBSD RELEASE 分发的未经修改的 GENERIC 内核。工具 **freebsd-update(8)** 要求更新的主机能够连接互联网。
@@ -29,7 +28,6 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 可以按照 **/usr/src/UPDATING** 中的说明从以前的版本进行基于源代码的更新（通过重新编译 FreeBSD 基本系统进行更新）。
 
 在更新 FreeBSD 之前，应先备份所有数据和配置文件。
-
 
 ### 安全与勘误
 
@@ -56,7 +54,6 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 | **FreeBSD-SA-24:18.ctl**     | 2024 年 10 月 29 日 | [ctl(4)](https://man.freebsd.org/cgi/man.cgi?query=ctl&sektion=4&format=html) CAM 目标层中的不受限制分配                                   |
 | **FreeBSD-SA-24:19.fetch**   | 2024 年 10 月 29 日 | [fetch(1)](https://man.freebsd.org/cgi/man.cgi?query=fetch&sektion=1&format=html) 参数的证书吊销列表功能失效                                 |
 
-
 #### 勘误通知
 
 | 勘误编号                   | 日期           | 主题                                                                 |
@@ -69,7 +66,6 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 | **FreeBSD-EN-24:15.calendar** | 2024 年 9 月 4 日  | [cron(8)](https://man.freebsd.org/cgi/man.cgi?query=cron&sektion=8&format=html)/[periodic(8)](https://man.freebsd.org/cgi/man.cgi?query=periodic&sektion=8&format=html) 会话登录                                        |
 | **FreeBSD-EN-24:16.pf**     | 2024 年 9 月 19 日 | pf 中的 ICMPv6 状态处理错误                                         |
 | **FreeBSD-EN-24:17.pam_xdg** | 2024 年 10 月 29 日 | 登录时 XDG 运行目录的文件描述符泄漏                                 |
-
 
 ## 用户空间
 
