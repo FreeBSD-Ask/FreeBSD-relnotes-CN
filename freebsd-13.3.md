@@ -91,7 +91,7 @@ FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 Fr
 
 用于下载闰秒信息的默认链接已更新为使用标准源，因为旧链接已经失效。[d19b59cfe594](https://cgit.freebsd.org/src/commit/?id=d19b59cfe594)
 
-在使用 arm64 `RPI` 系统的树莓派设备上，守护进程 [powerd(8)] 默认启用(https://man.freebsd.org/cgi/man.cgi?query=powerd&sektion=8&format=html)，这样系统可以在需要时全速运行。非默认睿频设置的用户也许需要禁用之。[e889b5a892b6](https://cgit.freebsd.org/src/commit/?id=e889b5a892b6)
+在使用 arm64 `RPI` 系统的树莓派设备上，守护进程 [powerd(8)](https://man.freebsd.org/cgi/man.cgi?query=powerd&sektion=8&format=html) 默认启用，这样系统可以在需要时全速运行。非默认睿频设置的用户也许需要禁用之。[e889b5a892b6](https://cgit.freebsd.org/src/commit/?id=e889b5a892b6)
 
 某个服务的 `umask` 现在可以通过 [rc.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5&format=html) 中的变量 `<服务>_umask` 来指定，其中 `<服务>` 是服务名称。[2d6a03dd43c7](https://cgit.freebsd.org/src/commit/?id=2d6a03dd43c7)
 
