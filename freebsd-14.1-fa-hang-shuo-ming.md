@@ -176,13 +176,13 @@ OpenZFS 已升级至版本 2.2.4. [78c9d8f1ce65](https://cgit.freebsd.org/src/co
 
 现在可以配置 [loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html)，以便根据 SMBIOS 中的变量 planar maker、planar product、system product 和 uboot m_product 读取特定的配置文件。目前，最好的文档是 git 提交信息，[3eb3a802a31b](https://cgit.freebsd.org/src/commit/?id=3eb3a802a31b)。
 
-对于 EFI 设备，[loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html) 中的控制台检测得到了改进。如果没有变量 ConOut，会检查变量 ConIn。如果找到多个设备，则首选串行。[20a6f4779ac6](https://cgit.freebsd.org/src/commit/?id=20a6f4779ac6)（由Netflix赞助）
+对于 EFI 设备，[loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html) 中的控制台检测得到了改进。如果没有变量 ConOut，会检查变量 ConIn。如果找到多个设备，则首选串行。[20a6f4779ac6](https://cgit.freebsd.org/src/commit/?id=20a6f4779ac6)（由 Netflix 赞助）
 
-[loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html) 中的帧缓冲区现在支持使用仅文本的视频驱动程序，从而节省空间。[57ca2848c0aa](https://cgit.freebsd.org/src/commit/?id=05cf4dda599a)（由Netflix赞助）
+[loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html) 中的帧缓冲区现在支持使用仅文本的视频驱动程序，从而节省空间。[57ca2848c0aa](https://cgit.freebsd.org/src/commit/?id=05cf4dda599a)（由 Netflix 赞助）
 
 arm64 设备上的 [loader.efi(8)](https://man.freebsd.org/cgi/man.cgi?query=loader.efi&sektion=8&format=html)，会更早地完成 ACPI 检测。对于基于 ACPI 的 arm64 设备，应更新 EFI 分区上的 **loader.efi** 文件。[05cf4dda599a](https://cgit.freebsd.org/src/commit/?id=05cf4dda599a) [16c09de80135](https://cgit.freebsd.org/src/commit/?id=16c09de80135)
 
-引导加载程序 LinuxBoot 可用于从 Linux 引导 FreeBSD。（aarch64、amd64），[46010641267](https://cgit.freebsd.org/src/commit/?id=46010641267)（由Netflix赞助）
+引导加载程序 LinuxBoot 可用于从 Linux 引导 FreeBSD。（aarch64、amd64），[46010641267](https://cgit.freebsd.org/src/commit/?id=46010641267)（由 Netflix 赞助）
 
 ## 网络
 
