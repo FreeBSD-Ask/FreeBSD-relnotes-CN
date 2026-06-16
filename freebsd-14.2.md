@@ -125,36 +125,28 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 - 一款支持部分 Realtek 芯片组的新无线驱动已可用：[rtw89(4)](https://man.freebsd.org/cgi/man.cgi?query=rtw89&sektion=4&format=html)。[a2d1e07f6451](https://cgit.freebsd.org/src/commit/?id=a2d1e07f6451)（由 FreeBSD 基金会赞助）
 - 对 Realtek 8156/8156B 的支持已从 [cdce(4)](https://man.freebsd.org/cgi/man.cgi?query=cdce&sektion=4&format=html) 迁移至 [ure(4)](https://man.freebsd.org/cgi/man.cgi?query=ure&sektion=4&format=html)，以提升性能和可靠性。[630077a84186](https://cgit.freebsd.org/src/commit/?id=630077a84186)（由 FreeBSD 基金会赞助）
 - 增加了对 ACPI GPIO _AEI 对象的支持。[1db6ffb2a482](https://cgit.freebsd.org/src/commit/?id=1db6ffb2a482)（由亚马逊赞助）
-- 已在所有架构上启用 [nvme(4)](https://man.freebsd.org/cgi/man.cgi?query=nvme&sektion=4&format=html) 和 [nvmecontrol(8)](https://man.freebsd.org/cgi/man.cgi?query=nvmecontrol&sektion=8&format=html)。[24687a65dd7f](https://cgit.freebsd.org/src/commit/?id=24687a65dd7f)，[aba2d7f89dcf](https://cgit.freebsd.org/src/commit/?id=aba2d7f89dcf)（由 Chelsio Communications 和奈飞赞助）  
-
+- 已在所有架构上启用 [nvme(4)](https://man.freebsd.org/cgi/man.cgi?query=nvme&sektion=4&format=html) 和 [nvmecontrol(8)](https://man.freebsd.org/cgi/man.cgi?query=nvmecontrol&sektion=8&format=html)。[24687a65dd7f](https://cgit.freebsd.org/src/commit/?id=24687a65dd7f)，[aba2d7f89dcf](https://cgit.freebsd.org/src/commit/?id=aba2d7f89dcf)（由 Chelsio Communications 和奈飞赞助）
 
 ### 弃用和删除的驱动程序
 
 - 计划在 FreeBSD 15.0 中删除 [agp(4)](https://man.freebsd.org/cgi/man.cgi?query=agp&sektion=4&format=html) ，手册页已标注为弃用。[92af7c97e197](https://cgit.freebsd.org/src/commit/?id=92af7c97e197)  
-- 计划在后续版本中删除 [syscons(4)](https://man.freebsd.org/cgi/man.cgi?query=syscons&sektion=4&format=html) ，手册页已标注为弃用，建议用户迁移至 [vt(4)](https://man.freebsd.org/cgi/man.cgi?query=vt&sektion=4&format=html)。[2bc5b1d60512](https://cgit.freebsd.org/src/commit/?id=2bc5b1d60512)（由 FreeBSD 基金会赞助）  
-
+- 计划在后续版本中删除 [syscons(4)](https://man.freebsd.org/cgi/man.cgi?query=syscons&sektion=4&format=html) ，手册页已标注为弃用，建议用户迁移至 [vt(4)](https://man.freebsd.org/cgi/man.cgi?query=vt&sektion=4&format=html)。[2bc5b1d60512](https://cgit.freebsd.org/src/commit/?id=2bc5b1d60512)（由 FreeBSD 基金会赞助）
 
 ## 存储
 
 本节介绍文件系统及其他本地和网络存储子系统的变更与新增内容。
 
-
 ### ZFS
 
-OpenZFS 已更新至版本 2.2.6。[755e773877e9](https://cgit.freebsd.org/src/commit/?id=755e773877e9)  
-
-
+OpenZFS 已更新至版本 2.2.6。[755e773877e9](https://cgit.freebsd.org/src/commit/?id=755e773877e9)
 
 ## 启动加载程序的变更
 
 本节介绍启动加载程序、启动菜单及其他与启动相关的变更。
 
-
-
 ### 启动加载程序的变更
 
 BIOS 引导加载程序重新添加了对 gzip 和 bzip2 的支持，但默认情况下移除了图形模式的支持，以解决大小问题。（EFI 引导加载程序未受影响，仍支持上述所有功能。）[4d3b05a8530e](https://cgit.freebsd.org/src/commit/?id=4d3b05a8530e)（由奈飞赞助）
-
 
 ## 网络
 
