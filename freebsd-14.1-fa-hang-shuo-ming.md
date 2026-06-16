@@ -110,7 +110,7 @@ Clang/LLVM 已升级至版本 18.1.5。[90a5e985e5f4](https://cgit.freebsd.org/s
 
 ### 运行时库和 API
 
-`libutil` 中的 [setusercontext(3)](https://man.freebsd.org/cgi/man.cgi?query=setusercontext&sektion=3&format=html) 例程可依据一定的条件从家目录下的 **.login.conf** 文件以及系统 [login.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5&format=html) 设置进程优先级（nice）。优先级可以赋值 `inherit`，意味着优先级会保持与父进程相同。umask 亦可以赋值 `inherit`。[6f6186e19fe5](https://cgit.freebsd.org/src/commit/?id=6f6186e19fe5)、[a8c273b3c97f](https://cgit.freebsd.org/src/commit/?id=a8c273b3c97f), [d2d66fedc41](https://cgit.freebsd.org/src/commit/?id=d2d66fedc4188)（由 Kumacom SAS 赞助）
+`libutil` 中的 [setusercontext(3)](https://man.freebsd.org/cgi/man.cgi?query=setusercontext&sektion=3&format=html) 例程可依据一定的条件从家目录下的 **.login.conf** 文件以及系统 [login.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5&format=html) 设置进程优先级（nice）。优先级可以赋值 `inherit`，意味着优先级会保持与父进程相同。umask 亦可以赋值 `inherit`。[6f6186e19fe5](https://cgit.freebsd.org/src/commit/?id=6f6186e19fe5)、[a8c273b3c97f](https://cgit.freebsd.org/src/commit/?id=a8c273b3c97f), [d2d66fedc418](https://cgit.freebsd.org/src/commit/?id=d2d66fedc418)（由 Kumacom SAS 赞助）
 
 在 amd64 设备支持时，C 库中的许多字符串和内存操作，都能用 SIMD（单指令多数据）进行扩展以提高性能；请参阅 [simd(7)](https://man.freebsd.org/cgi/man.cgi?query=simd&sektion=7&format=html)。（由 FreeBSD 基金会赞助）
 
