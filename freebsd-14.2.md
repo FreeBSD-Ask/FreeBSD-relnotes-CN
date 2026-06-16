@@ -36,7 +36,7 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 #### 安全公告
 
 | 公告编号 | 日期 | 主题 |
-| -------- | ---- | ---- |
+| :------- | :--- | :--- |
 | **FreeBSD-SA-24:04.openssh** | 2024 年 7 月 1 日 | OpenSSH 预认证远程代码执行 |
 | **FreeBSD-SA-24:05.pf** | 2024 年 8 月 7 日 | pf 在状态表中错误匹配不同的 ICMPv6 状态 |
 | **FreeBSD-SA-24:06.ktrace** | 2024 年 8 月 7 日 | [ktrace(2)](https://man.freebsd.org/cgi/man.cgi?query=ktrace&sektion=2&format=html) 在执行 setuid 二进制文件时未正确分离 |
@@ -57,7 +57,7 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 #### 勘误通知
 
 | 勘误编号 | 日期 | 主题 |
-| -------- | ---- | ---- |
+| :------- | :--- | :--- |
 | **FreeBSD-EN-24:10.zfs** | 2024 年 6 月 19 日 | ZFS 内核内存泄漏 |
 | **FreeBSD-EN-24:11.ldns** | 2024 年 6 月 19 日 | LDNS 使用了 **resolv.conf** 中注释掉的 nameserver |
 | **FreeBSD-EN-24:12.killpg** | 2024 年 6 月 19 日 | killpg 中的锁顺序反转（Lock order reversal，LOR）导致的活锁 |
