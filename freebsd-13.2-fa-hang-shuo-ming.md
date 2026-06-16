@@ -16,7 +16,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 该 FreeBSD 13.2-RELEASE 的分发版是一个 RELEASE 发行版。该分发版可以在 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 和镜像站点找到。获取此版本（及其他）FreeBSD 发行版的更多信息，请参见 [FreeBSD 手册](https://docs.freebsd.org/en/books/handbook/)中的[获取 FreeBSD 附录](https://docs.freebsd.org/en/books/handbook/mirrors)。
 
-所有用户在安装 FreeBSD 之前都应查阅发布勘误。勘误文档会更新一些在发布周期末期或发布后发现的“最新”信息。通常，它包含已知的漏洞、安全公告以及文档的修正。FreeBSD 13.2-RELEASE 的最新勘误可以在 FreeBSD 网站上找到。
+所有用户在安装 FreeBSD 之前都应查阅发布勘误。勘误文档会更新一些在发布周期末期或发布后发现的“最新”信息。通常，它包含已知的漏洞、安全公告以及文档的修正。可以在 FreeBSD 网站上找到 FreeBSD 13.2-RELEASE 的最新勘误。
 
 本文档介绍了自 13.1-RELEASE 以来 FreeBSD 中最具用户可见性的新增或变更功能。一般来说，本文所述的变更是 13-STABLE 分支的特有变更，除非特别标记为合并特性。
 

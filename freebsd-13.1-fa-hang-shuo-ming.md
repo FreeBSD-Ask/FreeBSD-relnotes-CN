@@ -111,7 +111,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 
 对于 64 位架构，基本系统现在默认启用位置无关可执行文件（PIE）支持。可以通过开关 `WITHOUT_PIE` 禁用该功能，需要进行完全重新编译。[396e9f259d96](https://cgit.freebsd.org/src/commit/?id=396e9f259d96)
 
-新增了 `zfskeys` [rc(8)](https://man.freebsd.org/cgi/man.cgi?query=rc&sektion=8&format=html) 服务脚本，允许在启动过程中自动解密使用 ZFS 原生加密的 ZFS 数据集。更多信息请参考 [rc.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5&format=html) 手册。[33ff39796ffe](https://cgit.freebsd.org/src/commit/?id=33ff39796ffe)、[8719e8a951b7](https://cgit.freebsd.org/src/commit/?id=8719e8a951b7)（由 Modirum 和 Klara Inc. 赞助）
+`zfskeys` [rc(8)](https://man.freebsd.org/cgi/man.cgi?query=rc&sektion=8&format=html) 服务脚本已新增，允许在启动过程中自动解密使用 ZFS 原生加密的 ZFS 数据集。更多信息请参考 [rc.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5&format=html) 手册。[33ff39796ffe](https://cgit.freebsd.org/src/commit/?id=33ff39796ffe)、[8719e8a951b7](https://cgit.freebsd.org/src/commit/?id=8719e8a951b7)（由 Modirum 和 Klara Inc. 赞助）
 
 [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 的 NVMe 仿真已升级至 NVMe 规范的 1.4 版本。[b7a2cf0d9102](https://cgit.freebsd.org/src/commit/?id=b7a2cf0d9102) [eae02d959363](https://cgit.freebsd.org/src/commit/?id=eae02d959363)
 
@@ -236,7 +236,7 @@ ZFS 已升级至 OpenZFS 2.1.4 版本。OpenZFS 的发行说明可参阅 [https:
 
 - 默认的 NFSv4 挂载次版本号已变更为 NFSv4 服务器所支持的最高次版本号。用户可通过挂载选项 `minorversion` 手动覆盖此默认值。[8a04edfdcbd2](https://cgit.freebsd.org/src/commit/?id=8a04edfdcbd2)
 
-- 新增了 NFSv4.1/4.2 的挂载选项 `nconnect`，用于指定挂载所使用的 TCP 连接数量（最多 16 个）。默认的第一个 TCP 连接将用于所有小型 RPC 消息，而可能包含大型 RPC 消息的操作（如 Read、Readdir、ReaddirPlus、Write）将在额外的 TCP 连接上以轮询方式发送。如果 NFS 客户端或服务器具有多个聚合的网络接口或支持多队列的网络接口，则此功能可以提高 NFS 的性能。[9ec7dbf46b0a](https://cgit.freebsd.org/src/commit/?id=9ec7dbf46b0a)
+- NFSv4.1/4.2 的挂载选项 `nconnect` 已新增，用于指定挂载所使用的 TCP 连接数量（最多 16 个）。默认的第一个 TCP 连接将用于所有小型 RPC 消息，而可能包含大型 RPC 消息的操作（如 Read、Readdir、ReaddirPlus、Write）将在额外的 TCP 连接上以轮询方式发送。如果 NFS 客户端或服务器具有多个聚合的网络接口或支持多队列的网络接口，则此功能可以提高 NFS 的性能。[9ec7dbf46b0a](https://cgit.freebsd.org/src/commit/?id=9ec7dbf46b0a)
 
 - sysctl 配置项 `vfs.nfsd.srvmaxio` 已添加，用于将 NFS 服务器的最大 I/O 大小从 128KB 增加到任意 2 的幂值（最高 1MB）。该选项只能在 nfsd 线程未运行时设置，且通常需要将 `kern.ipc.maxsockbuf` 增加至控制台日志中建议的值。[9fb6e613373c](https://cgit.freebsd.org/src/commit/?id=9fb6e613373c)
 
