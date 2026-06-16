@@ -24,9 +24,9 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 ## 从旧版 FreeBSD 升级
 
-使用 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具支持在 RELEASE 版本之间（以及各种安全分支的快照）进行二进制升级。[二进制升级程序](https://docs.freebsd.org/en/books/handbook/cutting-edge/#freebsdupdate-upgrade) 会更新未修改的用户空间工具以及作为官方 FreeBSD 发行版一部分分发的未修改的 GENERIC 内核。[freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具要求被升级的主机必须具备互联网连接。
+可以使用 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具在 RELEASE 版本之间（以及各种安全分支的快照）进行二进制升级。[二进制升级程序](https://docs.freebsd.org/en/books/handbook/cutting-edge/#freebsdupdate-upgrade) 会更新未修改的用户空间工具以及作为官方 FreeBSD 发行版一部分分发的未修改的 GENERIC 内核。[freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具要求被升级的主机必须具备互联网连接。
 
-支持从先前版本进行基于源代码的升级（即从源代码重新编译 FreeBSD 基本系统），具体按 **/usr/src/UPDATING** 中的说明进行操作。
+从先前版本进行基于源代码的升级（即从源代码重新编译 FreeBSD 基本系统）也受到支持，具体按 **/usr/src/UPDATING** 中的说明进行操作。
 
 所有 PowerPC 架构的用户，在成功安装内核和世界之后，必须手动运行 `kldxref /boot/kernel`。
 
@@ -116,7 +116,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 MSS clamping 在 [ppp(8)](https://man.freebsd.org/cgi/man.cgi?query=ppp&sektion=8&format=html) 中得到了改进。[301bff9bdd62](https://cgit.freebsd.org/src/commit/?id=301bff9bdd62)
 
-指标别名在 [prometheus_sysctl_exporter(8)](https://man.freebsd.org/cgi/man.cgi?query=prometheus_sysctl_exporter&sektion=8&format=html) 中已变更，以避免由于冲突的指标名称而混淆 Prometheus 服务器。UMA 区域 `tcp_log_bucket` 已重命名为 `tcp_log_id_bucket`，`tcp_log_node` 被重命名为 `tcp_log_id_node` 以保持一致性。描述中带有 `(LEGACY)` 的 sysctl 变量不再导出，这些变量是由 sysctl ZFS 替换的，许多已别名为相同的 Prometheus 指标名称（如 `vfs.zfs.arc_max` 和 `vfs.zfs.arc.max`）。[e4f508d5a211](https://cgit.freebsd.org/src/commit/?id=e4f508d5a211)（由 Axcient 赞助）
+指标别名在 [prometheus_sysctl_exporter(8)](https://man.freebsd.org/cgi/man.cgi?query=prometheus_sysctl_exporter&sektion=8&format=html) 中已变更，以避免由于冲突的指标名称而混淆 Prometheus 服务器。UMA 区域 `tcp_log_bucket` 已重命名为 `tcp_log_id_bucket`，`tcp_log_node` 被重命名为 `tcp_log_id_node` 以保持一致性。描述中带有 `(LEGACY)` 的 sysctl 变量不再导出，这些变量由已被其他变量替换的 ZFS sysctl 使用，其中许多已别名为相同的 Prometheus 指标名称（如 `vfs.zfs.arc_max` 和 `vfs.zfs.arc.max`）。[e4f508d5a211](https://cgit.freebsd.org/src/commit/?id=e4f508d5a211)（由 Axcient 赞助）
 
 [uuidgen(1)](https://man.freebsd.org/cgi/man.cgi?query=uuidgen&sektion=1&format=html) 工具新增了 `-r` 选项，用于生成随机 UUID，版本 4。[8fd1953b7eb2](https://cgit.freebsd.org/src/commit/?id=8fd1953b7eb2)
 
@@ -182,11 +182,11 @@ Gavin Howard 的 `bc` 已升级到版本 6.2.4。
 
 针对 Intel Alder Lake（第十二代）和 Raptor Lake（第十三代）混合 CPU 的硬件页面失效问题的解决方法已实现。该漏洞可能导致 UFS 和 MSDOSFS 文件系统损坏，并可能导致其他内存损坏。通过此解决方法，小核（E 核心）会自动使用较慢的页面失效方法。[567cc4e6bfd9](https://cgit.freebsd.org/src/commit/?id=567cc4e6bfd9)（由 FreeBSD 基金会赞助）
 
-新增内核配置选项 `SPLIT_KERNEL_DEBUG`，用于控制将内核和模块的调试数据分割成独立的文件。该选项与选项 `WITHOUT_KERNEL_SYMBOLS` 相互作用，后者的操作方式与 13.0-RELEASE 和 13.1-RELEASE 中不同，但与早期版本相似；它现在仅控制调试数据的安装。默认情况下为 `WITH_KERNEL_SYMBOLS` 和 `WITH_SPLIT_KERNEL_DEBUG`，允许将不含调试数据的内核和模块安装在 /boot 中，将独立的调试文件安装在 **/usr/lib/debug** 中，这与 13.0-RELEASE 之前的版本相同。使用 `WITHOUT_KERNEL_SYMBOLS` 和 `WITH_SPLIT_KERNEL_DEBUG` 时，独立的调试文件会生成，但不会安装，类似于早期版本中使用 `WITHOUT_KERNEL_SYMBOLS` 的情况。最后，使用 `WITHOUT_KERNEL_SYMBOLS` 和 `WITHOUT_SPLIT_KERNEL_DEBUG` 时，将内核和模块与内置调试信息一起安装到 **/boot** 中，这与 13.1-RELEASE 中使用 `WITHOUT_KERNEL_SYMBOLS` 的情况相同。[0c4d13c521aa](https://cgit.freebsd.org/src/commit/?id=0c4d13c521aa)（由 FreeBSD 基金会赞助）
+新增内核配置选项 `SPLIT_KERNEL_DEBUG`，用于控制将内核和模块的调试数据分割成独立的文件。该选项与选项 `WITHOUT_KERNEL_SYMBOLS` 相互作用，后者的操作方式与 13.0-RELEASE 和 13.1-RELEASE 中不同，但与早期版本相似；它现在仅控制调试数据的安装。默认情况下为 `WITH_KERNEL_SYMBOLS` 和 `WITH_SPLIT_KERNEL_DEBUG`，允许将不含调试数据的内核和模块安装在 **/boot** 中，将独立的调试文件安装在 **/usr/lib/debug** 中，这与 13.0-RELEASE 之前的版本相同。使用 `WITHOUT_KERNEL_SYMBOLS` 和 `WITH_SPLIT_KERNEL_DEBUG` 时，独立的调试文件会生成，但不会安装，类似于早期版本中使用 `WITHOUT_KERNEL_SYMBOLS` 的情况。最后，使用 `WITHOUT_KERNEL_SYMBOLS` 和 `WITHOUT_SPLIT_KERNEL_DEBUG` 时，将内核和模块与内置调试信息一起安装到 **/boot** 中，这与 13.1-RELEASE 中使用 `WITHOUT_KERNEL_SYMBOLS` 的情况相同。[0c4d13c521aa](https://cgit.freebsd.org/src/commit/?id=0c4d13c521aa)（由 FreeBSD 基金会赞助）
 
 在 PowerPC 上，pseries 的 ISA 3.0 中的 radix pmap 现已受支持。这应使得 pseries 在 POWER9 实例上显著加速，因为现在管理 pmap 所需的超调用更少。[c74c77531248](https://cgit.freebsd.org/src/commit/?id=c74c77531248)
 
-现已在 arm64 上为 Linux 进程提供 [ptrace(2)](https://man.freebsd.org/cgi/man.cgi?query=ptrace&sektion=2&format=html) 支持。[99950e8beb72](https://cgit.freebsd.org/src/commit/?id=99950e8beb72)
+[ptrace(2)](https://man.freebsd.org/cgi/man.cgi?query=ptrace&sektion=2&format=html) 支持现已可用于 arm64 上的 Linux 进程。[99950e8beb72](https://cgit.freebsd.org/src/commit/?id=99950e8beb72)
 
 为了提高 `stable` 分支的 ABI 兼容性，CPU 亲和性系统调用现在可以更宽容地处理比内核使用的 CPU 集合小的 CPU 集合。这将促进 `MAXCPU`（内核 CPU 集合的大小）增加。[72bc1e6806cc](https://cgit.freebsd.org/src/commit/?id=72bc1e6806cc)
 
@@ -214,7 +214,7 @@ arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=
 
 对 DPAA2（第二代数据路径加速架构，一种存在于某些 NXP SoC 中的硬件级网络架构）的初步支持现已提供。它运行 NXP 提供的固件，作为抽象层提供 DPAA2 对象，并提供一个 `dpni` 网络接口。[d5a64a935bc9](https://cgit.freebsd.org/src/commit/?id=d5a64a935bc9)（由 Bare Enthusiasm :-) 和 Traverse Technologies 赞助）
 
-[iwlwifi(4)](https://man.freebsd.org/cgi/man.cgi?query=iwlwifi&sektion=4&format=html) 驱动程序已更新。（由 FreeBSD 基金会赞助）
+用于 Intel 无线接口的 [iwlwifi(4)](https://man.freebsd.org/cgi/man.cgi?query=iwlwifi&sektion=4&format=html) 驱动程序已更新。（由 FreeBSD 基金会赞助）
 
 [rtw88(4)](https://man.freebsd.org/cgi/man.cgi?query=rtw88&sektion=4&format=html) 驱动程序已添加，用于支持多个 Realtek 无线 PCI 接口。该驱动程序目前仅限于 802.11 a/b/g 操作。更多信息请参见 [https://wiki.freebsd.org/WiFi/Rtw88](https://wiki.freebsd.org/WiFi/Rtw88)。
 
@@ -240,7 +240,7 @@ arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=
 
 变量 `teken.fg_color` 和 `teken.bg_color` [loader.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=loader.conf&sektion=5&format=html) 现在接受 `bright` 或 `light` 前缀（以及颜色号 8 到 15）来选择亮色。[1dcb6002c500](https://cgit.freebsd.org/src/commit/?id=1dcb6002c500)（由 FreeBSD 基金会赞助）。另见 [233ab015c0d7](https://cgit.freebsd.org/src/commit/?id=233ab015c0d7)
 
-修复了 [loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html) 中多个导致视频控制台输出消失的 bug。这些问题表现为引导加载程序启动内核后出现挂起。（由 Netflix 赞助）
+[loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html) 中多个导致视频控制台输出消失的 bug 已修复。这些问题表现为引导加载程序启动内核后出现挂起。（由 Netflix 赞助）
 
 ## 网络
 
@@ -254,7 +254,7 @@ KTLS（内核 TLS 实现）已为 TLS 1.3 添加接收卸载支持。TLS 1.1 至
 
 [netlink(4)](https://man.freebsd.org/cgi/man.cgi?query=netlink&sektion=4&format=html) 网络配置协议现已提供。它是 RFC 3549 中定义的通信协议，使用原始套接字在用户空间和内核之间交换配置数据。第三方路由程序和 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&format=html) ABI 使用该协议。[6058f6cc48f5](https://cgit.freebsd.org/src/commit/?id=6058f6cc48f5)（该协议不包括在 13.2-RELEASE 的 **GENERIC** 配置中，但作为内核模块提供）
 
-现在支持在 [ipfw(4)](https://man.freebsd.org/cgi/man.cgi?query=ipfw&sektion=4&format=html) 中使用 Radix 表和查找来处理 MAC 地址。这使得可以构建和使用 MAC 地址表来进行过滤。[c31f8b7bd895](https://cgit.freebsd.org/src/commit/?id=c31f8b7bd895)
+[ipfw(4)](https://man.freebsd.org/cgi/man.cgi?query=ipfw&sektion=4&format=html) 现已支持使用 Radix 表和查找来处理 MAC 地址。这使得可以构建和使用 MAC 地址表来进行过滤。[c31f8b7bd895](https://cgit.freebsd.org/src/commit/?id=c31f8b7bd895)
 
 内核模块 dpdk_lpm4 和 dpdk_lpm6 现在可用，可以通过 [loader.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=loader.conf&sektion=5&format=html) 加载。它们为具有大量路由表的主机提供优化的路由功能。它们可以通过 [route(8)](https://man.freebsd.org/cgi/man.cgi?query=route&sektion=8&format=html) 配置，并且是模块化 FIB 查找机制的一部分。[0ca122044369](https://cgit.freebsd.org/src/commit/?id=0ca122044369)
 
@@ -272,7 +272,7 @@ ISA 声卡的驱动程序已弃用，并将在 FreeBSD 14.0 中移除。[d7620b6
 
 工具 [minigzip(1)](https://man.freebsd.org/cgi/man.cgi?query=minigzip&sektion=1&format=html) 已弃用，并将在 FreeBSD 14.0 中移除。[84d3fc26e3a2](https://cgit.freebsd.org/src/commit/?id=84d3fc26e3a2)
 
-在 netgraph 中，ATM 的剩余组件（NgATM）已弃用，并将在 FreeBSD 14.0 中移除。对 ATM NIC 的支持已移除。
+在 netgraph 中，ATM 的剩余组件（NgATM）已弃用，并将在 FreeBSD 14.0 中移除。对 ATM NIC 的支持此前已移除。
 
 Telnet 守护进程 [telnetd(8)](https://man.freebsd.org/cgi/man.cgi?query=telnetd&sektion=8&format=html) 已弃用，并将在 FreeBSD 14.0 中移除。Telnet 客户端不受影响。
 
@@ -286,7 +286,7 @@ Telnet 守护进程 [telnetd(8)](https://man.freebsd.org/cgi/man.cgi?query=telne
 
 由于 i486 和 i586 CPU 主要用于嵌入式市场，因此预计对普通用户的影响将是最小的，因为这些 CPU 类型的新硬件早已不再使用，而从统计数据来看，部署的这类系统大部分已接近退役年限。
 
-做出这一变更时考虑了多个因素。例如，i486 没有 64 位原子操作，虽然它们可以在内核中模拟，但无法在用户空间中模拟。此外，32 位 amd64 库从一开始就是 i686。
+这一变更考虑了多个因素。例如，i486 没有 64 位原子操作，虽然它们可以在内核中模拟，但无法在用户空间中模拟。此外，32 位 amd64 库从一开始就是 i686。
 
 由于大多数 32 位测试是由开发人员在 64 位硬件上使用 lib32 库并配合内核中的 `COMPAT_FREEBSD32` 选项进行的，这一变更确保了更好的覆盖率和用户体验。这也符合大多数 Linux® 发行版长期以来的做法。
 
