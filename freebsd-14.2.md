@@ -57,7 +57,7 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 #### 勘误通知
 
 | 勘误编号 | 日期 | 主题 |
-| ---- | ---- | ---- |
+| -------- | ---- | ---- |
 | **FreeBSD-EN-24:10.zfs** | 2024 年 6 月 19 日 | ZFS 内核内存泄漏 |
 | **FreeBSD-EN-24:11.ldns** | 2024 年 6 月 19 日 | LDNS 使用了 **resolv.conf** 中注释掉的 nameserver |
 | **FreeBSD-EN-24:12.killpg** | 2024 年 6 月 19 日 | killpg 中的锁顺序反转（Lock order reversal，LOR）导致的活锁 |
