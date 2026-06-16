@@ -210,13 +210,13 @@ arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=
 
 [ice(4)](https://man.freebsd.org/cgi/man.cgi?query=ice&sektion=4&format=html) 驱动程序更新至 1.37.7-k 版本。
 
-[irdma(4)](https://man.freebsd.org/cgi/man.cgi?query=irdma&sektion=4&format=html) RDMA 驱动程序已为 Intel E810 以太网控制器引入，支持 RoCEv2 和 iWARP 协议，以每个 PF 方式运行，默认使用 RoCEv2，并已升级至 1.1.5-k 版本。[42bad04a2156](https://cgit.freebsd.org/src/commit/?id=42bad04a2156)（由英特尔公司赞助）
+[irdma(4)](https://man.freebsd.org/cgi/man.cgi?query=irdma&sektion=4&format=html) RDMA 驱动程序为 Intel E810 以太网控制器引入，支持 RoCEv2 和 iWARP 协议，以每个 PF 方式运行，默认使用 RoCEv2，并升级至 1.1.5-k 版本。[42bad04a2156](https://cgit.freebsd.org/src/commit/?id=42bad04a2156)（由英特尔公司赞助）
 
 对 DPAA2（第二代数据路径加速架构，一种存在于某些 NXP SoC 中的硬件级网络架构）的初步支持现已提供。它运行 NXP 提供的固件，作为抽象层提供 DPAA2 对象，并提供一个 `dpni` 网络接口。[d5a64a935bc9](https://cgit.freebsd.org/src/commit/?id=d5a64a935bc9)（由 Bare Enthusiasm :-) 和 Traverse Technologies 赞助）
 
-用于 Intel 无线接口的 [iwlwifi(4)](https://man.freebsd.org/cgi/man.cgi?query=iwlwifi&sektion=4&format=html) 驱动程序已更新。（由 FreeBSD 基金会赞助）
+用于 Intel 无线接口的 [iwlwifi(4)](https://man.freebsd.org/cgi/man.cgi?query=iwlwifi&sektion=4&format=html) 驱动程序更新。（由 FreeBSD 基金会赞助）
 
-[rtw88(4)](https://man.freebsd.org/cgi/man.cgi?query=rtw88&sektion=4&format=html) 驱动程序已添加，用于支持多个 Realtek 无线 PCI 接口。该驱动程序目前仅限于 802.11 a/b/g 操作。更多信息请参见 [https://wiki.freebsd.org/WiFi/Rtw88](https://wiki.freebsd.org/WiFi/Rtw88)。
+新增了 [rtw88(4)](https://man.freebsd.org/cgi/man.cgi?query=rtw88&sektion=4&format=html) 驱动程序，用于支持多个 Realtek 无线 PCI 接口。该驱动程序目前仅限于 802.11 a/b/g 操作。更多信息请参见 [https://wiki.freebsd.org/WiFi/Rtw88](https://wiki.freebsd.org/WiFi/Rtw88)。
 
 支持 Linux 设备驱动程序的 KPI 有许多新增和改进。（由 FreeBSD 基金会赞助）
 
@@ -226,7 +226,7 @@ arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=
 
 ### NFS 变更
 
-导致 NFS 服务器挂起的问题已修复；该问题是由 TCP 中 SACK 处理的 bug 引起的。
+导致 NFS 服务器挂起的问题修复；该问题是由 TCP 中 SACK 处理的 bug 引起的。
 
 ### UFS 变更
 
@@ -240,7 +240,7 @@ arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=
 
 变量 `teken.fg_color` 和 `teken.bg_color` [loader.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=loader.conf&sektion=5&format=html) 现在接受 `bright` 或 `light` 前缀（以及颜色号 8 到 15）来选择亮色。[1dcb6002c500](https://cgit.freebsd.org/src/commit/?id=1dcb6002c500)（由 FreeBSD 基金会赞助）。另见 [233ab015c0d7](https://cgit.freebsd.org/src/commit/?id=233ab015c0d7)
 
-[loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html) 中多个导致视频控制台输出消失的 bug 已修复。这些问题表现为引导加载程序启动内核后出现挂起。（由 Netflix 赞助）
+[loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html) 中多个导致视频控制台输出消失的 bug 修复。这些问题表现为引导加载程序启动内核后出现挂起。（由 Netflix 赞助）
 
 ## 网络
 
