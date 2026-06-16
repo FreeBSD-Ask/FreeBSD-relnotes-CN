@@ -56,16 +56,16 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 
 #### 勘误通知
 
-|勘误编号|日期|主题|
-|:----:|:----:|:----|
-|**FreeBSD-EN-24:10.zfs**|2024 年 6 月 19 日|ZFS 内核内存泄漏|
-|**FreeBSD-EN-24:11.ldns**|2024 年 6 月 19 日|LDNS 使用了 **resolv.conf** 中注释掉的 nameserver|
-|**FreeBSD-EN-24:12.killpg**|2024 年 6 月 19 日|killpg 中的锁顺序反转（Lock order reversal，LOR）导致的活锁|
-|**FreeBSD-EN-24:13.libc++**|2024 年 6 月 19 日|传递给堆分配的 `std::string` 删除操作的大小不正确|
-|**FreeBSD-EN-24:14.ifconfig**|2024 年 8 月 7 日|ifconfig 掩码分配错误|
-|**FreeBSD-EN-24:15.calendar**|2024 年 9 月 4 日|[cron(8)](https://man.freebsd.org/cgi/man.cgi?query=cron&sektion=8&format=html)/[periodic(8)](https://man.freebsd.org/cgi/man.cgi?query=periodic&sektion=8&format=html) 会话登录|
-|**FreeBSD-EN-24:16.pf**|2024 年 9 月 19 日|pf 中的 ICMPv6 状态处理错误|
-|**FreeBSD-EN-24:17.pam_xdg**|2024 年 10 月 29 日|登录时 XDG 运行目录的文件描述符泄漏|
+| 勘误编号                   | 日期           | 主题                                                                 |
+|:---:|:---:|:---|
+| **FreeBSD-EN-24:10.zfs**   | 2024 年 6 月 19 日 | ZFS 内核内存泄漏                                                   |
+| **FreeBSD-EN-24:11.ldns**  | 2024 年 6 月 19 日 | LDNS 使用了 **resolv.conf** 中注释掉的 nameserver                   |
+| **FreeBSD-EN-24:12.killpg** | 2024 年 6 月 19 日 | killpg 中的锁顺序反转（Lock order reversal，LOR）导致的活锁                                   |
+| **FreeBSD-EN-24:13.libc++** | 2024 年 6 月 19 日 |传递给堆分配的 `std::string` 删除操作的大小不正确                         |
+| **FreeBSD-EN-24:14.ifconfig** | 2024 年 8 月 7 日  | ifconfig 掩码分配错误                                               |
+| **FreeBSD-EN-24:15.calendar** | 2024 年 9 月 4 日  | [cron(8)](https://man.freebsd.org/cgi/man.cgi?query=cron&sektion=8&format=html)/[periodic(8)](https://man.freebsd.org/cgi/man.cgi?query=periodic&sektion=8&format=html) 会话登录                                        |
+| **FreeBSD-EN-24:16.pf**     | 2024 年 9 月 19 日 | pf 中的 ICMPv6 状态处理错误                                         |
+| **FreeBSD-EN-24:17.pam_xdg** | 2024 年 10 月 29 日 | 登录时 XDG 运行目录的文件描述符泄漏                                 |
 
 ## 用户空间
 
