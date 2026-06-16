@@ -276,7 +276,7 @@ ISA 声卡的驱动程序已弃用，并将在 FreeBSD 14.0 中移除。[d7620b6
 
 已弃用 Telnet 守护进程 [telnetd(8)](https://man.freebsd.org/cgi/man.cgi?query=telnetd&sektion=8&format=html)，并将在 FreeBSD 14.0 中移除。Telnet 客户端不受影响。
 
-已弃用 [geom(8)](https://man.freebsd.org/cgi/man.cgi?query=geom&sektion=8&format=html) 中的 VINUM 类，并将在后续版本中移除。
+[geom(8)](https://man.freebsd.org/cgi/man.cgi?query=geom&sektion=8&format=html) 中的 VINUM 类已弃用，并将在后续版本中移除。
 
 ### 默认 `CPUTYPE` 变更
 
