@@ -227,3 +227,4 @@ $RECYCLE.BIN/
 *.ps1
 *.pyc
 *.json
+/script
