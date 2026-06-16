@@ -250,7 +250,7 @@ arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=
 
 内核的 [wg(4)](https://man.freebsd.org/cgi/man.cgi?query=wg&sektion=4&format=html) WireGuard 驱动程序已重新集成；它通过 WireGuard 协议提供虚拟私人网络（VPN）接口。[5ae69e2f10da](https://cgit.freebsd.org/src/commit/?id=5ae69e2f10da)（由 Rubicon Communications, LLC（“Netgate”）和 FreeBSD 基金会赞助）
 
-KTLS（内核 TLS 实现）已为 TLS 1.3 添加接收卸载支持。TLS 1.1 至 1.3 的接收卸载现已受支持；TLS 1.0 至 1.3 的发送卸载也已受支持。[1462dc95f796](https://cgit.freebsd.org/src/commit/?id=1462dc95f796)（由 Netflix 赞助）
+KTLS（内核 TLS 实现）为 TLS 1.3 添加接收卸载支持。TLS 1.1 至 1.3 的接收卸载现已受支持；TLS 1.0 至 1.3 的发送卸载也已受支持。[1462dc95f796](https://cgit.freebsd.org/src/commit/?id=1462dc95f796)（由 Netflix 赞助）
 
 [netlink(4)](https://man.freebsd.org/cgi/man.cgi?query=netlink&sektion=4&format=html) 网络配置协议现已提供。它是 RFC 3549 中定义的通信协议，使用原始套接字在用户空间和内核之间交换配置数据。第三方路由程序和 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&format=html) ABI 使用该协议。[6058f6cc48f5](https://cgit.freebsd.org/src/commit/?id=6058f6cc48f5)（该协议不包括在 13.2-RELEASE 的 **GENERIC** 配置中，但作为内核模块提供）
 
