@@ -102,7 +102,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 工具 [kdump(1)](https://man.freebsd.org/cgi/man.cgi?query=kdump&sektion=1&format=html) 新增了对 Linux 系统调用的解码支持。
 
-工具 [killall(1)](https://man.freebsd.org/cgi/man.cgi?query=killall&sektion=1&format=html) 现在允许通过语法 `-t pts/N` 向具有其控制终端的进程发送信号，[pts(4)](https://man.freebsd.org/cgi/man.cgi?query=pts&sektion=4&format=html) 中使用。[a76fa7bb6cb7](https://cgit.freebsd.org/src/commit/?id=a76fa7bb6cb7)
+工具 [killall(1)](https://man.freebsd.org/cgi/man.cgi?query=killall&sektion=1&format=html) 现在允许通过语法 `-t pts/N` 向控制终端位于 [pts(4)](https://man.freebsd.org/cgi/man.cgi?query=pts&sektion=4&format=html) 上的进程发送信号。[a76fa7bb6cb7](https://cgit.freebsd.org/src/commit/?id=a76fa7bb6cb7)
 
 新增工具 [nproc(1)](https://man.freebsd.org/cgi/man.cgi?query=nproc&sektion=1&format=html)，与同名的 Linux 程序兼容。
 
@@ -116,7 +116,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 MSS clamping 在 [ppp(8)](https://man.freebsd.org/cgi/man.cgi?query=ppp&sektion=8&format=html) 中得到了改进。[301bff9bdd62](https://cgit.freebsd.org/src/commit/?id=301bff9bdd62)
 
-在 [prometheus_sysctl_exporter(8)](https://man.freebsd.org/cgi/man.cgi?query=prometheus_sysctl_exporter&sektion=8&format=html) 中变更了指标别名，以避免由于冲突的指标名称而混淆 Prometheus 服务器。UMA 区域 `tcp_log_bucket` 已重命名为 `tcp_log_id_bucket`，`tcp_log_node` 被重命名为 `tcp_log_id_node` 以保持一致性。不再导出描述中带有 `(LEGACY)` 的 sysctl 变量，这些变量是由  sysctl ZFS 替换的，许多已别名为相同的 Prometheus 指标名称（如 `vfs.zfs.arc_max` 和 `vfs.zfs.arc.max`）。[e4f508d5a211](https://cgit.freebsd.org/src/commit/?id=e4f508d5a211)（由 Axcient 赞助）
+指标别名在 [prometheus_sysctl_exporter(8)](https://man.freebsd.org/cgi/man.cgi?query=prometheus_sysctl_exporter&sektion=8&format=html) 中已变更，以避免由于冲突的指标名称而混淆 Prometheus 服务器。UMA 区域 `tcp_log_bucket` 已重命名为 `tcp_log_id_bucket`，`tcp_log_node` 被重命名为 `tcp_log_id_node` 以保持一致性。描述中带有 `(LEGACY)` 的 sysctl 变量不再导出，这些变量是由 sysctl ZFS 替换的，许多已别名为相同的 Prometheus 指标名称（如 `vfs.zfs.arc_max` 和 `vfs.zfs.arc.max`）。[e4f508d5a211](https://cgit.freebsd.org/src/commit/?id=e4f508d5a211)（由 Axcient 赞助）
 
 [uuidgen(1)](https://man.freebsd.org/cgi/man.cgi?query=uuidgen&sektion=1&format=html) 工具新增了 `-r` 选项，用于生成随机 UUID，版本 4。[8fd1953b7eb2](https://cgit.freebsd.org/src/commit/?id=8fd1953b7eb2)
 
@@ -132,13 +132,13 @@ Gavin Howard 的 `bc` 已升级到版本 6.2.4。
 
 `less` 已升级到版本 608。
 
-`libarchive` 已升级到版本 3.6.2，修复了许多可靠性问题。发行说明可查看 [https://github.com/libarchive/libarchive/releases](https://github.com/libarchive/libarchive/releases)。
+`libarchive` 已升级到版本 3.6.2，此版本修复了许多可靠性问题。发行说明可查看 [https://github.com/libarchive/libarchive/releases](https://github.com/libarchive/libarchive/releases)。
 
 `libedit` 已升级到版本 2022-04-11。
 
 `LLVM` 和 `clang` 编译器已升级到版本 14.0.5。
 
-现已在 `powerpc64` 及其变体上启用支持的 `LLVM` sanitizers。
+支持的 `LLVM` sanitizers 现已在 `powerpc64` 及其变体上启用。
 
 `mandoc` 已升级到版本 1.14.6。
 
@@ -166,7 +166,7 @@ Gavin Howard 的 `bc` 已升级到版本 6.2.4。
 
 `libmd` 增加了对 SHA-512/224 的支持。[e04ee7d95ef6](https://cgit.freebsd.org/src/commit/?id=e04ee7d95ef6)（由 Klara, Inc. 赞助）
 
-现已支持 Linux 风格的系统调用跟踪，通过 [sysdecode(3)](https://man.freebsd.org/cgi/man.cgi?query=sysdecode&sektion=3&format=html) 和 [kdump(1)](https://man.freebsd.org/cgi/man.cgi?query=kdump&sektion=1&format=html)。
+[sysdecode(3)](https://man.freebsd.org/cgi/man.cgi?query=sysdecode&sektion=3&format=html) 和 [kdump(1)](https://man.freebsd.org/cgi/man.cgi?query=kdump&sektion=1&format=html) 现已支持 Linux 风格的系统调用跟踪。
 
 本地 pthread 库函数现在可以支持 Linux 语义。
 
@@ -178,7 +178,7 @@ Gavin Howard 的 `bc` 已升级到版本 6.2.4。
 
 [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 虚拟机管理程序和内核模块 [vmm(4)](https://man.freebsd.org/cgi/man.cgi?query=vmm&sektion=4&format=html) 现在支持在虚拟机中使用超过 16 个 vCPU。默认情况下，bhyve 允许每个虚拟机创建与主机物理 CPU 数量相同的 vCPU。此限制可以通过加载器调节选项 `hw.vmm.maxcpu` 来调整。[3e02f8809aec](https://cgit.freebsd.org/src/commit/?id=3e02f8809aec)
 
-默认启用了 64 位可执行文件的地址空间布局随机化（ASLR）。如果应用程序出现意外故障（例如，段错误），可以根据需要禁用 ASLR。要禁用单次调用，可以使用 [proccontrol(1)](https://man.freebsd.org/cgi/man.cgi?query=proccontrol&sektion=1&format=html) 命令：`proccontrol -m aslr -s disable command`。要禁用所有二进制文件的 ASLR 调用，可以使用 [elfctl(1)](https://man.freebsd.org/cgi/man.cgi?query=elfctl&sektion=1&format=html) 命令：`elfctl -e +noaslr file`。问题应通过问题报告系统 [https://bugs.freebsd.org](https://bugs.freebsd.org/) 提交，或通过 `freebsd-stable@FreeBSD.org` 邮件列表报告。[10192e77cfac](https://cgit.freebsd.org/src/commit/?id=10192e77cfac)（由 Stormshield 赞助）
+64 位可执行文件的地址空间布局随机化（ASLR）已默认启用。如果应用程序出现意外故障（例如，段错误），可以根据需要禁用 ASLR。要禁用单次调用，可以使用 [proccontrol(1)](https://man.freebsd.org/cgi/man.cgi?query=proccontrol&sektion=1&format=html) 命令：`proccontrol -m aslr -s disable command`。要禁用所有二进制文件的 ASLR 调用，可以使用 [elfctl(1)](https://man.freebsd.org/cgi/man.cgi?query=elfctl&sektion=1&format=html) 命令：`elfctl -e +noaslr file`。问题应通过问题报告系统 [https://bugs.freebsd.org](https://bugs.freebsd.org/) 提交，或通过 `freebsd-stable@FreeBSD.org` 邮件列表报告。[10192e77cfac](https://cgit.freebsd.org/src/commit/?id=10192e77cfac)（由 Stormshield 赞助）
 
 已实现针对 Intel Alder Lake（第十二代）和 Raptor Lake（第十三代）混合 CPU 的硬件页面失效问题的解决方法。该漏洞可能导致 UFS 和 MSDOSFS 文件系统损坏，并可能导致其他内存损坏。通过此解决方法，小核（E 核心）会自动使用较慢的页面失效方法。[567cc4e6bfd9](https://cgit.freebsd.org/src/commit/?id=567cc4e6bfd9)（由 FreeBSD 基金会赞助）
 
