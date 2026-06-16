@@ -215,11 +215,11 @@ Telnet 守护进程，[telnetd(8)](https://man.freebsd.org/cgi/man.cgi?query=tel
 
 **libfido2** 已升级到版本 1.13.0。[f540a43052c1](https://cgit.freebsd.org/src/commit/?id=f540a43052c1)[3e696dfb7009](https://cgit.freebsd.org/src/commit/?id=3e696dfb7009)[95321fff46ec](https://cgit.freebsd.org/src/commit/?id=95321fff46ec)（由 FreeBSD 基金会赞助）
 
-**[llvm-objdump(1)](https://man.freebsd.org/cgi/man.cgi?query=llvm-objdump&sektion=1&format=html)** 工具现在始终作为 [objdump(1)](https://man.freebsd.org/cgi/man.cgi?query=objdump&sektion=1&format=html) 安装。[86edb11e7491](https://cgit.freebsd.org/src/commit/?id=86edb11e7491)（由 FreeBSD 基金会赞助）
+** 0 ** 工具现在始终作为 [objdump(1)](https://man.freebsd.org/cgi/man.cgi?query=objdump&sektion=1&format=html) 安装。[86edb11e7491](https://cgit.freebsd.org/src/commit/?id=86edb11e7491)（由 FreeBSD 基金会赞助）
 
 **OpenSSH** 已升级到版本 9.5p1。完整的发行说明请参阅 [https://www.openssh.com/txt/release-9.5](https://www.openssh.com/txt/release-9.5)。[676824f5cdf9](https://cgit.freebsd.org/src/commit/?id=676824f5cdf9)（由 FreeBSD 基金会赞助）
 
-**[scp(1)](https://man.freebsd.org/cgi/man.cgi?query=scp&sektion=1&format=html)** 工具现在默认使用 SFTP 协议，而不是传统的 scp/rcp 协议。这消除了对通配符扩展字符的双引号引用的需要。[fb5aabcb990b](https://cgit.freebsd.org/src/commit/?id=fb5aabcb990b)（由 FreeBSD 基金会赞助）
+** 0 ** 工具现在默认使用 SFTP 协议，而不是传统的 scp/rcp 协议。这消除了对通配符扩展字符的双引号引用的需要。[fb5aabcb990b](https://cgit.freebsd.org/src/commit/?id=fb5aabcb990b)（由 FreeBSD 基金会赞助）
 
 默认情况下，在 [ssh(1)](https://man.freebsd.org/cgi/man.cgi?query=ssh&sektion=1&format=html) 中禁用了 RSA/SHA-1 签名。可以在用户的 **~/.ssh/config** 文件中按主机启用它们。[8c22023ca5e1](https://cgit.freebsd.org/src/commit/?id=8c22023ca5e1)（由 FreeBSD 基金会赞助）
 
@@ -345,7 +345,7 @@ Linux 设备驱动程序的 KPI 稳定性有所修复和增强，以及无线驱
 
 x86 **GENERIC** 内核配置中已删除 [pms(4)](https://man.freebsd.org/cgi/man.cgi?query=pms&sektion=4&format=html) 驱动程序 `pmspcv`，因为它很大且使用不常见。可以通过在 [loader.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=loader.conf&sektion=5&format=html) 中放置 `pmspcv_load="YES"` 来将其加载为模块。[95e4f5ef7cce](https://cgit.freebsd.org/src/commit/?id=95e4f5ef7cce)（由 Rubicon Communications, LLC (“Netgate”) 赞助）
 
-x86 **GENERIC** 和 `MINIMAL` 内核配置中已删除了 VESA 参数。它仍然可用作内核模块。VESA 不被默认控制台 [vt(4)](https://man.freebsd.org/cgi/man.cgi?query=vt&sektion=4&format=html) 使用。[777526ed8382](https://cgit.freebsd.org/src/commit/?id=777526ed8382)[b8cf1c5c30a5](https://cgit.freebsd.org/src/commit/?id=b8cf1c5c30a5)（由 FreeBSD 基金会赞助）
+x86 **GENERIC** 和 **MINIMAL** 内核配置中已删除了 VESA 参数。它仍然可用作内核模块。VESA 不被默认控制台 [vt(4)](https://man.freebsd.org/cgi/man.cgi?query=vt&sektion=4&format=html) 使用。[777526ed8382](https://cgit.freebsd.org/src/commit/?id=777526ed8382)[b8cf1c5c30a5](https://cgit.freebsd.org/src/commit/?id=b8cf1c5c30a5)（由 FreeBSD 基金会赞助）
 
 已删除 ISA 声卡的驱动程序。[92e6b4712b53](https://cgit.freebsd.org/src/commit/?id=92e6b4712b53)[df51e63eb5d7](https://cgit.freebsd.org/src/commit/?id=df51e63eb5d7)[aa83e9b189d6](https://cgit.freebsd.org/src/commit/?id=aa83e9b189d6)[754decef384a](https://cgit.freebsd.org/src/commit/?id=754decef384a)[5126e5eeeb5e](https://cgit.freebsd.org/src/commit/?id=5126e5eeeb5e)[716924cb4832](https://cgit.freebsd.org/src/commit/?id=716924cb4832)[9054e296819f](https://cgit.freebsd.org/src/commit/?id=9054e296819f)（由 FreeBSD 基金会赞助）
 
