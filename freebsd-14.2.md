@@ -86,8 +86,7 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 - `llvm` 已更新至 18.1.6。[f1e3279983d6](https://cgit.freebsd.org/src/commit/?id=f1e3279983d6)
 - `openssl` 已更新至 3.0.15。[cc43f991ab3e](https://cgit.freebsd.org/src/commit/?id=cc43f991ab3e)
 - `tcpdump` 已更新至 4.99.5。[ec3da16d8bc1](https://cgit.freebsd.org/src/commit/?id=ec3da16d8bc1)（由 FreeBSD 基金会赞助）  
-- `unbound` 已更新至 1.22.0。[0a096a7b3ae8](https://cgit.freebsd.org/src/commit/?id=0a096a7b3ae8)  
-
+- `unbound` 已更新至 1.22.0。[0a096a7b3ae8](https://cgit.freebsd.org/src/commit/?id=0a096a7b3ae8)
 
 ### 已弃用应用程序
 
@@ -114,7 +113,6 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 ## 设备与驱动程序
 
 本节介绍自 FreeBSD 14.1-RELEASE 以来设备和驱动程序的变更与新增内容。
-
 
 ### 设备驱动程序
 
