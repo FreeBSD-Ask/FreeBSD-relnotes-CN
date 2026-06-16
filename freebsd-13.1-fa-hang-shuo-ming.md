@@ -10,7 +10,7 @@ FreeBSD 13.1-RELEASE 的发行说明总结了在 13-STABLE 开发分支中对 Fr
 
 本文件包含 FreeBSD 13.1-RELEASE 的发行说明，介绍了最近添加、变更或删除的功能，同时提供了从 FreeBSD 早期版本升级的相关说明。
 
-本发行说明适用于 FreeBSD 13-STABLE 开发分支中自创建以来的最新节点。有关此分支上预构建的二进制发行版的信息，请访问 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/)。
+本发行说明所适用的发行版，代表了 13-STABLE 开发分支自创建以来的最新节点。有关此分支上预构建的二进制发行版的信息，请访问 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/)。
 
 本发行说明所涉的发行版，位于 13-STABLE 开发分支中 13.0-RELEASE 和未来 13.2-RELEASE 之间的某一节点。有关此分支上预构建的二进制发行版的信息，请访问 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/)。
 
