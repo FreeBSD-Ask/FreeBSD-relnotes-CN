@@ -210,9 +210,9 @@ powerpc64(le) 平台在启动过程中使用 AST2500 时，VGA/HDMI 控制台的
 
 [iwlwifi(4)](https://man.freebsd.org/cgi/man.cgi?query=iwlwifi&sektion=4&format=html) 驱动和一个 LinuxKPI 802.11 兼容层已添加，用于支持较新的 Intel 无线芯片组，以补充 [iwm(4)](https://man.freebsd.org/cgi/man.cgi?query=iwm&sektion=4&format=html) 驱动。（由 FreeBSD 基金会赞助）
 
-当内核使用选项 `MMCCAM` 配置时，现在可以使用 `dwmmc` 控制器将内核崩溃转储保存到 SD 卡和 eMMC 模块。[79c3478e76c3](https://cgit.freebsd.org/src/commit/?id=79c3478e76c3)
+当内核使用选项 **MMCCAM** 配置时，现在可以使用 `dwmmc` 控制器将内核崩溃转储保存到 SD 卡和 eMMC 模块。[79c3478e76c3](https://cgit.freebsd.org/src/commit/?id=79c3478e76c3)
 
-当内核使用选项 `MMCCAM` 配置时，现在可以使用 `sdhci` 控制器将内核崩溃转储保存到 SD 卡。[8934d3e7b9b9](https://cgit.freebsd.org/src/commit/?id=8934d3e7b9b9)
+当内核使用选项 **MMCCAM** 配置时，现在可以使用 `sdhci` 控制器将内核崩溃转储保存到 SD 卡。[8934d3e7b9b9](https://cgit.freebsd.org/src/commit/?id=8934d3e7b9b9)
 
 ### 支持的平台
 
