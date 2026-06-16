@@ -26,7 +26,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 
 通过 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具，可以在不同 RELEASE 版本之间（包括各安全分支的快照版本）进行二进制升级。该工具将更新未修改的用户空间工具，以及官方 FreeBSD 发行版中包含的未修改的 GENERIC 内核。使用 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具要求待升级的主机具备互联网连接。
 
-基于源代码的升级（通过重新编译 FreeBSD 基本系统的源代码进行升级）也受到支持，具体请按照 **/usr/src/UPDATING** 中的说明操作。
+基于源代码的升级（通过重新编译 FreeBSD 基本系统的源代码升级）也受到支持，具体请按照 **/usr/src/UPDATING** 中的说明操作。
 
 对于所有 powerpc 架构的用户，在成功安装内核和世界后，需要手动运行 `kldxref /boot/kernel`。
 
@@ -143,7 +143,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 
 - `zlib` 升级到版本 1.2.12。
 
-- `libarchive` 升级到版本 3.6.0，并包含即将发布的修补程序版本中的额外错误和安全修复。发布说明可在 [https://github.com/libarchive/libarchive/releases](https://github.com/libarchive/libarchive/releases) 查看。
+- `libarchive` 升级到版本 3.6.0，并包含即将发布的修补程序版本中的额外错误和安全修复。发行说明可在 [https://github.com/libarchive/libarchive/releases](https://github.com/libarchive/libarchive/releases) 查看。
 
 - `ssh` 包已更新为 OpenSSH v8.8p1，包含安全更新和错误修复。其他更新包括以下变更：
   - [ssh(1)](https://man.freebsd.org/cgi/man.cgi?query=ssh&sektion=1&format=html)：在提示是否记录新主机密钥时，接受该密钥的指纹作为“yes”的同义词。

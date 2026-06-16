@@ -16,7 +16,7 @@ FreeBSD 14.1-RELEASE 发行说明概述了由 14-STABLE 开发线衍生的 FreeB
 
 该 FreeBSD 14.1-RELEASE 版本是个“RELEASE”版本。可以在 <https://www.FreeBSD.org/releases/> 和镜像站中找到它。更多有关下载该（及其他）FreeBSD“RELEASE”版本的信息，请参阅 [FreeBSD 手册](https://docs.freebsd.org/en/books/handbook/)的[附录《获取 FreeBSD》](https://docs.freebsd.org/en/books/handbook/mirrors)。
 
-在安装 FreeBSD 前，建议所有用户都看一下发行勘误。勘误文档会在发行周期后期，随发行后发现的“最新”信息进行更新。通常涉及勘误、安全公告和文档更正的相关信息。可在 FreeBSD 网站上找到 FreeBSD 14.1-RELEASE 的最新勘误信息。
+在安装 FreeBSD 前，建议所有用户都看一下发行勘误。勘误文档会在发行周期后期，随发行后发现的“最新”信息更新。通常涉及勘误、安全公告和文档更正的相关信息。可在 FreeBSD 网站上找到 FreeBSD 14.1-RELEASE 的最新勘误信息。
 
 本文档说明了自 14.0-RELEASE 以降，在 FreeBSD 中最具用户可见性的新特性和变更。一般来说，除非其明确标记为 MERGED 特性，否则此处所述的变更独立于 14-STABLE 分支。
 
@@ -38,13 +38,37 @@ RELEASE 版本（以及各种安全分支的快照）使用工具 [freebsd-updat
 
 | 公告 | 日期 | 主题 |
 | :--- | :--- | :--- |
-| 无公告。 | | |
+| [FreeBSD-SA-23:15.stdio](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:15.stdio.asc) | 2023 年 11 月 7 日 | libc stdio 缓冲区溢出 |
+| [FreeBSD-SA-23:16.cap_net](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:16.cap_net.asc) | 2023 年 11 月 8 日 | libcap_net 限制列表操作错误 |
+| [FreeBSD-SA-23:17.pf](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:17.pf.asc) | 2023 年 12 月 5 日 | [pf(4)](https://man.freebsd.org/cgi/man.cgi?query=pf&sektion=4&format=html) 中的 TCP 欺骗漏洞 |
+| [FreeBSD-SA-23:18.nfsclient](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:18.nfsclient.asc) | 2023 年 12 月 12 日 | NFS 客户端数据损坏和内核内存泄露 |
+| [FreeBSD-SA-23:19.openssh](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:19.openssh.asc) | 2023 年 12 月 19 日 | SSH 协议中的前缀截断攻击 |
+| [FreeBSD-SA-24:01.bhyveload](https://www.freebsd.org/security/advisories/FreeBSD-SA-24:01.bhyveload.asc) | 2024 年 2 月 14 日 | [bhyveload(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyveload&sektion=8&format=html) 宿主文件访问 |
+| [FreeBSD-SA-24:02.tty](https://www.freebsd.org/security/advisories/FreeBSD-SA-24:02.tty.asc) | 2024 年 2 月 14 日 | [jail(2)](https://man.freebsd.org/cgi/man.cgi?query=jail&sektion=2&format=html) 信息泄露 |
+| [FreeBSD-SA-24:03.unbound](https://www.freebsd.org/security/advisories/FreeBSD-SA-24:03.unbound.asc) | 2024 年 3 月 28 日 | Unbound 中的多个漏洞 |
 
 ### 勘误通知
 
 | 勘误 | 日期 | 主题 |
 | :--- | :--- | :--- |
-| 无通知。 | | |
+| [FreeBSD-EN-23:13.freebsd-update](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:13.freebsd-update.asc) | 2023 年 11 月 8 日 | [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 无法处理深层启动环境 |
+| [FreeBSD-EN-23:14.regcomp](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:14.regcomp.asc) | 2023 年 11 月 8 日 | 正则表达式转义处理错误 |
+| [FreeBSD-EN-23:15.sanitizer](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:15.sanitizer.asc) | 2023 年 12 月 1 日 | 启用 ASLR 时 Clang 清理器失败 |
+| [FreeBSD-EN-23:16.openzfs](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:16.openzfs.asc) | 2023 年 12 月 1 日 | OpenZFS 数据损坏 |
+| [FreeBSD-EN-23:17.ossl](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:17.ossl.asc) | 2023 年 12 月 5 日 | [ossl(4)](https://man.freebsd.org/cgi/man.cgi?query=ossl&sektion=4&format=html) 的 AES-GCM 实现可能给出错误结果 |
+| [FreeBSD-EN-23:18.openzfs](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:18.openzfs.asc) | 2023 年 12 月 5 日 | ZFS 内核线程 CPU 占用率过高 |
+| [FreeBSD-EN-23:19.pkgbase](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:19.pkgbase.asc) | 2023 年 12 月 5 日 | FreeBSD 14.0 的 pkgbase 版本号不正确 |
+| [FreeBSD-EN-23:20.vm](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:20.vm.asc) | 2023 年 12 月 5 日 | 内核物理内存分配器返回错误结果 |
+| [FreeBSD-EN-23:21.tty](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:21.tty.asc) | 2023 年 11 月 24 日 | [tty(4)](https://man.freebsd.org/cgi/man.cgi?query=tty&sektion=4&format=html) IUTF8 导致内核恐慌 |
+| [FreeBSD-EN-23:22.vfs](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:22.vfs.asc) | 2023 年 12 月 5 日 | ZFS 快照目录无法通过 NFS 访问 |
+| [FreeBSD-EN-24:01.tzdata](https://www.freebsd.org/security/advisories/FreeBSD-EN-24:01.tzdata.asc) | 2024 年 2 月 14 日 | 时区数据库信息更新 |
+| [FreeBSD-EN-24:02.libutil](https://www.freebsd.org/security/advisories/FreeBSD-EN-24:02.libutil.asc) | 2024 年 2 月 14 日 | 登录类别资源限制和 CPU 掩码绕过 |
+| [FreeBSD-EN-24:03.kqueue](https://www.freebsd.org/security/advisories/FreeBSD-EN-24:03.kqueue.asc) | 2024 年 2 月 14 日 | 使用 [rfork(2)](https://man.freebsd.org/cgi/man.cgi?query=rfork&sektion=2&format=html) 退出时 [kqueue_close(2)](https://man.freebsd.org/cgi/man.cgi?query=kqueue_close&sektion=2&format=html) 页面错误 |
+| [FreeBSD-EN-24:04.ip](https://www.freebsd.org/security/advisories/FreeBSD-EN-24:04.ip.asc) | 2024 年 2 月 14 日 | [bind(2)](https://man.freebsd.org/cgi/man.cgi?query=bind&sektion=2&format=html) 触发内核恐慌 |
+| [FreeBSD-EN-24:05.tty](https://www.freebsd.org/security/advisories/FreeBSD-EN-24:05.tty.asc) | 2024 年 3 月 28 日 | TTY 内核崩溃 |
+| [FreeBSD-EN-24:06.wireguard](https://www.freebsd.org/security/advisories/FreeBSD-EN-24:06.wireguard.asc) | 2024 年 3 月 28 日 | WireGuard [if_wg(4)](https://man.freebsd.org/cgi/man.cgi?query=if_wg&sektion=4&format=html) 屏障不足 |
+| [FreeBSD-EN-24:07.clang](https://www.freebsd.org/security/advisories/FreeBSD-EN-24:07.clang.asc) | 2024 年 3 月 28 日 | 启用某些优化时 Clang 崩溃 |
+| [FreeBSD-EN-24:08.kerberos](https://www.freebsd.org/security/advisories/FreeBSD-EN-24:08.kerberos.asc) | 2024 年 3 月 28 日 | 使用弱加密时 Kerberos 发生段错误 |
 
 ## 用户空间
 

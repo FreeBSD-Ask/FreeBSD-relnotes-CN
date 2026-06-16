@@ -4,15 +4,15 @@
 
 ## 摘要
 
-FreeBSD 13.2-RELEASE 的发布说明包含了在 13-STABLE 开发线上对 FreeBSD 基本系统所做变更的摘要。本文件列出了自上次发布以来发布的相关安全通告，以及对 FreeBSD 内核和用户态的重大变更。此外，还提供了有关升级的一些简要说明。
+FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeBSD 基本系统所做变更的摘要。本文件列出了自上次发布以来发布的相关安全通告，以及对 FreeBSD 内核和用户态的重大变更。此外，还提供了有关升级的一些简要说明。
 
 ## 介绍
 
-本文档包含 FreeBSD 13.2-RELEASE 的发布说明。它介绍了最近添加、变更或删除的 FreeBSD 特性，并提供了一些关于从之前版本升级的说明。
+本文档包含 FreeBSD 13.2-RELEASE 的发行说明。它介绍了最近添加、变更或删除的 FreeBSD 特性，并提供了一些关于从之前版本升级的说明。
 
-这些发布说明所适用的发行版，代表了自 13-STABLE 创建以来，该开发分支上的最新节点。有关该分支上的预构建二进制发行版的信息，请访问 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/)。
+这些发行说明所适用的发行版，代表了自 13-STABLE 创建以来，该开发分支上的最新节点。有关该分支上的预构建二进制发行版的信息，请访问 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/)。
 
-这些发布说明所适用的发行版，代表了 13-STABLE 开发分支上 13.1-RELEASE 与未来的 13.3-RELEASE 之间的一个节点。有关该分支上的预构建二进制发行版的信息，请访问 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/)。
+这些发行说明所适用的发行版，代表了 13-STABLE 开发分支上 13.1-RELEASE 与未来的 13.3-RELEASE 之间的一个节点。有关该分支上的预构建二进制发行版的信息，请访问 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/)。
 
 该 FreeBSD 13.2-RELEASE 的分发版是一个 RELEASE 发行版。可以在 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 和镜像站点找到。有关获取此版本（及其他）FreeBSD 发行版的更多信息，请参见 [FreeBSD 手册](https://docs.freebsd.org/en/books/handbook/)中的[获取 FreeBSD 附录](https://docs.freebsd.org/en/books/handbook/mirrors)。
 
@@ -20,7 +20,7 @@ FreeBSD 13.2-RELEASE 的发布说明包含了在 13-STABLE 开发线上对 FreeB
 
 本文档介绍了自 13.1-RELEASE 以来 FreeBSD 中最具用户可见性的新增或变更功能。一般来说，本文所述的变更是 13-STABLE 分支的特有变更，除非特别标记为已合并特性。
 
-典型的发布说明项包括 13.1-RELEASE 之后发布的安全通告、新的驱动程序或硬件支持、新命令或选项、重大错误修复或第三方软件升级。它们也可能列出对主要 Port/软件包或发布工程实践的变更。显然，发布说明无法列出两个版本之间对 FreeBSD 所做的每个变更；本文件主要关注安全通告、用户可见的变更以及重大架构改进。
+典型的发行说明项包括 13.1-RELEASE 之后发布的安全通告、新的驱动程序或硬件支持、新命令或选项、重大错误修复或第三方软件升级。它们也可能列出对主要 Port/软件包或发布工程实践的变更。显然，发行说明无法列出两个版本之间对 FreeBSD 所做的每个变更；本文件主要关注安全通告、用户可见的变更以及重大架构改进。
 
 ## 从先前版本升级 FreeBSD
 
@@ -32,7 +32,7 @@ FreeBSD 13.2-RELEASE 的发布说明包含了在 13-STABLE 开发线上对 FreeB
 
 >升级 FreeBSD 之前应备份 **所有** 数据和配置文件。
 
->安装新用户态软件后，正在运行的守护进程仍来自先前版本。在通过第二次调用 `freebsd-update` 安装用户级组件，或通过使用 `installworld` 从源代码进行升级后，系统应重新启动以启动新软件。例如，旧版本的 `sshd` 在安装新版本的 **/usr/sbin/sshd** 后无法正确处理传入连接；重启后，新的 `sshd` 和其他守护进程将启动。
+>安装新用户态软件后，正在运行的守护进程仍来自先前版本。在通过第二次调用 `freebsd-update` 安装用户级组件，或通过使用 `installworld` 从源代码升级后，系统应重新启动以启动新软件。例如，旧版本的 `sshd` 在安装新版本的 **/usr/sbin/sshd** 后无法正确处理传入连接；重启后，新的 `sshd` 和其他守护进程将启动。
 
 ## 安全与勘误
 
@@ -132,7 +132,7 @@ Gavin Howard 的 `bc` 已升级到版本 6.2.4。
 
 `less` 已升级到版本 608。
 
-`libarchive` 已升级到版本 3.6.2，修复了许多可靠性问题。发布说明可查看 [https://github.com/libarchive/libarchive/releases](https://github.com/libarchive/libarchive/releases)。
+`libarchive` 已升级到版本 3.6.2，修复了许多可靠性问题。发行说明可查看 [https://github.com/libarchive/libarchive/releases](https://github.com/libarchive/libarchive/releases)。
 
 `libedit` 已升级到版本 2022-04-11。
 
@@ -232,15 +232,15 @@ arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=
 
 现在可以在启用了日志软更新的 UFS 文件系统上进行快照。因此，现在可以在运行日志软更新的在线文件系统上执行后台转储。通过使用 `-L` 参数来请求后台转储：[dump(8)](https://man.freebsd.org/cgi/man.cgi?query=dump&sektion=8&format=html)。在以前的版本中，UFS 快照与日志软更新不兼容。[3f908eed27b4](https://cgit.freebsd.org/src/commit/?id=3f908eed27b4)（由 FreeBSD 基金会赞助）
 
-## 启动加载器变更
+## 引导加载程序变更
 
-本节介绍了启动加载器、启动菜单和其他启动相关的变更。
+本节介绍了引导加载程序、启动菜单和其他启动相关的变更。
 
-### 启动加载器变更
+### 引导加载程序变更
 
 变量 `teken.fg_color` 和 `teken.bg_color` [loader.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=loader.conf&sektion=5&format=html) 现在接受 `bright` 或 `light` 前缀（以及颜色号 8 到 15）来选择亮色。[1dcb6002c500](https://cgit.freebsd.org/src/commit/?id=1dcb6002c500)（由 FreeBSD 基金会赞助）。另见 [233ab015c0d7](https://cgit.freebsd.org/src/commit/?id=233ab015c0d7)
 
-修复了 [loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html) 中多个导致视频控制台输出消失的 bug。这些问题表现为启动加载器启动内核后出现挂起。（由 Netflix 赞助）
+修复了 [loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html) 中多个导致视频控制台输出消失的 bug。这些问题表现为引导加载程序启动内核后出现挂起。（由 Netflix 赞助）
 
 ## 网络
 

@@ -25,7 +25,7 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 
 使用工具 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 能在 RELEASE 版本（及各安全分支快照）间进行二进制更新。请参阅特定版本的更新程序，例如 [FreeBSD 14.2-RELEASE 更新信息](https://www.freebsd.org/releases/14.2R/installation/#upgrade-binary)，并在 FreeBSD 手册中查阅关于[二进制更新](https://docs.freebsd.org/en/books/handbook/cutting-edge/#freebsdupdate-upgrade)的详细说明。此工具会更新未经修改的用户空间工具，以及在官方 FreeBSD RELEASE 分发的未经修改的 GENERIC 内核。工具 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 要求更新的主机能够连接互联网。
 
-可以按照 **/usr/src/UPDATING** 中的说明从以前的版本进行基于源代码的更新（通过重新编译 FreeBSD 基本系统进行更新）。
+可以按照 **/usr/src/UPDATING** 中的说明从以前的版本进行基于源代码的更新（通过重新编译 FreeBSD 基本系统更新）。
 
 在更新 FreeBSD 之前，应先备份**所有**数据和配置文件。
 
