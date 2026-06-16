@@ -23,7 +23,7 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。该发行版可通过 [https
 
 ## 从旧版 FreeBSD 升级
 
-使用工具 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 能在 RELEASE 版本（及各安全分支快照）间进行二进制更新。请参阅特定版本的更新程序，例如 [FreeBSD 14.2-RELEASE 更新信息](https://www.freebsd.org/releases/14.2R/installation/#upgrade-binary)，并在 FreeBSD 手册中查阅关于[二进制更新](https://docs.freebsd.org/en/books/handbook/cutting-edge/#freebsdupdate-upgrade)的详细说明。此工具会更新未经修改的用户空间工具，以及官方 FreeBSD RELEASE 所分发的未经修改的 GENERIC 内核。工具 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 要求待更新的主机能够连接互联网。
+使用工具 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 能在 RELEASE 版本（及各安全分支快照）间进行二进制更新。请参阅特定版本的更新程序，例如 [FreeBSD 14.2-RELEASE 更新信息](https://www.freebsd.org/releases/14.2R/installation/#upgrade-binary)，并在 FreeBSD 手册中查阅关于[二进制更新](https://docs.freebsd.org/en/books/handbook/cutting-edge/#freebsdupdate-upgrade)的详细说明。此工具会更新未经修改的用户空间工具，以及官方 FreeBSD RELEASE 所分发的未经修改的 **GENERIC** 内核。工具 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 要求待更新的主机能够连接互联网。
 
 用户可以按照 **/usr/src/UPDATING** 中的说明，从以前的版本进行基于源代码的更新（即通过重新编译 FreeBSD 基本系统来更新）。
 
@@ -211,7 +211,7 @@ FreeBSD 安装程序 [bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?query=b
 
 FreeBSD 项目计划在 FreeBSD 15.0 和 stable/15 中将 armv7 作为二级（Tier 2）架构继续支持。然而，项目方预计 armv7 可能会在 FreeBSD 16.0 中被删除。FreeBSD 项目将会在 15.0 发布时更新 armv7 在 15.x 和 16.x RELEASE 中的支持状态。
 
-通过选项 `COMPAT_FREEBSD32` 在 64 位平台上运行 32 位二进制文件的支持将至少延续到分支 stable/15 和 stable/16。此外，通过 `cc -m32` 编译单个 32 位应用程序的支持也将至少延续到分支 stable/15，该分支中将包含适当的头文件（**/usr/include**）和库（**/usr/lib32**）。
+通过选项 **COMPAT_FREEBSD32** 在 64 位平台上运行 32 位二进制文件的支持将至少延续到分支 stable/15 和 stable/16。此外，通过 `cc -m32` 编译单个 32 位应用程序的支持也将至少延续到分支 stable/15，该分支中将包含适当的头文件（**/usr/include**）和库（**/usr/lib32**）。
 
 自 FreeBSD 15.0 起，Ports 将不再支持被弃用的 32 位平台。这些后续版本将不再提供用于弃用的 32 位平台的二进制软件包，也不支持使用 Ports 构建这些平台的软件包。
 
