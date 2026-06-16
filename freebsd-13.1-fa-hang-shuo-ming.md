@@ -156,7 +156,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 
 [bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?query=bsdinstall&sektion=8&format=html) 的脚本分区编辑器新增了一种新模式，用于支持变体磁盘名称。如果 `DEFAULT` 被设置为磁盘参数，或者在 `PARTITIONS` 参数中未指定设备名称，安装程序将遵循自动分区模式的逻辑。如果存在多个磁盘，将提供选择对话框；如果只有一个磁盘，则会自动选择。这简化了为硬件或虚拟机创建全自动安装介质的过程。[5ec4eb443e81](https://cgit.freebsd.org/src/commit/?id=5ec4eb443e81)
 
-### 运行时库与 API
+### 运行时库和 API
 
 为 powerpc、powerpc64 和 powerpc64le 添加了 OpenSSL 的汇编优化代码。[ce35a3bc852](https://cgit.freebsd.org/src/commit/?id=ce35a3bc852)
 
@@ -172,7 +172,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 
 本部分涉及内核配置、系统调优以及未分类的系统控制参数的变更。
 
-### 通用内核变更
+### 内核通用变更
 
 修复了 powerpc64 平台上串行控制台的输出损坏问题。[dca829138ca](https://cgit.freebsd.org/src/commit/?id=dca829138ca)
 
@@ -188,7 +188,7 @@ CAS 已变更为支持 Radix MMU。[cc8e726c85b](https://cgit.freebsd.org/src/co
 
 本部分介绍了自 13.0-RELEASE 以来，设备和设备驱动的变更和新增内容。
 
-### 设备驱动
+### 设备驱动程序
 
 引入了 [igc(4)](https://man.freebsd.org/cgi/man.cgi?query=igc&sektion=4&format=html) 驱动程序，用于支持 Intel I225 以太网控制器。该控制器支持 2.5G/1G/100Mb/10Mb 速度，并支持 tx/rx 校验和卸载、TSO、LRO 和多队列操作。[d7388d33b4dd](https://cgit.freebsd.org/src/commit/?id=d7388d33b4dd)（由 Rubicon Communications, LLC ("Netgate") 赞助）
 
