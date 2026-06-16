@@ -16,7 +16,7 @@ FreeBSD 13.1-RELEASE 的发行说明总结了在 13-STABLE 开发分支中对 Fr
 
 FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 或其任一镜像站下载。获取此版本（或其他版本）发行版的更多信息，请参阅 [FreeBSD 手册](https://docs.freebsd.org/en/books/handbook/mirrors) 中的 [获取 FreeBSD 附录](https://docs.freebsd.org/en/books/handbook/mirrors)。
 
-建议所有用户在安装 FreeBSD 之前，查阅发行版的勘误表。勘误表包含在发行周期后期或发行后发现的“最新信息”，通常包括已知错误、安全公告以及文档修订的相关内容。可在 FreeBSD 网站上找到 FreeBSD 13.1-RELEASE 的最新勘误表副本。
+建议所有用户在安装 FreeBSD 之前，查阅发行版的勘误表。勘误表包含在发行周期后期或发行后发现的“最新信息”，通常包括已知错误、安全公告以及文档修订的相关内容。FreeBSD 13.1-RELEASE 的最新勘误表副本可在 FreeBSD 网站上找到。
 
 本文件介绍了自 13.0-RELEASE 以来，FreeBSD 中对用户最显著的新功能或变更。一般而言，本文中提到的变更是 13-STABLE 分支所独有的，除非明确标记为已合并功能。
 
@@ -103,7 +103,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 
 ### 用户空间配置变更
 
-参数 `-i` 现在默认添加了到 **/etc/defaults/rc.conf** 中的 [rtsol(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsol&sektion=8&format=html) 和 [rtsold(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsold&sektion=8&format=html)。变更详情见 [a0fc5094bf4c](https://cgit.freebsd.org/src/commit/?id=a0fc5094bf4c)（由 [https://www.patreon.com/cperciva](https://www.patreon.com/cperciva) 赞助）。
+参数 `-i` 现在已默认添加到 **/etc/defaults/rc.conf** 中的 [rtsol(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsol&sektion=8&format=html) 和 [rtsold(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsold&sektion=8&format=html)。变更详情见 [a0fc5094bf4c](https://cgit.freebsd.org/src/commit/?id=a0fc5094bf4c)（由 [https://www.patreon.com/cperciva](https://www.patreon.com/cperciva) 赞助）。
 
 ### 用户空间应用程序变更
 
@@ -115,7 +115,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 
 [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 的 NVMe 仿真已升级至 NVMe 规范的 1.4 版本。[b7a2cf0d9102](https://cgit.freebsd.org/src/commit/?id=b7a2cf0d9102) [eae02d959363](https://cgit.freebsd.org/src/commit/?id=eae02d959363)
 
-修复了 [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 中构建大 IO 的 NVMe iovec 的问题，该问题由 Rocky Linux 8.4 附带的 UEFI 驱动暴露出来。[a7761d19dacd](https://cgit.freebsd.org/src/commit/?id=a7761d19dacd)
+[bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 中构建大 IO 的 NVMe iovec 的问题已修复，该问题由 Rocky Linux 8.4 附带的 UEFI 驱动暴露出来。[a7761d19dacd](https://cgit.freebsd.org/src/commit/?id=a7761d19dacd)
 
 为巴西葡萄牙语 ABNT2 键盘添加了额外的 Alt Gr 映射。[310623908c20](https://cgit.freebsd.org/src/commit/?id=310623908c20)
 
