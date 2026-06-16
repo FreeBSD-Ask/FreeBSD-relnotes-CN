@@ -34,6 +34,52 @@ FreeBSD 13.2-RELEASE 的发布说明包含了自 13-STABLE 开发线以来对 Fr
 
 >安装新用户态软件后，正在运行的守护进程仍来自先前版本。在通过第二次调用 `freebsd-update` 安装用户级组件，或通过使用 `installworld` 从源代码进行升级后，系统应重新启动以启动新软件。例如，旧版本的 `sshd` 在安装新版本的 `/usr/sbin/sshd` 后无法正确处理传入连接；重启后，新的 `sshd` 和其他守护进程将启动。
 
+## 安全与勘误
+
+本节列出了自 13.1-RELEASE 以来的各项安全通告和勘误通知。
+
+### 安全通告
+
+| 通告 | 日期 | 主题 |
+|---|---|---|
+| [FreeBSD-SA-22:03.openssl](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:03.openssl.asc) | 2022 年 3 月 15 日 | OpenSSL 证书解析无限循环 |
+| [FreeBSD-SA-22:04.netmap](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:04.netmap.asc) | 2022 年 4 月 6 日 | netmap 中潜在的 jail 逃逸漏洞 |
+| [FreeBSD-SA-22:05.bhyve](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:05.bhyve.asc) | 2022 年 4 月 6 日 | Bhyve e82545 设备仿真越界写入 |
+| [FreeBSD-SA-22:06.ioctl](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:06.ioctl.asc) | 2022 年 4 月 6 日 | mpr/mps/mpt 驱动 ioctl 堆越界写入 |
+| [FreeBSD-SA-22:07.wifi_meshid](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:07.wifi_meshid.asc) | 2022 年 4 月 6 日 | 802.11 堆缓冲区溢出 |
+| [FreeBSD-SA-22:08.zlib](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:08.zlib.asc) | 2022 年 4 月 6 日 | zlib 压缩越界写入 |
+| [FreeBSD-SA-22:09.elf](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:09.elf.asc) | 2022 年 8 月 9 日 | elf_note_prpsinfo() 越界读取 |
+| [FreeBSD-SA-22:11.vm](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:11.vm.asc) | 2022 年 8 月 9 日 | 过期虚拟内存映射导致内存泄露 |
+| [FreeBSD-SA-22:12.lib9p](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:12.lib9p.asc) | 2022 年 8 月 9 日 | 9p 消息处理中缺少边界检查 |
+| [FreeBSD-SA-22:13.zlib](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:13.zlib.asc) | 2022 年 8 月 30 日 | zlib 堆缓冲区溢出 |
+| [FreeBSD-SA-22:14.heimdal](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:14.heimdal.asc) | 2022 年 11 月 15 日 | Heimdal 中的多个漏洞 [已修订] |
+| [FreeBSD-SA-22:15.ping](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:15.ping.asc) | 2022 年 11 月 29 日 | [ping(8)](https://man.freebsd.org/cgi/man.cgi?query=ping&sektion=8&format=html) 栈溢出 |
+| [FreeBSD-SA-23:01.geli](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:01.geli.asc) | 2023 年 2 月 8 日 | GELI 在从标准输入读取时静默忽略密钥文件 |
+| [FreeBSD-SA-23:02.openssh](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:02.openssh.asc) | 2023 年 2 月 16 日 | OpenSSH 认证前双重释放 |
+| [FreeBSD-SA-23:03.openssl](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:03.openssl.asc) | 2023 年 2 月 16 日 | OpenSSL 中的多个漏洞 |
+
+### 勘误通知
+
+| 勘误 | 日期 | 主题 |
+|---|---|---|
+| [FreeBSD-EN-22:14.tzdata](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:14.tzdata.asc) | 2022 年 3 月 22 日 | 时区数据库信息更新 |
+| [FreeBSD-EN-22:16.kqueue](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:16.kqueue.asc) | 2022 年 8 月 9 日 | [kevent(2)](https://man.freebsd.org/cgi/man.cgi?query=kevent&sektion=2&format=html) 定时器触发过于频繁 |
+| [FreeBSD-EN-22:17.cam](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:17.cam.asc) | 2022 年 8 月 9 日 | SCSI 错误恢复期间的内核内存损坏 |
+| [FreeBSD-EN-22:19.pam_exec](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:19.pam_exec.asc) | 2022 年 8 月 9 日 | [pam_exec(8)](https://man.freebsd.org/cgi/man.cgi?query=pam_exec&sektion=8&format=html) 中的空指针解引用 |
+| [FreeBSD-EN-22:20.tzdata](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:20.tzdata.asc) | 2022 年 8 月 30 日 | 时区数据库信息更新 |
+| [FreeBSD-EN-22:21.zfs](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:21.zfs.asc) | 2022 年 11 月 1 日 | ZFS B-Tree 释放后使用 |
+| [FreeBSD-EN-22:22.tzdata](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:22.tzdata.asc) | 2022 年 11 月 1 日 | 时区数据库信息更新 |
+| [FreeBSD-EN-22:23.vm](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:23.vm.asc) | 2022 年 11 月 1 日 | 内存页面变为不可回收 |
+| [FreeBSD-EN-22:24.zfs](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:24.zfs.asc) | 2022 年 11 月 1 日 | ZFS 快照目录无法通过 NFS 访问 |
+| [FreeBSD-EN-22:25.tcp](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:25.tcp.asc) | 2022 年 8 月 28 日 | TCP SACK 重传可能导致数据损坏 |
+| [FreeBSD-EN-22:26.cam](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:26.cam.asc) | 2022 年 11 月 1 日 | CAM [ioctl(2)](https://man.freebsd.org/cgi/man.cgi?query=ioctl&sektion=2&format=html) 兼容性问题 |
+| [FreeBSD-EN-22:27.loader](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:27.loader.asc) | 2022 年 11 月 1 日 | UEFI 加载器无法引导较旧的 amd64 内核 |
+| [FreeBSD-EN-22:28.heimdal](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:28.heimdal.asc) | 2022 年 11 月 29 日 | Heimdal KDC 回归问题 |
+| [FreeBSD-EN-23:01.tzdata](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:01.tzdata.asc) | 2022 年 2 月 8 日 | 时区数据库信息更新 |
+| [FreeBSD-EN-23:02.sdhci](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:02.sdhci.asc) | 2023 年 2 月 8 日 | [sdhci(4)](https://man.freebsd.org/cgi/man.cgi?query=sdhci&sektion=4&format=html) 写保护设置错误 |
+| [FreeBSD-EN-23:03.ena](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:03.ena.asc) | 2023 年 2 月 8 日 | ena 驱动在第 7 代 AWS 实例类型上重置后崩溃 |
+| [FreeBSD-EN-23:04.ixgbe](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:04.ixgbe.asc) | 2023 年 2 月 8 日 | ixgbe 对 82599ES 错误地报告输入错误 |
+
 ## 用户态
 
 本节涉及对用户态应用程序、第三方软件和系统工具的变更和新增内容。
