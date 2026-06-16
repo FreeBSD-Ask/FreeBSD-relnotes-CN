@@ -131,7 +131,7 @@ FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 Fr
 
 本节涉及内核配置、系统调优以及未分类的系统控制参数的变更。
 
-### 一般内核变更
+### 内核通用变更
 
 [intro(9)](https://man.freebsd.org/cgi/man.cgi?query=intro&sektion=9&format=html) 核心编程接口介绍已完全重写。[5a0c410787b8](https://cgit.freebsd.org/src/commit/?id=5a0c410787b8)（由 FreeBSD 基金会赞助）
 
@@ -139,7 +139,7 @@ FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 Fr
 
 本节涉及自 13.2-RELEASE 以降设备与驱动的变更与新增。
 
-### 设备驱动
+### 设备驱动程序
 
 现在，x86 系统可支持多个 PCI MCFG 区域，使得支持访问非 0 域（段）的 PCI 配置成为可能。[0fb0306a89ad](https://cgit.freebsd.org/src/commit/?id=0fb0306a89ad)
 
@@ -157,7 +157,7 @@ USB 以太网适配器驱动 [smsc(4)](https://man.freebsd.org/cgi/man.cgi?query
 
 本节涉及文件系统和其他存储子系统的变更与新增，包括本地存储和网络存储。
 
-### 一般存储
+### 通用存储
 
 在调试和解决通用文件系统代码中与 vnode 回收相关的问题过程中，vnode 相关统计信息的 `sysctl` 已被分组到 `vfs.vnode` 下，以提高可见性。[77a8bd148796](https://cgit.freebsd.org/src/commit/?id=77a8bd148796)
 
@@ -177,7 +177,7 @@ NFS 服务器（[nfsd(8)](https://man.freebsd.org/cgi/man.cgi?query=nfsd&sektion
 
 本节简述了影响 FreeBSD 网络的变更。
 
-### 普通网络
+### 通用网络
 
 现在可以使用 sysctl `kern.ipc.sooverprio` 设置因套接字监听队列溢出而导致的 syslog 消息的日志优先级。默认值为 `7`，表示 `LOG_DEBUG`。值为 `-1` 时将抑制日志记录。请参见 [listen(2)](https://man.freebsd.org/cgi/man.cgi?query=listen&sektion=2&format=html)。[773c91ccc892](https://cgit.freebsd.org/src/commit/?id=773c91ccc892)
 
