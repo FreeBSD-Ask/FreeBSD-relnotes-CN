@@ -126,7 +126,7 @@ MSS clamping 在 [ppp(8)](https://man.freebsd.org/cgi/man.cgi?query=ppp&sektion=
 
 Gavin Howard 的 `bc` 升级到版本 6.2.4。
 
-`expat`（`libbsdxml`）已升级到版本 2.5.0。
+`expat`（`libbsdxml`）升级到版本 2.5.0。
 
 `file` 已升级到版本 5.43。
 
