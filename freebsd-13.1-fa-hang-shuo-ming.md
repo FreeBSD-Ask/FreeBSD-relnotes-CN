@@ -133,7 +133,7 @@ CAM 库已修改，以在解析设备名称之前使用 [realpath(3)](https://ma
 
 ### 第三方软件
 
-在所有 PowerPC 架构上已启用 LLDB 的构建支持。[cb1bee9bd34](https://cgit.freebsd.org/src/commit/?id=cb1bee9bd34)
+LLDB 的构建支持已在所有 PowerPC 架构上启用。[cb1bee9bd34](https://cgit.freebsd.org/src/commit/?id=cb1bee9bd34)
 
 - One True Awk 已更新为上游的最新版本（20210215）。除了一个补丁外，FreeBSD 的所有补丁已被上游接纳或移除。主要变更包括：
   - 范围不再使用区域设置。
