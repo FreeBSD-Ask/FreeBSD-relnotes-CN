@@ -35,24 +35,24 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。可以通过 [https://www.Fr
 
 #### 安全公告
 
-| 公告编号                    | 日期           | 主题                                                                 |
-|:---:|:---:|:---|
-| **FreeBSD-SA-24:04.openssh** | 2024 年 7 月 1 日  | OpenSSH 预认证远程代码执行                                           |
-| **FreeBSD-SA-24:05.pf**      | 2024 年 8 月 7 日  | pf 在状态表中错误匹配不同的 ICMPv6 状态                             |
-| **FreeBSD-SA-24:06.ktrace**  | 2024 年 8 月 7 日  | [ktrace(2)](https://man.freebsd.org/cgi/man.cgi?query=ktrace&sektion=2&format=html) 在执行 setuid 二进制文件时未正确分离                      |
-| **FreeBSD-SA-24:07.nfsclient** | 2024 年 8 月 7 日  | NFS 客户端接受包含路径分隔符的文件名                                 |
-| **FreeBSD-SA-24:08.openssh** | 2024 年 8 月 7 日  | OpenSSH 预认证异步信号安全问题                                      |
-| **FreeBSD-SA-24:09.libnv**   | 2024 年 9 月 4 日  | libnv 中的多个漏洞                                                  |
-| **FreeBSD-SA-24:10.bhyve**   | 2024 年 9 月 4 日  | [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 通过 TPM 设备直通导致的特权用户逃逸                        |
-| **FreeBSD-SA-24:11.ctl**     | 2024 年 9 月 4 日  | [ctl(4)](https://man.freebsd.org/cgi/man.cgi?query=ctl&sektion=4&format=html) CAM 目标层的多个问题                                         |
-| **FreeBSD-SA-24:12.bhyve**   | 2024 年 9 月 4 日  | [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 通过 USB 控制器直通导致的特权用户逃逸                      |
-| **FreeBSD-SA-24:13.openssl** | 2024 年 9 月 4 日  | OpenSSL 中 X.509 名称检查可能导致的 DoS                             |
-| **FreeBSD-SA-24:14.umtx**    | 2024 年 9 月 4 日  | umtx 内核崩溃或使用后释放                                           |
-| **FreeBSD-SA-24:15.bhyve**   | 2024 年 9 月 19 日 | [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) XHCI 仿真中越界读取访问                                   |
-| **FreeBSD-SA-24:16.libnv**   | 2024 年 9 月 19 日 | libnv 中的整数溢出                                                  |
-| **FreeBSD-SA-24:17.bhyve**   | 2024 年 10 月 29 日 | bhyve 管理程序中的多个问题                                          |
-| **FreeBSD-SA-24:18.ctl**     | 2024 年 10 月 29 日 | [ctl(4)](https://man.freebsd.org/cgi/man.cgi?query=ctl&sektion=4&format=html) CAM 目标层中的不受限制分配                                   |
-| **FreeBSD-SA-24:19.fetch**   | 2024 年 10 月 29 日 | [fetch(1)](https://man.freebsd.org/cgi/man.cgi?query=fetch&sektion=1&format=html) 参数的证书吊销列表功能失效                                 |
+|公告编号|日期|主题|
+|:----:|:----:|:----|
+|**FreeBSD-SA-24:04.openssh**|2024 年 7 月 1 日|OpenSSH 预认证远程代码执行|
+|**FreeBSD-SA-24:05.pf**|2024 年 8 月 7 日|pf 在状态表中错误匹配不同的 ICMPv6 状态|
+|**FreeBSD-SA-24:06.ktrace**|2024 年 8 月 7 日|[ktrace(2)](https://man.freebsd.org/cgi/man.cgi?query=ktrace&sektion=2&format=html) 在执行 setuid 二进制文件时未正确分离|
+|**FreeBSD-SA-24:07.nfsclient**|2024 年 8 月 7 日|NFS 客户端接受包含路径分隔符的文件名|
+|**FreeBSD-SA-24:08.openssh**|2024 年 8 月 7 日|OpenSSH 预认证异步信号安全问题|
+|**FreeBSD-SA-24:09.libnv**|2024 年 9 月 4 日|libnv 中的多个漏洞|
+|**FreeBSD-SA-24:10.bhyve**|2024 年 9 月 4 日|[bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 通过 TPM 设备直通导致的特权用户逃逸|
+|**FreeBSD-SA-24:11.ctl**|2024 年 9 月 4 日|[ctl(4)](https://man.freebsd.org/cgi/man.cgi?query=ctl&sektion=4&format=html) CAM 目标层的多个问题|
+|**FreeBSD-SA-24:12.bhyve**|2024 年 9 月 4 日|[bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 通过 USB 控制器直通导致的特权用户逃逸|
+|**FreeBSD-SA-24:13.openssl**|2024 年 9 月 4 日|OpenSSL 中 X.509 名称检查可能导致的 DoS|
+|**FreeBSD-SA-24:14.umtx**|2024 年 9 月 4 日|umtx 内核崩溃或使用后释放|
+|**FreeBSD-SA-24:15.bhyve**|2024 年 9 月 19 日|[bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) XHCI 仿真中越界读取访问|
+|**FreeBSD-SA-24:16.libnv**|2024 年 9 月 19 日|libnv 中的整数溢出|
+|**FreeBSD-SA-24:17.bhyve**|2024 年 10 月 29 日|bhyve 管理程序中的多个问题|
+|**FreeBSD-SA-24:18.ctl**|2024 年 10 月 29 日|[ctl(4)](https://man.freebsd.org/cgi/man.cgi?query=ctl&sektion=4&format=html) CAM 目标层中的不受限制分配|
+|**FreeBSD-SA-24:19.fetch**|2024 年 10 月 29 日|[fetch(1)](https://man.freebsd.org/cgi/man.cgi?query=fetch&sektion=1&format=html) 参数的证书吊销列表功能失效|
 
 #### 勘误通知
 
