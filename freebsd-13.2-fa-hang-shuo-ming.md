@@ -112,7 +112,7 @@ FreeBSD 13.2-RELEASE 的发布说明包含了在 13-STABLE 开发线上对 FreeB
 
 工具 [procstat(1)](https://man.freebsd.org/cgi/man.cgi?query=procstat&sektion=1&format=html) 现在可以通过新增的 `advlock` 命令打印关于文件的建议锁的信息。[f9daaf452a8a](https://cgit.freebsd.org/src/commit/?id=f9daaf452a8a)
 
-工具 [pwd_mkdb(8)](https://man.freebsd.org/cgi/man.cgi?query=pwd_mkdb&sektion=8&format=html) 工具不再将 `/etc/master.passwd` 中的注释复制到 `/etc/passwd` 中。[3e955733117d](https://cgit.freebsd.org/src/commit/?id=3e955733117d)
+[pwd_mkdb(8)](https://man.freebsd.org/cgi/man.cgi?query=pwd_mkdb&sektion=8&format=html) 工具不再将 `/etc/master.passwd` 中的注释复制到 `/etc/passwd` 中。[3e955733117d](https://cgit.freebsd.org/src/commit/?id=3e955733117d)
 
 MSS clamping 在 [ppp(8)](https://man.freebsd.org/cgi/man.cgi?query=ppp&sektion=8&format=html) 中得到了改进。[301bff9bdd62](https://cgit.freebsd.org/src/commit/?id=301bff9bdd62)
 
@@ -204,7 +204,7 @@ arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=
 
 [em(4)](https://man.freebsd.org/cgi/man.cgi?query=em&sektion=4&format=html) 驱动程序现在可以正确支持新款芯片 82580 和 i350 上的完整接收缓冲区大小范围。[3f8306cf8e2d](https://cgit.freebsd.org/src/commit/?id=3f8306cf8e2d)
 
-[ena(4)](https://man.freebsd.org/cgi/man.cgi?query=ena&sektion=4&format=html) 驱动程序已升级到 2.6.2 版本。（由亚马逊赞助）
+[ena(4)](https://man.freebsd.org/cgi/man.cgi?query=ena&sektion=4&format=html) 驱动程序已升级到 2.6.2 版本。（由亚马逊公司赞助）
 
 已为 [hwpmc(4)](https://man.freebsd.org/cgi/man.cgi?query=hwpmc&sektion=4&format=html) 实现了对 Intel Alder Lake CPU 的基本支持。[b8ef2ca9eae9](https://cgit.freebsd.org/src/commit/?id=b8ef2ca9eae9)
 
@@ -212,9 +212,9 @@ arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=
 
 [irdma(4)](https://man.freebsd.org/cgi/man.cgi?query=irdma&sektion=4&format=html) RDMA 驱动程序已为 Intel E810 以太网控制器引入，支持 RoCEv2 和 iWARP 协议，以每个 PF 方式运行，默认使用 RoCEv2，并已升级至 1.1.5-k 版本。[42bad04a2156](https://cgit.freebsd.org/src/commit/?id=42bad04a2156)（由英特尔公司赞助）
 
-现在已提供对 DPAA2（第二代数据路径加速架构，一种在某些 NXP SoC 中找到的硬件级网络架构）的初步支持。它运行 NXP 提供的固件，作为抽象层提供 DPAA2 对象，并提供一个 `dpni` 网络接口。[d5a64a935bc9](https://cgit.freebsd.org/src/commit/?id=d5a64a935bc9)（由 Bare Enthusiasm :-) 和 Traverse Technologies 赞助）
+现在已提供对 DPAA2（第二代数据路径加速架构，一种存在于某些 NXP SoC 中的硬件级网络架构）的初步支持。它运行 NXP 提供的固件，作为抽象层提供 DPAA2 对象，并提供一个 `dpni` 网络接口。[d5a64a935bc9](https://cgit.freebsd.org/src/commit/?id=d5a64a935bc9)（由 Bare Enthusiasm :-) 和 Traverse Technologies 赞助）
 
-[iwlwifi(4)](https://man.freebsd.org/cgi/man.cgi?query=iwlwifi&sektion=4&format=html) 驱动程序已更新，用于支持 Intel 无线接口。（由 FreeBSD 基金会赞助）
+[iwlwifi(4)](https://man.freebsd.org/cgi/man.cgi?query=iwlwifi&sektion=4&format=html) 驱动程序已更新。（由 FreeBSD 基金会赞助）
 
 [rtw88(4)](https://man.freebsd.org/cgi/man.cgi?query=rtw88&sektion=4&format=html) 驱动程序已添加，用于支持多个 Realtek 无线 PCI 接口。目前仅限于 802.11 a/b/g 操作。更多信息请参见 [https://wiki.freebsd.org/WiFi/Rtw88](https://wiki.freebsd.org/WiFi/Rtw88)。
 
