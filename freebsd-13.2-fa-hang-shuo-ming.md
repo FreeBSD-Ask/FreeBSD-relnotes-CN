@@ -26,7 +26,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 使用 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具支持在 RELEASE 版本之间（以及各种安全分支的快照）进行二进制升级。[二进制升级程序](https://docs.freebsd.org/en/books/handbook/cutting-edge/#freebsdupdate-upgrade) 会更新未修改的用户空间工具以及作为官方 FreeBSD 发行版一部分分发的未修改的 GENERIC 内核。[freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具要求被升级的主机必须具备互联网连接。
 
-支持基于源代码的升级（即从源代码重新编译 FreeBSD 基本系统）到先前版本，具体按 **/usr/src/UPDATING** 中的说明进行操作。
+支持从先前版本进行基于源代码的升级（即从源代码重新编译 FreeBSD 基本系统），具体按 **/usr/src/UPDATING** 中的说明进行操作。
 
 所有 PowerPC 架构的用户，在成功安装内核和世界之后，必须手动运行 `kldxref /boot/kernel`。
 
