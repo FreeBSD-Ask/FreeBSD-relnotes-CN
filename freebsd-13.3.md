@@ -24,7 +24,7 @@ FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 Fr
 
 ## 从旧版 FreeBSD 升级
 
-使用工具 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 能在 RELEASE 版本之间（以及各种安全分支的快照）进行二进制升级。有关升级的详细信息，请参阅发布特定的升级程序：[FreeBSD 13.3-RELEASE 升级信息](https://www.freebsd.org/releases/13.3R/installation/#upgrade-binary)，以及 FreeBSD 手册中的 [二进制升级程序](https://docs.freebsd.org/en/books/handbook/cutting-edge/#freebsdupdate-upgrade)。这将更新未修改的用户空间工具以及作为官方 FreeBSD 发行版一部分的未修改的 GENERIC 内核。 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具要求升级的主机必须具备互联网连接。
+使用工具 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 能在 RELEASE 版本之间（以及各种安全分支的快照）进行二进制升级。升级的详细信息，请参阅发布特定的升级程序：[FreeBSD 13.3-RELEASE 升级信息](https://www.freebsd.org/releases/13.3R/installation/#upgrade-binary)，以及 FreeBSD 手册中的 [二进制升级程序](https://docs.freebsd.org/en/books/handbook/cutting-edge/#freebsdupdate-upgrade)。这将更新未修改的用户空间工具以及作为官方 FreeBSD 发行版一部分的未修改的 GENERIC 内核。 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具要求升级的主机必须具备互联网连接。
 
 从旧版本进行基于源代码的升级（即通过重新编译 FreeBSD 基本系统）也是支持的，请按照 **/usr/src/UPDATING** 中的说明进行。
 
