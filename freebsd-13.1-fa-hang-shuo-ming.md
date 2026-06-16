@@ -121,7 +121,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 
 `chroot` 现在支持非特权操作，[chroot(8)](https://man.freebsd.org/cgi/man.cgi?query=chroot&sektion=8&format=html) 程序增加了 `-n` 选项以启用该功能。[460b4b550dc9](https://cgit.freebsd.org/src/commit/?id=460b4b550dc9)（由 EPSRC 赞助）
 
-修改了 CAM 库以在解析设备名称之前使用 [realpath(3)](https://man.freebsd.org/cgi/man.cgi?query=realpath&sektion=3&format=html)，从而允许诸如 [camcontrol(8)](https://man.freebsd.org/cgi/man.cgi?query=camcontrol&sektion=8&format=html) 和 [smartctl(8)](https://man.freebsd.org/cgi/man.cgi?query=smartctl&sektion=8&format=html) 之类的工具在使用符号链接时更加友好。[e32acf95ea25](https://cgit.freebsd.org/src/commit/?id=e32acf95ea25)
+CAM 库已修改，以在解析设备名称之前使用 [realpath(3)](https://man.freebsd.org/cgi/man.cgi?query=realpath&sektion=3&format=html)，从而允许诸如 [camcontrol(8)](https://man.freebsd.org/cgi/man.cgi?query=camcontrol&sektion=8&format=html) 和 [smartctl(8)](https://man.freebsd.org/cgi/man.cgi?query=smartctl&sektion=8&format=html) 之类的工具在使用符号链接时更加友好。[e32acf95ea25](https://cgit.freebsd.org/src/commit/?id=e32acf95ea25)
 
 兼容 Linux 的 [md5sum(1)](https://man.freebsd.org/cgi/man.cgi?query=md5sum&sektion=1&format=html) 和类似的消息摘要程序已添加，方法是在程序名称以 `sum` 结尾时让相应的 BSD 程序运行 `-r` 选项。[c0d5665be0dc](https://cgit.freebsd.org/src/commit/?id=c0d5665be0dc)（由 Netflix 赞助）
 

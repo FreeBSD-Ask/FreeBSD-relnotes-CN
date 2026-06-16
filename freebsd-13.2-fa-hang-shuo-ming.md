@@ -178,9 +178,9 @@ Gavin Howard 的 `bc` 升级到版本 6.2.4。
 
 [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 虚拟机管理程序和内核模块 [vmm(4)](https://man.freebsd.org/cgi/man.cgi?query=vmm&sektion=4&format=html) 现在支持在虚拟机中使用超过 16 个 vCPU。默认情况下，bhyve 允许每个虚拟机创建与主机物理 CPU 数量相同的 vCPU。此限制可以通过加载器调节选项 `hw.vmm.maxcpu` 来调整。[3e02f8809aec](https://cgit.freebsd.org/src/commit/?id=3e02f8809aec)
 
-64 位可执行文件的地址空间布局随机化（ASLR）已默认启用。如果应用程序出现意外故障（例如，段错误），可以根据需要禁用 ASLR。要禁用单次调用，可以使用 [proccontrol(1)](https://man.freebsd.org/cgi/man.cgi?query=proccontrol&sektion=1&format=html) 命令：`proccontrol -m aslr -s disable command`。要禁用所有二进制文件的 ASLR 调用，可以使用 [elfctl(1)](https://man.freebsd.org/cgi/man.cgi?query=elfctl&sektion=1&format=html) 命令：`elfctl -e +noaslr file`。问题应通过问题报告系统 [https://bugs.freebsd.org](https://bugs.freebsd.org/) 提交，或通过 `freebsd-stable@FreeBSD.org` 邮件列表报告。[10192e77cfac](https://cgit.freebsd.org/src/commit/?id=10192e77cfac)（由 Stormshield 赞助）
+64 位可执行文件的地址空间布局随机化（ASLR）默认启用。如果应用程序出现意外故障（例如，段错误），可以根据需要禁用 ASLR。要禁用单次调用，可以使用 [proccontrol(1)](https://man.freebsd.org/cgi/man.cgi?query=proccontrol&sektion=1&format=html) 命令：`proccontrol -m aslr -s disable command`。要禁用所有二进制文件的 ASLR 调用，可以使用 [elfctl(1)](https://man.freebsd.org/cgi/man.cgi?query=elfctl&sektion=1&format=html) 命令：`elfctl -e +noaslr file`。问题应通过问题报告系统 [https://bugs.freebsd.org](https://bugs.freebsd.org/) 提交，或通过 `freebsd-stable@FreeBSD.org` 邮件列表报告。[10192e77cfac](https://cgit.freebsd.org/src/commit/?id=10192e77cfac)（由 Stormshield 赞助）
 
-针对 Intel Alder Lake（第十二代）和 Raptor Lake（第十三代）混合 CPU 的硬件页面失效问题的解决方法已实现。该漏洞可能导致 UFS 和 MSDOSFS 文件系统损坏，并可能导致其他内存损坏。通过此解决方法，小核（E 核心）会自动使用较慢的页面失效方法。[567cc4e6bfd9](https://cgit.freebsd.org/src/commit/?id=567cc4e6bfd9)（由 FreeBSD 基金会赞助）
+针对 Intel Alder Lake（第十二代）和 Raptor Lake（第十三代）混合 CPU 的硬件页面失效问题，实现了解决方法。该漏洞可能导致 UFS 和 MSDOSFS 文件系统损坏，并可能导致其他内存损坏。通过此解决方法，小核（E 核心）会自动使用较慢的页面失效方法。[567cc4e6bfd9](https://cgit.freebsd.org/src/commit/?id=567cc4e6bfd9)（由 FreeBSD 基金会赞助）
 
 新增内核配置选项 `SPLIT_KERNEL_DEBUG`，用于控制将内核和模块的调试数据分割成独立的文件。该选项与选项 `WITHOUT_KERNEL_SYMBOLS` 相互作用，后者的操作方式与 13.0-RELEASE 和 13.1-RELEASE 中不同，但与早期版本相似；它现在仅控制调试数据的安装。默认情况下为 `WITH_KERNEL_SYMBOLS` 和 `WITH_SPLIT_KERNEL_DEBUG`，允许将不含调试数据的内核和模块安装在 **/boot** 中，将独立的调试文件安装在 **/usr/lib/debug** 中，这与 13.0-RELEASE 之前的版本相同。使用 `WITHOUT_KERNEL_SYMBOLS` 和 `WITH_SPLIT_KERNEL_DEBUG` 时，独立的调试文件会生成，但不会安装，类似于早期版本中使用 `WITHOUT_KERNEL_SYMBOLS` 的情况。最后，使用 `WITHOUT_KERNEL_SYMBOLS` 和 `WITHOUT_SPLIT_KERNEL_DEBUG` 时，将内核和模块与内置调试信息一起安装到 **/boot** 中，这与 13.1-RELEASE 中使用 `WITHOUT_KERNEL_SYMBOLS` 的情况相同。[0c4d13c521aa](https://cgit.freebsd.org/src/commit/?id=0c4d13c521aa)（由 FreeBSD 基金会赞助）
 
@@ -192,7 +192,7 @@ Gavin Howard 的 `bc` 升级到版本 6.2.4。
 
 64 位 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&format=html) ABI 增加了对跨信号传递保存 CPU 浮点状态的支持。[0b82c544de58](https://cgit.freebsd.org/src/commit/?id=0b82c544de58)，[20d601714206](https://cgit.freebsd.org/src/commit/?id=20d601714206)
 
-[linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&format=html) ABI 中的 vDSO（虚拟动态共享对象）支持已基本完成。[a340b5b4bd48](https://cgit.freebsd.org/src/commit/?id=a340b5b4bd48)
+[linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&format=html) ABI 中的 vDSO（虚拟动态共享对象）支持基本完成。[a340b5b4bd48](https://cgit.freebsd.org/src/commit/?id=a340b5b4bd48)
 
 arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&format=html) ABI 已与 amd64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&format=html) ABI 达到一致。[0b82c544de58](https://cgit.freebsd.org/src/commit/?id=0b82c544de58)，[a340b5b4bd48](https://cgit.freebsd.org/src/commit/?id=a340b5b4bd48)
 
