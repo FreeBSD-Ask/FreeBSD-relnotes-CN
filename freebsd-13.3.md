@@ -32,6 +32,51 @@ FreeBSD 13.3-RELEASE 的发布说明包含了对 13-STABLE 开发主线中的 Fr
 
 >在安装新的用户空间软件后，正在运行的守护进程仍然来自先前的版本。在第二次调用 `freebsd-update` 安装用户级组件，或通过源代码升级，再使用 `installworld` 命令安装后，应重启系统来启动所有新的软件。例如，较旧版本的 `sshd` 在安装新的 `/usr/sbin/sshd` 后无法正确处理传入连接；重启后将启动新的 `sshd` 和其他守护进程。
 
+## 安全与勘误
+
+本节列出了自 13.2-RELEASE 以来的各项安全通告和勘误通知。
+
+### 安全通告
+
+| 通告 | 日期 | 主题 |
+|---|---|---|
+| [FreeBSD-SA-23:04.pam_krb5](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:04.pam_krb5.asc) | 2023 年 6 月 21 日 | 通过 pam_krb5 进行网络认证攻击 |
+| [FreeBSD-SA-23:06.ipv6](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:06.ipv6.asc) | 2023 年 8 月 1 日 | IPv6 分片重组中的远程拒绝服务 |
+| [FreeBSD-SA-23:07.bhyve](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:07.bhyve.asc) | 2023 年 8 月 1 日 | bhyve 通过 fwctl 实现特权客户机逃逸 |
+| [FreeBSD-SA-23:08.ssh](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:08.ssh.asc) | 2023 年 8 月 1 日 | 通过 ssh-agent 转发的潜在远程代码执行 |
+| [FreeBSD-SA-23:09.pam_krb5](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:09.pam_krb5.asc) | 2023 年 8 月 1 日 | 通过 pam_krb5 进行网络认证攻击 |
+| [FreeBSD-SA-23:10.pf](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:10.pf.asc) | 2023 年 9 月 6 日 | pf 错误处理多个 IPv6 分片头 |
+| [FreeBSD-SA-23:11.wifi](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:11.wifi.asc) | 2023 年 9 月 6 日 | Wi-Fi 加密绕过 |
+| [FreeBSD-SA-23:12.msdosfs](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:12.msdosfs.asc) | 2023 年 10 月 3 日 | msdosfs 数据泄露 |
+| [FreeBSD-SA-23:13.capsicum](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:13.capsicum.asc) | 2023 年 10 月 3 日 | copy_file_range 权限检查不足 |
+| [FreeBSD-SA-23:14.smccc](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:14.smccc.asc) | 2023 年 10 月 3 日 | arm64 启动 CPU 可能缺少推测执行保护 |
+| [FreeBSD-SA-23:15.stdio](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:15.stdio.asc) | 2023 年 11 月 7 日 | libc stdio 缓冲区溢出 |
+| [FreeBSD-SA-23:16.cap_net](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:16.cap_net.asc) | 2023 年 11 月 8 日 | libcap_net 限制列表操作错误 |
+| [FreeBSD-SA-23:17.pf](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:17.pf.asc) | 2023 年 12 月 5 日 | [pf(4)](https://man.freebsd.org/cgi/man.cgi?query=pf&sektion=4&format=html) 中的 TCP 欺骗漏洞 |
+| [FreeBSD-SA-23:18.nfsclient](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:18.nfsclient.asc) | 2023 年 12 月 12 日 | NFS 客户端数据损坏和内核内存泄露 |
+| [FreeBSD-SA-23:19.openssh](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:19.openssh.asc) | 2023 年 12 月 19 日 | SSH 协议中的前缀截断攻击 |
+| [FreeBSD-SA-24:01.bhyveload](https://www.freebsd.org/security/advisories/FreeBSD-SA-24:01.bhyveload.asc) | 2024 年 2 月 14 日 | [bhyveload(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyveload&sektion=8&format=html) 宿主文件访问 |
+
+### 勘误通知
+
+| 勘误 | 日期 | 主题 |
+|---|---|---|
+| [FreeBSD-EN-23:05.tzdata](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:05.tzdata.asc) | 2023 年 6 月 21 日 | 时区数据库信息更新 |
+| [FreeBSD-EN-23:06.loader](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:06.loader.asc) | 2023 年 6 月 21 日 | x86 内核控制台配置 |
+| [FreeBSD-EN-23:07.mpr](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:07.mpr.asc) | 2023 年 6 月 21 日 | [mpr(4)](https://man.freebsd.org/cgi/man.cgi?query=mpr&sektion=4&format=html) 可能无法初始化设备 |
+| [FreeBSD-EN-23:09.freebsd-update](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:09.freebsd-update.asc) | 2023 年 9 月 6 日 | freebsd-update 在升级时错误合并文件 |
+| [FreeBSD-EN-23:10.pci](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:10.pci.asc) | 2023 年 9 月 6 日 | PCI-e 热插拔在某些设备上失效 |
+| [FreeBSD-EN-23:11.caroot](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:11.caroot.asc) | 2023 年 9 月 6 日 | 根证书包更新 |
+| [FreeBSD-EN-23:12.freebsd-update](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:12.freebsd-update.asc) | 2023 年 10 月 3 日 | freebsd-update 升级至 14.0 失败 |
+| [FreeBSD-EN-23:13.freebsd-update](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:13.freebsd-update.asc) | 2023 年 11 月 8 日 | freebsd-update 无法处理深层启动环境 |
+| [FreeBSD-EN-23:14.regcomp](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:14.regcomp.asc) | 2023 年 11 月 8 日 | 正则表达式转义处理错误 |
+| [FreeBSD-EN-23:15.sanitizer](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:15.sanitizer.asc) | 2023 年 12 月 1 日 | 启用 ASLR 时 Clang 清理器失败 |
+| [FreeBSD-EN-23:16.openzfs](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:16.openzfs.asc) | 2023 年 12 月 1 日 | OpenZFS 数据损坏 |
+| [FreeBSD-EN-23:21.tty](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:21.tty.asc) | 2023 年 11 月 24 日 | [tty(4)](https://man.freebsd.org/cgi/man.cgi?query=tty&sektion=4&format=html) IUTF8 导致内核恐慌 |
+| [FreeBSD-EN-23:22.vfs](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:22.vfs.asc) | 2023 年 12 月 5 日 | ZFS 快照目录无法通过 NFS 访问 |
+| [FreeBSD-EN-24:02.libutil](https://www.freebsd.org/security/advisories/FreeBSD-EN-24:02.libutil.asc) | 2024 年 2 月 14 日 | 登录类别资源限制和 CPU 掩码绕过 |
+| [FreeBSD-EN-24:03.kqueue](https://www.freebsd.org/security/advisories/FreeBSD-EN-24:03.kqueue.asc) | 2024 年 2 月 14 日 | 使用 [rfork(2)](https://man.freebsd.org/cgi/man.cgi?query=rfork&sektion=2&format=html) 退出时 [kqueue_close(2)](https://man.freebsd.org/cgi/man.cgi?query=kqueue_close&sektion=2&format=html) 页面错误 |
+
 ## 用户空间
 
 本节涉及对用户空间应用程序、第三方软件和系统实用程序的变更和新增功能。
