@@ -39,7 +39,7 @@ FreeBSD 13.3-RELEASE 的发布说明包含了对 13-STABLE 开发主线中的 Fr
 ### 安全通告
 
 | 通告 | 日期 | 主题 |
-|---|---|---|
+| :--- | :--- | :--- |
 | [FreeBSD-SA-23:04.pam_krb5](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:04.pam_krb5.asc) | 2023 年 6 月 21 日 | 通过 pam_krb5 进行网络认证攻击 |
 | [FreeBSD-SA-23:06.ipv6](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:06.ipv6.asc) | 2023 年 8 月 1 日 | IPv6 分片重组中的远程拒绝服务 |
 | [FreeBSD-SA-23:07.bhyve](https://www.freebsd.org/security/advisories/FreeBSD-SA-23:07.bhyve.asc) | 2023 年 8 月 1 日 | bhyve 通过 fwctl 实现特权客户机逃逸 |
@@ -60,7 +60,7 @@ FreeBSD 13.3-RELEASE 的发布说明包含了对 13-STABLE 开发主线中的 Fr
 ### 勘误通知
 
 | 勘误 | 日期 | 主题 |
-|---|---|---|
+| :--- | :--- | :--- |
 | [FreeBSD-EN-23:05.tzdata](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:05.tzdata.asc) | 2023 年 6 月 21 日 | 时区数据库信息更新 |
 | [FreeBSD-EN-23:06.loader](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:06.loader.asc) | 2023 年 6 月 21 日 | x86 内核控制台配置 |
 | [FreeBSD-EN-23:07.mpr](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:07.mpr.asc) | 2023 年 6 月 21 日 | [mpr(4)](https://man.freebsd.org/cgi/man.cgi?query=mpr&sektion=4&format=html) 可能无法初始化设备 |

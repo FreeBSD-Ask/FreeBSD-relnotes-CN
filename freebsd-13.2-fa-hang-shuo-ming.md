@@ -41,7 +41,7 @@ FreeBSD 13.2-RELEASE 的发布说明包含了自 13-STABLE 开发线以来对 Fr
 ### 安全通告
 
 | 通告 | 日期 | 主题 |
-|---|---|---|
+| :--- | :--- | :--- |
 | [FreeBSD-SA-22:03.openssl](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:03.openssl.asc) | 2022 年 3 月 15 日 | OpenSSL 证书解析无限循环 |
 | [FreeBSD-SA-22:04.netmap](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:04.netmap.asc) | 2022 年 4 月 6 日 | netmap 中潜在的 jail 逃逸漏洞 |
 | [FreeBSD-SA-22:05.bhyve](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:05.bhyve.asc) | 2022 年 4 月 6 日 | Bhyve e82545 设备仿真越界写入 |
@@ -61,7 +61,7 @@ FreeBSD 13.2-RELEASE 的发布说明包含了自 13-STABLE 开发线以来对 Fr
 ### 勘误通知
 
 | 勘误 | 日期 | 主题 |
-|---|---|---|
+| :--- | :--- | :--- |
 | [FreeBSD-EN-22:14.tzdata](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:14.tzdata.asc) | 2022 年 3 月 22 日 | 时区数据库信息更新 |
 | [FreeBSD-EN-22:16.kqueue](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:16.kqueue.asc) | 2022 年 8 月 9 日 | [kevent(2)](https://man.freebsd.org/cgi/man.cgi?query=kevent&sektion=2&format=html) 定时器触发过于频繁 |
 | [FreeBSD-EN-22:17.cam](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:17.cam.asc) | 2022 年 8 月 9 日 | SCSI 错误恢复期间的内核内存损坏 |

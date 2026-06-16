@@ -41,7 +41,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 ### 安全公告
 
 | 公告 | 日期 | 主题 |
-|---|---|---|
+| :--- | :--- | :--- |
 | [FreeBSD-SA-21:03.pam_login_access](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:03.pam_login_access.asc) | 2021 年 2 月 24 日 | login.access 未能应用规则 |
 | [FreeBSD-SA-21:04.jail_remove](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:04.jail_remove.asc) | 2021 年 2 月 24 日 | [jail_remove(2)](https://man.freebsd.org/cgi/man.cgi?query=jail_remove&sektion=2&format=html) 未能终止所有 jail 进程 |
 | [FreeBSD-SA-21:05.jail_chdir](https://www.freebsd.org/security/advisories/FreeBSD-SA-21:05.jail_chdir.asc) | 2021 年 2 月 24 日 | [jail_attach(2)](https://man.freebsd.org/cgi/man.cgi?query=jail_attach&sektion=2&format=html) 依赖调用者更改当前工作目录 |
@@ -67,7 +67,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 ### 勘误通知
 
 | 勘误 | 日期 | 主题 |
-|---|---|---|
+| :--- | :--- | :--- |
 | [FreeBSD-EN-21:12.divert](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:12.divert.asc) | 2021 年 5 月 26 日 | 在 divert 套接字上传输时内核双重释放 |
 | [FreeBSD-EN-21:13.mpt](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:13.mpt.asc) | 2021 年 5 月 26 日 | [mpt(4)](https://man.freebsd.org/cgi/man.cgi?query=mpt&sektion=4&format=html) 在较大 maxphys 值下出现 I/O 错误 |
 | [FreeBSD-EN-21:14.pms](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:14.pms.asc) | 2021 年 5 月 26 日 | [pms(4)](https://man.freebsd.org/cgi/man.cgi?query=pms&sektion=4&format=html) 数据损坏 |
