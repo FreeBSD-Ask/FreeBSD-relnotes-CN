@@ -5,11 +5,11 @@
 
 ## 摘要
 
-FreeBSD 14.2-RELEASE 发行说明总结了在 14-STABLE 开发分支上 FreeBSD 基本系统发生的变更。本文档列出了自上次发布以来 RELEASE 适用的安全公告，以及对 FreeBSD 内核和用户空间的重大变更。同时还附带了有关更新的简要说明。
+FreeBSD 14.2-RELEASE 发行说明总结了在 14-STABLE 开发分支上 FreeBSD 基本系统发生的变更。本文档列出了自上次发布以来 RELEASE 适用的安全公告，以及对 FreeBSD 内核和用户空间的重大变更。本文档还附带了有关升级的简要说明。
 
 ## 引言
 
-本文档为 FreeBSD 14.2-RELEASE 的发行说明，概述了 FreeBSD 最近新增、修改和删除的功能，并附带了有关从旧版本更新的说明。
+本文档为 FreeBSD 14.2-RELEASE 的发行说明，概述了 FreeBSD 最近新增、修改和删除的功能，并附带了有关从旧版本升级的说明。
 
 本发行说明适用于自 14-STABLE 开发分支创建以来的最新版本信息。该分支中预编译的二进制“RELEASE”发行版的信息，请参见 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/)。
 
