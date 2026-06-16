@@ -84,7 +84,7 @@ RELEASE 版本（以及各种安全分支的快照）使用工具 [freebsd-updat
 
 由 [bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?query=bsdinstall&sektion=8&format=html) 调用的工具 [adduser(8)](https://man.freebsd.org/cgi/man.cgi?query=adduser&sektion=8&format=html)，现在会在 ZFS 数据集上的父目录上，为新用户的家目录创建一个 ZFS 数据集。命令行参数可禁用此独立数据集。亦支持 ZFS 加密。[516009ce8d38](https://cgit.freebsd.org/src/commit/?id=516009ce8d38)
 
-工具 [date(1)](https://man.freebsd.org/cgi/man.cgi?query=date&sektion=1&format=html) 已支持纳秒。如： `date -Ins` 打印为 "2024-04-22T12:20:28,763742224+02:00"， `date +%N` 打印为 "415050400"。[eeb04a736cb9](https://cgit.freebsd.org/src/commit/?id=eeb04a736cb9)
+工具 [date(1)](https://man.freebsd.org/cgi/man.cgi?query=date&sektion=1&format=html) 已支持纳秒。如： `date -Ins` 打印为 “2024-04-22T12:20:28,763742224+02:00”， `date +%N` 打印为 “415050400”。[eeb04a736cb9](https://cgit.freebsd.org/src/commit/?id=eeb04a736cb9)
 
 工具 [dtrace(1)](https://man.freebsd.org/cgi/man.cgi?query=dtrace&sektion=1&format=html) 已支持使用 [libxo(3)](https://man.freebsd.org/cgi/man.cgi?query=libxo&sektion=3&format=html) 生成机器可读的输出格式：JSON、XML 和 HTML。[aef4504139a4](https://cgit.freebsd.org/src/commit/?id=aef4504139a4) (由英国研究与创新机构（UKRI）赞助)
 
