@@ -107,7 +107,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 
 ### 用户空间应用程序变更
 
-在 [rtsol(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsol&sektion=8&format=html) 和 [rtsold(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsold&sektion=8&format=html) 中添加了 `-i` 选项，用于禁用 0 到 1 秒的随机延迟，从而加快启动过程。[8056b73ea163](https://cgit.freebsd.org/src/commit/?id=8056b73ea163)（由 [https://www.patreon.com/cperciva](https://www.patreon.com/cperciva) 赞助）
+`-i` 选项已添加到 [rtsol(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsol&sektion=8&format=html) 和 [rtsold(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsold&sektion=8&format=html) 中，用于禁用 0 到 1 秒的随机延迟，从而加快启动过程。[8056b73ea163](https://cgit.freebsd.org/src/commit/?id=8056b73ea163)（由 [https://www.patreon.com/cperciva](https://www.patreon.com/cperciva) 赞助）
 
 对于 64 位架构，基本系统现在默认启用位置无关可执行文件（PIE）支持。可以通过开关 `WITHOUT_PIE` 禁用该功能，需要进行完全重新编译。[396e9f259d96](https://cgit.freebsd.org/src/commit/?id=396e9f259d96)
 
