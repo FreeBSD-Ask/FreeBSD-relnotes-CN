@@ -149,7 +149,7 @@ FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 Fr
 
 [Realtek 无线 PCI 接口的 rtw88(4) 驱动](https://man.freebsd.org/cgi/man.cgi?query=rtw88&sektion=4&format=html) 已更新。
 
-对原生和基于 LinuxKPI 的无线驱动程序进行了诸多稳定性修复。（由 FreeBSD 基金会赞助）
+修复了原生和基于 LinuxKPI 的无线驱动程序的诸多稳定性问题。（由 FreeBSD 基金会赞助）
 
 USB 以太网适配器驱动 [smsc(4)](https://man.freebsd.org/cgi/man.cgi?query=smsc&sektion=4&format=html) 现在将在树莓派设备中从 `bootargs` 获取 MAC 地址，如果没有提供，则回退到使用 [ether_gen_addr(9)](https://man.freebsd.org/cgi/man.cgi?query=ether_gen_addr&sektion=9&format=html) 生成固定的 MAC 地址。[3d96ee7c7dcc](https://cgit.freebsd.org/src/commit/?id=3d96ee7c7dcc)
 
