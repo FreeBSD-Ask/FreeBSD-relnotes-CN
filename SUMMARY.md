@@ -52,6 +52,13 @@
   * [FreeBSD 14.2-RELEASE 发布计划](14.2-schedule.md)
 * FreeBSD 14.1-RELEASE
   * [FreeBSD 14.1-RELEASE 发行说明（2024 年 6 月 4 日）](freebsd-14.1-fa-hang-shuo-ming.md)
+  * [FreeBSD 14.1-RELEASE 发行公告](14.1-announce.md)
+  * [FreeBSD 14.1-RELEASE 安装说明](14.1-installation.md)
+  * [FreeBSD 14.1-RELEASE 硬件兼容性列表](14.1-hardware.md)
+  * [FreeBSD 14.1-RELEASE 自述文件](14.1-readme.md)
+  * [FreeBSD 14.1-RELEASE 勘误](14.1-errata.md)
+  * [FreeBSD 14.1-RELEASE 签名校验文件](14.1-signatures.md)
+  * [FreeBSD 14.1-RELEASE 发布计划](14.1-schedule.md)
 * FreeBSD 14.0-RELEASE
   * [FreeBSD 14.0-RELEASE 发行说明（2023 年 11 月 20 日）](freebsd-14.0-fa-hang-shuo-ming.md)
 * FreeBSD 13.5-RELEASE
