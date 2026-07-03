@@ -176,13 +176,13 @@ OpenZFS 已升级至版本 2.2.4。[78c9d8f1ce65](https://cgit.freebsd.org/src/c
 
 现在可以配置 [loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html)，以便根据 SMBIOS 中的变量 planar maker、planar product、system product 和 uboot m_product 读取特定的配置文件。目前，最好的文档是 git 提交信息，[3eb3a802a31b](https://cgit.freebsd.org/src/commit/?id=3eb3a802a31b)。
 
-对于 EFI 设备，[loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html) 中的控制台检测得到了改进。如果没有变量 ConOut，会检查变量 ConIn。如果找到多个设备，则首选串行。[20a6f4779ac6](https://cgit.freebsd.org/src/commit/?id=20a6f4779ac6)（由 Netflix 赞助）
+对于 EFI 系统，[loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html) 中的控制台检测得到了改进。如果没有变量 ConOut，会检查变量 ConIn。如果找到多个设备，则首选串行。[20a6f4779ac6](https://cgit.freebsd.org/src/commit/?id=20a6f4779ac6)（由 Netflix 赞助）
 
 [loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html) 中的帧缓冲区现在支持使用仅文本的视频驱动程序，从而节省空间。[57ca2848c0aa](https://cgit.freebsd.org/src/commit/?id=57ca2848c0aa)（由 Netflix 赞助）
 
-arm64 设备上的 [loader.efi(8)](https://man.freebsd.org/cgi/man.cgi?query=loader.efi&sektion=8&format=html)，会更早地完成 ACPI 检测。对于基于 ACPI 的 arm64 设备，应更新 EFI 分区上的 **loader.efi** 文件。[05cf4dda599a](https://cgit.freebsd.org/src/commit/?id=05cf4dda599a) [16c09de80135](https://cgit.freebsd.org/src/commit/?id=16c09de80135)
+arm64 系统上的 [loader.efi(8)](https://man.freebsd.org/cgi/man.cgi?query=loader.efi&sektion=8&format=html)，会更早地完成 ACPI 检测。对于基于 ACPI 的 arm64 系统，应更新 EFI 分区上的 **loader.efi** 文件。[05cf4dda599a](https://cgit.freebsd.org/src/commit/?id=05cf4dda599a) [16c09de80135](https://cgit.freebsd.org/src/commit/?id=16c09de80135)
 
-引导加载程序 LinuxBoot 可用于从 Linux 引导 FreeBSD。（aarch64、amd64），[46010641267](https://cgit.freebsd.org/src/commit/?id=46010641267)（由 Netflix 赞助）
+引导加载程序 LinuxBoot 可用于在 aarch64 和 amd64 系统上从 Linux 引导 FreeBSD。[46010641267](https://cgit.freebsd.org/src/commit/?id=46010641267)（由 Netflix 赞助）
 
 ## 网络
 
@@ -208,7 +208,7 @@ netgraph 模块 [ng_ipfw(4)](https://man.freebsd.org/cgi/man.cgi?query=ng_ipfw&s
 
 ### 手册页
 
-新的手册页 [networking(7)](https://man.freebsd.org/cgi/man.cgi?query=networking&sektion=7&format=html) 包含了连接系统到网络（含 WiFi）的快速入门指南，并链接到了其他手册页和手册。[39f92a4c4c49](https://cgit.freebsd.org/src/commit/?id=39f92a4c4c49)
+新的手册页 [networking(7)](https://man.freebsd.org/cgi/man.cgi?query=networking&sektion=7&format=html) 提供了连接系统到网络（含 Wi-Fi）的快速入门指南，并链接到其他手册页和手册。[39f92a4c4c49](https://cgit.freebsd.org/src/commit/?id=39f92a4c4c49)
 
 ## 关于后续 FreeBSD 版本的一般说明
 
