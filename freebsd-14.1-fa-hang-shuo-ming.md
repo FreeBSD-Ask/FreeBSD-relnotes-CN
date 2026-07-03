@@ -4,11 +4,11 @@
 
 ## 摘要
 
-FreeBSD 14.1-RELEASE 发行说明概述了由 14-STABLE 开发线衍生的 FreeBSD 基本系统之变更。本文列出了自上次发行以来针对 RELEASE 的安全公告，以及 FreeBSD 内核和用户空间发生的重大变更。本文还概述了某些升级注意事宜。
+FreeBSD 14.1-RELEASE 发行说明概述了由 14-STABLE 开发线衍生的 FreeBSD 基本系统之变更。本文列出了自上次发行以来发布的适用安全公告，以及 FreeBSD 内核和用户空间发生的重大变更。本文还概述了某些升级注意事宜。
 
 ## 引言
 
-本文档是 FreeBSD 14.1-RELEASE 的发行说明。它说明了最近增加、变更、删除的 FreeBSD 特性。它还包含了一些旧版本升级的相关注意事项。
+本文档是 FreeBSD 14.1-RELEASE 的发行说明。它说明了最近增加、变更、删除的 FreeBSD 特性。它还提供了从旧版本 FreeBSD 升级的相关说明。
 
 这些发行说明所适用的“RELEASE”发行版，代表了自 14-STABLE 分支创建以来的最新状态。有关基于此分支的预构建二进制“RELEASE”的发行信息，请访问 <https://www.FreeBSD.org/releases/>。
 
@@ -200,7 +200,7 @@ netgraph 模块 [ng_ipfw(4)](https://man.freebsd.org/cgi/man.cgi?query=ng_ipfw&s
 
 本节涉及了对物理机、hypervisors 和虚拟化环境的一般硬件支持，以及不适合归入本文档其他部分的硬件变更和更新。
 
-请查看 14.1-RELEASE [硬件支持列表](https://www.freebsd.org/releases/14.1R/hardware)，以及受支持的 CPU [架构完整列表页](https://www.freebsd.org/platforms/)。
+请查看 14.1-RELEASE [支持的硬件列表](https://www.freebsd.org/releases/14.1R/hardware)，以及[平台页面](https://www.freebsd.org/platforms/)获取受支持 CPU 架构的完整列表。
 
 ## 文档
 
