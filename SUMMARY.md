@@ -7,6 +7,13 @@
 
 * FreeBSD 15.1-RELEASE
   * [FreeBSD 15.1-RELEASE 发行说明（2026 年 6 月 16 日）](15.1.md)
+  * [FreeBSD 15.1-RELEASE 发行公告](15.1-announce.md)
+  * [FreeBSD 15.1-RELEASE 升级说明](15.1-upgrading.md)
+  * [FreeBSD 15.1-RELEASE 硬件兼容性列表](15.1-hardware.md)
+  * [FreeBSD 15.1-RELEASE 自述文件](15.1-readme.md)
+  * [FreeBSD 15.1-RELEASE 勘误](15.1-errata.md)
+  * [FreeBSD 15.1-RELEASE 签名校验文件](15.1-signatures.md)
+  * [FreeBSD 15.1-RELEASE 发布计划](15.1-schedule.md)
 * FreeBSD 14.4-RELEASE
   * [FreeBSD 14.4-RELEASE 发行说明（2026 年 3 月 10 日）](14.4.md)
 * FreeBSD 15.0-RELEASE
