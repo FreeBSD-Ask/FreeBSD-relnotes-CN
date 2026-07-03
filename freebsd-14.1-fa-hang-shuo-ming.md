@@ -118,9 +118,9 @@ Clang/LLVM 已升级至版本 18.1.5。[90a5e985e5f4](https://cgit.freebsd.org/s
 
 ## 云支持
 
-本节涉及了对云端的变更。
+本节涉及了对云环境支持的变更。
 
-14.1-RELEASE 已支持 cloudinit，包括启动脚本 `nuageinit` 以及对 `config-drive` 分区的支持。该支持能兼容 OpenStack 和许多托管设施。请参阅 [cloud-init](https://cloud-init.io/) 网站和提交信息，[16a6da44e28d](https://cgit.freebsd.org/src/commit/?id=16a6da44e28d) [227e7a205edf](https://cgit.freebsd.org/src/commit/?id=227e7a205edf)。（由 OVHCloud 赞助）
+14.1-RELEASE 支持 cloudinit，包括启动脚本 `nuageinit` 以及对 `config-drive` 分区的支持。该支持能兼容 OpenStack 和许多托管设施。请参阅 [cloud-init](https://cloud-init.io/) 网站和提交信息，[16a6da44e28d](https://cgit.freebsd.org/src/commit/?id=16a6da44e28d) [227e7a205edf](https://cgit.freebsd.org/src/commit/?id=227e7a205edf)。（由 OVHcloud 赞助）
 
 ## 内核
 
@@ -136,7 +136,7 @@ Clang/LLVM 已升级至版本 18.1.5。[90a5e985e5f4](https://cgit.freebsd.org/s
 
 ### 设备驱动程序
 
-Intel E800 系列（[ice(4)](https://man.freebsd.org/cgi/man.cgi?query=ice&sektion=4&format=html) 以太网网络控制器）已有驱动程序，该系列控制器可支持 100 Gb/s 速率。该驱动程序已升级至版本 1.39.13-k.[71d104536b51](https://cgit.freebsd.org/src/commit/?id=71d104536b51) [f6de0a7c94e9](https://cgit.freebsd.org/src/commit/?id=f6de0a7c94e9)（由 Intel Corporation 赞助）。
+Intel E800 系列（[ice(4)](https://man.freebsd.org/cgi/man.cgi?query=ice&sektion=4&format=html) 以太网网络控制器）现有驱动程序，该系列控制器可支持 100 Gb/s 速率。该驱动程序已升级至版本 1.39.13-k。[71d104536b51](https://cgit.freebsd.org/src/commit/?id=71d104536b51) [f6de0a7c94e9](https://cgit.freebsd.org/src/commit/?id=f6de0a7c94e9)（由 Intel Corporation 赞助）。
 
 英特尔 WiFi 设备的 [iwlwifi(4)](https://man.freebsd.org/cgi/man.cgi?query=iwlwifi&sektion=4&format=html) 驱动程序经过许多稳定性改进。(由 FreeBSD 基金会赞助)
 
