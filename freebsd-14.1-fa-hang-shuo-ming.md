@@ -32,7 +32,7 @@ RELEASE 版本之间（以及各种安全分支的快照）的二进制升级，
 
 ## 安全与勘误
 
-此部分列出了自 14.0-RELEASE 以降的所有安全公告和勘误通知。
+此部分列出了自 14.0-RELEASE 以来的所有安全公告和勘误通知。
 
 ### 安全公告
 
@@ -82,7 +82,7 @@ RELEASE 版本之间（以及各种安全分支的快照）的二进制升级，
 
 ### 用户空间应用程序变更
 
-由 [bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?query=bsdinstall&sektion=8&format=html) 调用的工具 [adduser(8)](https://man.freebsd.org/cgi/man.cgi?query=adduser&sektion=8&format=html)，如果父目录位于 ZFS 数据集上，现在会为新用户的家目录创建一个 ZFS 数据集。命令行参数可禁用此独立数据集。亦支持 ZFS 加密。[516009ce8d38](https://cgit.freebsd.org/src/commit/?id=516009ce8d38)
+由 [bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?query=bsdinstall&sektion=8&format=html) 调用的工具 [adduser(8)](https://man.freebsd.org/cgi/man.cgi?query=adduser&sektion=8&format=html)，如果父目录位于 ZFS 数据集上，现在会为新用户的家目录创建一个 ZFS 数据集。命令行选项可禁用此独立数据集。亦支持 ZFS 加密。[516009ce8d38](https://cgit.freebsd.org/src/commit/?id=516009ce8d38)
 
 工具 [date(1)](https://man.freebsd.org/cgi/man.cgi?query=date&sektion=1&format=html) 现在支持纳秒。例如：`date -Ins` 打印为 “2024-04-22T12:20:28,763742224+02:00”，`date +%N` 打印为 “415050400”。[eeb04a736cb9](https://cgit.freebsd.org/src/commit/?id=eeb04a736cb9)
 
@@ -132,7 +132,7 @@ Clang/LLVM 已升级至版本 18.1.5。[90a5e985e5f4](https://cgit.freebsd.org/s
 
 ## 设备与驱动
 
-本节内容涉及自 14.0-RELEASE 以降的设备和设备驱动程序的变更和增加。
+本节内容涉及自 14.0-RELEASE 以来的设备和设备驱动程序的变更和增加。
 
 ### 设备驱动程序
 
@@ -214,11 +214,11 @@ netgraph 模块 [ng_ipfw(4)](https://man.freebsd.org/cgi/man.cgi?query=ng_ipfw&s
 
 预计 FreeBSD 15.0 不会支持除 armv7 以外的 32 位平台。armv6、i386 和 powerpc 平台已弃用并将被移除。64 位系统仍可运行旧款 32 位二进制文件。
 
-预计我们将在 FreeBSD 15.0 及 stable/15 中，把 armv7 作为第二级架构。然而，我们也预计可能会在 FreeBSD 16.0 中移除 armv7。我们将在发行 15.0 时提供 armv7 在 15.x 和 16.x 中状态的相关更新。
+预计我们将在 FreeBSD 15.0 及 stable/15 中，把 armv7 作为 Tier 2 架构。然而，我们也预计可能会在 FreeBSD 16.0 中移除 armv7。我们将在发行 15.0 时提供 armv7 在 15.x 和 16.x 中状态的相关更新。
 
 对于在 64 位平台上执行 32 位二进制文件的支持（选项 **COMPAT_FREEBSD32**）将至少在 stable/15 和 stable/16 分支上延续。至少在 stable/15 分支上，还将继续支持使用 `cc -m32` 编译单个 32 位应用程序，其中包括 **/usr/include** 中的相应头文件和 **/usr/lib32** 中的库。
 
-对于 FreeBSD 15.0 及后续版本，Ports 将不再支持已弃用的 32 位平台。这些后续版本将不再支持已弃用的 32 位平台上的二进制软件包、Ports 构建软件包。
+对于 FreeBSD 15.0 及后续版本，Ports 将不再支持已弃用的 32 位平台。这些后续版本将不包含二进制软件包，也不支持从 Ports 为已弃用的 32 位平台构建软件包。
 
 FreeBSD stable/14 和更早分支将保留对现有的 32 位内核和 world 支持。只要这些分支仍受 Ports 支持，Ports 将保留对在 stable/14 和更早分支上构建 Ports 和软件包的支持。但是，所有 32 位平台都是 Tier-2 或 Tier-3，对个别 Port 的支持预计将随着上游弃用 32 位平台而降级。
 
