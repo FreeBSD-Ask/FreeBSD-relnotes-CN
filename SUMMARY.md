@@ -124,6 +124,13 @@
   * [FreeBSD 13.0-RELEASE 发布计划](13.0-schedule.md)
 * FreeBSD 12.4-RELEASE
   * [FreeBSD 12.4-RELEASE 发行说明（2022 年 12 月 5 日）](12.4.md)
+  * [FreeBSD 12.4-RELEASE 发行公告](12.4-announce.md)
+  * [FreeBSD 12.4-RELEASE 安装说明](12.4-installation.md)
+  * [FreeBSD 12.4-RELEASE 硬件兼容性列表](12.4-hardware.md)
+  * [FreeBSD 12.4-RELEASE 自述文件](12.4-readme.md)
+  * [FreeBSD 12.4-RELEASE 勘误](12.4-errata.md)
+  * [FreeBSD 12.4-RELEASE 签名校验文件](12.4-signatures.md)
+  * [FreeBSD 12.4-RELEASE 发布计划](12.4-schedule.md)
 * FreeBSD 12.3-RELEASE
   * [FreeBSD 12.3-RELEASE 发行说明（2021 年 12 月 7 日）](12.3.md)
 * FreeBSD 12.2-RELEASE
