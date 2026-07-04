@@ -28,8 +28,12 @@ FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 Fr
 
 从旧版本进行基于源代码的升级（即通过重新编译 FreeBSD 基本系统）也是支持的，请按照 **/usr/src/UPDATING** 中的说明进行。
 
+> **重要**：
+>
 > 在升级 FreeBSD 前，请确保备份了 **所有** 数据和配置文件。
 
+> **重要**：
+>
 > 在安装新的用户空间软件后，正在运行的守护进程仍然来自先前的版本。在第二次调用 `freebsd-update` 安装用户级组件，或通过源代码升级，再使用 `installworld` 命令安装后，应重启系统来启动所有新的软件。例如，较旧版本的 `sshd` 在安装新的 **/usr/sbin/sshd** 后无法正确处理传入连接；重启将启动新的 `sshd` 和其他守护进程。
 
 ## 安全与勘误
@@ -83,7 +87,7 @@ FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 Fr
 
 ### 用户空间配置变更
 
-改进了 [libtacplus(3)](https://man.freebsd.org/cgi/man.cgi?query=libtacplus&sektion=3&format=html) 库，现 [tacplus.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=tacplus.conf&sektion=5&format=html) 遵循 POSIX shell 语法规则。如果共享密钥包含单引号、双引号或反斜杠字符，且未正确引用和转义，这可能会导致 `TACACS+` 认证失败。该库现在允许配置最多 255 个附加 AV 配对。[5761f8a7de9f](https://cgit.freebsd.org/src/commit/?id=5761f8a7de9f)（由 Klara, Inc. 赞助）
+改进了 [libtacplus(3)](https://man.freebsd.org/cgi/man.cgi?query=libtacplus&sektion=3&format=html) 库，[tacplus.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=tacplus.conf&sektion=5&format=html) 现遵循 POSIX shell 语法规则。如果共享密钥包含单引号、双引号或反斜杠字符，且未正确引用和转义，这可能会导致 `TACACS+` 认证失败。该库现在允许配置最多 255 个附加 AV 配对。[5761f8a7de9f](https://cgit.freebsd.org/src/commit/?id=5761f8a7de9f)（由 Klara, Inc. 赞助）
 
 像 [login(1)](https://man.freebsd.org/cgi/man.cgi?query=login&sektion=1&format=html) 这样的程序，使用 [setusercontext(3)](https://man.freebsd.org/cgi/man.cgi?query=setusercontext&sektion=3&format=html)，现在能根据凭据从 `~/.login_conf` 文件中设置进程优先级。此外，可以在 [login.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5&format=html) 中，将优先级指定为 `inherit`，表示进程优先级将继承自父进程。同样，现在也可以将 `umask` 值指定为 `inherit`。[8b359002747a](https://cgit.freebsd.org/src/commit/?id=8b359002747a) [e074746fec21](https://cgit.freebsd.org/src/commit/?id=e074746fec21) [16e02df98ad6](https://cgit.freebsd.org/src/commit/?id=16e02df98ad6)（由 Kumacom SAS 赞助）
 
@@ -97,11 +101,11 @@ FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 Fr
 
 ### 用户空间应用程序变更
 
-[head(1)](https://man.freebsd.org/cgi/man.cgi?query=head&sektion=1&format=html) 和 [tail(1)](https://man.freebsd.org/cgi/man.cgi?query=tail&sektion=1&format=html) 程序现在一致地支持参数 `-q`（安静）和 `-v`（详细）。数字参数现在可以使用 [expand_number(3)](https://man.freebsd.org/cgi/man.cgi?query=expand_number&sektion=3&format=html) 支持的 SI 后缀。[585762c3733f](https://cgit.freebsd.org/src/commit/?id=585762c3733f)
+[head(1)](https://man.freebsd.org/cgi/man.cgi?query=head&sektion=1&format=html) 和 [tail(1)](https://man.freebsd.org/cgi/man.cgi?query=tail&sektion=1&format=html) 程序现在一致地支持 `-q`（安静）和 `-v`（详细）选项。数字参数现在可以使用 [expand_number(3)](https://man.freebsd.org/cgi/man.cgi?query=expand_number&sektion=3&format=html) 支持的 SI 后缀。[585762c3733f](https://cgit.freebsd.org/src/commit/?id=585762c3733f)
 
-LLVM 提供的 [objdump(1)](https://man.freebsd.org/cgi/man.cgi?query=objdump&sektion=1&format=html) 工具现在可用。某些 LLVM objdump 参数的输出格式与 GNU objdump 不同；可以使用 [readelf(1)](https://man.freebsd.org/cgi/man.cgi?query=readelf&sektion=1&format=html) 检查 ELF 文件，并且可以通过 Port devel/binutils 和二进制包安装 GNU objdump。
+LLVM 提供的 [objdump(1)](https://man.freebsd.org/cgi/man.cgi?query=objdump&sektion=1&format=html) 工具现在可用。某些 LLVM objdump 选项的输出格式与 GNU objdump 不同；可以使用 [readelf(1)](https://man.freebsd.org/cgi/man.cgi?query=readelf&sektion=1&format=html) 检查 ELF 文件，并且可以通过 `devel/binutils` Port 或二进制包安装 GNU objdump。
 
-[tftpd(8)](https://man.freebsd.org/cgi/man.cgi?query=tftpd&sektion=8&format=html) 服务器现在可以配置为允许在 chroot 环境中写入非世界可写的文件，使用新的 `-S` 参数。[b71dde1aeba2](https://cgit.freebsd.org/src/commit/?id=b71dde1aeba2)
+[tftpd(8)](https://man.freebsd.org/cgi/man.cgi?query=tftpd&sektion=8&format=html) 服务器现在可以配置为允许在 chroot 环境中写入非世界可写的文件，使用新的 `-S` 选项。[b71dde1aeba2](https://cgit.freebsd.org/src/commit/?id=b71dde1aeba2)
 
 ### 第三方软件
 
@@ -145,7 +149,7 @@ LLVM 提供的 [objdump(1)](https://man.freebsd.org/cgi/man.cgi?query=objdump&se
 
 `graid` 实现中的一个问题修复，该问题在使用 4 个及更多磁盘创建 Promise RAID1 时出现。该阵列仅在重启前正常工作。[394ceefc2f2f](https://cgit.freebsd.org/src/commit/?id=394ceefc2f2f)
 
-更新了 [Intel 无线接口的 iwlwifi(4) 驱动](https://man.freebsd.org/cgi/man.cgi?query=iwlwifi&sektion=4&format=html)，支持 BE200 及更高版本的芯片组。（由 FreeBSD 基金会赞助）（由 minipci.biz 赞助）
+更新了 [Intel 无线接口的 iwlwifi(4) 驱动](https://man.freebsd.org/cgi/man.cgi?query=iwlwifi&sektion=4&format=html)，支持最高至 BE200 的芯片组。（由 FreeBSD 基金会赞助）（由 minipci.biz 赞助）
 
 更新了 [Realtek 无线 PCI 接口的 rtw88(4) 驱动](https://man.freebsd.org/cgi/man.cgi?query=rtw88&sektion=4&format=html)。
 
@@ -171,7 +175,7 @@ NFS 服务器（[nfsd(8)](https://man.freebsd.org/cgi/man.cgi?query=nfsd&sektion
 
 `OpenZFS` 升级到 2.1.14 版本。[7005cd440405](https://cgit.freebsd.org/src/commit/?id=7005cd440405) [e6c1e181ba7f](https://cgit.freebsd.org/src/commit/?id=e6c1e181ba7f) [d9a61490b098](https://cgit.freebsd.org/src/commit/?id=d9a61490b098) [f5eac6541278](https://cgit.freebsd.org/src/commit/?id=f5eac6541278)
 
-守护进程 [zfsd(8)](https://man.freebsd.org/cgi/man.cgi?query=zfsd&sektion=8&format=html) 现在将故障掉生成过多 I/O 延迟事件的磁盘。[e2ce586899ff](https://cgit.freebsd.org/src/commit/?id=e2ce586899ff)（由 Axcient 赞助）
+守护进程 [zfsd(8)](https://man.freebsd.org/cgi/man.cgi?query=zfsd&sektion=8&format=html) 现在会将生成过多 I/O 延迟事件的磁盘标记为故障。[e2ce586899ff](https://cgit.freebsd.org/src/commit/?id=e2ce586899ff)（由 Axcient 赞助）
 
 ## 网络
 
