@@ -300,6 +300,13 @@
   * [FreeBSD 8.4-RELEASE 发布计划](8.4-schedule.md)
 * FreeBSD 8.3-RELEASE
   * [FreeBSD 8.3-RELEASE 发行说明（2012 年 4 月 18 日）](8.3.md)
+  * [FreeBSD 8.3-RELEASE 详细发行说明（2012 年 4 月 18 日）](8.3-relnotes-detailed.md)
+  * [FreeBSD 8.3-RELEASE 发行公告](8.3-announce.md)
+  * [FreeBSD 8.3-RELEASE 安装说明](8.3-installation.md)
+  * [FreeBSD 8.3-RELEASE 硬件兼容性列表](8.3-hardware.md)
+  * [FreeBSD 8.3-RELEASE 自述文件](8.3-readme.md)
+  * [FreeBSD 8.3-RELEASE 勘误](8.3-errata.md)
+  * [FreeBSD 8.3-RELEASE 发布计划](8.3-schedule.md)
 * FreeBSD 8.2-RELEASE
   * [FreeBSD 8.2-RELEASE 发行说明（2011 年 2 月 24 日）](8.2.md)
 * FreeBSD 8.1-RELEASE
