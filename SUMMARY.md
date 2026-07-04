@@ -205,10 +205,31 @@
   * [FreeBSD 11.1-RELEASE 发布计划](11.1-schedule.md)
 * FreeBSD 11.0-RELEASE
   * [FreeBSD 11.0-RELEASE 发行说明（2016 年 10 月 10 日）](11.0.md)
+  * [FreeBSD 11.0-RELEASE 发行公告](11.0-announce.md)
+  * [FreeBSD 11.0-RELEASE 安装说明](11.0-installation.md)
+  * [FreeBSD 11.0-RELEASE 硬件兼容性列表](11.0-hardware.md)
+  * [FreeBSD 11.0-RELEASE 自述文件](11.0-readme.md)
+  * [FreeBSD 11.0-RELEASE 勘误](11.0-errata.md)
+  * [FreeBSD 11.0-RELEASE 签名校验文件](11.0-signatures.md)
+  * [FreeBSD 11.0-RELEASE 发布计划](11.0-schedule.md)
 * FreeBSD 10.4-RELEASE
   * [FreeBSD 10.4-RELEASE 发行说明（2017 年 10 月 3 日）](10.4.md)
+  * [FreeBSD 10.4-RELEASE 发行公告](10.4-announce.md)
+  * [FreeBSD 10.4-RELEASE 安装说明](10.4-installation.md)
+  * [FreeBSD 10.4-RELEASE 硬件兼容性列表](10.4-hardware.md)
+  * [FreeBSD 10.4-RELEASE 自述文件](10.4-readme.md)
+  * [FreeBSD 10.4-RELEASE 勘误](10.4-errata.md)
+  * [FreeBSD 10.4-RELEASE 签名校验文件](10.4-signatures.md)
+  * [FreeBSD 10.4-RELEASE 发布计划](10.4-schedule.md)
 * FreeBSD 10.3-RELEASE
   * [FreeBSD 10.3-RELEASE 发行说明（2016 年 4 月 4 日）](10.3.md)
+  * [FreeBSD 10.3-RELEASE 发行公告](10.3-announce.md)
+  * [FreeBSD 10.3-RELEASE 安装说明](10.3-installation.md)
+  * [FreeBSD 10.3-RELEASE 硬件兼容性列表](10.3-hardware.md)
+  * [FreeBSD 10.3-RELEASE 自述文件](10.3-readme.md)
+  * [FreeBSD 10.3-RELEASE 勘误](10.3-errata.md)
+  * [FreeBSD 10.3-RELEASE 签名校验文件](10.3-signatures.md)
+  * [FreeBSD 10.3-RELEASE 发布计划](10.3-schedule.md)
 * FreeBSD 10.2-RELEASE
   * [FreeBSD 10.2-RELEASE 发行说明（2015 年 8 月 13 日）](10.2.md)
 * FreeBSD 10.1-RELEASE
