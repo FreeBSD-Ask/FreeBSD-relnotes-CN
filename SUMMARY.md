@@ -282,8 +282,22 @@
   * [FreeBSD 9.1-RELEASE 发布计划](9.1-schedule.md)
 * FreeBSD 9.0-RELEASE
   * [FreeBSD 9.0-RELEASE 发行说明（2012 年 1 月 12 日）](9.0.md)
+  * [FreeBSD 9.0-RELEASE 详细发行说明（2012 年 1 月 12 日）](9.0-relnotes-detailed.md)
+  * [FreeBSD 9.0-RELEASE 发行公告](9.0-announce.md)
+  * [FreeBSD 9.0-RELEASE 安装说明](9.0-installation.md)
+  * [FreeBSD 9.0-RELEASE 硬件兼容性列表](9.0-hardware.md)
+  * [FreeBSD 9.0-RELEASE 自述文件](9.0-readme.md)
+  * [FreeBSD 9.0-RELEASE 勘误](9.0-errata.md)
+  * [FreeBSD 9.0-RELEASE 发布计划](9.0-schedule.md)
 * FreeBSD 8.4-RELEASE
   * [FreeBSD 8.4-RELEASE 发行说明（2013 年 6 月 7 日）](8.4.md)
+  * [FreeBSD 8.4-RELEASE 详细发行说明（2013 年 6 月 7 日）](8.4-relnotes-detailed.md)
+  * [FreeBSD 8.4-RELEASE 发行公告](8.4-announce.md)
+  * [FreeBSD 8.4-RELEASE 安装说明](8.4-installation.md)
+  * [FreeBSD 8.4-RELEASE 硬件兼容性列表](8.4-hardware.md)
+  * [FreeBSD 8.4-RELEASE 自述文件](8.4-readme.md)
+  * [FreeBSD 8.4-RELEASE 勘误](8.4-errata.md)
+  * [FreeBSD 8.4-RELEASE 发布计划](8.4-schedule.md)
 * FreeBSD 8.3-RELEASE
   * [FreeBSD 8.3-RELEASE 发行说明（2012 年 4 月 18 日）](8.3.md)
 * FreeBSD 8.2-RELEASE
