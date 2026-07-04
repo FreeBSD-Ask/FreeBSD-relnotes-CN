@@ -196,6 +196,13 @@
   * [FreeBSD 11.2-RELEASE 发布计划](11.2-schedule.md)
 * FreeBSD 11.1-RELEASE
   * [FreeBSD 11.1-RELEASE 发行说明（2017 年 7 月 26 日）](11.1.md)
+  * [FreeBSD 11.1-RELEASE 发行公告](11.1-announce.md)
+  * [FreeBSD 11.1-RELEASE 安装说明](11.1-installation.md)
+  * [FreeBSD 11.1-RELEASE 硬件兼容性列表](11.1-hardware.md)
+  * [FreeBSD 11.1-RELEASE 自述文件](11.1-readme.md)
+  * [FreeBSD 11.1-RELEASE 勘误](11.1-errata.md)
+  * [FreeBSD 11.1-RELEASE 签名校验文件](11.1-signatures.md)
+  * [FreeBSD 11.1-RELEASE 发布计划](11.1-schedule.md)
 * FreeBSD 11.0-RELEASE
   * [FreeBSD 11.0-RELEASE 发行说明（2016 年 10 月 10 日）](11.0.md)
 * FreeBSD 10.4-RELEASE
