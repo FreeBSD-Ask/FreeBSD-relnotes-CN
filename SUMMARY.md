@@ -273,6 +273,13 @@
   * [FreeBSD 9.2-RELEASE 发布计划](9.2-schedule.md)
 * FreeBSD 9.1-RELEASE
   * [FreeBSD 9.1-RELEASE 发行说明（2012 年 12 月 30 日）](9.1.md)
+  * [FreeBSD 9.1-RELEASE 详细发行说明（2012 年 12 月 30 日）](9.1-relnotes-detailed.md)
+  * [FreeBSD 9.1-RELEASE 发行公告](9.1-announce.md)
+  * [FreeBSD 9.1-RELEASE 安装说明](9.1-installation.md)
+  * [FreeBSD 9.1-RELEASE 硬件兼容性列表](9.1-hardware.md)
+  * [FreeBSD 9.1-RELEASE 自述文件](9.1-readme.md)
+  * [FreeBSD 9.1-RELEASE 勘误](9.1-errata.md)
+  * [FreeBSD 9.1-RELEASE 发布计划](9.1-schedule.md)
 * FreeBSD 9.0-RELEASE
   * [FreeBSD 9.0-RELEASE 发行说明（2012 年 1 月 12 日）](9.0.md)
 * FreeBSD 8.4-RELEASE
