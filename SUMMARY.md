@@ -151,8 +151,22 @@
   * [FreeBSD 12.2-RELEASE 发布计划](12.2-schedule.md)
 * FreeBSD 12.1-RELEASE
   * [FreeBSD 12.1-RELEASE 发行说明（2019 年 11 月 4 日）](12.1.md)
+  * [FreeBSD 12.1-RELEASE 发行公告](12.1-announce.md)
+  * [FreeBSD 12.1-RELEASE 安装说明](12.1-installation.md)
+  * [FreeBSD 12.1-RELEASE 硬件兼容性列表](12.1-hardware.md)
+  * [FreeBSD 12.1-RELEASE 自述文件](12.1-readme.md)
+  * [FreeBSD 12.1-RELEASE 勘误](12.1-errata.md)
+  * [FreeBSD 12.1-RELEASE 签名校验文件](12.1-signatures.md)
+  * [FreeBSD 12.1-RELEASE 发布计划](12.1-schedule.md)
 * FreeBSD 12.0-RELEASE
   * [FreeBSD 12.0-RELEASE 发行说明（2018 年 12 月 11 日）](12.0.md)
+  * [FreeBSD 12.0-RELEASE 发行公告](12.0-announce.md)
+  * [FreeBSD 12.0-RELEASE 安装说明](12.0-installation.md)
+  * [FreeBSD 12.0-RELEASE 硬件兼容性列表](12.0-hardware.md)
+  * [FreeBSD 12.0-RELEASE 自述文件](12.0-readme.md)
+  * [FreeBSD 12.0-RELEASE 勘误](12.0-errata.md)
+  * [FreeBSD 12.0-RELEASE 签名校验文件](12.0-signatures.md)
+  * [FreeBSD 12.0-RELEASE 发布计划](12.0-schedule.md)
 * FreeBSD 11.4-RELEASE
   * [FreeBSD 11.4-RELEASE 发行说明（2020 年 6 月 23 日）](11.4.md)
 * FreeBSD 11.3-RELEASE
