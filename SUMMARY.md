@@ -309,8 +309,20 @@
   * [FreeBSD 8.3-RELEASE 发布计划](8.3-schedule.md)
 * FreeBSD 8.2-RELEASE
   * [FreeBSD 8.2-RELEASE 发行说明（2011 年 2 月 24 日）](8.2.md)
+  * [FreeBSD 8.2-RELEASE 详细发行说明（2011 年 2 月 24 日）](8.2-relnotes-detailed.md)
+  * [FreeBSD 8.2-RELEASE 发行公告](8.2-announce.md)
+  * [FreeBSD 8.2-RELEASE 硬件兼容性列表](8.2-hardware.md)
+  * [FreeBSD 8.2-RELEASE 自述文件](8.2-readme.md)
+  * [FreeBSD 8.2-RELEASE 勘误](8.2-errata.md)
+  * [FreeBSD 8.2-RELEASE 发布计划](8.2-schedule.md)
 * FreeBSD 8.1-RELEASE
   * [FreeBSD 8.1-RELEASE 发行说明（2010 年 7 月 23 日）](8.1.md)
+  * [FreeBSD 8.1-RELEASE 详细发行说明（2010 年 7 月 23 日）](8.1-relnotes-detailed.md)
+  * [FreeBSD 8.1-RELEASE 发行公告](8.1-announce.md)
+  * [FreeBSD 8.1-RELEASE 硬件兼容性列表](8.1-hardware.md)
+  * [FreeBSD 8.1-RELEASE 自述文件](8.1-readme.md)
+  * [FreeBSD 8.1-RELEASE 勘误](8.1-errata.md)
+  * [FreeBSD 8.1-RELEASE 发布计划](8.1-schedule.md)
 * FreeBSD 8.0-RELEASE
   * [FreeBSD 8.0-RELEASE 发行说明（2009 年 11 月 25 日）](8.0.md)
 * FreeBSD 7.4-RELEASE
