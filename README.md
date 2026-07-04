@@ -1,16 +1,12 @@
 # FreeBSD 中文版发行说明
 
+本项目所有内容均经校对与审阅。本翻译项目遵循 [BSD 2-Clause 许可证](LICENSE)。
+
 > **技巧**
 >
 > 那些关注实时开发状态或使用 CURRENT 的用户应该关注 [freebsd-src/UPDATING](https://github.com/freebsd/freebsd-src/blob/main/UPDATING) 及 [freebsd-src/RELNOTES](https://github.com/freebsd/freebsd-src/blob/main/RELNOTES)。
 >
 > 否则仅建议你使用在生命周期内最新的 RELEASE 版本。
-
-> **警告**
->
-> 除已校对部分外，本项目目前翻译错漏百出，不适合用于生产。但译者已经尽力修正。
->
-> 本项目目前处于低维护状态，主要维护者因精力所限仅处理 PR。欢迎社区通过 PR 贡献力量。
 
 镜像实时构建状态：
 
