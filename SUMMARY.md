@@ -187,6 +187,13 @@
   * [FreeBSD 11.3-RELEASE 发布计划](11.3-schedule.md)
 * FreeBSD 11.2-RELEASE
   * [FreeBSD 11.2-RELEASE 发行说明（2018 年 6 月 28 日）](11.2.md)
+  * [FreeBSD 11.2-RELEASE 发行公告](11.2-announce.md)
+  * [FreeBSD 11.2-RELEASE 安装说明](11.2-installation.md)
+  * [FreeBSD 11.2-RELEASE 硬件兼容性列表](11.2-hardware.md)
+  * [FreeBSD 11.2-RELEASE 自述文件](11.2-readme.md)
+  * [FreeBSD 11.2-RELEASE 勘误](11.2-errata.md)
+  * [FreeBSD 11.2-RELEASE 签名校验文件](11.2-signatures.md)
+  * [FreeBSD 11.2-RELEASE 发布计划](11.2-schedule.md)
 * FreeBSD 11.1-RELEASE
   * [FreeBSD 11.1-RELEASE 发行说明（2017 年 7 月 26 日）](11.1.md)
 * FreeBSD 11.0-RELEASE
