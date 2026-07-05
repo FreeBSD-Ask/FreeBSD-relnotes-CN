@@ -68,6 +68,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **避免欧化汉语：** 倒装句、后置句、偷换主语、不必要的被动句应改为地道汉语表述。
 - **禁止篡改：** 不要篡改软件版本号、用户名、带圈数字（如 ①②③ 等），确保其位置、数量和英语原文一致。
 - **避免章节交叉引用：** 正文不要出现具体的章节交叉引用（如"参见第 5 章"），改用语义化链接。
+- **内部锚点改外链：** 英文原文中的 HTML 锚点（如 `#ETHERNET`、`#BLUETOOTH`、`#INTRO` 等）在 Markdown 翻译中不存在对应锚点，必须改为指向 FreeBSD 官方网站对应页面的外链。URL 格式为 `https://www.freebsd.org/releases/<版本>R/<文档类型>.html#<锚点>`（如 `https://www.freebsd.org/releases/7.1R/hardware.html#ETHERNET`）。逐个手动修改，禁止批量替换。
 - **代码块注释翻译：** 代码块（` ``` ` 围栏）内的英文注释必须翻译为中文（如 shell 注释 `# This is a comment` → `# 这是一个注释`）。只翻译注释部分，不修改实际命令或代码。保持代码结构和格式不变。
 - **fstab 不翻译：** fstab 文件表头（如 `# Device Mountpoint FStype Options Dump Pass#`）及其相关内容保持英文原样，不翻译。
 
