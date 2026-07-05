@@ -143,7 +143,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `announce.adoc` → 发行公告
 - `relnotes.adoc` → 发行说明（通常已有翻译）
 - `installation.adoc` → 安装说明
-- `hardware.adoc` → 硬件兼容性列表
+- `hardware.adoc` → 硬件兼容列表
 - `readme.adoc` → 自述文件
 - `errata.adoc` → 勘误
 - `signatures.adoc` → 签名校验文件
@@ -173,7 +173,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - 每个发行版作为父级章节（无链接的 GitBook 分类标签），命名为 `FreeBSD <版本>-RELEASE`
 - 父级章节下列出该发行版的所有文档子项
 - 既有文件的 SUMMARY.md 条目文本保持不变（以保留 H1 不被 CI 覆盖）
-- 新增文档按以下顺序排列：发行说明（relnotes）→ 发行公告（announce）→ 安装说明（installation）→ 硬件兼容性列表（hardware）→ 自述文件（readme）→ 勘误（errata）→ 签名校验文件（signatures）→ 发布计划（schedule）
+- 新增文档按以下顺序排列：发行说明（relnotes）→ 发行公告（announce）→ 安装说明（installation）→ 硬件兼容列表（hardware）→ 自述文件（readme）→ 勘误（errata）→ 签名校验文件（signatures）→ 发布计划（schedule）
 
 ## Lint 配置
 
