@@ -325,10 +325,28 @@
   * [FreeBSD 8.1-RELEASE 发布计划](8.1-schedule.md)
 * FreeBSD 8.0-RELEASE
   * [FreeBSD 8.0-RELEASE 发行说明（2009 年 11 月 25 日）](8.0.md)
+  * [FreeBSD 8.0-RELEASE 详细发行说明（2009 年 11 月 25 日）](8.0-relnotes-detailed.md)
+  * [FreeBSD 8.0-RELEASE 发行公告](8.0-announce.md)
+  * [FreeBSD 8.0-RELEASE 硬件兼容性列表](8.0-hardware.md)
+  * [FreeBSD 8.0-RELEASE 自述文件](8.0-readme.md)
+  * [FreeBSD 8.0-RELEASE 勘误](8.0-errata.md)
+  * [FreeBSD 8.0-RELEASE 发布计划](8.0-schedule.md)
+  * [FreeBSD 8.0-RELEASE 新闻稿](8.0-pressrelease.md)
 * FreeBSD 7.4-RELEASE
   * [FreeBSD 7.4-RELEASE 发行说明（2011 年 2 月 24 日）](7.4.md)
+  * [FreeBSD 7.4-RELEASE 发行公告](7.4-announce.md)
+  * [FreeBSD 7.4-RELEASE 硬件兼容性列表](7.4-hardware.md)
+  * [FreeBSD 7.4-RELEASE 自述文件](7.4-readme.md)
+  * [FreeBSD 7.4-RELEASE 勘误](7.4-errata.md)
+  * [FreeBSD 7.4-RELEASE 发布计划](7.4-schedule.md)
 * FreeBSD 7.3-RELEASE
   * [FreeBSD 7.3-RELEASE 发行说明（2010 年 3 月 23 日）](7.3.md)
+  * [FreeBSD 7.3-RELEASE 详细发行说明](7.3-relnotes-detailed.md)
+  * [FreeBSD 7.3-RELEASE 发行公告](7.3-announce.md)
+  * [FreeBSD 7.3-RELEASE 硬件兼容性列表](7.3-hardware.md)
+  * [FreeBSD 7.3-RELEASE 自述文件](7.3-readme.md)
+  * [FreeBSD 7.3-RELEASE 勘误](7.3-errata.md)
+  * [FreeBSD 7.3-RELEASE 发布计划](7.3-schedule.md)
 * FreeBSD 7.2-RELEASE
   * [FreeBSD 7.2-RELEASE 发行说明（2009 年 5 月 4 日）](7.2.md)
 * FreeBSD 7.1-RELEASE
