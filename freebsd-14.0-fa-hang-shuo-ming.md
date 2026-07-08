@@ -399,9 +399,9 @@ NFS 现在支持在 VNET Jail 中运行 NFS 服务器，包括 [nfsd(8)](https:/
 
 FreeBSD NFS 客户端现在可以设置为使用 1M 字节的 I/O 大小，通过可调参数 `vfs.maxbcachebuf`；Linux NFS 客户端也可以进行 1M 字节的 I/O。需要增加 `kern.ipc.maxsockbuf` 的值。控制台消息将建议相应的设置。请注意，在 [nfsd(8)](https://man.freebsd.org/cgi/man.cgi?query=nfsd&sektion=8&format=html) 未运行时，可以通过 sysctl `vfs.nfsd.srvmaxio` 将 FreeBSD NFS 服务器的最大 I/O 大小增加到任何 2 的幂次方，最多为 1M 字节。[ee29e6f31111](https://cgit.freebsd.org/src/commit/?id=ee29e6f31111)
 
-如果会话中断，NFSv4.1/4.2 客户端和服务器现在将生成控制台消息，建议用户检查并确保 **/etc/hostid** 中的值对所有 NFSv4.1/4.2 客户端都是唯一的。[b875d4f5ddcb](https://cgit.freebsd.org/src/commit/?id=b875d4f5ddcb)[0685c73cfe88](https://cgit.freebsd.org/src/commit/?id=0685c73cfe88)
+如果会话中断，NFSv4.1/4.2 客户端和服务器现在将生成控制台消息，建议用户检查并确保 **/etc/hostid** 中的值对所有 NFSv4.1/4.2 客户端都是唯一的。[b875d4f5ddcb](https://cgit.freebsd.org/src/commit/?id=b875d4f5ddcb) [0685c73cfe88](https://cgit.freebsd.org/src/commit/?id=0685c73cfe88)
 
-NFSv4.1/4.2 挂载在使用 `intr` 挂载参数时现在基本可用（尽管不是 100% 正确），前提是同时使用 `nolockd` 挂载参数。详细信息，请参见手册页 [mount_nfs(8)](https://man.freebsd.org/cgi/man.cgi?query=mount_nfs&sektion=8&format=html)。[981ef32230b2](https://cgit.freebsd.org/src/commit/?id=981ef32230b2)[33721eb991d8](https://cgit.freebsd.org/src/commit/?id=33721eb991d8)
+NFSv4.1/4.2 挂载在使用 `intr` 挂载参数时现在基本可用（尽管不是 100% 正确），前提是同时使用 `nolockd` 挂载参数。详细信息，请参见手册页 [mount_nfs(8)](https://man.freebsd.org/cgi/man.cgi?query=mount_nfs&sektion=8&format=html)。[981ef32230b2](https://cgit.freebsd.org/src/commit/?id=981ef32230b2) [33721eb991d8](https://cgit.freebsd.org/src/commit/?id=33721eb991d8)
 
 对于 Kerberized NFSv4.1/4.2 挂载，现在可以使用新的挂载参数 `syskrb5`。NFSv4.1/4.2 的一个特性用于提供 `AUTH_SYS` 身份验证，因此在挂载时不需要 Kerberos 凭证。请参见 [mount_nfs(8)](https://man.freebsd.org/cgi/man.cgi?query=mount_nfs&sektion=8&format=html)。[896516e54a8c](https://cgit.freebsd.org/src/commit/?id=896516e54a8c)
 
