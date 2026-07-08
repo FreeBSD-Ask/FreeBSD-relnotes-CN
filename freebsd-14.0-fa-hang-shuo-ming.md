@@ -203,9 +203,9 @@ root 用户的默认 shell 现在是 [sh(1)](https://man.freebsd.org/cgi/man.cgi
 
 [pw(8)](https://man.freebsd.org/cgi/man.cgi?query=pw&sektion=8&format=html) 和 [bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?query=bsdinstall&sektion=8&format=html) 程序现在默认在 **/home** 中为用户创建家目录，而非 **/usr/home**。**/home** 的默认符号链接（即指向 **/usr/home**）不再被创建。[bbb2d2ce4220](https://cgit.freebsd.org/src/commit/?id=bbb2d2ce4220)
 
-[sleep(1)](https://man.freebsd.org/cgi/man.cgi?query=sleep&sektion=1&format=html) 工具现在接受单位为秒以外的值，并接受多个将被求和的延迟值（例如，`1h 30m`）。[34978f7edd15](https://cgit.freebsd.org/src/commit/?id=34978f7edd15)[be038c3afcae](https://cgit.freebsd.org/src/commit/?id=be038c3afcae)
+[sleep(1)](https://man.freebsd.org/cgi/man.cgi?query=sleep&sektion=1&format=html) 工具现在接受单位为秒以外的值，并接受多个将被求和的延迟值（例如，`1h 30m`）。[34978f7edd15](https://cgit.freebsd.org/src/commit/?id=34978f7edd15) [be038c3afcae](https://cgit.freebsd.org/src/commit/?id=be038c3afcae)
 
-[sockstat(1)](https://man.freebsd.org/cgi/man.cgi?query=sockstat&sektion=1&format=html) 工具现在在 capsicum 中运行。[94dc57159532](https://cgit.freebsd.org/src/commit/?id=94dc57159532)[c5a2d8c5f517](https://cgit.freebsd.org/src/commit/?id=c5a2d8c5f517)
+[sockstat(1)](https://man.freebsd.org/cgi/man.cgi?query=sockstat&sektion=1&format=html) 工具现在在 capsicum 中运行。[94dc57159532](https://cgit.freebsd.org/src/commit/?id=94dc57159532) [c5a2d8c5f517](https://cgit.freebsd.org/src/commit/?id=c5a2d8c5f517)
 
 [systat(1)](https://man.freebsd.org/cgi/man.cgi?query=systat&sektion=1&format=html) 工具有新命令 `iolat`，可报告由 CAM I/O 调度器计算的 I/O 延迟。[22054f88914b](https://cgit.freebsd.org/src/commit/?id=22054f88914b)（由 Netflix 赞助）
 
@@ -221,13 +221,13 @@ Telnet 守护进程，[telnetd(8)](https://man.freebsd.org/cgi/man.cgi?query=tel
 
 ### 第三方软件
 
-**One True Awk**（[awk(1)](https://man.freebsd.org/cgi/man.cgi?query=awk&sektion=1&format=html)）已更新到 20210727，这是第 1 版。（第 2 版将包含在 14.1-RELEASE 中。）现在除一个 FreeBSD 补丁外，所有的 FreeBSD 补丁都已被上游采纳或丢弃。值得注意的变化包括：不再使用地区（locale）进行范围选择；与 `gawk` 和 `mawk` 有更好的兼容性。请注意，十六进制字符串与早期的 FreeBSD 版本一样被解释为数字。这将在 FreeBSD 15 中变更以符合上游和当前的 POSIX 标准。[f39dd6a97844](https://cgit.freebsd.org/src/commit/?id=f39dd6a97844)[23f24377b1a9](https://cgit.freebsd.org/src/commit/?id=23f24377b1a9)[628bd30ab5a4](https://cgit.freebsd.org/src/commit/?id=628bd30ab5a4)
+**One True Awk**（[awk(1)](https://man.freebsd.org/cgi/man.cgi?query=awk&sektion=1&format=html)）已更新到 20210727，这是第 1 版。（第 2 版将包含在 14.1-RELEASE 中。）现在除一个 FreeBSD 补丁外，所有的 FreeBSD 补丁都已被上游采纳或丢弃。值得注意的变化包括：不再使用地区（locale）进行范围选择；与 `gawk` 和 `mawk` 有更好的兼容性。请注意，十六进制字符串与早期的 FreeBSD 版本一样被解释为数字。这将在 FreeBSD 15 中变更以符合上游和当前的 POSIX 标准。[f39dd6a97844](https://cgit.freebsd.org/src/commit/?id=f39dd6a97844) [23f24377b1a9](https://cgit.freebsd.org/src/commit/?id=23f24377b1a9) [628bd30ab5a4](https://cgit.freebsd.org/src/commit/?id=628bd30ab5a4)
 
 [bc(1)](https://man.freebsd.org/cgi/man.cgi?query=bc&sektion=1&format=html) 和 [dc(1)](https://man.freebsd.org/cgi/man.cgi?query=dc&sektion=1&format=html) 命令已更新到版本 6.6.0，修复了与行编辑和包含多个 read() 命令的复杂脚本的问题，并在 `bc` 的（非标准）扩展数学库中添加了一些功能。
 
 **libbsdxml**（`expat`，[libbsdxml(3)](https://man.freebsd.org/cgi/man.cgi?query=libbsdxml&sektion=3&format=html)）已升级到版本 2.4.7。[7ed8e142a00d](https://cgit.freebsd.org/src/commit/?id=7ed8e142a00d)
 
-**libfido2** 已升级到版本 1.13.0。[f540a43052c1](https://cgit.freebsd.org/src/commit/?id=f540a43052c1)[3e696dfb7009](https://cgit.freebsd.org/src/commit/?id=3e696dfb7009)[95321fff46ec](https://cgit.freebsd.org/src/commit/?id=95321fff46ec)（由 FreeBSD 基金会赞助）
+**libfido2** 已升级到版本 1.13.0。[f540a43052c1](https://cgit.freebsd.org/src/commit/?id=f540a43052c1) [3e696dfb7009](https://cgit.freebsd.org/src/commit/?id=3e696dfb7009) [95321fff46ec](https://cgit.freebsd.org/src/commit/?id=95321fff46ec)（由 FreeBSD 基金会赞助）
 
 [llvm-objdump(1)](https://man.freebsd.org/cgi/man.cgi?query=llvm-objdump&sektion=1&format=html) 工具现在始终作为 [objdump(1)](https://man.freebsd.org/cgi/man.cgi?query=objdump&sektion=1&format=html) 安装。[86edb11e7491](https://cgit.freebsd.org/src/commit/?id=86edb11e7491)（由 FreeBSD 基金会赞助）
 
@@ -237,15 +237,15 @@ Telnet 守护进程，[telnetd(8)](https://man.freebsd.org/cgi/man.cgi?query=tel
 
 默认情况下，在 [ssh(1)](https://man.freebsd.org/cgi/man.cgi?query=ssh&sektion=1&format=html) 中禁用了 RSA/SHA-1 签名。可以在用户的 **~/.ssh/config** 文件中按主机启用它们。[8c22023ca5e1](https://cgit.freebsd.org/src/commit/?id=8c22023ca5e1)（由 FreeBSD 基金会赞助）
 
-对于 [ssh(1)](https://man.freebsd.org/cgi/man.cgi?query=ssh&sektion=1&format=html)，`VerifyHostKeyDNS` 参数现在默认为 `no`，与 OpenSSH 默认发行一致。`X11Forwarding` 参数也默认为 `no`。[41ff5ea22cb9](https://cgit.freebsd.org/src/commit/?id=41ff5ea22cb9)[77934b7a1301](https://cgit.freebsd.org/src/commit/?id=77934b7a1301)（由 FreeBSD 基金会赞助）
+对于 [ssh(1)](https://man.freebsd.org/cgi/man.cgi?query=ssh&sektion=1&format=html)，`VerifyHostKeyDNS` 参数现在默认为 `no`，与 OpenSSH 默认发行一致。`X11Forwarding` 参数也默认为 `no`。[41ff5ea22cb9](https://cgit.freebsd.org/src/commit/?id=41ff5ea22cb9) [77934b7a1301](https://cgit.freebsd.org/src/commit/?id=77934b7a1301)（由 FreeBSD 基金会赞助）
 
 从 OpenSSH 中删除了 HPN 参数处理。HPN 支持很久以前就已经弃用，但配置参数仍然被接受（并被忽略）以保持向后兼容性。[348bea10b6f2](https://cgit.freebsd.org/src/commit/?id=348bea10b6f2)（由 FreeBSD 基金会赞助）
 
 从 [ssh(1)](https://man.freebsd.org/cgi/man.cgi?query=ssh&sektion=1&format=html) 客户端中删除了参数 `VersionAddendum`。[bffe60ead024](https://cgit.freebsd.org/src/commit/?id=bffe60ead024)（由 FreeBSD 基金会赞助）
 
-**OpenSSL** 已升级到版本 3.0.12。这是从版本 1.1.1 的重大升级，而 1.1.1 已到达其生命周期的终点。基本系统的许多组件使用向后兼容的 API，但稍后将进行迁移。[aa7957345732](https://cgit.freebsd.org/src/commit/?id=aa7957345732)[930cec16d9ee](https://cgit.freebsd.org/src/commit/?id=930cec16d9ee)[b077aed33b7b](https://cgit.freebsd.org/src/commit/?id=b077aed33b7b)（由 FreeBSD 基金会赞助）
+**OpenSSL** 已升级到版本 3.0.12。这是从版本 1.1.1 的重大升级，而 1.1.1 已到达其生命周期的终点。基本系统的许多组件使用向后兼容的 API，但稍后将进行迁移。[aa7957345732](https://cgit.freebsd.org/src/commit/?id=aa7957345732) [930cec16d9ee](https://cgit.freebsd.org/src/commit/?id=930cec16d9ee) [b077aed33b7b](https://cgit.freebsd.org/src/commit/?id=b077aed33b7b)（由 FreeBSD 基金会赞助）
 
-**tcpdump** 已升级到版本 4.99.4。[ee67461e5682](https://cgit.freebsd.org/src/commit/?id=ee67461e5682)[171a7bbfc048](https://cgit.freebsd.org/src/commit/?id=171a7bbfc048)[1ad8d2ee1f7d](https://cgit.freebsd.org/src/commit/?id=1ad8d2ee1f7d)（由 FreeBSD 基金会赞助）
+**tcpdump** 已升级到版本 4.99.4。[ee67461e5682](https://cgit.freebsd.org/src/commit/?id=ee67461e5682) [171a7bbfc048](https://cgit.freebsd.org/src/commit/?id=171a7bbfc048) [1ad8d2ee1f7d](https://cgit.freebsd.org/src/commit/?id=1ad8d2ee1f7d)（由 FreeBSD 基金会赞助）
 
 **libpcap** 已升级到版本 1.10.4。[6f9cba8f8b5e](https://cgit.freebsd.org/src/commit/?id=6f9cba8f8b5e)[dd744a896be3](https://cgit.freebsd.org/src/commit/?id=dd744a896be3)（由 FreeBSD 基金会赞助）
 
