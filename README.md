@@ -42,24 +42,18 @@
 
 ## 平台支持
 
-| 平台名称 | 目标架构 | 13.x [支持等级](https://docs.freebsd.org/en/articles/committers-guide/#archs) | 14.x [支持等级](https://docs.freebsd.org/en/articles/committers-guide/#archs) | 15.x [支持等级](https://docs.freebsd.org/en/articles/committers-guide/#archs) | 预计 16.x [支持等级](https://docs.freebsd.org/en/articles/committers-guide/#archs) |
-| :------: | :------: | :---------------------------------------------------------------------------: | :---------------------------------------------------------------------------: | :---------------------------------------------------------------------------: | :--------------------------------------------------------------------------------: |
-| 64 位 x86 | [amd64](https://www.freebsd.org/platforms/amd64) | 一级 | 一级 | 一级 | 一级 |
-| 32 位 x86 | [i386](https://www.freebsd.org/platforms/i386) | 二级 | 二级 | 不支持 | 不支持 |
-| 64 位 ARMv8 | [aarch64](https://www.freebsd.org/platforms/arm) | 一级 | 一级 | 一级 | 一级 |
-| 32 位 ARMv6 | [armv6](https://www.freebsd.org/platforms/arm) | 二级 | 三级 | 不支持 | 不支持 |
-| 32 位 ARMv7 | [armv7](https://www.freebsd.org/platforms/arm) | 二级 | 二级 | 二级 | 二级 |
-| 32 位 MIPS 软浮点 | [mips, mipsel](https://www.freebsd.org/platforms/mips) | 二级 | 不支持 | 不支持 | 不支持 |
-| 32 位 MIPS 硬浮点 | [mipshf, mipselhf](https://www.freebsd.org/platforms/mips) | 二级 | 不支持 | 不支持 | 不支持 |
-| 32 位 MIPS n32 | [mipsn32](https://www.freebsd.org/platforms/mips) | 二级 | 不支持 | 不支持 | 不支持 |
-| 64 位 MIPS 软浮点 | [mips64, mips64el](https://www.freebsd.org/platforms/mips) | 二级 | 不支持 | 不支持 | 不支持 |
-| 64 位 MIPS 硬浮点 | [mips64hf, mips64elhf](https://www.freebsd.org/platforms/mips) | 二级 | 不支持 | 不支持 | 不支持 |
-| 32 位 PowerPC | [powerpc](https://www.freebsd.org/platforms/ppc) | 二级 | 二级 | 不支持 | 不支持 |
-| 带 SPE 的 32 位 PowerPC | [powerpcspe](https://www.freebsd.org/platforms/ppc) | 二级 | 二级 | 不支持 | 不支持 |
-| 64 位 PowerPC 大端序 | [powerpc64](https://www.freebsd.org/platforms/ppc) | 二级 | 二级 | 二级 | 二级 |
-| 64 位 PowerPC 小端序 | [powerpc64le](https://www.freebsd.org/platforms/ppc) | 二级 | 二级 | 二级 | 二级 |
-| 64 位 RISC-V | [riscv64](https://wiki.freebsd.org/riscv) | 二级 | 二级 | 二级 | 二级 |
-| 64 位 RISC-V 软浮点 | [riscv64sf](https://wiki.freebsd.org/riscv) | 二级 | 不支持 | 不支持 | 不支持 |
+| 平台名称 | 目标架构 | 14.x [支持等级](https://docs.freebsd.org/en/articles/committers-guide/#archs) | 15.x [支持等级](https://docs.freebsd.org/en/articles/committers-guide/#archs) | 预计 16.x [支持等级](https://docs.freebsd.org/en/articles/committers-guide/#archs) |
+| :------: | :------: | :---------------------------------------------------------------------------: | :---------------------------------------------------------------------------: | :--------------------------------------------------------------------------------: |
+| 64 位 x86 | [amd64](https://www.freebsd.org/platforms/amd64) | 一级 | 一级 | 一级 |
+| 32 位 x86 | [i386](https://www.freebsd.org/platforms/i386) | 二级 | 不支持 | 不支持 |
+| 64 位 ARMv8 | [aarch64](https://www.freebsd.org/platforms/arm) | 一级 | 一级 | 一级 |
+| 32 位 ARMv6 | [armv6](https://www.freebsd.org/platforms/arm) | 三级 | 不支持 | 不支持 |
+| 32 位 ARMv7 | [armv7](https://www.freebsd.org/platforms/arm) | 二级 | 二级 | 二级 |
+| 32 位 PowerPC | [powerpc](https://www.freebsd.org/platforms/ppc) | 二级 | 不支持 | 不支持 |
+| 带 SPE 的 32 位 PowerPC | [powerpcspe](https://www.freebsd.org/platforms/ppc) | 二级 | 不支持 | 不支持 |
+| 64 位 PowerPC 大端序 | [powerpc64](https://www.freebsd.org/platforms/ppc) | 二级 | 二级 | 二级 |
+| 64 位 PowerPC 小端序 | [powerpc64le](https://www.freebsd.org/platforms/ppc) | 二级 | 二级 | 二级 |
+| 64 位 RISC-V | [riscv64](https://wiki.freebsd.org/riscv) | 二级 | 二级 | 二级 |
 
 | 平台名称 | 目标架构 | 最后支持的 RELEASE 版本 |
 | :------: | :------: | :---------------------: |
@@ -67,7 +61,13 @@
 | 32 位小端 ARM v4/v5 | arm | [12.4](https://www.freebsd.org/releases/#rel12-4) |
 | 32 位大端 ARM | armeb | [11.4](https://www.freebsd.org/releases/#rel11-4) |
 | Intel IA-64 | ia64 | [10.4](https://www.freebsd.org/releases/#rel10-4) |
+| 32 位 MIPS 软浮点 | mips, mipsel | [13.5](https://www.freebsd.org/releases/#rel13-5) |
+| 32 位 MIPS 硬浮点 | mipshf, mipselhf | [13.5](https://www.freebsd.org/releases/#rel13-5) |
+| 32 位 MIPS n32 | mipsn32 | [13.5](https://www.freebsd.org/releases/#rel13-5) |
+| 64 位 MIPS 软浮点 | mips64, mips64el | [13.5](https://www.freebsd.org/releases/#rel13-5) |
+| 64 位 MIPS 硬浮点 | mips64hf, mips64elhf | [13.5](https://www.freebsd.org/releases/#rel13-5) |
 | PC98 | pc98 | [11.4](https://www.freebsd.org/releases/#rel11-4) |
+| 64 位 RISC-V 软浮点 | riscv64sf | [13.5](https://www.freebsd.org/releases/#rel13-5) |
 | 64 位 SPARCv9 | sparc64 | [12.4](https://www.freebsd.org/releases/#rel12-4) |
 
 ——[Supported Platforms](https://www.freebsd.org/platforms/)
