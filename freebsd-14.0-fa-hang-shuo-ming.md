@@ -183,7 +183,7 @@ root 用户的默认 shell 现在是 [sh(1)](https://man.freebsd.org/cgi/man.cgi
 
 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 现在说明如果升级未在进行中且不需要回滚，则可以删除 **/var/db/freebsd-update** 下的文件。[80b003e81684](https://cgit.freebsd.org/src/commit/?id=80b003e81684)（由 FreeBSD 基金会赞助）
 
-新的 [fwget(8)](https://man.freebsd.org/cgi/man.cgi?query=fwget&sektion=8&format=html) 工具会检查系统需要固件的外围设备，并为其安装适当的软件包。目前仅支持 PCI 子系统，目前仅知道 Intel 和 AMD GPU 的显卡固件。[d198b8774d2c](https://cgit.freebsd.org/src/commit/?id=d198b8774d2c)[d198b8774d2c](https://cgit.freebsd.org/src/commit/?id=d198b8774d2c)（由 Beckhoff Automation GmbH & Co. KG 赞助）
+新的 [fwget(8)](https://man.freebsd.org/cgi/man.cgi?query=fwget&sektion=8&format=html) 工具会检查系统需要固件的外围设备，并为其安装适当的软件包。目前仅支持 PCI 子系统，目前仅知道 Intel 和 AMD GPU 的显卡固件。[d198b8774d2c](https://cgit.freebsd.org/src/commit/?id=d198b8774d2c) [d198b8774d2c](https://cgit.freebsd.org/src/commit/?id=d198b8774d2c)（由 Beckhoff Automation GmbH & Co. KG 赞助）
 
 通过一致支持 `-q` 和 `-v` 参数、允许带有 SI 后缀的数字以及去除 [head(1)](https://man.freebsd.org/cgi/man.cgi?query=head&sektion=1&format=html) 中行数的 2^31 限制，提高了 [head(1)](https://man.freebsd.org/cgi/man.cgi?query=head&sektion=1&format=html) 和 [tail(1)](https://man.freebsd.org/cgi/man.cgi?query=tail&sektion=1&format=html) 的可用性。[643ac419fafb](https://cgit.freebsd.org/src/commit/?id=643ac419fafb)
 
