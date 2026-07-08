@@ -269,7 +269,7 @@ Telnet 守护进程，[telnetd(8)](https://man.freebsd.org/cgi/man.cgi?query=tel
 
 [qsort_r(3)](https://man.freebsd.org/cgi/man.cgi?query=qsort_r&sektion=3&format=html) 的原型已修改以匹配 POSIX，该标准采用了 glibc-based 接口。[af3c78886fd8](https://cgit.freebsd.org/src/commit/?id=af3c78886fd8)
 
-对于 aarch64（arm64），已经实现了 **COMPAT_LIB32** 构建参数，并默认启用。这为 arm64 系统提供了兼容 armv7 32 位的库和头文件，以便构建和运行大多数 armv7 32 位二进制文件。[f1d5183124d3](https://cgit.freebsd.org/src/commit/?id=f1d5183124d3)[d5d97bed4ab6](https://cgit.freebsd.org/src/commit/?id=d5d97bed4ab6)[a1b675731301](https://cgit.freebsd.org/src/commit/?id=a1b675731301)
+对于 aarch64（arm64），已经实现了 **COMPAT_LIB32** 构建参数，并默认启用。这为 arm64 系统提供了兼容 armv7 32 位的库和头文件，以便构建和运行大多数 armv7 32 位二进制文件。[f1d5183124d3](https://cgit.freebsd.org/src/commit/?id=f1d5183124d3) [d5d97bed4ab6](https://cgit.freebsd.org/src/commit/?id=d5d97bed4ab6) [a1b675731301](https://cgit.freebsd.org/src/commit/?id=a1b675731301)
 
 ## 云支持
 
