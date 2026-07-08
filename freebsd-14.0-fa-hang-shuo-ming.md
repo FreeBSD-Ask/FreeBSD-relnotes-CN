@@ -247,7 +247,7 @@ Telnet 守护进程，[telnetd(8)](https://man.freebsd.org/cgi/man.cgi?query=tel
 
 **tcpdump** 已升级到版本 4.99.4。[ee67461e5682](https://cgit.freebsd.org/src/commit/?id=ee67461e5682) [171a7bbfc048](https://cgit.freebsd.org/src/commit/?id=171a7bbfc048) [1ad8d2ee1f7d](https://cgit.freebsd.org/src/commit/?id=1ad8d2ee1f7d)（由 FreeBSD 基金会赞助）
 
-**libpcap** 已升级到版本 1.10.4。[6f9cba8f8b5e](https://cgit.freebsd.org/src/commit/?id=6f9cba8f8b5e)[dd744a896be3](https://cgit.freebsd.org/src/commit/?id=dd744a896be3)（由 FreeBSD 基金会赞助）
+**libpcap** 已升级到版本 1.10.4。[6f9cba8f8b5e](https://cgit.freebsd.org/src/commit/?id=6f9cba8f8b5e) [dd744a896be3](https://cgit.freebsd.org/src/commit/?id=dd744a896be3)（由 FreeBSD 基金会赞助）
 
 **xz** 已升级到版本 5.4.3。
 
