@@ -359,9 +359,9 @@ Linux 设备驱动程序的 KPI 稳定性有所修复和增强，以及无线驱
 
 x86 **GENERIC** 内核配置中已删除 [pms(4)](https://man.freebsd.org/cgi/man.cgi?query=pms&sektion=4&format=html) 驱动程序 `pmspcv`，因为它很大且使用不常见。可以通过在 [loader.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=loader.conf&sektion=5&format=html) 中放置 `pmspcv_load="YES"` 来将其加载为模块。[95e4f5ef7cce](https://cgit.freebsd.org/src/commit/?id=95e4f5ef7cce)（由 Rubicon Communications, LLC (“Netgate”) 赞助）
 
-x86 **GENERIC** 和 **MINIMAL** 内核配置中已删除了 VESA 参数。它仍然可用作内核模块。VESA 不被默认控制台 [vt(4)](https://man.freebsd.org/cgi/man.cgi?query=vt&sektion=4&format=html) 使用。[777526ed8382](https://cgit.freebsd.org/src/commit/?id=777526ed8382)[b8cf1c5c30a5](https://cgit.freebsd.org/src/commit/?id=b8cf1c5c30a5)（由 FreeBSD 基金会赞助）
+x86 **GENERIC** 和 **MINIMAL** 内核配置中已删除了 VESA 参数。它仍然可用作内核模块。VESA 不被默认控制台 [vt(4)](https://man.freebsd.org/cgi/man.cgi?query=vt&sektion=4&format=html) 使用。[777526ed8382](https://cgit.freebsd.org/src/commit/?id=777526ed8382) [b8cf1c5c30a5](https://cgit.freebsd.org/src/commit/?id=b8cf1c5c30a5)（由 FreeBSD 基金会赞助）
 
-已删除 ISA 声卡的驱动程序。[92e6b4712b53](https://cgit.freebsd.org/src/commit/?id=92e6b4712b53)[df51e63eb5d7](https://cgit.freebsd.org/src/commit/?id=df51e63eb5d7)[aa83e9b189d6](https://cgit.freebsd.org/src/commit/?id=aa83e9b189d6)[754decef384a](https://cgit.freebsd.org/src/commit/?id=754decef384a)[5126e5eeeb5e](https://cgit.freebsd.org/src/commit/?id=5126e5eeeb5e)[716924cb4832](https://cgit.freebsd.org/src/commit/?id=716924cb4832)[9054e296819f](https://cgit.freebsd.org/src/commit/?id=9054e296819f)（由 FreeBSD 基金会赞助）
+已删除 ISA 声卡的驱动程序。[92e6b4712b53](https://cgit.freebsd.org/src/commit/?id=92e6b4712b53) [df51e63eb5d7](https://cgit.freebsd.org/src/commit/?id=df51e63eb5d7) [aa83e9b189d6](https://cgit.freebsd.org/src/commit/?id=aa83e9b189d6) [754decef384a](https://cgit.freebsd.org/src/commit/?id=754decef384a) [5126e5eeeb5e](https://cgit.freebsd.org/src/commit/?id=5126e5eeeb5e) [716924cb4832](https://cgit.freebsd.org/src/commit/?id=716924cb4832) [9054e296819f](https://cgit.freebsd.org/src/commit/?id=9054e296819f)（由 FreeBSD 基金会赞助）
 
 从 [ath(4)](https://man.freebsd.org/cgi/man.cgi?query=ath&sektion=4&format=html) 中删除了 AHB 总线前端，因为它仅被 MIPS 使用。[37c8ee8847fa](https://cgit.freebsd.org/src/commit/?id=37c8ee8847fa)
 
@@ -393,11 +393,11 @@ x86 **GENERIC** 和 **MINIMAL** 内核配置中已删除了 VESA 参数。它仍
 
 ### NFS 变更
 
-NFS 现在支持在 VNET Jail 中运行 NFS 服务器，包括[nfsd(8)](https://man.freebsd.org/cgi/man.cgi?query=nfsd&sektion=8&format=html)，[nfsuserd(8)](https://man.freebsd.org/cgi/man.cgi?query=nfsuserd&sektion=8&format=html)，[mountd(8)](https://man.freebsd.org/cgi/man.cgi?query=mountd&sektion=8&format=html)，[gssd(8)](https://man.freebsd.org/cgi/man.cgi?query=gssd&sektion=8&format=html) 和 [rpc.tlsservd(8)](https://man.freebsd.org/cgi/man.cgi?query=rpc.tlsservd&sektion=8&format=html)。VNET Jail 必须位于自己的文件系统上，必须设置 Jail 参数 `allow.nfsd`，而 `enforce_statfs` 不能设置为 `0`。不允许使用 UDP 和 pNFS 服务器配置。[7344856e3a6d](https://cgit.freebsd.org/src/commit/?id=7344856e3a6d)以及许多其他提交
+NFS 现在支持在 VNET Jail 中运行 NFS 服务器，包括 [nfsd(8)](https://man.freebsd.org/cgi/man.cgi?query=nfsd&sektion=8&format=html)，[nfsuserd(8)](https://man.freebsd.org/cgi/man.cgi?query=nfsuserd&sektion=8&format=html)，[mountd(8)](https://man.freebsd.org/cgi/man.cgi?query=mountd&sektion=8&format=html)，[gssd(8)](https://man.freebsd.org/cgi/man.cgi?query=gssd&sektion=8&format=html) 和 [rpc.tlsservd(8)](https://man.freebsd.org/cgi/man.cgi?query=rpc.tlsservd&sektion=8&format=html)。VNET Jail 必须位于自己的文件系统上，必须设置 Jail 参数 `allow.nfsd`，而 `enforce_statfs` 不能设置为 `0`。不允许使用 UDP 和 pNFS 服务器配置。[7344856e3a6d](https://cgit.freebsd.org/src/commit/?id=7344856e3a6d) 以及许多其他提交
 
 对于 NFSv4 挂载，NFS 客户端现在默认使用 NFS 服务器支持的 NFSv4 的最高小版本，而不是小版本 0。挂载参数 `minorversion` 可用于覆盖此默认值。[a145cf3f73c7](https://cgit.freebsd.org/src/commit/?id=a145cf3f73c7)
 
-FreeBSD NFS 客户端现在可以设置为使用 1M 字节的 I/O 大小，通过可调参数 `vfs.maxbcachebuf`；Linux NFS 客户端也可以进行 1M 字节的 I/O。需要增加 `kern.ipc.maxsockbuf` 的值。控制台消息将建议相应的设置。请注意，在 [nfsd(8)](https://man.freebsd.org/cgi/man.cgi?query=nfsd&sektion=8&format=html) 未运行时，可以通过 sysctl `vfs.nfsd.srvmaxio`将 FreeBSD NFS 服务器的最大 I/O 大小增加到任何 2 的幂次方，最多为 1M 字节。[ee29e6f31111](https://cgit.freebsd.org/src/commit/?id=ee29e6f31111)
+FreeBSD NFS 客户端现在可以设置为使用 1M 字节的 I/O 大小，通过可调参数 `vfs.maxbcachebuf`；Linux NFS 客户端也可以进行 1M 字节的 I/O。需要增加 `kern.ipc.maxsockbuf` 的值。控制台消息将建议相应的设置。请注意，在 [nfsd(8)](https://man.freebsd.org/cgi/man.cgi?query=nfsd&sektion=8&format=html) 未运行时，可以通过 sysctl `vfs.nfsd.srvmaxio` 将 FreeBSD NFS 服务器的最大 I/O 大小增加到任何 2 的幂次方，最多为 1M 字节。[ee29e6f31111](https://cgit.freebsd.org/src/commit/?id=ee29e6f31111)
 
 如果会话中断，NFSv4.1/4.2 客户端和服务器现在将生成控制台消息，建议用户检查并确保 **/etc/hostid** 中的值对所有 NFSv4.1/4.2 客户端都是唯一的。[b875d4f5ddcb](https://cgit.freebsd.org/src/commit/?id=b875d4f5ddcb)[0685c73cfe88](https://cgit.freebsd.org/src/commit/?id=0685c73cfe88)
 
