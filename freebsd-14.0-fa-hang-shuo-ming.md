@@ -16,7 +16,7 @@ FreeBSD 14.0-RELEASE 发行说明总结了在 14-STABLE 开发线上对 FreeBSD 
 
 这份发行说明适用于 14-STABLE 开发分支中的一个节点，位于 13.2-RELEASE 和后续的 14.1-RELEASE 之间。此分支上预构建二进制发行版的信息可以在 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 找到。
 
-FreeBSD 14.0-RELEASE 的这个发行版本是一个正式的 RELEASE 版本。它可以在 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 或其镜像站点找到。获取这个（或其他）FreeBSD 发行版本的更多信息，请参阅[FreeBSD 手册](https://docs.freebsd.org/en/books/handbook/) 中的[获取 FreeBSD 附录](https://docs.freebsd.org/en/books/handbook/mirrors)。
+FreeBSD 14.0-RELEASE 的这个发行版本是一个正式的 RELEASE 版本。它可以在 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 或其镜像站点找到。获取这个（或其他）FreeBSD 发行版本的更多信息，请参阅 [FreeBSD 手册](https://docs.freebsd.org/en/books/handbook/) 中的 [获取 FreeBSD 附录](https://docs.freebsd.org/en/books/handbook/mirrors)。
 
 在安装 FreeBSD 之前，建议所有用户查阅发行勘误。发行勘误文档会随着发行周期后期或发行后发现的“迟到”信息而更新。通常，它包含已知错误、安全公告和对文档的更正。FreeBSD 14.0-RELEASE 的最新发行勘误副本可以在 FreeBSD 网站上找到。
 
