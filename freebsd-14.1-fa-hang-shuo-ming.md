@@ -14,7 +14,7 @@ FreeBSD 14.1-RELEASE 发行说明概述了由 14-STABLE 开发线衍生的 FreeB
 
 这些发行说明所适用的“RELEASE”发行版本，代表了 14-STABLE 开发分支中的一个节点，位于 14.0-RELEASE 和后续的 14.2-RELEASE 之间。有关基于此分支的预构建二进制“RELEASE”的发行信息，请访问 <https://www.FreeBSD.org/releases/>。
 
-该 FreeBSD 14.1-RELEASE 版本是个“RELEASE”版本。可以在 <https://www.FreeBSD.org/releases/> 和镜像站中找到它。下载该（及其他）FreeBSD“RELEASE”版本的信息，请参阅 [FreeBSD 手册](https://docs.freebsd.org/en/books/handbook/)的[附录《获取 FreeBSD》](https://docs.freebsd.org/en/books/handbook/mirrors)。
+该 FreeBSD 14.1-RELEASE 版本是个“RELEASE”版本。可以在 <https://www.FreeBSD.org/releases/> 和镜像站中找到它。下载该（及其他）FreeBSD“RELEASE”版本的信息，请参阅 [FreeBSD 手册](https://docs.freebsd.org/en/books/handbook/) 的 [附录《获取 FreeBSD》](https://docs.freebsd.org/en/books/handbook/mirrors)。
 
 在安装 FreeBSD 前，建议所有用户查阅发行勘误。勘误文档会在发行周期后期，随发行后发现的“最新”信息更新。它通常涉及已知错误、安全公告和文档更正的相关信息。可以在 FreeBSD 网站上找到 FreeBSD 14.1-RELEASE 的最新勘误信息。
 
@@ -24,7 +24,7 @@ FreeBSD 14.1-RELEASE 发行说明概述了由 14-STABLE 开发线衍生的 FreeB
 
 ## 从旧版 FreeBSD 升级
 
-RELEASE 版本之间（以及各种安全分支的快照）的二进制升级，可使用工具 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 进行。请参阅特定于版本的升级过程——[FreeBSD 14.1-RELEASE 升级信息](https://www.freebsd.org/releases/14.1R/installation/#upgrade-binary)，在 [FreeBSD 手册的二进制升级过程](https://docs.freebsd.org/en/books/handbook/cutting-edge/#freebsdupdate-upgrade)中有更多详情。该工具可更新未修改的用户空间工具，以及随 FreeBSD 官方发行版发行的未修改的 **GENERIC** 内核。[freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具要求升级的主机拥有互联网连接。
+RELEASE 版本之间（以及各种安全分支的快照）的二进制升级，可使用工具 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 进行。请参阅特定于版本的升级过程——[FreeBSD 14.1-RELEASE 升级信息](https://www.freebsd.org/releases/14.1R/installation/#upgrade-binary)，在 [FreeBSD 手册的二进制升级过程](https://docs.freebsd.org/en/books/handbook/cutting-edge/#freebsdupdate-upgrade) 中有更多详情。该工具可更新未修改的用户空间工具，以及随 FreeBSD 官方发行版发行的未修改的 **GENERIC** 内核。[freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具要求升级的主机拥有互联网连接。
 
 据 **/usr/src/UPDATING** 所述，基于源代码的升级（即重新编译 FreeBSD 基本系统的源代码）也受支持。
 
@@ -200,7 +200,7 @@ netgraph 模块 [ng_ipfw(4)](https://man.freebsd.org/cgi/man.cgi?query=ng_ipfw&s
 
 本节涉及了对物理机、hypervisors 和虚拟化环境的一般硬件支持，以及不适合归入本文档其他部分的硬件变更和更新。
 
-请查看 14.1-RELEASE [支持的硬件列表](https://www.freebsd.org/releases/14.1R/hardware)，以及[平台页面](https://www.freebsd.org/platforms/)获取受支持 CPU 架构的完整列表。
+请查看 14.1-RELEASE [支持的硬件列表](https://www.freebsd.org/releases/14.1R/hardware)，以及 [平台页面](https://www.freebsd.org/platforms/) 获取受支持 CPU 架构的完整列表。
 
 ## 文档
 
