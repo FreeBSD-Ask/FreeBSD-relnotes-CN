@@ -533,7 +533,12 @@
 * FreeBSD 5.4-RELEASE
   * [FreeBSD 5.4-RELEASE alpha 发行说明（2005 年 5 月 9 日）](5.4-alpha.md)
   * [FreeBSD 5.4-RELEASE amd64 发行说明（2005 年 5 月 9 日）](5.4-amd64.md)
+  * [FreeBSD 5.4-RELEASE i386 发行说明](5.4-i386.md)
+  * [FreeBSD 5.4-RELEASE ia64 发行说明](5.4-ia64.md)
+  * [FreeBSD 5.4-RELEASE pc98 发行说明](5.4-pc98.md)
   * [FreeBSD 5.4-RELEASE sparc64 发行说明](5.4-sparc64.md)
+  * [FreeBSD 5.4-RELEASE 发行公告](5.4-announce.md)
+  * [FreeBSD 5.4-RELEASE 安装说明](5.4-installation.md)
   * [FreeBSD 5.4-RELEASE 硬件兼容列表](5.4-hardware.md)
     * [FreeBSD 5.4-RELEASE alpha 硬件兼容列表](5.4-alpha-hardware.md)
     * [FreeBSD 5.4-RELEASE amd64 硬件兼容列表](5.4-amd64-hardware.md)
@@ -541,6 +546,10 @@
     * [FreeBSD 5.4-RELEASE ia64 硬件兼容列表](5.4-ia64-hardware.md)
     * [FreeBSD 5.4-RELEASE pc98 硬件兼容列表](5.4-pc98-hardware.md)
     * [FreeBSD 5.4-RELEASE sparc64 硬件兼容列表](5.4-sparc64-hardware.md)
+  * [FreeBSD 5.4-RELEASE 自述文件](5.4-readme.md)
+  * [FreeBSD 5.4-RELEASE 勘误](5.4-errata.md)
+  * [FreeBSD 5.4-RELEASE 发布计划](5.4-schedule.md)
+  * [FreeBSD 5.4-RELEASE 迁移指南](5.4-migration-guide.md)
 * FreeBSD 5.3-RELEASE
   * [FreeBSD 5.3-RELEASE amd64 发行说明（2004 年 11 月 6 日）](5.3-amd64.md)
   * [FreeBSD 5.3-RELEASE 硬件兼容列表](5.3-hardware.md)
