@@ -80,6 +80,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - "Jail" 保持英文（不翻译为"监狱"、"监牢"）禁止机械替换。
 - "pkgbase" 保持英文不翻译（不翻译为"打包基系统"、"打包基本系统"、"基系统包"等）。禁止机械替换。
 - "base system" → "基本系统"（不翻译为"基系统"等）。禁止机械替换。
+- "package" / "packages" → "软件包"（不保留英文 "package"，不翻译为"包"）。代码块和命令输出中的 "package" 保留英文。禁止机械替换。
 - "Google Summer of Code" → "谷歌编程之夏"，"GSoC" → "编程之夏"（"Google" 已单独翻译时不重复）。禁止机械替换。
 - "拷贝" → "复制"，"壳/外壳" → "shell"。禁止机械替换。
 - "The FreeBSD Foundation" → "FreeBSD 基金会"，注意前后空格自动调整（CJK 与 CJK 间不留空格，如"基金会的注册商标"、"基金会[捐赠]"；CJK 与 Latin 间保留空格，如"包括 FreeBSD 基金会、"）。禁止机械替换。
