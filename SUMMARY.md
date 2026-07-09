@@ -18,6 +18,13 @@
   * [FreeBSD 15.1-RELEASE 勘误](15.1-errata.md)
   * [FreeBSD 15.1-RELEASE 签名校验文件](15.1-signatures.md)
   * [FreeBSD 15.1-RELEASE 发布计划](15.1-schedule.md)
+* FreeBSD 14.5-RELEASE
+  * [FreeBSD 14.5-RELEASE 发行说明](14.5.md)
+  * [FreeBSD 14.5-RELEASE 安装说明](14.5-installation.md)
+  * [FreeBSD 14.5-RELEASE 硬件兼容列表](14.5-hardware.md)
+  * [FreeBSD 14.5-RELEASE 自述文件](14.5-readme.md)
+  * [FreeBSD 14.5-RELEASE 勘误](14.5-errata.md)
+  * [FreeBSD 14.5-RELEASE 发布计划](14.5-schedule.md)
 * FreeBSD 14.4-RELEASE
   * [FreeBSD 14.4-RELEASE 发行说明（2026 年 3 月 10 日）](14.4.md)
   * [FreeBSD 14.4-RELEASE 发行公告](14.4-announce.md)
