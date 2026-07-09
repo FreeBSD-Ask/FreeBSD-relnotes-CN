@@ -532,6 +532,13 @@
   * [FreeBSD 5.5-RELEASE 发布计划](5.5-schedule.md)
 * FreeBSD 5.4-RELEASE
   * [FreeBSD 5.4-RELEASE amd64 发行说明（2005 年 5 月 9 日）](5.4-amd64.md)
+  * [FreeBSD 5.4-RELEASE 硬件兼容列表](5.4-hardware.md)
+    * [FreeBSD 5.4-RELEASE alpha 硬件兼容列表](5.4-alpha-hardware.md)
+    * [FreeBSD 5.4-RELEASE amd64 硬件兼容列表](5.4-amd64-hardware.md)
+    * [FreeBSD 5.4-RELEASE i386 硬件兼容列表](5.4-i386-hardware.md)
+    * [FreeBSD 5.4-RELEASE ia64 硬件兼容列表](5.4-ia64-hardware.md)
+    * [FreeBSD 5.4-RELEASE pc98 硬件兼容列表](5.4-pc98-hardware.md)
+    * [FreeBSD 5.4-RELEASE sparc64 硬件兼容列表](5.4-sparc64-hardware.md)
 * FreeBSD 5.3-RELEASE
   * [FreeBSD 5.3-RELEASE amd64 发行说明（2004 年 11 月 6 日）](5.3-amd64.md)
 * FreeBSD 5.2.1-RELEASE
