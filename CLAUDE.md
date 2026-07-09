@@ -210,3 +210,4 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **文件编码**：统一使用 UTF-8 但禁止使用 BOM 标记，换行符统一 LF
 - **临时文件**：任何临时文件或脚本均放置在 `script/` 目录下，执行完成后不需要清理，保持原样即可
 - **PowerShell 限制**：当想使用 PowerShell 时，尽量转成 Python 脚本
+- **AI 不可见字符**：AI 生成文本可能夹带零宽字符（U+200B/200C/200D、U+2060）、BOM（U+FEFF）、双向标记（U+200E/200F、U+202A–202E、U+2066–2069）、Tag 块（U+E0000–E007F，疑似 LLM 水印）、变体选择符（U+FE00–FE0F、U+E0100–E01EF）、软连字符（U+00AD）、不换行空格（U+00A0）等不可见字符，会破坏搜索、字符串匹配与渲染。校对或新增内容时如怀疑混入此类字符，可运行检测脚本 `script/detect_invisible_chars.py`（基于 `unicodedata` 通用类别 + 可疑码点区间判定，排除 `en/`、`.github/`、`node_modules/`、`script/`）。**注意：** 检测会报出大量 U+0009（Tab），这是 Markdown 嵌套列表的合法缩进（如 hardware 文件中的 `*\tAdaptec`），**不得删除**，否则会破坏列表层级；真正的 AI 不可见字符才需清理。截至最近一次全量扫描（570 个 `.md` 文件，Python 扫描 + grep PCRE + 字节级核验三重验证），全书 AI 不可见字符数为 0。
