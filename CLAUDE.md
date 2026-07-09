@@ -77,6 +77,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - `Ports` 保持英文不翻译，且保持首字母大写（注意区分真正的"端口"）禁止机械替换。
 - "Jail" 保持英文（不翻译为"监狱"、"监牢"）禁止机械替换。
+- "pkgbase" 保持英文不翻译（不翻译为"打包基系统"、"打包基本系统"、"基系统包"等）。禁止机械替换。
+- "Google Summer of Code" → "谷歌编程之夏"，"GSoC" → "编程之夏"（"Google" 已单独翻译时不重复）。禁止机械替换。
 - "拷贝" → "复制"，"壳/外壳" → "shell"。禁止机械替换。
 - 第二人称一律使用"你"而非"您"
 
