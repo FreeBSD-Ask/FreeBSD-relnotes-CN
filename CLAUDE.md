@@ -20,11 +20,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### 目录结构
 
-- 本项目为 **扁平文件结构**，所有 `.md` 文件直接放在仓库根目录，不存在子目录章节模式。
-- 文件命名遵循以下模式：
-  - 单架构发行版：`<版本>.md`（如 `14.4.md`、`15.1.md`、`13.0.md`）
-  - 多架构发行版：`<版本>-<架构>.md`（如 `6.4-amd64.md`、`5.2-amd64.md`、`4.4-i386.md`）
-  - 早期命名变体：`freebsd-<版本>-fa-hang-shuo-ming.md`（如 `freebsd-14.0-fa-hang-shuo-ming.md`）为既有文件，保持原样
+- 本项目按发行版分组的 **子目录结构**，每个发行版的 `.md` 文件放在对应的子目录中。
+- 子目录命名与 `en/` 文件夹保持一致：
+  - 大多数发行版：`<版本>R/`（如 `15.1R/`、`14.4R/`、`6.4R/`）
+  - 早期发行版（1.x、2.0）：`<版本>/`（如 `1.0/`、`1.1/`、`2.0/`）
+- 根目录仅保留特殊文件：`SUMMARY.md`、`CHANGELOG.md`、`README.md`、`mu-lu.md`、`CLAUDE.md`
+- 文件命名遵循以下模式（文件名本身不含子目录前缀）：
+  - 单架构发行版：`<版本>.md`（如 `15.1R/15.1.md`、`14.4R/14.4.md`、`13.0R/13.0.md`）
+  - 多架构发行版：`<版本>-<架构>.md`（如 `6.4R/6.4-amd64.md`、`5.2R/5.2-amd64.md`、`4.4R/4.4-i386.md`）
+  - 早期命名变体：`freebsd-<版本>-fa-hang-shuo-ming.md`（如 `14.0R/freebsd-14.0-fa-hang-shuo-ming.md`）为既有文件，保持原样
 - `en/` — 英文 AsciiDoc 原版归档，按发行版目录组织：
   - 目录命名为 `<版本>R`（如 `en/14.4R/`、`en/15.1R/`、`en/6.4R/`、`en/1.1/`）
   - 每个目录包含该发行版的全部文档：`_index.adoc`、`announce.adoc`、`relnotes.adoc`、`installation.adoc`、`hardware.adoc`、`readme.adoc`、`errata.adoc`、`signatures.adoc`、`schedule.adoc` 等
