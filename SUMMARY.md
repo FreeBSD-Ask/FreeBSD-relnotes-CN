@@ -1,6 +1,6 @@
 # Table of contents
 
-* [FreeBSD 中文版发行说明](README.md)
+* [FreeBSD 发行说明](README.md)
 * [编辑日志](CHANGELOG.md)
 
 ***

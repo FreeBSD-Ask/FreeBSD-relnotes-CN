@@ -1,4 +1,4 @@
-# FreeBSD 中文版发行说明
+# FreeBSD 发行说明
 
 本项目所有内容均经校对与审阅。本翻译项目遵循 [BSD 2-Clause 许可证](LICENSE)。
 
