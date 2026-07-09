@@ -80,6 +80,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - "pkgbase" 保持英文不翻译（不翻译为"打包基系统"、"打包基本系统"、"基系统包"等）。禁止机械替换。
 - "Google Summer of Code" → "谷歌编程之夏"，"GSoC" → "编程之夏"（"Google" 已单独翻译时不重复）。禁止机械替换。
 - "拷贝" → "复制"，"壳/外壳" → "shell"。禁止机械替换。
+- "The FreeBSD Foundation" → "FreeBSD 基金会"，注意前后空格自动调整（CJK 与 CJK 间不留空格，如"基金会的注册商标"、"基金会[捐赠]"；CJK 与 Latin 间保留空格，如"包括 FreeBSD 基金会、"）。禁止机械替换。
 - 第二人称一律使用"你"而非"您"
 
 ### CJK 空格
