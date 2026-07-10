@@ -115,7 +115,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 
 对于 64 位架构，基本系统现在默认启用位置无关可执行文件（PIE）支持。可以通过开关 `WITHOUT_PIE` 禁用该功能，需要进行完全重新编译。[396e9f259d96](https://cgit.freebsd.org/src/commit/?id=396e9f259d96)
 
-`zfskeys` [rc(8)](https://man.freebsd.org/cgi/man.cgi?query=rc&sektion=8&format=html) 服务脚本新增，允许在启动过程中自动解密使用 ZFS 原生加密的 ZFS 数据集。更多信息请参考 [rc.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5&format=html) 手册。[33ff39796ffe](https://cgit.freebsd.org/src/commit/?id=33ff39796ffe)、[8719e8a951b7](https://cgit.freebsd.org/src/commit/?id=8719e8a951b7)（由 Modirum 和 Klara Inc. 赞助）
+新增 [rc(8)](https://man.freebsd.org/cgi/man.cgi?query=rc&sektion=8&format=html) 服务脚本 `zfskeys`，允许在启动过程中自动解密使用 ZFS 原生加密的 ZFS 数据集。更多信息请参考 [rc.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5&format=html) 手册。[33ff39796ffe](https://cgit.freebsd.org/src/commit/?id=33ff39796ffe)、[8719e8a951b7](https://cgit.freebsd.org/src/commit/?id=8719e8a951b7)（由 Modirum 和 Klara Inc. 赞助）
 
 [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 的 NVMe 仿真升级至 NVMe 规范的 1.4 版本。[b7a2cf0d9102](https://cgit.freebsd.org/src/commit/?id=b7a2cf0d9102) [eae02d959363](https://cgit.freebsd.org/src/commit/?id=eae02d959363)
 
