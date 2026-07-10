@@ -98,7 +98,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 | [FreeBSD-EN-22:07.la57](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:07.la57.asc) | 2022 年 2 月 1 日 | Intel CPU LA57 引导失败 |
 | [FreeBSD-EN-22:10.zfs](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:10.zfs.asc) | 2022 年 3 月 15 日 | ZFS 写入未能更新文件大小 |
 | [FreeBSD-EN-22:11.zfs](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:11.zfs.asc) | 2022 年 3 月 15 日 | ZFS [lseek(2)](https://man.freebsd.org/cgi/man.cgi?query=lseek&sektion=2&format=html) 不一致 |
-| [FreeBSD-EN-22:12.zfs](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:12.zfs.asc) | 2022 年 3 月 15 日 | 并发 'zfs list' 调用时 ZFS 崩溃 |
+| [FreeBSD-EN-22:12.zfs](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:12.zfs.asc) | 2022 年 3 月 15 日 | 并发 ‘zfs list’ 调用时 ZFS 崩溃 |
 | [FreeBSD-EN-22:14.tzdata](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:14.tzdata.asc) | 2022 年 3 月 22 日 | 时区数据库信息更新 |
 
 ## 用户空间
