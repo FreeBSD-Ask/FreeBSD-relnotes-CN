@@ -266,9 +266,9 @@ TCP 和 SCTP 中修复了多个 bug。
 
 ## 关于后续 FreeBSD 版本的一般说明
 
-弃用 `OPIE`，并将在 FreeBSD 14.0 中移除。
+`OPIE` 已弃用，将在 FreeBSD 14.0 中移除。
 
-弃用同步串行驱动程序 [ce(4)](https://man.freebsd.org/cgi/man.cgi?query=ce&sektion=4&format=html) 和 [cp(4)](https://man.freebsd.org/cgi/man.cgi?query=cp&sektion=4&format=html)，并将在 FreeBSD 14.0 中移除。
+同步串行驱动程序 [ce(4)](https://man.freebsd.org/cgi/man.cgi?query=ce&sektion=4&format=html) 和 [cp(4)](https://man.freebsd.org/cgi/man.cgi?query=cp&sektion=4&format=html) 已弃用，将在 FreeBSD 14.0 中移除。
 
 弃用 ISA 声卡的驱动程序，并将在 FreeBSD 14.0 中移除。[d7620b6ec941](https://cgit.freebsd.org/src/commit/?id=d7620b6ec941)（由 FreeBSD 基金会赞助）
 
