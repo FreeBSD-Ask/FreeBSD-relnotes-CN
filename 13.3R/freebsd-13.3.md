@@ -4,11 +4,11 @@
 
 ## 摘要
 
-FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 FreeBSD 基本系统所做变更的总结。本文列出了自上次发布以来发布的相关安全公告，并介绍了 FreeBSD 内核和用户空间的重大变更。还简要说明了从先前版本升级的相关事项。
+FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 FreeBSD 基本系统所做变更的总结。本文列出了自上次发布以来公布的相关安全公告，并介绍了 FreeBSD 内核和用户空间的重大变更。还简要说明了从旧版本升级的相关事项。
 
 ## 引言
 
-本文档包含了 FreeBSD 13.3-RELEASE 的发行说明。它简述了 FreeBSD 最近添加、改变和删除的功能，还提供了一些从旧版本升级的注意事项。
+本文档包含了 FreeBSD 13.3-RELEASE 的发行说明。它描述了 FreeBSD 最近添加、变更或删除的功能，还提供了一些从旧版本升级的注意事项。
 
 本次发布的发行版代表了自 13-STABLE 创建以来，13-STABLE 开发分支的最新位置。该分支上预构建二进制发行版的信息，请参见 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/)。
 
@@ -16,11 +16,11 @@ FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 Fr
 
 此 FreeBSD 13.3-RELEASE 版本是 RELEASE 发行版。它可以在 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 和任何镜像站点找到。获取此版本或其他版本的更多信息，请参见 [FreeBSD 手册](https://docs.freebsd.org/en/books/handbook/) 中的附录 [获取 FreeBSD](https://docs.freebsd.org/en/books/handbook/mirrors)。
 
-在安装 FreeBSD 之前，建议所有用户都先查阅下发行勘误文档。勘误文档会根据发布周期结束和发布后发现的“最新”信息更新，通常包含已知的 bug、安全公告以及文档的更正。可以在 FreeBSD 网站上找到最新的 FreeBSD 13.3-RELEASE 勘误文档。
+在安装 FreeBSD 之前，建议所有用户都先查阅发行勘误文档。勘误文档会根据发布周期后期或发布后发现的“最新”信息更新，通常包含已知的 bug、安全公告以及文档的更正。可以在 FreeBSD 网站上找到最新的 FreeBSD 13.3-RELEASE 勘误文档。
 
 本文档介绍了 FreeBSD 13-STABLE 中自 13.2-RELEASE 以来最为用户可见的新特性或变更。请注意，本文中描述的某些变更也可以在 FreeBSD 14.0-RELEASE 中找到。
 
-典型的发行说明条目记录了自 13.2-RELEASE 以来发布的安全公告、新的驱动程序和硬件支持、新的命令和参数、主要的 bug 修复，及第三方的软件升级。它们还可能列出主要 Port/软件包的变更和发布工程实践。显然，发行说明无法列出 FreeBSD 在两个版本之间的每一项变更；本文档主要关注安全公告、用户可见的变更以及主要的架构改进。
+典型的发行说明条目记录了自 13.2-RELEASE 以来发布的安全公告、新的驱动程序和硬件支持、新的命令和参数、主要的 bug 修复，及第三方软件升级。它们还可能列出主要 Ports/软件包的变更和发布工程实践。显然，发行说明无法列出 FreeBSD 在两个版本之间的每一项变更；本文档主要关注安全公告、用户可见的变更以及主要的架构改进。
 
 ## 从旧版 FreeBSD 升级
 
