@@ -14,7 +14,7 @@ FreeBSD 13.1-RELEASE 的发行说明总结了在 13-STABLE 开发分支中对 Fr
 
 本发行说明所涉的发行版，位于 13-STABLE 开发分支中 13.0-RELEASE 和未来 13.2-RELEASE 之间的某一节点。有关此分支上预构建的二进制发行版的信息，请访问 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/)。
 
-FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 或其任一镜像站下载。获取此版本（或其他版本）发行版的更多信息，请参阅 [FreeBSD 手册](https://docs.freebsd.org/en/books/handbook/mirrors) 中的 [获取 FreeBSD 附录](https://docs.freebsd.org/en/books/handbook/mirrors)。
+FreeBSD 13.1-RELEASE 是一种 RELEASE 发行版，可以从 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 或其任一镜像站下载。获取此版本（或其他版本）发行版的更多信息，请参阅 [FreeBSD 手册](https://docs.freebsd.org/en/books/handbook/mirrors) 中的 [获取 FreeBSD 附录](https://docs.freebsd.org/en/books/handbook/mirrors)。
 
 建议所有用户在安装 FreeBSD 之前，查阅发行版的勘误。勘误文档包含在发行周期后期或发行后发现的“最新信息”，通常包括已知错误、安全公告以及文档修订的相关内容。可以在 FreeBSD 网站上找到 FreeBSD 13.1-RELEASE 的最新勘误副本。
 
@@ -26,7 +26,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 
 通过 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具，可以在不同 RELEASE 版本之间（包括各安全分支的快照版本）进行二进制升级。该工具将更新未修改的用户空间工具，以及官方 FreeBSD 发行版中包含的未修改的 **GENERIC** 内核。使用 [freebsd-update(8)](https://man.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8&format=html) 工具要求待升级的主机具备互联网连接。
 
-基于源代码的升级（通过重新编译 FreeBSD 基本系统的源代码升级）也受到支持，具体请按照 **/usr/src/UPDATING** 中的说明操作。
+支持从早期版本基于源代码的升级（即通过重新编译 FreeBSD 基本系统的源代码进行升级），具体请按照 **/usr/src/UPDATING** 中的说明操作。
 
 对于所有 powerpc 架构的用户，在成功安装内核和世界后，需要手动运行 `kldxref /boot/kernel`。
 
