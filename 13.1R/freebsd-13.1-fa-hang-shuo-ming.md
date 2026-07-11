@@ -264,7 +264,7 @@ ZFS 已升级至 OpenZFS 2.1.4 版本。OpenZFS 的发行说明可参阅 [https:
 - **性能改进**：[loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html)、[nvme(4)](https://man.freebsd.org/cgi/man.cgi?query=nvme&sektion=4&format=html)、[random(4)](https://man.freebsd.org/cgi/man.cgi?query=random&sektion=4&format=html)、[rtsold(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsold&sektion=8&format=html) 和 x86 时钟校准的性能优化，这显著缩短了系统引导时间。此外，EC2 平台的配置变更进一步提高了性能，使得 13.1-RELEASE 的引导速度达到 13.0-RELEASE 的两倍以上。（由 [https://www.patreon.com/cperciva](https://www.patreon.com/cperciva) 赞助）
 
 - **EC2 镜像默认使用 UEFI 引导**：
-  EC2 镜像现在默认使用 UEFI 引导而非传统的 BIOS 引导。不过，基于 Xen 的 EC2 实例或“bare metal”EC2 实例仍不支持 UEFI。[65f22ccf8247](https://cgit.freebsd.org/src/commit/?id=65f22ccf8247)（由 [https://www.patreon.com/cperciva](https://www.patreon.com/cperciva) 赞助）
+  EC2 镜像现在默认使用 UEFI 引导而非传统的 BIOS 引导。不过，基于 Xen 的 EC2 实例或“bare metal” EC2 实例仍不支持 UEFI。[65f22ccf8247](https://cgit.freebsd.org/src/commit/?id=65f22ccf8247)（由 [https://www.patreon.com/cperciva](https://www.patreon.com/cperciva) 赞助）
 
 - **支持在 AWS Systems Manager 参数存储中记录 EC2 AMI ID**：
   FreeBSD 在 AWS Systems Manager 参数存储中使用公共前缀 **/aws/service/freebsd**，生成类似 **/aws/service/freebsd/amd64/base/ufs/13.1/RELEASE** 的参数名称。[242d1c32e42c](https://cgit.freebsd.org/src/commit/?id=242d1c32e42c)（由 [https://www.patreon.com/cperciva](https://www.patreon.com/cperciva) 赞助）
