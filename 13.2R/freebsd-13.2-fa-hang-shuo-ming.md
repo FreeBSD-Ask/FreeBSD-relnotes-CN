@@ -262,7 +262,7 @@ KTLS（内核 TLS 实现）为 TLS 1.3 添加了接收卸载支持。TLS 1.1 至
 
 内核模块 dpdk_lpm4 和 dpdk_lpm6 现在可用，可以通过 [loader.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=loader.conf&sektion=5&format=html) 加载。它们为具有大量路由表的主机提供优化的路由功能。它们可以通过 [route(8)](https://man.freebsd.org/cgi/man.cgi?query=route&sektion=8&format=html) 配置，并且是模块化 FIB 查找机制的一部分。[0ca122044369](https://cgit.freebsd.org/src/commit/?id=0ca122044369)
 
-TCP 和 SCTP 中有多个 bug 修复。
+TCP 和 SCTP 中修复了多个 bug。
 
 ## 关于后续 FreeBSD 版本的一般说明
 
