@@ -76,9 +76,9 @@ RELEASE 版本之间（以及各种安全分支的快照）的二进制升级，
 
 ### 用户空间配置变更
 
-新增的变量 `kdc_restart` 能用来管理 [daemon(8)](https://man.freebsd.org/cgi/man.cgi?query=daemon&sektion=8&format=html) 下的 [kdc(8)](https://man.freebsd.org/cgi/man.cgi?query=kdc&sektion=8&format=html)（`krb5kdc`）。在 [rc.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5&format=html) 中，设置 `kdc_restart="YES"`：能自动重启 kdc，来解决其异常停止问题。`kdc_restart_delay="N"` 可设定在重启 kdc 前的延迟（秒）。[abc4b3088941](https://cgit.freebsd.org/src/commit/?id=abc4b3088941)
+新增的变量 `kdc_restart` 能用来管理 [daemon(8)](https://man.freebsd.org/cgi/man.cgi?query=daemon&sektion=8&format=html) 下的 [kdc(8)](https://man.freebsd.org/cgi/man.cgi?query=kdc&sektion=8&format=html)（`krb5kdc`）。在 [rc.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5&format=html) 中设置 `kdc_restart="YES"`，可在 kdc 异常终止时自动重启。`kdc_restart_delay="N"` 可设定在重启 kdc 前的延迟（秒）。[abc4b3088941](https://cgit.freebsd.org/src/commit/?id=abc4b3088941)
 
-在默认情况下，由 [periodic(8)](https://man.freebsd.org/cgi/man.cgi?query=periodic&sektion=8&format=html) 工具通过 daily 脚本在电子邮件中展示的变更信息，其上下文输出比以前更少，以减小输出大小。此行为由 [periodic.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=periodic.conf&sektion=5&format=html) 中的变量 `daily_diff_flags` 所控制。同样地，安全脚本显示的变更亦比以前少，由 [periodic.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=periodic.conf&sektion=5&format=html) 中的变量 `security_status_diff_flags` 控制。[538994626b9f](https://cgit.freebsd.org/src/commit/?id=538994626b9f), [37dc394170a5](https://cgit.freebsd.org/src/commit/?id=37dc394170a5), [128e78ffb084](https://cgit.freebsd.org/src/commit/?id=128e78ffb084)
+在默认情况下，由 [periodic(8)](https://man.freebsd.org/cgi/man.cgi?query=periodic&sektion=8&format=html) 工具通过 `daily` 脚本在电子邮件中展示的变更信息，其上下文输出比以前更少，以减小输出大小。此行为由 [periodic.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=periodic.conf&sektion=5&format=html) 中的变量 `daily_diff_flags` 所控制。同样地，安全脚本显示的变更亦比以前少，由 [periodic.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=periodic.conf&sektion=5&format=html) 中的变量 `security_status_diff_flags` 控制。[538994626b9f](https://cgit.freebsd.org/src/commit/?id=538994626b9f), [37dc394170a5](https://cgit.freebsd.org/src/commit/?id=37dc394170a5), [128e78ffb084](https://cgit.freebsd.org/src/commit/?id=128e78ffb084)
 
 ### 用户空间应用程序变更
 
@@ -98,19 +98,19 @@ OpenSSH 已升级至版本 9.7p1。完整的发行说明请参见 <https://www.o
 
 ### 第三方软件
 
-One True Awk（[awk(1)](https://man.freebsd.org/cgi/man.cgi?query=awk&sektion=1&format=html)）已更新至第二版，新增了 `-csv` 和 UTF-8 支持。[daf917daba9c](https://cgit.freebsd.org/src/commit/?id=daf917daba9c)
+One True Awk（[awk(1)](https://man.freebsd.org/cgi/man.cgi?query=awk&sektion=1&format=html)）更新至第二版，新增了 `-csv` 和 UTF-8 支持。[daf917daba9c](https://cgit.freebsd.org/src/commit/?id=daf917daba9c)
 
-Clang/LLVM 已升级至版本 18.1.5。[90a5e985e5f4](https://cgit.freebsd.org/src/commit/?id=90a5e985e5f4)
+Clang/LLVM 升级至版本 18.1.5。[90a5e985e5f4](https://cgit.freebsd.org/src/commit/?id=90a5e985e5f4)
 
-[libarchive(3)](https://man.freebsd.org/cgi/man.cgi?query=libarchive&sektion=3&format=html) 库已升级至版本 3.7.4。[8774c92e32b2](https://cgit.freebsd.org/src/commit/?id=8774c92e32b2)
+[libarchive(3)](https://man.freebsd.org/cgi/man.cgi?query=libarchive&sektion=3&format=html) 库升级至版本 3.7.4。[8774c92e32b2](https://cgit.freebsd.org/src/commit/?id=8774c92e32b2)
 
-[sendmail(8)](https://man.freebsd.org/cgi/man.cgi?query=sendmail&sektion=8&format=html) 套件已升级至版本 8.18.1，修复了漏洞 CVE-2023-51765。[58ae50f31e95](https://cgit.freebsd.org/src/commit/?id=58ae50f31e95)
+[sendmail(8)](https://man.freebsd.org/cgi/man.cgi?query=sendmail&sektion=8&format=html) 套件升级至版本 8.18.1，修复了漏洞 CVE-2023-51765。[58ae50f31e95](https://cgit.freebsd.org/src/commit/?id=58ae50f31e95)
 
-解析器 [unbound(8)](https://man.freebsd.org/cgi/man.cgi?query=unbound&sektion=8&format=html) 已升级至版本 1.20.0，并修复了“DNSBomb”漏洞（CVE-2024-33655）。[dcde37c4170b](https://cgit.freebsd.org/src/commit/?id=dcde37c4170b)
+解析器 [unbound(8)](https://man.freebsd.org/cgi/man.cgi?query=unbound&sektion=8&format=html) 升级至版本 1.20.0，并修复了“DNSBomb”漏洞（CVE-2024-33655）。[dcde37c4170b](https://cgit.freebsd.org/src/commit/?id=dcde37c4170b)
 
 ### 运行时库和 API
 
-`libutil` 中的 [setusercontext(3)](https://man.freebsd.org/cgi/man.cgi?query=setusercontext&sektion=3&format=html) 例程可依据一定的条件从家目录下的 **.login.conf** 文件以及系统 [login.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5&format=html) 设置进程优先级（nice）。优先级可以取值 `inherit`，意味着优先级会保持与父进程相同。umask 亦可以取值 `inherit`。[6f6186e19fe5](https://cgit.freebsd.org/src/commit/?id=6f6186e19fe5)、[a8c273b3c97f](https://cgit.freebsd.org/src/commit/?id=a8c273b3c97f), [d2d66fedc418](https://cgit.freebsd.org/src/commit/?id=d2d66fedc418)（由 Kumacom SAS 赞助）
+`libutil` 中的 [setusercontext(3)](https://man.freebsd.org/cgi/man.cgi?query=setusercontext&sektion=3&format=html) 例程可依据一定的条件从家目录下的 **.login.conf** 文件以及系统 [login.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5&format=html) 设置进程优先级（nice）。优先级可以取值 `inherit`，意味着优先级会保持与父进程相同。umask 亦可以取值 `inherit`。[6f6186e19fe5](https://cgit.freebsd.org/src/commit/?id=6f6186e19fe5)、[a8c273b3c97f](https://cgit.freebsd.org/src/commit/?id=a8c273b3c97f)、[d2d66fedc418](https://cgit.freebsd.org/src/commit/?id=d2d66fedc418)（由 Kumacom SAS 赞助）
 
 在 amd64 系统上可用时，C 库中的许多字符串和内存操作现在使用 SIMD（单指令多数据）扩展来提高性能；请参阅 [simd(7)](https://man.freebsd.org/cgi/man.cgi?query=simd&sektion=7&format=html)。（由 FreeBSD 基金会赞助）
 
