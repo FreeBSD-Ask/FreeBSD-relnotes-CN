@@ -4,7 +4,7 @@
 
 ## 摘要
 
-FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeBSD 基本系统所做变更的摘要。本文件列出了自上次发布以来发布的相关安全公告，以及对 FreeBSD 内核和用户空间的重大变更。此外，本文档还提供了有关升级的一些简要说明。
+FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeBSD 基本系统所做变更的摘要。本文档列出了自上次发布以来公布的相关安全公告，以及对 FreeBSD 内核和用户空间的重大变更。此外，本文档还提供了有关升级的一些简要说明。
 
 ## 引言
 
@@ -14,13 +14,13 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 这些发行说明所适用的发行版，代表了 13-STABLE 开发分支上 13.1-RELEASE 与未来的 13.3-RELEASE 之间的一个节点。有关该分支上的预构建二进制发行版的信息，请访问 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/)。
 
-该 FreeBSD 13.2-RELEASE 的分发版是一个 RELEASE 发行版。该分发版可以在 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 和镜像站点找到。获取此版本（及其他）FreeBSD 发行版的更多信息，请参见 [FreeBSD 手册](https://docs.freebsd.org/en/books/handbook/) 中的 [获取 FreeBSD 附录](https://docs.freebsd.org/en/books/handbook/mirrors)。
+FreeBSD 13.2-RELEASE 这一发行版属于 RELEASE 类型。该发行版可以在 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 和镜像站点找到。获取此版本（及其他）FreeBSD 发行版的更多信息，请参见 [FreeBSD 手册](https://docs.freebsd.org/en/books/handbook/) 中的 [获取 FreeBSD 附录](https://docs.freebsd.org/en/books/handbook/mirrors)。
 
 所有用户在安装 FreeBSD 之前都应查阅发布勘误。勘误文档会更新一些在发布周期末期或发布后发现的“最新”信息。通常，它包含已知的漏洞、安全公告以及文档的修正。可以在 FreeBSD 网站上找到 FreeBSD 13.2-RELEASE 的最新勘误。
 
 本文档介绍了自 13.1-RELEASE 以来 FreeBSD 中最具用户可见性的新增或变更功能。一般来说，本文所述的变更是 13-STABLE 分支的特有变更，除非特别标记为合并特性。
 
-典型的发行说明条目包括 13.1-RELEASE 之后发布的安全公告、新的驱动程序或硬件支持、新命令或选项、重大错误修复或第三方软件升级。它们也可能列出对主要 Ports/软件包或发布工程实践的变更。显然，发行说明无法列出两个版本之间对 FreeBSD 所做的每个变更；本文件主要关注安全公告、用户可见的变更以及重大架构改进。
+典型的发行说明条目包括 13.1-RELEASE 之后发布的安全公告、新的驱动程序或硬件支持、新命令或选项、重大错误修复或第三方软件升级。它们也可能列出对主要 Ports/软件包或发布工程实践的变更。显然，发行说明无法列出两个版本之间对 FreeBSD 所做的每个变更；本文档主要关注安全公告、用户可见的变更以及重大架构改进。
 
 ## 从旧版 FreeBSD 升级
 
@@ -28,7 +28,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 从先前版本进行基于源代码的升级（即从源代码重新编译 FreeBSD 基本系统）也受到支持，具体按 **/usr/src/UPDATING** 中的说明进行操作。
 
-所有 PowerPC 架构的用户，在成功安装内核和世界之后，必须手动运行 `kldxref /boot/kernel`。
+所有 PowerPC 架构的用户，在成功安装内核与 world 之后，必须手动运行 `kldxref /boot/kernel`。
 
 > **重要**：
 >
@@ -36,7 +36,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 > **重要**：
 >
-> 安装新用户空间软件后，正在运行的守护进程仍来自先前版本。在通过第二次调用 `freebsd-update` 安装用户级组件，或通过使用 `installworld` 从源代码升级后，系统应重新启动以启动新软件。例如，旧版本的 `sshd` 在安装新版本的 **/usr/sbin/sshd** 后无法正确处理传入连接；重启后，新的 `sshd` 和其他守护进程将启动。
+> 安装新用户空间软件后，正在运行的守护进程仍来自先前版本。在通过第二次调用 `freebsd-update` 安装用户级组件，或通过使用 `installworld` 从源代码升级后，系统应重新启动以启动新软件。例如，旧版本的 `sshd` 在安装新版本的 **/usr/sbin/sshd** 后无法正确处理传入连接；重启后会启动新的 `sshd` 和其他守护进程。
 
 ## 安全与勘误
 
@@ -53,7 +53,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 | [FreeBSD-SA-22:07.wifi_meshid](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:07.wifi_meshid.asc) | 2022 年 4 月 6 日 | 802.11 堆缓冲区溢出 |
 | [FreeBSD-SA-22:08.zlib](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:08.zlib.asc) | 2022 年 4 月 6 日 | zlib 压缩越界写入 |
 | [FreeBSD-SA-22:09.elf](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:09.elf.asc) | 2022 年 8 月 9 日 | elf_note_prpsinfo() 越界读取 |
-| [FreeBSD-SA-22:11.vm](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:11.vm.asc) | 2022 年 8 月 9 日 | 过期虚拟内存映射导致内存泄露 |
+| [FreeBSD-SA-22:11.vm](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:11.vm.asc) | 2022 年 8 月 9 日 | 过期虚拟内存映射导致内存信息泄露 |
 | [FreeBSD-SA-22:12.lib9p](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:12.lib9p.asc) | 2022 年 8 月 9 日 | 9p 消息处理中缺少边界检查 |
 | [FreeBSD-SA-22:13.zlib](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:13.zlib.asc) | 2022 年 8 月 30 日 | zlib 堆缓冲区溢出 |
 | [FreeBSD-SA-22:14.heimdal](https://www.freebsd.org/security/advisories/FreeBSD-SA-22:14.heimdal.asc) | 2022 年 11 月 15 日 | Heimdal 中的多个漏洞 [修订] |
@@ -79,7 +79,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 | [FreeBSD-EN-22:26.cam](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:26.cam.asc) | 2022 年 11 月 1 日 | CAM [ioctl(2)](https://man.freebsd.org/cgi/man.cgi?query=ioctl&sektion=2&format=html) 兼容性问题 |
 | [FreeBSD-EN-22:27.loader](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:27.loader.asc) | 2022 年 11 月 1 日 | UEFI 加载器无法引导较旧的 amd64 内核 |
 | [FreeBSD-EN-22:28.heimdal](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:28.heimdal.asc) | 2022 年 11 月 29 日 | Heimdal KDC 回归问题 |
-| [FreeBSD-EN-23:01.tzdata](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:01.tzdata.asc) | 2022 年 2 月 8 日 | 时区数据库信息更新 |
+| [FreeBSD-EN-23:01.tzdata](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:01.tzdata.asc) | 2023 年 2 月 8 日 | 时区数据库信息更新 |
 | [FreeBSD-EN-23:02.sdhci](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:02.sdhci.asc) | 2023 年 2 月 8 日 | [sdhci(4)](https://man.freebsd.org/cgi/man.cgi?query=sdhci&sektion=4&format=html) 写保护设置错误 |
 | [FreeBSD-EN-23:03.ena](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:03.ena.asc) | 2023 年 2 月 8 日 | ena 驱动在第 7 代 AWS 实例类型上重置后崩溃 |
 | [FreeBSD-EN-23:04.ixgbe](https://www.freebsd.org/security/advisories/FreeBSD-EN-23:04.ixgbe.asc) | 2023 年 2 月 8 日 | ixgbe 对 82599ES 错误地报告输入错误 |
@@ -90,15 +90,15 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 ### 用户空间配置变更
 
-[growfs(7)](https://man.freebsd.org/cgi/man.cgi?query=growfs&sektion=7&format=html) 启动脚本现在将在扩展根文件系统时添加交换分区（如果可能），且如果之前未存在交换分区。这在使用原始映像安装到 SD 卡时尤其有用。新增的 [rc.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5&format=html) 变量 `growfs_swap_size` 可以根据需要控制交换分区的添加。详见 [growfs(7)](https://man.freebsd.org/cgi/man.cgi?query=growfs&sektion=7&format=html)。
+[growfs(7)](https://man.freebsd.org/cgi/man.cgi?query=growfs&sektion=7&format=html) 启动脚本现在将在扩展根文件系统时添加交换分区（如果可能），并且之前不存在交换分区。这在使用原始映像安装到 SD 卡时尤其有用。新增的 [rc.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5&format=html) 变量 `growfs_swap_size` 可以根据需要控制交换分区的添加。详见 [growfs(7)](https://man.freebsd.org/cgi/man.cgi?query=growfs&sektion=7&format=html)。
 
 `zfskeys` 启动脚本支持自动加载存储在 ZFS 上的密钥。[2411090f6940](https://cgit.freebsd.org/src/commit/?id=2411090f6940)（由 Klara Inc. 赞助）
 
 新增的 RC 脚本 `zpoolreguid` 用于为一个或多个 zpool 分配新的 GUID，在虚拟化环境中共享数据集时非常有用。
 
-`hostid` 启动脚本现在将在没有 **/etc/hostid** 文件且硬件没有有效 UUID 时生成一个随机（版本 4）UUID。此外，如果没有 **/etc/machine-id** 文件，`hostid_save` 脚本将把一个压缩版的 hostid（没有连字符的版本）存储在 **/etc/machine-id** 中。此文件由 GLib 等库使用。[17333d92643d](https://cgit.freebsd.org/src/commit/?id=17333d92643d) [a379d5c5efb2](https://cgit.freebsd.org/src/commit/?id=a379d5c5efb2) [71d88613d129](https://cgit.freebsd.org/src/commit/?id=71d88613d129)
+`hostid` 启动脚本现在将在没有 **/etc/hostid** 文件且硬件没有有效 UUID 时生成一个随机（版本 4）UUID。此外，如果没有 **/etc/machine-id** 文件，`hostid_save` 脚本将把 hostid 的紧凑版（无连字符的版本）存储在 **/etc/machine-id** 中。此文件由 GLib 等库使用。[17333d92643d](https://cgit.freebsd.org/src/commit/?id=17333d92643d) [a379d5c5efb2](https://cgit.freebsd.org/src/commit/?id=a379d5c5efb2) [71d88613d129](https://cgit.freebsd.org/src/commit/?id=71d88613d129)
 
-现在可以通过使用变量 `defaultrouter_fibN` 和 `ipv6_defaultrouter_fibN` [rc.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5&format=html)，为除主路由表外的其他 FIB 添加默认路由。[c6ec1b441ad3](https://cgit.freebsd.org/src/commit/?id=c6ec1b441ad3)（由 ScaleEngine Inc. 赞助）
+现在可以通过使用变量 `defaultrouter_fibN` 和 `ipv6_defaultrouter_fibN` [rc.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5&format=html)，为除主 FIB 外的其他 FIB 添加默认路由。[c6ec1b441ad3](https://cgit.freebsd.org/src/commit/?id=c6ec1b441ad3)（由 ScaleEngine Inc. 赞助）
 
 ### 用户空间应用程序变更
 
@@ -106,7 +106,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 工具 [kdump(1)](https://man.freebsd.org/cgi/man.cgi?query=kdump&sektion=1&format=html) 新增了对 Linux 系统调用的解码支持。
 
-工具 [killall(1)](https://man.freebsd.org/cgi/man.cgi?query=killall&sektion=1&format=html) 现在允许通过语法 `-t pts/N` 向控制终端在 [pts(4)](https://man.freebsd.org/cgi/man.cgi?query=pts&sektion=4&format=html) 上的进程发送信号。[a76fa7bb6cb7](https://cgit.freebsd.org/src/commit/?id=a76fa7bb6cb7)
+工具 [killall(1)](https://man.freebsd.org/cgi/man.cgi?query=killall&sektion=1&format=html) 现在允许通过语法 `-t pts/N` 向控制终端位于 [pts(4)](https://man.freebsd.org/cgi/man.cgi?query=pts&sektion=4&format=html) 上的进程发送信号。[a76fa7bb6cb7](https://cgit.freebsd.org/src/commit/?id=a76fa7bb6cb7)
 
 新增工具 [nproc(1)](https://man.freebsd.org/cgi/man.cgi?query=nproc&sektion=1&format=html)，与同名的 Linux 程序兼容。
 
@@ -120,7 +120,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 改进了 [ppp(8)](https://man.freebsd.org/cgi/man.cgi?query=ppp&sektion=8&format=html) 中的 MSS clamping。[301bff9bdd62](https://cgit.freebsd.org/src/commit/?id=301bff9bdd62)
 
-指标别名在 [prometheus_sysctl_exporter(8)](https://man.freebsd.org/cgi/man.cgi?query=prometheus_sysctl_exporter&sektion=8&format=html) 中变更，以避免由于冲突的指标名称而混淆 Prometheus 服务器。UMA 区域 `tcp_log_bucket` 重命名为 `tcp_log_id_bucket`，`tcp_log_node` 被重命名为 `tcp_log_id_node` 以保持一致性。描述中带有 `(LEGACY)` 的 sysctl 变量不再导出，这些变量由被其他变量替换的 ZFS sysctl 使用，其中许多别名为相同的 Prometheus 指标名称（如 `vfs.zfs.arc_max` 和 `vfs.zfs.arc.max`）。[e4f508d5a211](https://cgit.freebsd.org/src/commit/?id=e4f508d5a211)（由 Axcient 赞助）
+在 [prometheus_sysctl_exporter(8)](https://man.freebsd.org/cgi/man.cgi?query=prometheus_sysctl_exporter&sektion=8&format=html) 中更改了指标别名机制，以避免因指标名称冲突而使 Prometheus 服务器产生混淆。UMA 区域 `tcp_log_bucket` 重命名为 `tcp_log_id_bucket`，`tcp_log_node` 被重命名为 `tcp_log_id_node` 以保持一致性。描述中带有 `(LEGACY)` 的 sysctl 变量不再导出，这些变量由被其他变量替换的 ZFS sysctl 使用，其中许多别名为相同的 Prometheus 指标名称（如 `vfs.zfs.arc_max` 和 `vfs.zfs.arc.max`）。[e4f508d5a211](https://cgit.freebsd.org/src/commit/?id=e4f508d5a211)（由 Axcient 赞助）
 
 [uuidgen(1)](https://man.freebsd.org/cgi/man.cgi?query=uuidgen&sektion=1&format=html) 工具新增了 `-r` 选项，用于生成随机 UUID，版本 4。[8fd1953b7eb2](https://cgit.freebsd.org/src/commit/?id=8fd1953b7eb2)
 
@@ -182,17 +182,17 @@ Gavin Howard 的 `bc` 升级到版本 6.2.4。
 
 [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 虚拟机管理程序和内核模块 [vmm(4)](https://man.freebsd.org/cgi/man.cgi?query=vmm&sektion=4&format=html) 现在支持在虚拟机中使用超过 16 个 vCPU。默认情况下，bhyve 允许每个虚拟机创建与主机物理 CPU 数量相同的 vCPU。此限制可以通过加载器调节选项 `hw.vmm.maxcpu` 来调整。[3e02f8809aec](https://cgit.freebsd.org/src/commit/?id=3e02f8809aec)
 
-64 位可执行文件的地址空间布局随机化（ASLR）默认启用。如果应用程序出现意外故障（例如，段错误），可以根据需要禁用 ASLR。要禁用单次调用，可以使用 [proccontrol(1)](https://man.freebsd.org/cgi/man.cgi?query=proccontrol&sektion=1&format=html) 命令：`proccontrol -m aslr -s disable command`。要禁用所有二进制文件的 ASLR 调用，可以使用 [elfctl(1)](https://man.freebsd.org/cgi/man.cgi?query=elfctl&sektion=1&format=html) 命令：`elfctl -e +noaslr file`。问题应通过问题报告系统 [https://bugs.freebsd.org](https://bugs.freebsd.org/) 提交，或通过 `freebsd-stable@FreeBSD.org` 邮件列表报告。[10192e77cfac](https://cgit.freebsd.org/src/commit/?id=10192e77cfac)（由 Stormshield 赞助）
+64 位可执行文件的地址空间布局随机化（ASLR）默认启用。如果应用程序出现意外故障（例如，段错误），可以根据需要禁用 ASLR。要针对单次执行禁用 ASLR，可以使用 [proccontrol(1)](https://man.freebsd.org/cgi/man.cgi?query=proccontrol&sektion=1&format=html) 命令：`proccontrol -m aslr -s disable command`。要针对某个二进制文件的所有执行禁用 ASLR，可以使用 [elfctl(1)](https://man.freebsd.org/cgi/man.cgi?query=elfctl&sektion=1&format=html) 命令：`elfctl -e +noaslr file`。问题应通过问题报告系统 [https://bugs.freebsd.org](https://bugs.freebsd.org/) 提交，或通过 `freebsd-stable@FreeBSD.org` 邮件列表报告。[10192e77cfac](https://cgit.freebsd.org/src/commit/?id=10192e77cfac)（由 Stormshield 赞助）
 
 针对 Intel Alder Lake（第十二代）和 Raptor Lake（第十三代）混合 CPU 的硬件页面失效问题，已实现了一种解决方法。该漏洞可能导致 UFS 和 MSDOSFS 文件系统损坏，并可能导致其他内存损坏。通过此解决方法，小核（E 核心）会自动使用较慢的页面失效方法。[567cc4e6bfd9](https://cgit.freebsd.org/src/commit/?id=567cc4e6bfd9)（由 FreeBSD 基金会赞助）
 
 新增内核配置选项 **SPLIT_KERNEL_DEBUG**，用于控制将内核和模块的调试数据分割成独立的文件。该选项与选项 `WITHOUT_KERNEL_SYMBOLS` 相互作用，后者的操作方式与 13.0-RELEASE 和 13.1-RELEASE 中不同，但与早期版本相似；它现在仅控制调试数据的安装。默认情况下为 `WITH_KERNEL_SYMBOLS` 和 `WITH_SPLIT_KERNEL_DEBUG`，允许将不含调试数据的内核和模块安装在 **/boot** 中，将独立的调试文件安装在 **/usr/lib/debug** 中，这与 13.0-RELEASE 之前的版本相同。使用 `WITHOUT_KERNEL_SYMBOLS` 和 `WITH_SPLIT_KERNEL_DEBUG` 时，独立的调试文件会生成，但不会安装，类似于早期版本中使用 `WITHOUT_KERNEL_SYMBOLS` 的情况。最后，使用 `WITHOUT_KERNEL_SYMBOLS` 和 `WITHOUT_SPLIT_KERNEL_DEBUG` 时，将内核和模块与内置调试信息一起安装到 **/boot** 中，这与 13.1-RELEASE 中使用 `WITHOUT_KERNEL_SYMBOLS` 的情况相同。[0c4d13c521aa](https://cgit.freebsd.org/src/commit/?id=0c4d13c521aa)（由 FreeBSD 基金会赞助）
 
-在 PowerPC 上，pseries 的 ISA 3.0 中的 radix pmap 现在受支持。这应使得 pseries 在 POWER9 实例上显著加速，因为现在管理 pmap 所需的超调用更少。[c74c77531248](https://cgit.freebsd.org/src/commit/?id=c74c77531248)
+在 PowerPC 上，pseries 中 ISA 3.0 的 radix pmap 现已受支持。这应使得 pseries 在 POWER9 实例上显著加速，因为现在管理 pmap 所需的超调用更少。[c74c77531248](https://cgit.freebsd.org/src/commit/?id=c74c77531248)
 
-arm64 上的 Linux 进程现在支持 [ptrace(2)](https://man.freebsd.org/cgi/man.cgi?query=ptrace&sektion=2&format=html)。[99950e8beb72](https://cgit.freebsd.org/src/commit/?id=99950e8beb72)
+现在为 arm64 上的 Linux 进程提供了 [ptrace(2)](https://man.freebsd.org/cgi/man.cgi?query=ptrace&sektion=2&format=html) 支持。[99950e8beb72](https://cgit.freebsd.org/src/commit/?id=99950e8beb72)
 
-为了提高 `stable` 分支的 ABI 兼容性，CPU 亲和性系统调用现在可以更宽容地处理比内核使用的 CPU 集合小的 CPU 集合。这将促进 `MAXCPU`（内核 CPU 集合的大小）增加。[72bc1e6806cc](https://cgit.freebsd.org/src/commit/?id=72bc1e6806cc)
+为了提高 `stable` 分支的 ABI 兼容性，CPU 亲和性系统调用现在可以更宽容地处理比内核使用的 CPU 集合小的 CPU 集合。这将便于增大内核 CPU 集合的大小（`MAXCPU`）。[72bc1e6806cc](https://cgit.freebsd.org/src/commit/?id=72bc1e6806cc)
 
 64 位 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&format=html) ABI 增加了对跨信号传递保存 CPU 浮点状态的支持。[0b82c544de58](https://cgit.freebsd.org/src/commit/?id=0b82c544de58)，[20d601714206](https://cgit.freebsd.org/src/commit/?id=20d601714206)
 
@@ -214,7 +214,7 @@ arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=
 
 [ice(4)](https://man.freebsd.org/cgi/man.cgi?query=ice&sektion=4&format=html) 驱动程序更新至 1.37.7-k 版本。
 
-[irdma(4)](https://man.freebsd.org/cgi/man.cgi?query=irdma&sektion=4&format=html) RDMA 驱动程序为 Intel E810 以太网控制器引入，支持 RoCEv2 和 iWARP 协议，以每个 PF 方式运行，默认使用 RoCEv2，并升级至 1.1.5-k 版本。[42bad04a2156](https://cgit.freebsd.org/src/commit/?id=42bad04a2156)（由 Intel Corporation 赞助）
+[irdma(4)](https://man.freebsd.org/cgi/man.cgi?query=irdma&sektion=4&format=html) RDMA 驱动程序为 Intel E810 以太网控制器引入，支持 RoCEv2 和 iWARP 协议，按每 PF 方式运行，默认使用 RoCEv2，并升级至 1.1.5-k 版本。[42bad04a2156](https://cgit.freebsd.org/src/commit/?id=42bad04a2156)（由 Intel Corporation 赞助）
 
 现已提供对 DPAA2（第二代数据路径加速架构，一种存在于某些 NXP SoC 中的硬件级网络架构）的初步支持。它运行 NXP 提供的固件，作为抽象层提供 DPAA2 对象，并提供一个 `dpni` 网络接口。[d5a64a935bc9](https://cgit.freebsd.org/src/commit/?id=d5a64a935bc9)（由 Bare Enthusiasm :-) 和 Traverse Technologies 赞助）
 
