@@ -5,21 +5,21 @@
 
 ## 摘要
 
-FreeBSD 14.2-RELEASE 发行说明总结了在 14-STABLE 开发分支上 FreeBSD 基本系统发生的变更。本文档列出了自上次发布以来 RELEASE 适用的安全公告，以及对 FreeBSD 内核和用户空间的重大变更。本文档还附带了有关升级的简要说明。
+FreeBSD 14.2-RELEASE 发行说明总结了在 `14-STABLE` 开发分支上 FreeBSD 基本系统发生的变更。本文档列出了自上次发布以来 RELEASE 适用的安全公告，以及对 FreeBSD 内核和用户空间的重大变更。本文档还附带了有关升级的简要说明。
 
 ## 引言
 
 本文档为 FreeBSD 14.2-RELEASE 的发行说明，概述了 FreeBSD 最近新增、修改和删除的功能，并附带了有关从旧版本升级的说明。
 
-本发行说明所适用的发行版，代表了自 14-STABLE 开发分支创建以来的最新版本。该分支中预编译的二进制“RELEASE”发行版的信息，请参见 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/)。
+本发行说明所适用的发行版，代表了自 `14-STABLE` 开发分支创建以来的最新版本。该分支中预编译的二进制“RELEASE”发行版的信息，请参见 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/)。
 
-FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。该发行版可通过 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 或其任意镜像站点下载。如需获取此版本（及其他版本）FreeBSD 的更多信息，请参阅 [FreeBSD Handbook](https://docs.freebsd.org/en/books/handbook/) 的 [FreeBSD 附录](https://docs.freebsd.org/en/books/handbook/mirrors)。
+FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。该发行版可通过 [https://www.FreeBSD.org/releases/](https://www.freebsd.org/releases/) 或其任意镜像站点下载。如需获取此版本（及其他版本）FreeBSD 的更多信息，请参阅 [FreeBSD Handbook](https://docs.freebsd.org/en/books/handbook/) 的 [获取 FreeBSD 附录](https://docs.freebsd.org/en/books/handbook/mirrors)。
 
 建议用户在安装 FreeBSD 之前，先查阅发行勘误文档。该文档包含在发行周期后期及发行后发现的“最新”信息，通常涉及已知错误、安全公告以及文档修正。最新的 FreeBSD 14.2-RELEASE 勘误文档可在 FreeBSD 网站上找到。
 
-本文档总结了自 14.1-RELEASE 以来 FreeBSD 中用户最易察觉的新增和变更功能。一般来说，这些变更是 14-STABLE 分支的独有内容，除非特别标记为 MERGED 功能。
+本文档总结了自 14.1-RELEASE 以来 FreeBSD 中用户最易察觉的新增和变更功能。一般来说，这些变更是 `14-STABLE` 分支的独有内容，除非特别标记为 MERGED 功能。
 
-一般的发行说明内容包括自 14.1-RELEASE 之后发布的安全公告、新增的驱动程序/硬件支持、新命令/参数、主要的错误修复/外部软件更新。发行说明还可能列出主要 Ports/软件包和发行工程实践的变更。显然，发行说明无法详尽列出两个 FreeBSD 版本之间的每项变更；本文档主要聚焦于安全公告、用户可见的变更和重大架构改进。
+一般的发行说明内容包括自 14.1-RELEASE 之后发布的安全公告、新增的驱动程序/硬件支持、新命令/选项、主要的错误修复/外部软件更新。发行说明还可能列出主要 Ports/软件包和发行工程实践的变更。显然，发行说明无法详尽列出两个 FreeBSD 版本之间的每项变更；本文档主要聚焦于安全公告、用户可见的变更和重大架构改进。
 
 ## 从旧版 FreeBSD 升级
 
