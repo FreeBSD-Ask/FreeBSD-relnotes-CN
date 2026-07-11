@@ -131,7 +131,7 @@ arm64 的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=4&f
 
 为了提高 `stable` 分支的 ABI 兼容性，CPU 亲和力系统调用现在能更好地处理比内核使用的 CPU 集更小的 CPU 集。这将有助于增加内核集 `MAXCPU` 的大小。[47a57144af25](https://cgit.freebsd.org/src/commit/?id=47a57144af25) [f35093f8d6d8](https://cgit.freebsd.org/src/commit/?id=f35093f8d6d8)（由 Juniper Networks, Inc.赞助）
 
-现在可以在运行时使用有日志的软更新的 UFS 文件系统上进行快照。因此，现在可以在使用有日志的软更新运行的活动文件系统上执行后台转储。后台转储可以通过使用 `dump(8)` 的 `-L` 参数来请求。（在先前的版本中，UFS 快照与有日志的软更新不兼容。）[78f412987605](https://cgit.freebsd.org/src/commit/?id=78f412987605)（由 FreeBSD 基金会赞助）
+现在可以在运行时使用有日志的软更新的 UFS 文件系统上进行快照。因此，现在可以在使用有日志的软更新运行的活动文件系统上执行后台转储。后台转储可以通过使用 **dump(8)** 的 `-L` 参数来请求。（在先前的版本中，UFS 快照与有日志的软更新不兼容。）[78f412987605](https://cgit.freebsd.org/src/commit/?id=78f412987605)（由 FreeBSD 基金会赞助）
 
 内核的 [wg(4)](https://man.freebsd.org/cgi/man.cgi?query=wg&sektion=4&format=html) WireGuard 驱动程序已被重新集成；它提供了使用 WireGuard 协议的虚拟专用网络（VPN）接口。[744bfb213144](https://cgit.freebsd.org/src/commit/?id=744bfb213144)（由 Rubicon Communications, LLC (“Netgate”) 和 FreeBSD 基金会赞助）
 
