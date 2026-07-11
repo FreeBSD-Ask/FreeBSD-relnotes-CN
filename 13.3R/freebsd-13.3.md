@@ -155,7 +155,7 @@ LLVM 提供的 [objdump(1)](https://man.freebsd.org/cgi/man.cgi?query=objdump&se
 
 修复了原生和基于 LinuxKPI 的无线驱动程序的诸多稳定性问题。（由 FreeBSD 基金会赞助）
 
-USB 以太网适配器驱动 [smsc(4)](https://man.freebsd.org/cgi/man.cgi?query=smsc&sektion=4&format=html) 现在将在树莓派设备中从 `bootargs` 获取 MAC 地址，如果没有提供，则回退到使用 [ether_gen_addr(9)](https://man.freebsd.org/cgi/man.cgi?query=ether_gen_addr&sektion=9&format=html) 生成固定的 MAC 地址。[3d96ee7c7dcc](https://cgit.freebsd.org/src/commit/?id=3d96ee7c7dcc)
+在传递了 `bootargs` 的树莓派系统上，USB 以太网适配器驱动 [smsc(4)](https://man.freebsd.org/cgi/man.cgi?query=smsc&sektion=4&format=html) 现在会从 `bootargs` 获取 MAC 地址；如果硬件未提供，则回退使用 [ether_gen_addr(9)](https://man.freebsd.org/cgi/man.cgi?query=ether_gen_addr&sektion=9&format=html) 生成稳定的 MAC 地址。[3d96ee7c7dcc](https://cgit.freebsd.org/src/commit/?id=3d96ee7c7dcc)
 
 ## 存储
 
