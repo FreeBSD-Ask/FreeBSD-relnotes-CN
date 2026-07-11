@@ -77,11 +77,11 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。该发行版可通过 [https
 
 ### 第三方软件
 
-- `bc` 已更新至 7.0.2。[90ea553a0d30](https://cgit.freebsd.org/src/commit/?id=90ea553a0d30)
-- `libarchive` 已更新至 3.7.7。[2ae238160f20](https://cgit.freebsd.org/src/commit/?id=2ae238160f20)
-- `libcbor` 已更新至 0.11.0。[1755b9daa693](https://cgit.freebsd.org/src/commit/?id=1755b9daa693)（由 FreeBSD 基金会赞助）
-- `libcxxrt` 已更新至供应商快照 6f2fdfebcd62。[d0dcee46d971](https://cgit.freebsd.org/src/commit/?id=d0dcee46d971)
-- `libfido2` 已更新至 1.14.0。[128bace5102e](https://cgit.freebsd.org/src/commit/?id=128bace5102e)（由 FreeBSD 基金会赞助）
+- `bc` 更新至 7.0.2。[90ea553a0d30](https://cgit.freebsd.org/src/commit/?id=90ea553a0d30)
+- `libarchive` 更新至 3.7.7。[2ae238160f20](https://cgit.freebsd.org/src/commit/?id=2ae238160f20)
+- `libcbor` 更新至 0.11.0。[1755b9daa693](https://cgit.freebsd.org/src/commit/?id=1755b9daa693)（由 FreeBSD 基金会赞助）
+- `libcxxrt` 更新至供应商快照 6f2fdfebcd62。[d0dcee46d971](https://cgit.freebsd.org/src/commit/?id=d0dcee46d971)
+- `libfido2` 更新至 1.14.0。[128bace5102e](https://cgit.freebsd.org/src/commit/?id=128bace5102e)（由 FreeBSD 基金会赞助）
 - `libpcap` 已更新至 1.10.5。[26f21a6494b4](https://cgit.freebsd.org/src/commit/?id=26f21a6494b4)（由 FreeBSD 基金会赞助）
 - `llvm` 已更新至 18.1.6。[f1e3279983d6](https://cgit.freebsd.org/src/commit/?id=f1e3279983d6)
 - `openssl` 已更新至 3.0.15。[cc43f991ab3e](https://cgit.freebsd.org/src/commit/?id=cc43f991ab3e)
