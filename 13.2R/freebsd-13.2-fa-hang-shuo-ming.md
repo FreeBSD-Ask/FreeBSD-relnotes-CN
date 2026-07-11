@@ -186,7 +186,7 @@ Gavin Howard 的 `bc` 升级到版本 6.2.4。
 
 针对 Intel Alder Lake（第十二代）和 Raptor Lake（第十三代）混合 CPU 的硬件页面失效问题，已实现了一种解决方法。该漏洞可能导致 UFS 和 MSDOSFS 文件系统损坏，并可能导致其他内存损坏。通过此解决方法，小核（E 核心）会自动使用较慢的页面失效方法。[567cc4e6bfd9](https://cgit.freebsd.org/src/commit/?id=567cc4e6bfd9)（由 FreeBSD 基金会赞助）
 
-新增内核配置选项 **SPLIT_KERNEL_DEBUG**，用于控制将内核和模块的调试数据分割成独立的文件。该选项与选项 `WITHOUT_KERNEL_SYMBOLS` 相互作用，后者的操作方式与 13.0-RELEASE 和 13.1-RELEASE 中不同，但与早期版本相似；它现在仅控制调试数据的安装。默认情况下为 `WITH_KERNEL_SYMBOLS` 和 `WITH_SPLIT_KERNEL_DEBUG`，允许将不含调试数据的内核和模块安装在 **/boot** 中，将独立的调试文件安装在 **/usr/lib/debug** 中，这与 13.0-RELEASE 之前的版本相同。使用 `WITHOUT_KERNEL_SYMBOLS` 和 `WITH_SPLIT_KERNEL_DEBUG` 时，独立的调试文件会生成，但不会安装，类似于早期版本中使用 `WITHOUT_KERNEL_SYMBOLS` 的情况。最后，使用 `WITHOUT_KERNEL_SYMBOLS` 和 `WITHOUT_SPLIT_KERNEL_DEBUG` 时，将内核和模块与内置调试信息一起安装到 **/boot** 中，这与 13.1-RELEASE 中使用 `WITHOUT_KERNEL_SYMBOLS` 的情况相同。[0c4d13c521aa](https://cgit.freebsd.org/src/commit/?id=0c4d13c521aa)（由 FreeBSD 基金会赞助）
+新增内核配置选项 `SPLIT_KERNEL_DEBUG`，用于控制将内核和模块的调试数据分割成独立的文件。该选项与选项 `WITHOUT_KERNEL_SYMBOLS` 相互作用，后者的操作方式与 13.0-RELEASE 和 13.1-RELEASE 中不同，但与早期版本相似；它现在仅控制调试数据的安装。默认情况下为 `WITH_KERNEL_SYMBOLS` 和 `WITH_SPLIT_KERNEL_DEBUG`，允许将不含调试数据的内核和模块安装在 **/boot** 中，将独立的调试文件安装在 **/usr/lib/debug** 中，这与 13.0-RELEASE 之前的版本相同。使用 `WITHOUT_KERNEL_SYMBOLS` 和 `WITH_SPLIT_KERNEL_DEBUG` 时，独立的调试文件会生成，但不会安装，类似于早期版本中使用 `WITHOUT_KERNEL_SYMBOLS` 的情况。最后，使用 `WITHOUT_KERNEL_SYMBOLS` 和 `WITHOUT_SPLIT_KERNEL_DEBUG` 时，将内核和模块与内置调试信息一起安装到 **/boot** 中，这与 13.1-RELEASE 中使用 `WITHOUT_KERNEL_SYMBOLS` 的情况相同。[0c4d13c521aa](https://cgit.freebsd.org/src/commit/?id=0c4d13c521aa)（由 FreeBSD 基金会赞助）
 
 在 PowerPC 上，pseries 中 ISA 3.0 的 radix pmap 现已受支持。这应使得 pseries 在 POWER9 实例上显著加速，因为现在管理 pmap 所需的超调用更少。[c74c77531248](https://cgit.freebsd.org/src/commit/?id=c74c77531248)
 
@@ -208,13 +208,13 @@ arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=
 
 [em(4)](https://man.freebsd.org/cgi/man.cgi?query=em&sektion=4&format=html) 驱动程序现在可以正确支持新款芯片 82580 和 i350 上的完整接收缓冲区大小范围。[3f8306cf8e2d](https://cgit.freebsd.org/src/commit/?id=3f8306cf8e2d)
 
-[ena(4)](https://man.freebsd.org/cgi/man.cgi?query=ena&sektion=4&format=html) 驱动程序升级到 2.6.2 版本。（由亚马逊公司赞助）
+[ena(4)](https://man.freebsd.org/cgi/man.cgi?query=ena&sektion=4&format=html) 驱动程序升级到版本 2.6.2。（由 Amazon, Inc. 赞助）
 
 为 [hwpmc(4)](https://man.freebsd.org/cgi/man.cgi?query=hwpmc&sektion=4&format=html) 实现了对 Intel Alder Lake CPU 的基本支持。[b8ef2ca9eae9](https://cgit.freebsd.org/src/commit/?id=b8ef2ca9eae9)
 
-[ice(4)](https://man.freebsd.org/cgi/man.cgi?query=ice&sektion=4&format=html) 驱动程序更新至 1.37.7-k 版本。
+[ice(4)](https://man.freebsd.org/cgi/man.cgi?query=ice&sektion=4&format=html) 驱动程序更新至版本 1.37.7-k。
 
-[irdma(4)](https://man.freebsd.org/cgi/man.cgi?query=irdma&sektion=4&format=html) RDMA 驱动程序为 Intel E810 以太网控制器引入，支持 RoCEv2 和 iWARP 协议，按每 PF 方式运行，默认使用 RoCEv2，并升级至 1.1.5-k 版本。[42bad04a2156](https://cgit.freebsd.org/src/commit/?id=42bad04a2156)（由 Intel Corporation 赞助）
+[irdma(4)](https://man.freebsd.org/cgi/man.cgi?query=irdma&sektion=4&format=html) RDMA 驱动程序为 Intel E810 以太网控制器引入，支持 RoCEv2 和 iWARP 协议，按每 PF 方式运行，默认使用 RoCEv2，并升级至版本 1.1.5-k。[42bad04a2156](https://cgit.freebsd.org/src/commit/?id=42bad04a2156)（由 Intel Corporation 赞助）
 
 现已提供对 DPAA2（第二代数据路径加速架构，一种存在于某些 NXP SoC 中的硬件级网络架构）的初步支持。它运行 NXP 提供的固件，作为抽象层提供 DPAA2 对象，并提供一个 `dpni` 网络接口。[d5a64a935bc9](https://cgit.freebsd.org/src/commit/?id=d5a64a935bc9)（由 Bare Enthusiasm :-) 和 Traverse Technologies 赞助）
 
