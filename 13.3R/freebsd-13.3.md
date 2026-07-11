@@ -89,13 +89,13 @@ FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 Fr
 
 改进了 [libtacplus(3)](https://man.freebsd.org/cgi/man.cgi?query=libtacplus&sektion=3&format=html) 库，[tacplus.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=tacplus.conf&sektion=5&format=html) 现遵循 POSIX shell 语法规则。如果共享密钥包含单引号、双引号或反斜杠字符，且未正确引用和转义，这可能会导致 `TACACS+` 认证失败。该库现在允许配置最多 255 个附加 AV 配对。[5761f8a7de9f](https://cgit.freebsd.org/src/commit/?id=5761f8a7de9f)（由 Klara, Inc. 赞助）
 
-像 [login(1)](https://man.freebsd.org/cgi/man.cgi?query=login&sektion=1&format=html) 这样的程序，使用 [setusercontext(3)](https://man.freebsd.org/cgi/man.cgi?query=setusercontext&sektion=3&format=html)，现在能根据凭据从 `~/.login_conf` 文件中设置进程优先级。此外，可以在 [login.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5&format=html) 中，将优先级指定为 `inherit`，表示进程优先级将继承自父进程。同样，现在也可以将 `umask` 值指定为 `inherit`。[8b359002747a](https://cgit.freebsd.org/src/commit/?id=8b359002747a) [e074746fec21](https://cgit.freebsd.org/src/commit/?id=e074746fec21) [16e02df98ad6](https://cgit.freebsd.org/src/commit/?id=16e02df98ad6)（由 Kumacom SAS 赞助）
+像 [login(1)](https://man.freebsd.org/cgi/man.cgi?query=login&sektion=1&format=html) 这样使用 [setusercontext(3)](https://man.freebsd.org/cgi/man.cgi?query=setusercontext&sektion=3&format=html) 的程序，现在能根据凭据从 **~/.login_conf** 文件中设置进程优先级。此外，可以在 [login.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5&format=html) 中，将优先级指定为 `inherit`，表示进程优先级将继承自父进程。同样，现在也可以将 `umask` 值指定为 `inherit`。[8b359002747a](https://cgit.freebsd.org/src/commit/?id=8b359002747a) [e074746fec21](https://cgit.freebsd.org/src/commit/?id=e074746fec21) [16e02df98ad6](https://cgit.freebsd.org/src/commit/?id=16e02df98ad6)（由 Kumacom SAS 赞助）
 
 通过 [periodic(8)](https://man.freebsd.org/cgi/man.cgi?query=periodic&sektion=8&format=html) 生成的配置文件和安全输出报告（发送给系统管理员）现在使用了简化的上下文，以减少无关内容。生成每日输出时，传给 [diff(1)](https://man.freebsd.org/cgi/man.cgi?query=diff&sektion=1&format=html) 的参数，可以通过 [rc.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5&format=html) 中的变量 `daily_diff_flags` 进行控制；安全脚本所用的 [diff(1)](https://man.freebsd.org/cgi/man.cgi?query=diff&sektion=1&format=html) 参数由 `security_status_diff_flags` 控制。[4c14a3a6aebe](https://cgit.freebsd.org/src/commit/?id=4c14a3a6aebe) [6d9195b5f763](https://cgit.freebsd.org/src/commit/?id=6d9195b5f763)
 
 用于下载闰秒信息的默认链接更新为使用标准源，因为旧链接失效。[d19b59cfe594](https://cgit.freebsd.org/src/commit/?id=d19b59cfe594)
 
-在使用 arm64 `RPI` 系统的树莓派设备上，守护进程 [powerd(8)](https://man.freebsd.org/cgi/man.cgi?query=powerd&sektion=8&format=html) 默认启用，这样系统可以在需要时全速运行。非默认睿频设置的用户也许需要禁用之。[e889b5a892b6](https://cgit.freebsd.org/src/commit/?id=e889b5a892b6)
+在 arm64 `RPI` 镜像的树莓派系统上，守护进程 [powerd(8)](https://man.freebsd.org/cgi/man.cgi?query=powerd&sektion=8&format=html) 现在在 **/etc/rc.conf** 中默认启用，使系统可以在需要时全速运行。使用非默认睿频设置的用户可能需要将其禁用。[e889b5a892b6](https://cgit.freebsd.org/src/commit/?id=e889b5a892b6)
 
 某个服务的 `umask` 现在可以通过 [rc.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5&format=html) 中的变量 `<服务>_umask` 来指定，其中 `<服务>` 是服务名称。[2d6a03dd43c7](https://cgit.freebsd.org/src/commit/?id=2d6a03dd43c7)
 
@@ -105,7 +105,7 @@ FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 Fr
 
 LLVM 提供的 [objdump(1)](https://man.freebsd.org/cgi/man.cgi?query=objdump&sektion=1&format=html) 工具现在可用。某些 LLVM objdump 选项的输出格式与 GNU objdump 不同；可以使用 [readelf(1)](https://man.freebsd.org/cgi/man.cgi?query=readelf&sektion=1&format=html) 检查 ELF 文件，并且可以通过 `devel/binutils` Port 或二进制软件包安装 GNU objdump。
 
-[tftpd(8)](https://man.freebsd.org/cgi/man.cgi?query=tftpd&sektion=8&format=html) 服务器现在可以配置为允许在 chroot 环境中写入非世界可写的文件，使用新的 `-S` 选项。[b71dde1aeba2](https://cgit.freebsd.org/src/commit/?id=b71dde1aeba2)
+[tftpd(8)](https://man.freebsd.org/cgi/man.cgi?query=tftpd&sektion=8&format=html) 服务器现在可以配置为允许在 chroot 环境中写入非全局可写的文件，使用新的 `-S` 选项。[b71dde1aeba2](https://cgit.freebsd.org/src/commit/?id=b71dde1aeba2)
 
 ### 第三方软件
 
@@ -119,7 +119,7 @@ LLVM 提供的 [objdump(1)](https://man.freebsd.org/cgi/man.cgi?query=objdump&se
 
 `nvi`（[vi(1)](https://man.freebsd.org/cgi/man.cgi?query=vi&sektion=1&format=html)）升级至 2.2.1 版本。
 
-`sendmail` 升级至 8.18.1 版本。此版本默认执行更严格的 RFC 合规性，特别是在行尾方面。这可能会导致接收来自不合规邮件传输代理（MTA）的消息时出现问题；有关缓解措施，请参阅 [https://ftp.sendmail.org/RELEASE_NOTES](https://ftp.sendmail.org/RELEASE_NOTES) 中的 8.18.1 发行说明。[b36ddb27b3b9](https://cgit.freebsd.org/src/commit/?id=b36ddb27b3b9)
+`sendmail` 升级至 8.18.1 版本。此版本默认执行更严格的 RFC 合规性，特别是在行尾方面。这可能会导致接收来自不合规邮件传输代理（MTA）的消息时出现问题；有关缓解措施，请参阅 [https://ftp.sendmail.org/RELEASE_NOTES](https://ftp.sendmail.org/RELEASE_NOTES) 中的第一条 8.18.1 发行说明。[b36ddb27b3b9](https://cgit.freebsd.org/src/commit/?id=b36ddb27b3b9)
 
 `OpenSSH` 更新至 9.6p1 版本，包括若干安全修复。最重要的修复是针对 SSH 传输协议中新发现的漏洞。现在 [ssh-keygen(1)](https://man.freebsd.org/cgi/man.cgi?query=ssh-keygen&sektion=1&format=html) 默认生成 Ed25519 密钥。[sshd(8)](https://man.freebsd.org/cgi/man.cgi?query=sshd&sektion=8&format=html) 现在能够准确保留子系统命令和参数的引号。[f26eafdfafb0](https://cgit.freebsd.org/src/commit/?id=f26eafdfafb0) [221a6bc397ad](https://cgit.freebsd.org/src/commit/?id=221a6bc397ad) [2cd20d9bc807](https://cgit.freebsd.org/src/commit/?id=2cd20d9bc807)（由 FreeBSD 基金会赞助）
 
