@@ -270,29 +270,29 @@ TCP 和 SCTP 中修复了多个 bug。
 
 同步串行驱动程序 [ce(4)](https://man.freebsd.org/cgi/man.cgi?query=ce&sektion=4&format=html) 和 [cp(4)](https://man.freebsd.org/cgi/man.cgi?query=cp&sektion=4&format=html) 已弃用，将在 FreeBSD 14.0 中移除。
 
-弃用 ISA 声卡的驱动程序，并将在 FreeBSD 14.0 中移除。[d7620b6ec941](https://cgit.freebsd.org/src/commit/?id=d7620b6ec941)（由 FreeBSD 基金会赞助）
+ISA 声卡驱动程序已弃用，将在 FreeBSD 14.0 中移除。[d7620b6ec941](https://cgit.freebsd.org/src/commit/?id=d7620b6ec941)（由 FreeBSD 基金会赞助）
 
-弃用工具 [mergemaster(8)](https://man.freebsd.org/cgi/man.cgi?query=mergemaster&sektion=8&format=html)，并将在 FreeBSD 14.0 中移除。它的替代工具是 [etcupdate(8)](https://man.freebsd.org/cgi/man.cgi?query=etcupdate&sektion=8&format=html)。[5fa16e3c50c5](https://cgit.freebsd.org/src/commit/?id=5fa16e3c50c5)（由 FreeBSD 基金会赞助）
+工具 [mergemaster(8)](https://man.freebsd.org/cgi/man.cgi?query=mergemaster&sektion=8&format=html) 已弃用，将在 FreeBSD 14.0 中移除。它的替代工具是 [etcupdate(8)](https://man.freebsd.org/cgi/man.cgi?query=etcupdate&sektion=8&format=html)。[5fa16e3c50c5](https://cgit.freebsd.org/src/commit/?id=5fa16e3c50c5)（由 FreeBSD 基金会赞助）
 
-弃用工具 [minigzip(1)](https://man.freebsd.org/cgi/man.cgi?query=minigzip&sektion=1&format=html)，并将在 FreeBSD 14.0 中移除。[84d3fc26e3a2](https://cgit.freebsd.org/src/commit/?id=84d3fc26e3a2)
+工具 [minigzip(1)](https://man.freebsd.org/cgi/man.cgi?query=minigzip&sektion=1&format=html) 已弃用，将在 FreeBSD 14.0 中移除。[84d3fc26e3a2](https://cgit.freebsd.org/src/commit/?id=84d3fc26e3a2)
 
-在 netgraph 中，弃用 ATM 的剩余组件（NgATM），并将在 FreeBSD 14.0 中移除。对 ATM NIC 的支持此前已移除。
+netgraph 中 ATM 的剩余组件（NgATM）已弃用，将在 FreeBSD 14.0 中移除。对 ATM NIC 的支持此前已移除。
 
-弃用 Telnet 守护进程 [telnetd(8)](https://man.freebsd.org/cgi/man.cgi?query=telnetd&sektion=8&format=html)，并将在 FreeBSD 14.0 中移除。Telnet 客户端不受影响。
+Telnet 守护进程 [telnetd(8)](https://man.freebsd.org/cgi/man.cgi?query=telnetd&sektion=8&format=html) 已弃用，将在 FreeBSD 14.0 中移除。Telnet 客户端不受影响。
 
-弃用 [geom(8)](https://man.freebsd.org/cgi/man.cgi?query=geom&sektion=8&format=html) 中的 VINUM 类，并将在后续版本中移除。
+[geom(8)](https://man.freebsd.org/cgi/man.cgi?query=geom&sektion=8&format=html) 中的 VINUM 类已弃用，将在后续版本中移除。
 
 ### 默认 `CPUTYPE` 变更
 
 从 FreeBSD-13.0 开始，i386 架构的默认 `CPUTYPE` 将从 `486` 变更为 `686`。
 
-这意味着，默认情况下，生成的二进制文件将要求 686 类 CPU，包括但不限于 FreeBSD 发布工程团队提供的二进制文件。FreeBSD 13.x 仍将继续支持旧的 CPU，但需要此功能的用户将需要为获得官方支持而自行构建发行版。
+这意味着，默认情况下，生成的二进制文件将要求 686 类 CPU，包括但不限于 FreeBSD 发布工程团队提供的二进制文件。FreeBSD 13.x 仍将继续支持旧的 CPU，但需要此功能的用户需自行构建发行版以获得官方支持。
 
-由于 i486 和 i586 CPU 主要用于嵌入式市场，因此预计对普通用户的影响将是最小的，因为这些 CPU 类型的新硬件早就不再使用，而从统计数据来看，部署的这类系统大部分接近退役年限。
+由于 i486 和 i586 CPU 主要用于嵌入式市场，因此预计对普通用户的影响极小，因为这些 CPU 类型的新硬件早已淘汰，而从统计数据来看，部署的这类系统大部分接近退役年限。
 
 这一变更考虑了多个因素。例如，i486 没有 64 位原子操作，虽然它们可以在内核中模拟，但无法在用户空间中模拟。此外，32 位 amd64 库从一开始就是 i686。
 
-由于大多数 32 位测试是由开发人员在 64 位硬件上使用 lib32 库并配合内核中的 **COMPAT_FREEBSD32** 选项进行的，这一变更确保了更好的覆盖率和用户体验。这也符合大多数 Linux® 发行版长期以来的做法。
+由于大多数 32 位测试是由开发人员在 64 位硬件上使用 lib32 库并配合内核中的 **COMPAT_FREEBSD32** 选项进行的，这一变更确保了更好的覆盖率和用户体验。这也符合大多数 Linux 发行版长期以来的做法。
 
 预计这将是 i386 默认 `CPUTYPE` 的最后一次升级。
 
