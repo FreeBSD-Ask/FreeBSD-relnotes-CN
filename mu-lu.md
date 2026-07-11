@@ -381,6 +381,7 @@
   * [FreeBSD 7.0-RELEASE 勘误](7.0R/7.0-errata.md)
   * [FreeBSD 7.0-RELEASE 发布计划](7.0R/7.0-schedule.md)
 * FreeBSD 6.4-RELEASE
+  * [FreeBSD 6.4-RELEASE 发行说明](6.4R/6.4-relnotes.md)
   * [FreeBSD 6.4-RELEASE amd64 发行说明（2008 年 11 月 28 日）](6.4R/6.4-amd64.md)
   * [FreeBSD 6.4-RELEASE i386 发行说明（2008 年 11 月 28 日）](6.4R/6.4-i386.md)
   * [FreeBSD 6.4-RELEASE alpha 发行说明（2008 年 11 月 28 日）](6.4R/6.4-alpha.md)
