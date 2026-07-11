@@ -553,6 +553,8 @@
   * [FreeBSD 5.4-RELEASE 迁移指南](5.4R/5.4-migration-guide.md)
 * FreeBSD 5.3-RELEASE
   * [FreeBSD 5.3-RELEASE amd64 发行说明（2004 年 11 月 6 日）](5.3R/5.3-amd64.md)
+  * [FreeBSD 5.3-RELEASE 发行公告](5.3R/5.3-announce.md)
+  * [FreeBSD 5.3-RELEASE 安装说明](5.3R/5.3-installation.md)
   * [FreeBSD 5.3-RELEASE 硬件兼容列表](5.3R/5.3-hardware.md)
     * [FreeBSD 5.3-RELEASE alpha 硬件兼容列表](5.3R/5.3-alpha-hardware.md)
     * [FreeBSD 5.3-RELEASE amd64 硬件兼容列表](5.3R/5.3-amd64-hardware.md)
@@ -560,86 +562,195 @@
     * [FreeBSD 5.3-RELEASE ia64 硬件兼容列表](5.3R/5.3-ia64-hardware.md)
     * [FreeBSD 5.3-RELEASE pc98 硬件兼容列表](5.3R/5.3-pc98-hardware.md)
     * [FreeBSD 5.3-RELEASE sparc64 硬件兼容列表](5.3R/5.3-sparc64-hardware.md)
+  * [FreeBSD 5.3-RELEASE 自述文件](5.3R/5.3-readme.md)
+  * [FreeBSD 5.3-RELEASE 勘误](5.3R/5.3-errata.md)
+  * [FreeBSD 5.3-RELEASE 发布计划](5.3R/5.3-schedule.md)
 * FreeBSD 5.2.1-RELEASE
+  * [FreeBSD 5.2.1-RELEASE amd64 发行说明（2004 年 2 月 25 日）](5.2.1R/5.2.1-amd64.md)
+  * [FreeBSD 5.2.1-RELEASE 发行公告](5.2.1R/5.2.1-announce.md)
+  * [FreeBSD 5.2.1-RELEASE 安装说明](5.2.1R/5.2.1-installation.md)
   * [FreeBSD 5.2.1-RELEASE 硬件兼容列表](5.2.1R/5.2.1-hardware.md)
     * [FreeBSD 5.2.1-RELEASE amd64 硬件兼容列表](5.2.1R/5.2.1-amd64-hardware.md)
     * [FreeBSD 5.2.1-RELEASE i386 硬件兼容列表](5.2.1R/5.2.1-i386-hardware.md)
     * [FreeBSD 5.2.1-RELEASE ia64 硬件兼容列表](5.2.1R/5.2.1-ia64-hardware.md)
     * [FreeBSD 5.2.1-RELEASE pc98 硬件兼容列表](5.2.1R/5.2.1-pc98-hardware.md)
     * [FreeBSD 5.2.1-RELEASE sparc64 硬件兼容列表](5.2.1R/5.2.1-sparc64-hardware.md)
-  * [FreeBSD 5.2.1-RELEASE amd64 发行说明（2004 年 2 月 25 日）](5.2.1R/5.2.1-amd64.md)
+  * [FreeBSD 5.2.1-RELEASE 自述文件](5.2.1R/5.2.1-readme.md)
+  * [FreeBSD 5.2.1-RELEASE 勘误](5.2.1R/5.2.1-errata.md)
 * FreeBSD 5.2-RELEASE
   * [FreeBSD 5.2-RELEASE amd64 发行说明（2004 年 1 月 9 日）](5.2R/5.2-amd64.md)
+  * [FreeBSD 5.2-RELEASE 发行公告](5.2R/5.2-announce.md)
+  * [FreeBSD 5.2-RELEASE 安装说明](5.2R/5.2-installation.md)
+  * [FreeBSD 5.2-RELEASE 硬件兼容列表](5.2R/5.2-hardware.md)
+  * [FreeBSD 5.2-RELEASE 自述文件](5.2R/5.2-readme.md)
+  * [FreeBSD 5.2-RELEASE 勘误](5.2R/5.2-errata.md)
+  * [FreeBSD 5.2-RELEASE 发布计划](5.2R/5.2-schedule.md)
 * FreeBSD 5.1-RELEASE
   * [FreeBSD 5.1-RELEASE i386 发行说明（2003 年 6 月 9 日）](5.1R/5.1.md)
+  * [FreeBSD 5.1-RELEASE 发行公告](5.1R/5.1-announce.md)
+  * [FreeBSD 5.1-RELEASE 安装说明](5.1R/5.1-installation.md)
+  * [FreeBSD 5.1-RELEASE 硬件兼容列表](5.1R/5.1-hardware.md)
+  * [FreeBSD 5.1-RELEASE 自述文件](5.1R/5.1-readme.md)
+  * [FreeBSD 5.1-RELEASE 勘误](5.1R/5.1-errata.md)
+  * [FreeBSD 5.1-RELEASE 发布计划](5.1R/5.1-schedule.md)
 * FreeBSD 5.0-RELEASE
   * [FreeBSD 5.0-RELEASE i386 发行说明（2003 年 1 月 14 日）](5.0R/5.0.md)
+  * [FreeBSD 5.0-RELEASE 发行公告](5.0R/5.0-announce.md)
+  * [FreeBSD 5.0-RELEASE 安装说明](5.0R/5.0-installation.md)
+  * [FreeBSD 5.0-RELEASE 硬件兼容列表](5.0R/5.0-hardware.md)
+  * [FreeBSD 5.0-RELEASE 自述文件](5.0R/5.0-readme.md)
+  * [FreeBSD 5.0-RELEASE 勘误](5.0R/5.0-errata.md)
+  * [FreeBSD 5.0-RELEASE 发布计划](5.0R/5.0-schedule.md)
 * FreeBSD 4.11-RELEASE
   * [FreeBSD 4.11-RELEASE i386 发行说明（2005 年 1 月 25 日）](4.11R/4.11.md)
+  * [FreeBSD 4.11-RELEASE 发行公告](4.11R/4.11-announce.md)
+  * [FreeBSD 4.11-RELEASE 安装说明](4.11R/4.11-installation.md)
+  * [FreeBSD 4.11-RELEASE 硬件兼容列表](4.11R/4.11-hardware.md)
+  * [FreeBSD 4.11-RELEASE 自述文件](4.11R/4.11-readme.md)
+  * [FreeBSD 4.11-RELEASE 勘误](4.11R/4.11-errata.md)
+  * [FreeBSD 4.11-RELEASE 发布计划](4.11R/4.11-schedule.md)
 * FreeBSD 4.10-RELEASE
   * [FreeBSD 4.10-RELEASE i386 发行说明（2004 年 5 月 27 日）](4.10R/4.10.md)
+  * [FreeBSD 4.10-RELEASE 发行公告](4.10R/4.10-announce.md)
+  * [FreeBSD 4.10-RELEASE 安装说明](4.10R/4.10-installation.md)
+  * [FreeBSD 4.10-RELEASE 硬件兼容列表](4.10R/4.10-hardware.md)
+  * [FreeBSD 4.10-RELEASE 自述文件](4.10R/4.10-readme.md)
+  * [FreeBSD 4.10-RELEASE 勘误](4.10R/4.10-errata.md)
+  * [FreeBSD 4.10-RELEASE 发布计划](4.10R/4.10-schedule.md)
 * FreeBSD 4.9-RELEASE
   * [FreeBSD 4.9-RELEASE i386 发行说明（2003 年 10 月 28 日）](4.9R/4.9.md)
+  * [FreeBSD 4.9-RELEASE 发行公告](4.9R/4.9-announce.md)
+  * [FreeBSD 4.9-RELEASE 安装说明](4.9R/4.9-installation.md)
+  * [FreeBSD 4.9-RELEASE 硬件兼容列表](4.9R/4.9-hardware.md)
+  * [FreeBSD 4.9-RELEASE 自述文件](4.9R/4.9-readme.md)
+  * [FreeBSD 4.9-RELEASE 勘误](4.9R/4.9-errata.md)
+  * [FreeBSD 4.9-RELEASE 发布计划](4.9R/4.9-schedule.md)
 * FreeBSD 4.8-RELEASE
   * [FreeBSD 4.8-RELEASE i386 发行说明（2003 年 4 月 3 日）](4.8R/4.8.md)
+  * [FreeBSD 4.8-RELEASE 发行公告](4.8R/4.8-announce.md)
+  * [FreeBSD 4.8-RELEASE 安装说明](4.8R/4.8-installation.md)
+  * [FreeBSD 4.8-RELEASE 硬件兼容列表](4.8R/4.8-hardware.md)
+  * [FreeBSD 4.8-RELEASE 自述文件](4.8R/4.8-readme.md)
+  * [FreeBSD 4.8-RELEASE 勘误](4.8R/4.8-errata.md)
+  * [FreeBSD 4.8-RELEASE 发布计划](4.8R/4.8-schedule.md)
 * FreeBSD 4.7-RELEASE
   * [FreeBSD 4.7-RELEASE i386 发行说明（2002 年 10 月 10 日）](4.7R/4.7-i386.md)
+  * [FreeBSD 4.7-RELEASE 发行公告](4.7R/4.7-announce.md)
+  * [FreeBSD 4.7-RELEASE 安装说明](4.7R/4.7-installation.md)
+  * [FreeBSD 4.7-RELEASE 硬件兼容列表](4.7R/4.7-hardware.md)
+  * [FreeBSD 4.7-RELEASE 自述文件](4.7R/4.7-readme.md)
+  * [FreeBSD 4.7-RELEASE 勘误](4.7R/4.7-errata.md)
+  * [FreeBSD 4.7-RELEASE 发布计划](4.7R/4.7-schedule.md)
 * FreeBSD 4.6.2-RELEASE
   * [FreeBSD 4.6.2-RELEASE i386 发行说明（2002 年 8 月 15 日）](4.6.2R/4.6.2-i386.md)
+  * [FreeBSD 4.6.2-RELEASE 发行公告](4.6.2R/4.6.2-announce.md)
+  * [FreeBSD 4.6.2-RELEASE 硬件兼容列表](4.6.2R/4.6.2-hardware.md)
+  * [FreeBSD 4.6.2-RELEASE 自述文件](4.6.2R/4.6.2-readme.md)
+  * [FreeBSD 4.6.2-RELEASE 勘误](4.6.2R/4.6.2-errata.md)
 * FreeBSD 4.6-RELEASE
   * [FreeBSD 4.6-RELEASE i386 发行说明（2002 年 6 月 15 日）](4.6R/4.6-i386.md)
+  * [FreeBSD 4.6-RELEASE 发行公告](4.6R/4.6-announce.md)
+  * [FreeBSD 4.6-RELEASE 安装说明](4.6R/4.6-installation.md)
+  * [FreeBSD 4.6-RELEASE 硬件兼容列表](4.6R/4.6-hardware.md)
+  * [FreeBSD 4.6-RELEASE 勘误](4.6R/4.6-errata.md)
+  * [FreeBSD 4.6-RELEASE 发布计划](4.6R/4.6-schedule.md)
 * FreeBSD 4.5-RELEASE
   * [FreeBSD 4.5-RELEASE i386 发行说明（2002 年 1 月 29 日）](4.5R/4.5-i386.md)
+  * [FreeBSD 4.5-RELEASE 发行公告](4.5R/4.5-announce.md)
+  * [FreeBSD 4.5-RELEASE 硬件兼容列表](4.5R/4.5-hardware.md)
+  * [FreeBSD 4.5-RELEASE 勘误](4.5R/4.5-errata.md)
+  * [FreeBSD 4.5-RELEASE 发布计划](4.5R/4.5-schedule.md)
 * FreeBSD 4.4-RELEASE
   * [FreeBSD 4.4-RELEASE i386 发行说明（2001 年 9 月 20 日）](4.4R/4.4-i386.md)
+  * [FreeBSD 4.4-RELEASE 发行公告](4.4R/4.4-announce.md)
+  * [FreeBSD 4.4-RELEASE 硬件兼容列表](4.4R/4.4-hardware.md)
+  * [FreeBSD 4.4-RELEASE 勘误](4.4R/4.4-errata.md)
 * FreeBSD 4.3-RELEASE
   * [FreeBSD 4.3-RELEASE 发行说明（2001 年 4 月 20 日）](4.3R/4.3.md)
+  * [FreeBSD 4.3-RELEASE 发行公告](4.3R/4.3-announce.md)
+  * [FreeBSD 4.3-RELEASE 勘误](4.3R/4.3-errata.md)
 * FreeBSD 4.2-RELEASE
   * [FreeBSD 4.2-RELEASE 发行说明（2000 年 11 月 21 日）](4.2R/4.2.md)
+  * [FreeBSD 4.2-RELEASE 发行公告](4.2R/4.2-announce.md)
+  * [FreeBSD 4.2-RELEASE 勘误](4.2R/4.2-errata.md)
 * FreeBSD 4.1.1-RELEASE
   * [FreeBSD 4.1.1-RELEASE 发行说明（2000 年 9 月 27 日）](4.1.1R/4.1.1.md)
+  * [FreeBSD 4.1.1-RELEASE 发行公告](4.1.1R/4.1.1-announce.md)
+  * [FreeBSD 4.1.1-RELEASE 勘误](4.1.1R/4.1.1-errata.md)
 * FreeBSD 4.1-RELEASE
   * [FreeBSD 4.1-RELEASE 发行说明（2000 年 7 月 27 日）](4.1R/4.1.md)
+  * [FreeBSD 4.1-RELEASE 发行公告](4.1R/4.1-announce.md)
+  * [FreeBSD 4.1-RELEASE 勘误](4.1R/4.1-errata.md)
 * FreeBSD 4.0-RELEASE
   * [FreeBSD 4.0-RELEASE 发行说明（2000 年 3 月 14 日）](4.0R/4.0.md)
+  * [FreeBSD 4.0-RELEASE 发行公告](4.0R/4.0-announce.md)
+  * [FreeBSD 4.0-RELEASE 勘误](4.0R/4.0-errata.md)
 * FreeBSD 3.5-RELEASE
   * [FreeBSD 3.5-RELEASE 发行说明（2000 年 6 月）](3.5R/3.5.md)
+  * [FreeBSD 3.5-RELEASE 发行公告](3.5R/3.5-announce.md)
+  * [FreeBSD 3.5-RELEASE 勘误](3.5R/3.5-errata.md)
 * FreeBSD 3.4-RELEASE
   * [FreeBSD 3.4-RELEASE 发行说明（1999 年 12 月）](3.4R/3.4.md)
+  * [FreeBSD 3.4-RELEASE 发行公告](3.4R/3.4-announce.md)
+  * [FreeBSD 3.4-RELEASE 勘误](3.4R/3.4-errata.md)
 * FreeBSD 3.3-RELEASE
   * [FreeBSD 3.3-RELEASE 发行说明（1999 年 9 月）](3.3R/3.3.md)
+  * [FreeBSD 3.3-RELEASE 发行公告](3.3R/3.3-announce.md)
+  * [FreeBSD 3.3-RELEASE 勘误](3.3R/3.3-errata.md)
 * FreeBSD 3.2-RELEASE
   * [FreeBSD 3.2-RELEASE 发行说明（1999 年 5 月）](3.2R/3.2.md)
+  * [FreeBSD 3.2-RELEASE 发行公告](3.2R/3.2-announce.md)
+  * [FreeBSD 3.2-RELEASE 勘误](3.2R/3.2-errata.md)
 * FreeBSD 3.1-RELEASE
   * [FreeBSD 3.1-RELEASE 发行说明（1999 年 2 月）](3.1R/3.1.md)
+  * [FreeBSD 3.1-RELEASE 发行公告](3.1R/3.1-announce.md)
+  * [FreeBSD 3.1-RELEASE 勘误](3.1R/3.1-errata.md)
 * FreeBSD 3.0-RELEASE
   * [FreeBSD 3.0-RELEASE 发行说明（1998 年 10 月）](3.0R/3.0.md)
+  * [FreeBSD 3.0-RELEASE 发行公告](3.0R/3.0-announce.md)
+  * [FreeBSD 3.0-RELEASE 勘误](3.0R/3.0-errata.md)
 * FreeBSD 2.2.8-RELEASE
   * [FreeBSD 2.2.8-RELEASE 发行说明（1998 年 12 月）](2.2.8R/2.2.8.md)
+  * [FreeBSD 2.2.8-RELEASE 发行公告](2.2.8R/2.2.8-announce.md)
+  * [FreeBSD 2.2.8-RELEASE 勘误](2.2.8R/2.2.8-errata.md)
 * FreeBSD 2.2.7-RELEASE
   * [FreeBSD 2.2.7-RELEASE 发行说明（1998 年 7 月）](2.2.7R/2.2.7.md)
+  * [FreeBSD 2.2.7-RELEASE 发行公告](2.2.7R/2.2.7-announce.md)
+  * [FreeBSD 2.2.7-RELEASE 勘误](2.2.7R/2.2.7-errata.md)
 * FreeBSD 2.2.6-RELEASE
   * [FreeBSD 2.2.6-RELEASE 发行说明（1998 年 3 月）](2.2.6R/2.2.6.md)
+  * [FreeBSD 2.2.6-RELEASE 发行公告](2.2.6R/2.2.6-announce.md)
+  * [FreeBSD 2.2.6-RELEASE 勘误](2.2.6R/2.2.6-errata.md)
 * FreeBSD 2.2.5-RELEASE
   * [FreeBSD 2.2.5-RELEASE 发行说明（1997 年 10 月）](2.2.5R/2.2.5.md)
+  * [FreeBSD 2.2.5-RELEASE 发行公告](2.2.5R/2.2.5-announce.md)
+  * [FreeBSD 2.2.5-RELEASE 勘误](2.2.5R/2.2.5-errata.md)
 * FreeBSD 2.2.2-RELEASE
   * [FreeBSD 2.2.2-RELEASE 发行说明（1997 年 5 月）](2.2.2R/2.2.2.md)
+  * [FreeBSD 2.2.2-RELEASE 勘误](2.2.2R/2.2.2-errata.md)
 * FreeBSD 2.2.1-RELEASE
   * [FreeBSD 2.2.1-RELEASE 发行说明（1997 年 4 月）](2.2.1R/2.2.1.md)
 * FreeBSD 2.2-RELEASE
   * [FreeBSD 2.2-RELEASE 发行说明（1997 年 3 月）](2.2R/2.2.md)
+  * [FreeBSD 2.2-RELEASE 发行公告](2.2R/2.2-announce.md)
 * FreeBSD 2.1.7-RELEASE
   * [FreeBSD 2.1.7-RELEASE 发行说明（1997 年 2 月）](2.1.7R/2.1.7.md)
+  * [FreeBSD 2.1.7-RELEASE 发行公告](2.1.7R/2.1.7-announce.md)
 * FreeBSD 2.1.6-RELEASE
   * [FreeBSD 2.1.6-RELEASE 发行说明（1996 年 11 月）](2.1.6R/2.1.6.md)
+  * [FreeBSD 2.1.6-RELEASE 发行公告](2.1.6R/2.1.6-announce.md)
 * FreeBSD 2.1.5-RELEASE
   * [FreeBSD 2.1.5-RELEASE 发行说明（1996 年 7 月）](2.1.5R/2.1.5.md)
+  * [FreeBSD 2.1.5-RELEASE 发行公告](2.1.5R/2.1.5-announce.md)
 * FreeBSD 2.1-RELEASE
   * [FreeBSD 2.1-RELEASE 发行说明（1995 年 11 月）](2.1R/2.1.md)
+  * [FreeBSD 2.1-RELEASE 发行公告](2.1R/2.1-announce.md)
 * FreeBSD 2.0.5-ALPHA
   * [FreeBSD 2.0.5-ALPHA 发行说明（1995 年 6 月）](2.0.5R/2.0.5.md)
+  * [FreeBSD 2.0.5-ALPHA 发行公告](2.0.5R/2.0.5-announce.md)
 * FreeBSD 2.0-RELEASE
   * [FreeBSD 2.0-RELEASE 发行说明（1994 年 11 月）](2.0/2.0.md)
+  * [FreeBSD 2.0-RELEASE 发行公告](2.0/2.0-announce.md)
 * FreeBSD 1.1.5.1-RELEASE
   * [FreeBSD 1.1.5.1-RELEASE 发行说明（1994 年 7 月）](1.1.5.1/1.1.5.1.md)
 * FreeBSD 1.1.5-RELEASE
@@ -648,3 +759,4 @@
   * [FreeBSD 1.1-RELEASE 发行说明（1994 年 5 月）](1.1/1.1.md)
 * FreeBSD 1.0-RELEASE
   * [FreeBSD 1.0-RELEASE 发行说明（1993 年 11 月）](1.0/1.0.md)
+  * [FreeBSD 1.0-RELEASE 发行公告](1.0/1.0-announce.md)
