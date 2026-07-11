@@ -77,8 +77,8 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 | [FreeBSD-EN-21:14.pms](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:14.pms.asc) | 2021 年 5 月 26 日 | [pms(4)](https://man.freebsd.org/cgi/man.cgi?query=pms&sektion=4&format=html) 数据损坏 |
 | [FreeBSD-EN-21:15.virtio](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:15.virtio.asc) | 2021 年 5 月 26 日 | [virtio(4)](https://man.freebsd.org/cgi/man.cgi?query=virtio&sektion=4&format=html) 设备探测失败 |
 | [FreeBSD-EN-21:16.bc](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:16.bc.asc) | 2021 年 5 月 26 日 | dc 更新 |
-| [FreeBSD-EN-21:17.libradius](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:17.libradius.asc) | 2021 年 6 月 1 日 | [rad_get_attr(3)](https://man.freebsd.org/cgi/man.cgi?query=rad_get_attr&sektion=3&format=html) 中的错误验证 |
-| [FreeBSD-EN-21:18.libc++](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:18.libc%2B%2B.asc) | 2021 年 6 月 29 日 | libC++ 中缺少 C++20 头文件 |
+| [FreeBSD-EN-21:17.libradius](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:17.libradius.asc) | 2021 年 6 月 1 日 | [rad_get_attr(3)](https://man.freebsd.org/cgi/man.cgi?query=rad_get_attr&sektion=3&format=html) 中的不正确验证 |
+| [FreeBSD-EN-21:18.libc++](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:18.libc%2B%2B.asc) | 2021 年 6 月 29 日 | libc++ 中缺少 C++20 头文件 |
 | [FreeBSD-EN-21:19.libcasper](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:19.libcasper.asc) | 2021 年 6 月 29 日 | libcasper 断言失败 |
 | [FreeBSD-EN-21:20.vlan](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:20.vlan.asc) | 2021 年 6 月 29 日 | [vlan(4)](https://man.freebsd.org/cgi/man.cgi?query=vlan&sektion=4&format=html) 缺少向后兼容性 |
 | [FreeBSD-EN-21:21.ipfw](https://www.freebsd.org/security/advisories/FreeBSD-EN-21:21.ipfw.asc) | 2021 年 6 月 29 日 | 启用 ipfw 链路层过滤时内核崩溃 |
@@ -98,7 +98,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 | [FreeBSD-EN-22:07.la57](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:07.la57.asc) | 2022 年 2 月 1 日 | Intel CPU LA57 引导失败 |
 | [FreeBSD-EN-22:10.zfs](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:10.zfs.asc) | 2022 年 3 月 15 日 | ZFS 写入未能更新文件大小 |
 | [FreeBSD-EN-22:11.zfs](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:11.zfs.asc) | 2022 年 3 月 15 日 | ZFS [lseek(2)](https://man.freebsd.org/cgi/man.cgi?query=lseek&sektion=2&format=html) 不一致 |
-| [FreeBSD-EN-22:12.zfs](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:12.zfs.asc) | 2022 年 3 月 15 日 | 并发‘zfs list’调用时 ZFS 崩溃 |
+| [FreeBSD-EN-22:12.zfs](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:12.zfs.asc) | 2022 年 3 月 15 日 | 并发 `zfs list` 调用时 ZFS 崩溃 |
 | [FreeBSD-EN-22:14.tzdata](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:14.tzdata.asc) | 2022 年 3 月 22 日 | 时区数据库信息更新 |
 
 ## 用户空间
@@ -107,11 +107,11 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 
 ### 用户空间配置变更
 
-参数 `-i` 现在已默认添加到 **/etc/defaults/rc.conf** 中的 [rtsol(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsol&sektion=8&format=html) 和 [rtsold(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsold&sektion=8&format=html)。变更详情见 [a0fc5094bf4c](https://cgit.freebsd.org/src/commit/?id=a0fc5094bf4c)（由 [https://www.patreon.com/cperciva](https://www.patreon.com/cperciva) 赞助）。
+选项 `-i` 现在默认添加到 **/etc/defaults/rc.conf** 中的 [rtsol(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsol&sektion=8&format=html) 和 [rtsold(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsold&sektion=8&format=html)。变更详情见 [a0fc5094bf4c](https://cgit.freebsd.org/src/commit/?id=a0fc5094bf4c)（由 [https://www.patreon.com/cperciva](https://www.patreon.com/cperciva) 赞助）。
 
 ### 用户空间应用程序变更
 
-`-i` 选项已添加到 [rtsol(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsol&sektion=8&format=html) 和 [rtsold(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsold&sektion=8&format=html) 中，用于禁用 0 到 1 秒的随机延迟，从而加快启动过程。[8056b73ea163](https://cgit.freebsd.org/src/commit/?id=8056b73ea163)（由 [https://www.patreon.com/cperciva](https://www.patreon.com/cperciva) 赞助）
+`-i` 选项添加到 [rtsol(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsol&sektion=8&format=html) 和 [rtsold(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsold&sektion=8&format=html) 中，用于禁用 0 到 1 秒的随机延迟，从而加快启动过程。[8056b73ea163](https://cgit.freebsd.org/src/commit/?id=8056b73ea163)（由 [https://www.patreon.com/cperciva](https://www.patreon.com/cperciva) 赞助）
 
 对于 64 位架构，基本系统现在默认启用位置无关可执行文件（PIE）支持。可以通过开关 `WITHOUT_PIE` 禁用该功能，需要进行完全重新编译。[396e9f259d96](https://cgit.freebsd.org/src/commit/?id=396e9f259d96)
 
@@ -127,7 +127,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 
 CAM 库已修改，以在解析设备名称之前使用 [realpath(3)](https://man.freebsd.org/cgi/man.cgi?query=realpath&sektion=3&format=html)，从而允许诸如 [camcontrol(8)](https://man.freebsd.org/cgi/man.cgi?query=camcontrol&sektion=8&format=html) 和 [smartctl(8)](https://man.freebsd.org/cgi/man.cgi?query=smartctl&sektion=8&format=html) 之类的工具在使用符号链接时更加友好。[e32acf95ea25](https://cgit.freebsd.org/src/commit/?id=e32acf95ea25)
 
-兼容 Linux 的 [md5sum(1)](https://man.freebsd.org/cgi/man.cgi?query=md5sum&sektion=1&format=html) 和类似的消息摘要程序添加完成，方法是在程序名称以 `sum` 结尾时让相应的 BSD 程序运行 `-r` 选项。[c0d5665be0dc](https://cgit.freebsd.org/src/commit/?id=c0d5665be0dc)（由 Netflix 赞助）
+兼容 Linux 的 [md5sum(1)](https://man.freebsd.org/cgi/man.cgi?query=md5sum&sektion=1&format=html) 和类似的消息摘要程序添加完成，方法是在程序名称以 `sum` 结尾时让相应的 BSD 程序带 `-r` 选项运行。[c0d5665be0dc](https://cgit.freebsd.org/src/commit/?id=c0d5665be0dc)（由 Netflix 赞助）
 
 [svnlite(1)](https://man.freebsd.org/cgi/man.cgi?query=svnlite&sektion=1&format=html) 默认在构建中禁用。[a4f99b3c2384](https://cgit.freebsd.org/src/commit/?id=a4f99b3c2384)
 
