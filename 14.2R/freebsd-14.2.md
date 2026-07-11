@@ -84,8 +84,8 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。该发行版可通过 [https
 - `libfido2` 更新至 1.14.0。[128bace5102e](https://cgit.freebsd.org/src/commit/?id=128bace5102e)（由 FreeBSD 基金会赞助）
 - `libpcap` 更新至 1.10.5。[26f21a6494b4](https://cgit.freebsd.org/src/commit/?id=26f21a6494b4)（由 FreeBSD 基金会赞助）
 - `llvm` 更新至 18.1.6。[f1e3279983d6](https://cgit.freebsd.org/src/commit/?id=f1e3279983d6)
-- `openssl` 已更新至 3.0.15。[cc43f991ab3e](https://cgit.freebsd.org/src/commit/?id=cc43f991ab3e)
-- `tcpdump` 已更新至 4.99.5。[ec3da16d8bc1](https://cgit.freebsd.org/src/commit/?id=ec3da16d8bc1)（由 FreeBSD 基金会赞助）
+- `openssl` 更新至 3.0.15。[cc43f991ab3e](https://cgit.freebsd.org/src/commit/?id=cc43f991ab3e)
+- `tcpdump` 更新至 4.99.5。[ec3da16d8bc1](https://cgit.freebsd.org/src/commit/?id=ec3da16d8bc1)（由 FreeBSD 基金会赞助）
 - `unbound` 已更新至 1.22.0。[0a096a7b3ae8](https://cgit.freebsd.org/src/commit/?id=0a096a7b3ae8)
 
 ### 运行时库和 API
