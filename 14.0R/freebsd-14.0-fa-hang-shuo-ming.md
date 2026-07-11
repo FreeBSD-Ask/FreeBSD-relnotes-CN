@@ -213,7 +213,7 @@ root 用户的默认 shell 现在是 [sh(1)](https://man.freebsd.org/cgi/man.cgi
 
 Telnet 守护进程，[telnetd(8)](https://man.freebsd.org/cgi/man.cgi?query=telnetd&sektion=8&format=html)，已被移除。如果需要，可以使用 Port [net/freebsd-telnetd](https://cgit.freebsd.org/ports/tree/net/freebsd-telnetd/)。客户端不受影响。[0eea46fb1f83](https://cgit.freebsd.org/src/commit/?id=0eea46fb1f83)
 
-在默认情况下禁用了参数 `PROFILE`，因此不提供系统库的配置版本。建议使用基于硬件的性能分析（例如 [hwpmc(4)](https://man.freebsd.org/cgi/man.cgi?query=hwpmc&sektion=4&format=html)）。[fe52b7f60ef4](https://cgit.freebsd.org/src/commit/?id=fe52b7f60ef4)（由 FreeBSD 基金会赞助）
+在默认情况下禁用了参数 `PROFILE`，因此不提供系统库的性能分析版本。建议使用基于硬件的性能分析（例如 [hwpmc(4)](https://man.freebsd.org/cgi/man.cgi?query=hwpmc&sektion=4&format=html)）。[fe52b7f60ef4](https://cgit.freebsd.org/src/commit/?id=fe52b7f60ef4)（由 FreeBSD 基金会赞助）
 
 二进制文件中的压缩调试段在小端目标上默认启用。[47363e99d3d3](https://cgit.freebsd.org/src/commit/?id=47363e99d3d3)（由 FreeBSD 基金会赞助）
 
@@ -450,7 +450,7 @@ OpenZFS 已升级到 2.2 版。新功能包括：
 
 ### 引导加载程序变更
 
-lua 风格的 [loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html) 现在将解释在 `loader_conf_files` 中出现的 **.lua** 文件为 lua，并在沙盒中执行它们。现有的加载器环境变量在沙盒中作为全局变量可用，成功执行配置文件后，任何设置的全局变量，如果不是表值，都将反映在加载器环境中。名称不是有效 lua 名称的环境变量可以作为 `_ENV` 的索引访问；例如，`_ENV[ 'net.fibs']`。[3cb2f5f369ec](https://cgit.freebsd.org/src/commit/?id=3cb2f5f369ec)
+lua 风格的 [loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html) 现在将解释在 `loader_conf_files` 中出现的 **.lua** 文件为 lua，并在沙盒中执行它们。现有的加载器环境变量在沙盒中作为全局变量可用，成功执行配置文件后，任何设置的全局变量，如果不是表值，都将反映在加载器环境中。名称不是有效 lua 名称的环境变量可以作为 `_ENV` 的索引访问；例如，`_ENV['net.fibs']`。[3cb2f5f369ec](https://cgit.freebsd.org/src/commit/?id=3cb2f5f369ec)
 
 EC2 实例现在在可用的情况下使用 UEFI 引导，大大加速了引导过程。[b43d7aa09b3c](https://cgit.freebsd.org/src/commit/?id=b43d7aa09b3c) [bcf9147144f3](https://cgit.freebsd.org/src/commit/?id=bcf9147144f3)（由 [https://www.patreon.com/cperciva](https://www.patreon.com/cperciva) 赞助）
 
