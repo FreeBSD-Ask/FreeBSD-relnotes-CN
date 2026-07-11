@@ -93,7 +93,7 @@ FreeBSD 13.1-RELEASE 是个 RELEASE 发行版，可以从 [https://www.FreeBSD.o
 | [FreeBSD-EN-22:01.fsck_ffs](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:01.fsck_ffs.asc) | 2022 年 1 月 11 日 | fsck_ffs 未能纠正某些错误 |
 | [FreeBSD-EN-22:02.xsave](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:02.xsave.asc) | 2022 年 1 月 11 日 | XSAVE 状态大小不正确 |
 | [FreeBSD-EN-22:03.hyperv](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:03.hyperv.asc) | 2022 年 1 月 11 日 | 某些 Hyper-V 版本的 vPCI 兼容性改进 |
-| [FreeBSD-EN-22:05.tail](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:05.tail.asc) | 2022 年 1 月 11 日 | tail -F 未能跟随某些类型的日志轮转 |
+| [FreeBSD-EN-22:05.tail](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:05.tail.asc) | 2022 年 1 月 11 日 | `tail -F` 未能跟随某些类型的日志轮转 |
 | [FreeBSD-EN-22:06.libalias](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:06.libalias.asc) | 2022 年 1 月 11 日 | libalias 中对分片 IPv4 数据包的处理不正确 |
 | [FreeBSD-EN-22:07.la57](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:07.la57.asc) | 2022 年 2 月 1 日 | Intel CPU LA57 引导失败 |
 | [FreeBSD-EN-22:10.zfs](https://www.freebsd.org/security/advisories/FreeBSD-EN-22:10.zfs.asc) | 2022 年 3 月 15 日 | ZFS 写入未能更新文件大小 |
