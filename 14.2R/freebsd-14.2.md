@@ -43,9 +43,9 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。该发行版可通过 [https
 | **FreeBSD-SA-24:07.nfsclient** | 2024 年 8 月 7 日 | NFS 客户端接受包含路径分隔符的文件名 |
 | **FreeBSD-SA-24:08.openssh** | 2024 年 8 月 7 日 | OpenSSH 预认证异步信号安全问题 |
 | **FreeBSD-SA-24:09.libnv** | 2024 年 9 月 4 日 | libnv 中的多个漏洞 |
-| **FreeBSD-SA-24:10.bhyve** | 2024 年 9 月 4 日 | [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 通过 TPM 设备直通导致的特权用户逃逸 |
+| **FreeBSD-SA-24:10.bhyve** | 2024 年 9 月 4 日 | [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 通过 TPM 设备直通导致的特权客户机逃逸 |
 | **FreeBSD-SA-24:11.ctl** | 2024 年 9 月 4 日 | [ctl(4)](https://man.freebsd.org/cgi/man.cgi?query=ctl&sektion=4&format=html) CAM 目标层的多个问题 |
-| **FreeBSD-SA-24:12.bhyve** | 2024 年 9 月 4 日 | [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 通过 USB 控制器直通导致的特权用户逃逸 |
+| **FreeBSD-SA-24:12.bhyve** | 2024 年 9 月 4 日 | [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) 通过 USB 控制器直通导致的特权客户机逃逸 |
 | **FreeBSD-SA-24:13.openssl** | 2024 年 9 月 4 日 | OpenSSL 中 X.509 名称检查可能导致的 DoS |
 | **FreeBSD-SA-24:14.umtx** | 2024 年 9 月 4 日 | umtx 内核崩溃或使用后释放 |
 | **FreeBSD-SA-24:15.bhyve** | 2024 年 9 月 19 日 | [bhyve(8)](https://man.freebsd.org/cgi/man.cgi?query=bhyve&sektion=8&format=html) XHCI 仿真中越界读取访问 |
