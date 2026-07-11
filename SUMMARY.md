@@ -733,12 +733,14 @@
 * FreeBSD 2.2-RELEASE
   * [FreeBSD 2.2-RELEASE 发行说明（1997 年 3 月）](2.2R/2.2.md)
   * [FreeBSD 2.2-RELEASE 发行公告](2.2R/2.2-announce.md)
+  * [FreeBSD 2.2-RELEASE 介质变更公告](2.2R/2.2-install-media.md)
 * FreeBSD 2.1.7-RELEASE
   * [FreeBSD 2.1.7-RELEASE 发行说明（1997 年 2 月）](2.1.7R/2.1.7.md)
   * [FreeBSD 2.1.7-RELEASE 发行公告](2.1.7R/2.1.7-announce.md)
 * FreeBSD 2.1.6-RELEASE
   * [FreeBSD 2.1.6-RELEASE 发行说明（1996 年 11 月）](2.1.6R/2.1.6.md)
   * [FreeBSD 2.1.6-RELEASE 发行公告](2.1.6R/2.1.6-announce.md)
+  * [FreeBSD 2.1.6-RELEASE 安全更新](2.1.6R/2.1.6-security.md)
 * FreeBSD 2.1.5-RELEASE
   * [FreeBSD 2.1.5-RELEASE 发行说明（1996 年 7 月）](2.1.5R/2.1.5.md)
   * [FreeBSD 2.1.5-RELEASE 发行公告](2.1.5R/2.1.5-announce.md)
@@ -751,6 +753,8 @@
 * FreeBSD 2.0-RELEASE
   * [FreeBSD 2.0-RELEASE 发行说明（1994 年 11 月）](2.0/2.0.md)
   * [FreeBSD 2.0-RELEASE 发行公告](2.0/2.0-announce.md)
+  * [FreeBSD 2.0-RELEASE 安装指南](2.0/2.0-install.md)
+  * [FreeBSD 2.0-RELEASE 贡献者名单](2.0/2.0-credits.md)
 * FreeBSD 1.1.5.1-RELEASE
   * [FreeBSD 1.1.5.1-RELEASE 发行说明（1994 年 7 月）](1.1.5.1/1.1.5.1.md)
 * FreeBSD 1.1.5-RELEASE
