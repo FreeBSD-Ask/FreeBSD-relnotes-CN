@@ -52,7 +52,7 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。该发行版可通过 [https
 | **FreeBSD-SA-24:16.libnv** | 2024 年 9 月 19 日 | libnv 中的整数溢出 |
 | **FreeBSD-SA-24:17.bhyve** | 2024 年 10 月 29 日 | bhyve 管理程序中的多个问题 |
 | **FreeBSD-SA-24:18.ctl** | 2024 年 10 月 29 日 | [ctl(4)](https://man.freebsd.org/cgi/man.cgi?query=ctl&sektion=4&format=html) CAM 目标层中的不受限制分配 |
-| **FreeBSD-SA-24:19.fetch** | 2024 年 10 月 29 日 | [fetch(1)](https://man.freebsd.org/cgi/man.cgi?query=fetch&sektion=1&format=html) 参数的证书吊销列表功能失效 |
+| **FreeBSD-SA-24:19.fetch** | 2024 年 10 月 29 日 | [fetch(1)](https://man.freebsd.org/cgi/man.cgi?query=fetch&sektion=1&format=html) 的证书吊销列表选项失效 |
 
 ### 勘误通知
 
@@ -73,7 +73,7 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。该发行版可通过 [https
 
 ### 用户空间应用程序变更
 
-[env(1)](https://man.freebsd.org/cgi/man.cgi?query=env&sektion=1&format=html) 增加了一个用于切换目录的参数。此功能类似于 GNU 版 `env` 的功能，但不支持长选项。[08e8554c4a39](https://cgit.freebsd.org/src/commit/?id=08e8554c4a39)（由 Klara, Inc. 赞助）
+[env(1)](https://man.freebsd.org/cgi/man.cgi?query=env&sektion=1&format=html) 新增了一项用于切换目录的选项。此功能类似于 GNU 版 `env` 的功能，但不支持长选项。[08e8554c4a39](https://cgit.freebsd.org/src/commit/?id=08e8554c4a39)（由 Klara, Inc. 赞助）
 
 ### 第三方软件
 
