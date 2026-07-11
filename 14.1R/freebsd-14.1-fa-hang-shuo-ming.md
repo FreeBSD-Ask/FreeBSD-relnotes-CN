@@ -174,9 +174,9 @@ OpenZFS 升级至版本 2.2.4。[78c9d8f1ce65](https://cgit.freebsd.org/src/comm
 
 现在 [loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html) 会在读取其他配置文件后，读取变量 `local_loader_conf_files` 中列出的本地配置文件，默认为 **/boot/loader.conf.local**。[a25531db0fc2](https://cgit.freebsd.org/src/commit/?id=a25531db0fc2)
 
-现在可以配置 [loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html)，以便根据 SMBIOS 中的变量 planar maker、planar product、system product 和 uboot m_product 读取特定的配置文件。目前，最好的文档是 git 提交信息，[3eb3a802a31b](https://cgit.freebsd.org/src/commit/?id=3eb3a802a31b)。
+现在可以配置 [loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html)，以便根据 SMBIOS 中的变量 `planar maker`、`planar product`、`system product` 和 `uboot m_product` 读取特定的配置文件。目前，最好的文档是 git 提交信息，[3eb3a802a31b](https://cgit.freebsd.org/src/commit/?id=3eb3a802a31b)。
 
-对于 EFI 系统，[loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html) 中的控制台检测得到了改进。如果没有变量 ConOut，会检查变量 ConIn。如果找到多个设备，则首选串行。[20a6f4779ac6](https://cgit.freebsd.org/src/commit/?id=20a6f4779ac6)（由 Netflix 赞助）
+对于 EFI 系统，[loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html) 中的控制台检测得到了改进。如果没有变量 `ConOut`，会检查变量 `ConIn`。如果找到多个设备，则首选串行。[20a6f4779ac6](https://cgit.freebsd.org/src/commit/?id=20a6f4779ac6)（由 Netflix 赞助）
 
 [loader(8)](https://man.freebsd.org/cgi/man.cgi?query=loader&sektion=8&format=html) 中的帧缓冲区现在支持使用仅文本的视频驱动程序，从而节省空间。[57ca2848c0aa](https://cgit.freebsd.org/src/commit/?id=57ca2848c0aa)（由 Netflix 赞助）
 
@@ -190,9 +190,9 @@ arm64 系统上的 [loader.efi(8)](https://man.freebsd.org/cgi/man.cgi?query=loa
 
 ### 通用网络
 
-已恢复 ARP（[arp(4)](https://man.freebsd.org/cgi/man.cgi?query=arp&sektion=4&format=html)）对 802 标准网络的支持；该支持曾随 FDDI 支持被意外移除（这与以太网标准封装不同）。[d776dd5fbd48](https://cgit.freebsd.org/src/commit/?id=d776dd5fbd48)
+恢复了 ARP（[arp(4)](https://man.freebsd.org/cgi/man.cgi?query=arp&sektion=4&format=html)）对 802 标准网络的支持；该支持曾随 FDDI 支持被意外移除（这与以太网标准封装不同）。[d776dd5fbd48](https://cgit.freebsd.org/src/commit/?id=d776dd5fbd48)
 
-现在可以构建仅支持 IPv6（**INET6**）而不支持 IPv4（**INET**）的内核。[6df9fa1c6b83](https://cgit.freebsd.org/src/commit/?id=6df9fa1c6b83) 和其他
+现在可以构建仅支持 IPv6（`INET6`）而不支持 IPv4（`INET`）的内核。[6df9fa1c6b83](https://cgit.freebsd.org/src/commit/?id=6df9fa1c6b83) 和其他
 
 netgraph 模块 [ng_ipfw(4)](https://man.freebsd.org/cgi/man.cgi?query=ng_ipfw&sektion=4&format=html) 不再将 cookie 截断为 16 位，可使用完整的 32 位。[dadf64c5586e](https://cgit.freebsd.org/src/commit/?id=dadf64c5586e)
 
