@@ -147,7 +147,7 @@ LLVM 提供的 [objdump(1)](https://man.freebsd.org/cgi/man.cgi?query=objdump&se
 
 现在，x86 系统可支持多个 PCI MCFG 区域，使得支持访问非 0 域（段）的 PCI 配置成为可能。[0fb0306a89ad](https://cgit.freebsd.org/src/commit/?id=0fb0306a89ad)
 
-`graid` 实现中的一个问题修复，该问题在使用 4 个及更多磁盘创建 Promise RAID1 时出现。该阵列仅在重启前正常工作。[394ceefc2f2f](https://cgit.freebsd.org/src/commit/?id=394ceefc2f2f)
+修复了 `graid` 实现中的一个问题，该问题出现在使用 4 个及以上磁盘创建 Promise RAID1 时。该阵列仅在重启前正常工作。[394ceefc2f2f](https://cgit.freebsd.org/src/commit/?id=394ceefc2f2f)
 
 更新了 [Intel 无线接口的 iwlwifi(4) 驱动](https://man.freebsd.org/cgi/man.cgi?query=iwlwifi&sektion=4&format=html)，支持最高至 BE200 的芯片组。（由 FreeBSD 基金会赞助）（由 minipci.biz 赞助）
 
