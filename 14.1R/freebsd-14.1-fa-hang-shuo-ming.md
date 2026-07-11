@@ -214,7 +214,7 @@ netgraph 模块 [ng_ipfw(4)](https://man.freebsd.org/cgi/man.cgi?query=ng_ipfw&s
 
 预计 FreeBSD 15.0 不会支持除 armv7 以外的 32 位平台。armv6、i386 和 powerpc 平台已弃用并将被移除。64 位系统仍可运行旧款 32 位二进制文件。
 
-预计我们将在 FreeBSD 15.0 及 stable/15 中，把 armv7 作为 Tier 2 架构。然而，我们也预计可能会在 FreeBSD 16.0 中移除 armv7。我们将在发行 15.0 时提供 armv7 在 15.x 和 16.x 中状态的相关更新。
+预计我们将在 FreeBSD 15.0 及 **stable/15** 中，把 armv7 作为 Tier 2 架构。然而，我们也预计可能会在 FreeBSD 16.0 中移除 armv7。我们将在发行 15.0 时提供 armv7 在 15.x 和 16.x 中状态的相关更新。
 
 对于在 64 位平台上执行 32 位二进制文件的支持（选项 **COMPAT_FREEBSD32**）将至少在 stable/15 和 stable/16 分支上延续。至少在 stable/15 分支上，还将继续支持使用 `cc -m32` 编译单个 32 位应用程序，其中包括 **/usr/include** 中的相应头文件和 **/usr/lib32** 中的库。
 
