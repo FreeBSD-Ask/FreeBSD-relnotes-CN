@@ -234,7 +234,7 @@ arm64 上的 [linux(4)](https://man.freebsd.org/cgi/man.cgi?query=linux&sektion=
 
 ### UFS 变更
 
-现在可以在启用了日志软更新的 UFS 文件系统上进行快照。因此，现在可以在运行日志软更新的在线文件系统上执行后台转储。后台转储通过使用 [dump(8)](https://man.freebsd.org/cgi/man.cgi?query=dump&sektion=8&format=html) 的 `-L` 参数来请求。在以前的版本中，UFS 快照与日志软更新不兼容。[3f908eed27b4](https://cgit.freebsd.org/src/commit/?id=3f908eed27b4)（由 FreeBSD 基金会赞助）
+现在可以在启用了日志软更新的 UFS 文件系统上进行快照。因此，现在可以在运行日志软更新的在线文件系统上执行后台转储。后台转储通过使用 [dump(8)](https://man.freebsd.org/cgi/man.cgi?query=dump&sektion=8&format=html) 的参数 `-L` 来请求。在以前的版本中，UFS 快照与日志软更新不兼容。[3f908eed27b4](https://cgit.freebsd.org/src/commit/?id=3f908eed27b4)（由 FreeBSD 基金会赞助）
 
 ## 引导加载程序变更
 
