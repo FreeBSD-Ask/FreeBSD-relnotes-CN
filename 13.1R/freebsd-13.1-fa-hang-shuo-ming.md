@@ -158,7 +158,7 @@ LLDB 的构建支持已在所有 PowerPC 架构上启用。[cb1bee9bd34](https:/
 
 对 FIDO/U2F 硬件认证器的支持在 `ssh` 中启用，新增了 `ecdsa-sk` 和 `ed25519-sk` 公钥类型以及相应的证书类型。有关 FIDO/U2F 支持的描述请参考 [https://www.openssh.com/txt/release-8.2](https://www.openssh.com/txt/release-8.2)。[a613d68fff9a](https://cgit.freebsd.org/src/commit/?id=a613d68fff9a)（由 FreeBSD 基金会赞助）
 
-[bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?query=bsdinstall&sektion=8&format=html) 的脚本分区编辑器新增了一种新模式，用于支持变体磁盘名称。如果 `DEFAULT` 被设置为磁盘参数，或者在 `PARTITIONS` 参数中未指定设备名称，安装程序将遵循自动分区模式的逻辑。如果存在多个磁盘，将提供选择对话框；如果只有一个磁盘，则会自动选择。这简化了为具有不同磁盘名称的硬件或虚拟机创建全自动安装介质的过程。[5ec4eb443e81](https://cgit.freebsd.org/src/commit/?id=5ec4eb443e81)
+[bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?query=bsdinstall&sektion=8&format=html) 的脚本分区编辑器新增了一种新模式，用于支持变体磁盘名称。如果 `DEFAULT` 被设置为磁盘参数，或者在参数 `PARTITIONS` 中未指定设备名称，安装程序将遵循自动分区模式的逻辑。如果存在多个磁盘，将提供选择对话框；如果只有一个磁盘，则会自动选择。这简化了为具有不同磁盘名称的硬件或虚拟机创建全自动安装介质的过程。[5ec4eb443e81](https://cgit.freebsd.org/src/commit/?id=5ec4eb443e81)
 
 ### 运行时库和 API
 
