@@ -111,7 +111,7 @@ FreeBSD 13.1-RELEASE 是一种 RELEASE 发行版，可以从 [https://www.FreeBS
 
 ### 用户空间应用程序变更
 
-`-i` 选项添加到 [rtsol(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsol&sektion=8&format=html) 和 [rtsold(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsold&sektion=8&format=html) 中，用于禁用 0 到 1 秒的随机延迟，从而加快启动过程。[8056b73ea163](https://cgit.freebsd.org/src/commit/?id=8056b73ea163)（由 [https://www.patreon.com/cperciva](https://www.patreon.com/cperciva) 赞助）
+选项 `-i` 添加到 [rtsol(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsol&sektion=8&format=html) 和 [rtsold(8)](https://man.freebsd.org/cgi/man.cgi?query=rtsold&sektion=8&format=html) 中，用于禁用 0 到 1 秒的随机延迟，从而加快启动过程。[8056b73ea163](https://cgit.freebsd.org/src/commit/?id=8056b73ea163)（由 [https://www.patreon.com/cperciva](https://www.patreon.com/cperciva) 赞助）
 
 对于 64 位架构，基本系统现在默认启用位置无关可执行文件（PIE）支持。可以通过开关 `WITHOUT_PIE` 禁用该功能，需要进行完全重新编译。[396e9f259d96](https://cgit.freebsd.org/src/commit/?id=396e9f259d96)
 
@@ -123,11 +123,11 @@ FreeBSD 13.1-RELEASE 是一种 RELEASE 发行版，可以从 [https://www.FreeBS
 
 巴西葡萄牙语 ABNT2 键盘添加了额外的 Alt Gr 映射。[310623908c20](https://cgit.freebsd.org/src/commit/?id=310623908c20)
 
-`chroot` 现在支持非特权操作，[chroot(8)](https://man.freebsd.org/cgi/man.cgi?query=chroot&sektion=8&format=html) 程序增加了 `-n` 选项以启用该功能。[460b4b550dc9](https://cgit.freebsd.org/src/commit/?id=460b4b550dc9)（由 EPSRC 赞助）
+`chroot` 现在支持非特权操作，[chroot(8)](https://man.freebsd.org/cgi/man.cgi?query=chroot&sektion=8&format=html) 程序增加了选项 `-n` 以启用该功能。[460b4b550dc9](https://cgit.freebsd.org/src/commit/?id=460b4b550dc9)（由 EPSRC 赞助）
 
 CAM 库已修改，以在解析设备名称之前使用 [realpath(3)](https://man.freebsd.org/cgi/man.cgi?query=realpath&sektion=3&format=html)，从而允许诸如 [camcontrol(8)](https://man.freebsd.org/cgi/man.cgi?query=camcontrol&sektion=8&format=html) 和 [smartctl(8)](https://man.freebsd.org/cgi/man.cgi?query=smartctl&sektion=8&format=html) 之类的工具在使用符号链接时更加友好。[e32acf95ea25](https://cgit.freebsd.org/src/commit/?id=e32acf95ea25)
 
-兼容 Linux 的 [md5sum(1)](https://man.freebsd.org/cgi/man.cgi?query=md5sum&sektion=1&format=html) 和类似的消息摘要程序添加完成，方法是在程序名称以 `sum` 结尾时让相应的 BSD 程序带 `-r` 选项运行。[c0d5665be0dc](https://cgit.freebsd.org/src/commit/?id=c0d5665be0dc)（由 Netflix 赞助）
+兼容 Linux 的 [md5sum(1)](https://man.freebsd.org/cgi/man.cgi?query=md5sum&sektion=1&format=html) 和类似的消息摘要程序添加完成，方法是在程序名称以 `sum` 结尾时让相应的 BSD 程序带选项 `-r` 运行。[c0d5665be0dc](https://cgit.freebsd.org/src/commit/?id=c0d5665be0dc)（由 Netflix 赞助）
 
 [svnlite(1)](https://man.freebsd.org/cgi/man.cgi?query=svnlite&sektion=1&format=html) 默认在构建中禁用。[a4f99b3c2384](https://cgit.freebsd.org/src/commit/?id=a4f99b3c2384)
 
@@ -290,7 +290,7 @@ ZFS 已升级至 OpenZFS 2.1.4 版本。OpenZFS 的发行说明可参阅 [https:
 
 此变更考虑了多个因素。例如，i486 不支持 64 位原子操作，虽然内核可以模拟这些操作，但在用户空间中无法实现。此外，32 位 amd64 库自开始以来便已采用 i686。
 
-大多数 32 位测试由开发者在 64 位硬件上使用 lib32 库并配合内核中的 `COMPAT_FREEBSD32` 选项完成。此变更可提供更好的覆盖范围和用户体验，同时符合大多数 Linux 发行版的长期做法。
+大多数 32 位测试由开发者在 64 位硬件上使用 lib32 库并配合内核中的选项 `COMPAT_FREEBSD32` 完成。此变更可提供更好的覆盖范围和用户体验，同时符合大多数 Linux 发行版的长期做法。
 
 这预计将是 i386 架构中默认 `CPUTYPE` 的最后一次升级。
 

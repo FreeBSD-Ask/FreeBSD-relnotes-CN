@@ -105,7 +105,7 @@ FreeBSD 13.3-RELEASE 的发行说明包含了对 13-STABLE 开发主线中的 Fr
 
 LLVM 提供的 [objdump(1)](https://man.freebsd.org/cgi/man.cgi?query=objdump&sektion=1&format=html) 工具现在可用。某些 LLVM objdump 选项的输出格式与 GNU objdump 不同；可以使用 [readelf(1)](https://man.freebsd.org/cgi/man.cgi?query=readelf&sektion=1&format=html) 检查 ELF 文件，并且可以通过 `devel/binutils` Port 或二进制软件包安装 GNU objdump。
 
-[tftpd(8)](https://man.freebsd.org/cgi/man.cgi?query=tftpd&sektion=8&format=html) 服务器现在可以配置为允许在 chroot 环境中写入非全局可写的文件，使用新的 `-S` 选项。[b71dde1aeba2](https://cgit.freebsd.org/src/commit/?id=b71dde1aeba2)
+[tftpd(8)](https://man.freebsd.org/cgi/man.cgi?query=tftpd&sektion=8&format=html) 服务器现在可以配置为允许在 chroot 环境中写入非全局可写的文件，使用新的选项 `-S`。[b71dde1aeba2](https://cgit.freebsd.org/src/commit/?id=b71dde1aeba2)
 
 ### 第三方软件
 
