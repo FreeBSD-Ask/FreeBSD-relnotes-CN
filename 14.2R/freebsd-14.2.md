@@ -73,7 +73,7 @@ FreeBSD 14.2-RELEASE 是个“RELEASE”发行版。该发行版可通过 [https
 
 ### 用户空间应用程序变更
 
-[env(1)](https://man.freebsd.org/cgi/man.cgi?query=env&sektion=1&format=html) 新增了一项用于切换目录的选项。此功能类似于 GNU 版 `env` 的功能，但不支持长选项。[08e8554c4a39](https://cgit.freebsd.org/src/commit/?id=08e8554c4a39)（由 Klara, Inc. 赞助）
+[env(1)](https://man.freebsd.org/cgi/man.cgi?query=env&sektion=1&format=html) 新增了一个用于切换目录的选项。此功能类似于 GNU 版 `env` 的功能，但不支持长选项。[08e8554c4a39](https://cgit.freebsd.org/src/commit/?id=08e8554c4a39)（由 Klara, Inc. 赞助）
 
 ### 第三方软件
 
