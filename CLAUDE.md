@@ -34,7 +34,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
   - 每个目录包含该发行版的全部文档：`_index.adoc`、`announce.adoc`、`relnotes.adoc`、`installation.adoc`、`hardware.adoc`、`readme.adoc`、`errata.adoc`、`signatures.adoc`、`schedule.adoc` 等
   - 早期发行版（4.x-6.x）按架构分文件，如 `relnotes-amd64.adoc`、`relnotes-i386.adoc`、`relnotes-alpha.adoc`、`relnotes-sparc64.adoc`、`relnotes-powerpc.adoc`、`relnotes-pc98.adoc`、`installation-<arch>.adoc`、`hardware-<arch>.adoc`
   - 部分发行版含 `upgrading.adoc`（如 15.1R）或其他特殊文件（`todo.adoc`、`pressrelease.adoc`、`approvals.adoc`、`relnotes-detailed.adoc`）
-  - 用于翻译对照参考，**不要修改或翻译其中的内容**
+  - 如果有 .po 文件，则用于翻译对照参考，**不要修改或翻译其中的内容**
 
 ### 标题管理（关键约束）
 
@@ -65,7 +65,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **禁止 HTML：** 本项目不支持任何 HTML 语法。
 - **文件命名：** 使用拼音 slug 或版本号，文件名中不得包含空格、中文字符或英文冒号 `:`，必须兼容 Windows 操作系统对文件名的要求。
 - **路径与 IP：** 全书正文中的路径（带 `/` 或 `\` 的，如 `/etc/rc.conf`、`/usr/local/etc/`）和 IP 地址一律使用 **加粗**，不使用反引号 `` ` `` 包裹；不要混合使用 `*` 和 `` ` ``（如 `*`path`*` 是错误的）。
-- **命令、选项、参数：** 命令、选项、可调选项、可调参数等格式使用 `行间代码`（反引号）包裹。
+- **命令、选项、参数：** 命令、选项、可调选项、可调参数等格式使用 `行间代码`（反引号）包裹。单个裸命令（不带选项或参数的命令，如 ls、cd）不加反引号、不加粗，保持原样。
 - **man 页引用与裸命令：** 禁止将 `vt(4)` 这类带括号数字的 man 页引用改为其他格式（如 `vt.4`）或类似修改；此类引用使用 **加粗**（如 **vt(4)**），不加反引号。**带链接的 man 页引用**（如 `[xxx(n)](url)` 格式）维持原样，不加粗、不加反引号、不破坏链接。单个裸命令（不带选项或参数的命令，如 ls、cd）不加反引号、不加粗，保持原样。
 - **转义字符：** 除非是命令、选项和参数，否则含转义字符 `\` 的元素一律使用 **加粗** 包裹整个元素，不在正文中直接使用转义字符（如写 **PROTO_TYPE** 而非 `PROTO\_TYPE` 在正文里裸露）。逐个手动修改，禁止批量替换。
 - **引号规范：** 正文禁止使用日式引号「」 『』（如「livefs」），一律使用中文双引号“”（如“livefs”）。全书正文标点符号统一使用全角，包括“”及括号、引号等，避免半角混用。正文中的双引号使用“”或‘’，不使用半角 "" 或 ''。代码块的非注释部分所有引号必须使用半角 "" 或 ''（代码语法需要）；代码块的注释部分看情况使用“”或‘’。正文中引用系统错误消息、命令输出等代码内容时，应使用反引号包裹，使内部半角引号成为代码内容。逐个手动修改，禁止批量替换。
@@ -79,6 +79,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **禁止 AsciiDoc 残留语法：** 禁止在 Markdown 中保留 AsciiDoc 的 `::` 定义列表语法（如 `mini-memstick::`、`dvd1::`）和 `+` 续行标记。`::` 双冒号一律不被允许。英文原文中的 AsciiDoc 定义列表术语（如 `dvd1::`、`disc1::`、`bootonly::`、`memstick::`、`mini-memstick::`、`FreeBSD/arm SD 卡镜像::`）必须转换为 Markdown 加粗标签格式：`**术语**` + 空行 + 描述文本。`+` 续行标记必须移除，段落间用空行分隔。如需链接，必须指向真实 URL，不得使用 `::` 伪引用。
 - **fstab 不翻译：** fstab 文件表头（如 `# Device Mountpoint FStype Options Dump Pass#`）及其相关内容保持英文原样，不翻译。
 - **段落换行：** 一段内容必须在同一行，不同段必须换行（段落之间用空行分隔）。禁止在同一段落内插入软换行（即两行普通文本之间无空行分隔却属于同一段落的情况）。
+- `汉字 **纯粹中文文字加粗内容** 汉字` 中间的 `**纯粹中文文字加粗内容**` 前后必须有一个空格（有标点在前后则不计入此条）
 
 ### 术语
 
