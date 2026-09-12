@@ -19,7 +19,7 @@
   * [FreeBSD 15.1-RELEASE 签名校验文件](15.1R/15.1-signatures.md)
   * [FreeBSD 15.1-RELEASE 发布计划](15.1R/15.1-schedule.md)
 * FreeBSD 14.5-RELEASE
-  * [FreeBSD 14.5-RELEASE 发行说明](14.5R/14.5.md)
+  * [FreeBSD 14.5-RELEASE 发行说明（2026 年 9 月 8 日）](14.5R/14.5.md)
   * [FreeBSD 14.5-RELEASE 发行公告](14.5R/14.5-announce.md)
   * [FreeBSD 14.5-RELEASE 安装说明](14.5R/14.5-installation.md)
   * [FreeBSD 14.5-RELEASE 硬件兼容列表](14.5R/14.5-hardware.md)
