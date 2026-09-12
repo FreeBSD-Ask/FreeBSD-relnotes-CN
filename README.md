@@ -17,8 +17,7 @@
 
 | 日期 | 事件 | 信息 |
 | ---- | ---- | ---- |
-| 2026 年 9 月 | FreeBSD 14.5 | [参见此处](https://www.freebsd.org/releases/14.5R/schedule/) |
-| 2026 年 12 月 | FreeBSD 15.2 | |
+| 2026 年 12 月 | FreeBSD 15.2 | [参见此处](https://www.freebsd.org/releases/15.2R/schedule/) |
 | 2027 年 3 月 | FreeBSD 14.6 | |
 | 2027 年 6 月 | FreeBSD 15.3 | |
 | 2027 年 12 月 | FreeBSD 16.0 | |
@@ -33,10 +32,8 @@
 | releng/15.1 | 15.1-RELEASE | 2026 年 6 月 16 日 | 2027 年 3 月 31 日 |
 | releng/15.0 | 15.0-RELEASE | 2025 年 12 月 2 日 | 2026 年 9 月 30 日 |
 | stable/14 | 不适用 | 不适用 | 2028 年 11 月 30 日 |
+| releng/14.5 | 14.5-RELEASE | 2026 年 9 月 8 日 | 2027 年 6 月 30 日 |
 | releng/14.4 | 14.4-RELEASE | 2026 年 3 月 10 日 | 2026 年 12 月 31 日 |
-| releng/14.3 | 14.3-RELEASE | 2025 年 6 月 10 日 | 2026 年 6 月 30 日 |
-| stable/13 | 不适用 | 不适用 | 2026 年 4 月 30 日 |
-| releng/13.5 | 13.5-RELEASE | 2025 年 3 月 11 日 | 2026 年 4 月 30 日 |
 
 ——[FreeBSD 安全信息](https://www.freebsd.org/security/#sup)
 

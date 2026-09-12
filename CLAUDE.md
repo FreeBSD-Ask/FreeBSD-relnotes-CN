@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 源内容为 Markdown 文件，由 GitBook 平台自动构建和部署，无需本地构建步骤。
 
-**翻译基准：** 以 `en/` 文件夹下的 AsciiDoc 归档为唯一权威源。`en/` 按发行版目录组织（如 `en/14.4R/`、`en/15.1R/`），每个目录包含该发行版的全部文档（`relnotes.adoc`、`installation.adoc`、`hardware.adoc` 等）。
+**翻译基准：** 以 `en/releases` 文件夹下的 AsciiDoc 归档为唯一权威源。`en/releases/` 按发行版目录组织（如 `en/releases/14.4R/`、`en/releases/15.1R/`），每个目录包含该发行版的全部文档（`relnotes.adoc`、`installation.adoc`、`hardware.adoc` 等）。
 
 ## 内容架构
 
@@ -21,7 +21,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### 目录结构
 
 - 本项目按发行版分组的 **子目录结构**，每个发行版的 `.md` 文件放在对应的子目录中。
-- 子目录命名与 `en/` 文件夹保持一致：
+- 子目录命名与 `en/releases/` 文件夹保持一致：
   - 大多数发行版：`<版本>R/`（如 `15.1R/`、`14.4R/`、`6.4R/`）
   - 早期发行版（1.x、2.0）：`<版本>/`（如 `1.0/`、`1.1/`、`2.0/`）
 - 根目录仅保留特殊文件：`SUMMARY.md`、`CHANGELOG.md`、`README.md`、`mu-lu.md`、`CLAUDE.md`
@@ -111,7 +111,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 对已翻译章节进行质量审校时，参考以下步骤：
 
-1. **获取原文**：以 `en/` 文件夹下对应发行版目录的 adoc 文件为唯一权威源（如 `en/14.4R/relnotes.adoc`、`en/6.4R/relnotes-amd64.adoc`），不再通过 `WebFetch` 抓取 handbook 页面。
+1. **获取原文**：以 `en/releases/` 文件夹下对应发行版目录的 adoc 文件为唯一权威源（如 `en/releases/14.4R/relnotes.adoc`、`en/releases/6.4R/relnotes-amd64.adoc`），不再通过 `WebFetch` 抓取 handbook 页面。
 
 2. **逐句对照**：将中文翻译与英文 adoc 原文逐句比对，重点检查以下问题类别：
 
@@ -151,7 +151,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### 1. 确定缺失文档
 
-对照 `en/` 文件夹下对应发行版目录（如 `en/14.4R/`），检查该目录下有哪些 adoc 文件，与中文版已有 `.md` 文件对比，确定缺失的文档类型。
+对照 `en/releases/` 文件夹下对应发行版目录（如 `en/releases/14.4R/`），检查该目录下有哪些 adoc 文件，与中文版已有 `.md` 文件对比，确定缺失的文档类型。
 
 每个发行版可能包含的文档类型：
 
